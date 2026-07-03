@@ -1,6 +1,17 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import Hero from "../../components/ui/Hero.astro";
+import Section from "../../components/ui/Section.astro";
+import Container from "../../components/ui/Container.astro";
+import ProductCard from "../../components/ui/ProductCard.astro";
+import Button from "../../components/ui/Button.astro";
+
+const categories = [
+  { title: "Veludos", description: "Toque macio e caimento nobre para peças de destaque." },
+  { title: "Linhos", description: "Textura natural e respirável, indicada para ambientes claros." },
+  { title: "Couros", description: "Resistência e sofisticação para uso intenso e comercial." },
+  { title: "Bouclé", description: "Textura contemporânea para composições modernas." },
+];
 ---
 
 <BaseLayout
@@ -10,6 +21,51 @@ import Hero from "../../components/ui/Hero.astro";
   <Hero
     eyebrow="Tecidos"
     title="Biblioteca de Tecidos"
-    text="Área base para catalogação de tecidos, revestimentos e combinações KARV."
+    text="Cada poltrona KARV pode ser combinada com tecidos e revestimentos selecionados para o estilo e o uso do seu ambiente."
   />
+
+  <Section background="surface">
+    <Container>
+      <div class="cards-grid">
+        {categories.map((c) => (
+          <ProductCard title={c.title} description={c.description} href="/tecidos/" />
+        ))}
+      </div>
+    </Container>
+  </Section>
+
+  <Section background="bg" spacing="tight">
+    <Container size="narrow" class="cta">
+      <h2 class="cta__title">Veja os tecidos aplicados nas coleções KARV</h2>
+      <p class="cta__text">
+        Explore as poltronas e coleções e escolha a combinação de tecido ideal para o seu projeto.
+      </p>
+      <Button href="/produtos/" variant="primary" size="lg">Ver produtos</Button>
+    </Container>
+  </Section>
 </BaseLayout>
+
+<style>
+  .cards-grid {
+    display: grid;
+    gap: var(--space-6);
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+
+  .cta {
+    text-align: center;
+  }
+
+  .cta__title {
+    font-size: clamp(22px, 3.5vw, 32px);
+  }
+
+  .cta__text {
+    margin-top: var(--space-4);
+    color: var(--color-muted);
+  }
+
+  .cta :global(.btn) {
+    margin-top: var(--space-6);
+  }
+</style>

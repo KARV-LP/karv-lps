@@ -4,15 +4,16 @@ import Hero from "../../components/ui/Hero.astro";
 import Section from "../../components/ui/Section.astro";
 import Container from "../../components/ui/Container.astro";
 import ProductCard from "../../components/ui/ProductCard.astro";
+import Button from "../../components/ui/Button.astro";
 
 const niches = [
-  "Barbearia",
-  "Estética",
-  "Tatuagem",
-  "Odontologia",
-  "Podologia",
-  "Salões",
-  "Clínicas",
+  { title: "Barbearia", description: "Poltronas e ambientes que reforçam a identidade da barbearia moderna." },
+  { title: "Estética", description: "Conforto e sofisticação para salas de atendimento e espera." },
+  { title: "Tatuagem", description: "Peças resistentes e estilosas para estúdios de tatuagem." },
+  { title: "Odontologia", description: "Mobiliário que transmite confiança em clínicas odontológicas." },
+  { title: "Podologia", description: "Soluções ergonômicas para consultórios de podologia." },
+  { title: "Salões", description: "Ambientes premium para salões de beleza e estética capilar." },
+  { title: "Clínicas", description: "Mobiliário institucional para recepções e salas de espera clínicas." },
 ];
 ---
 
@@ -23,16 +24,26 @@ const niches = [
   <Hero
     eyebrow="Nichos"
     title="Segmentos estratégicos KARV"
-    text="Área base para clínicas, barbearias, estúdios, estética, odontologia e outros segmentos."
+    text="Cada segmento tem exigências próprias de conforto, durabilidade e apresentação. A KARV desenvolve poltronas e coleções pensadas para o dia a dia de cada nicho."
   />
 
   <Section background="surface">
     <Container>
       <div class="cards-grid">
         {niches.map((niche) => (
-          <ProductCard title={niche} href="/nichos/" />
+          <ProductCard title={niche.title} description={niche.description} href="/produtos/" />
         ))}
       </div>
+    </Container>
+  </Section>
+
+  <Section background="bg" spacing="tight">
+    <Container size="narrow" class="cta">
+      <h2 class="cta__title">Não encontrou o seu segmento?</h2>
+      <p class="cta__text">
+        A KARV atende novos nichos sob demanda. Explore as coleções e tecidos disponíveis para o seu projeto.
+      </p>
+      <Button href="/produtos/" variant="primary" size="lg">Ver produtos</Button>
     </Container>
   </Section>
 </BaseLayout>
@@ -42,5 +53,22 @@ const niches = [
     display: grid;
     gap: var(--space-6);
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+
+  .cta {
+    text-align: center;
+  }
+
+  .cta__title {
+    font-size: clamp(22px, 3.5vw, 32px);
+  }
+
+  .cta__text {
+    margin-top: var(--space-4);
+    color: var(--color-muted);
+  }
+
+  .cta :global(.btn) {
+    margin-top: var(--space-6);
   }
 </style>
