@@ -1,0 +1,179 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import Hero from "../../../components/ui/Hero.astro";
+import Section from "../../../components/ui/Section.astro";
+import Container from "../../../components/ui/Container.astro";
+import Button from "../../../components/ui/Button.astro";
+---
+
+<BaseLayout
+  title="Clínicas | KARV"
+  description="Mobiliário de identidade para clínicas que transmite confiança, conforto e profissionalismo em cada ambiente."
+>
+  <Hero
+    eyebrow="Clínicas"
+    title="Conforto e confiança começam no ambiente"
+    text="Em clínicas, cada detalhe precisa transmitir segurança. O espaço precisa acolher o paciente, reforçar a autoridade do profissional e apoiar uma experiência organizada desde a chegada."
+    primaryCta={{ label: "Ver produtos", href: "/produtos/" }}
+    secondaryCta={{ label: "Falar com a KARV", href: "mailto:contato@karv.com" }}
+  />
+
+  <Section background="surface">
+    <Container class="content">
+      <div class="intro">
+        <h2>Uma clínica precisa parecer tão confiável quanto o atendimento</h2>
+        <p>
+          O mobiliário de uma clínica é parte da experiência de cuidado. Poltronas e peças de identidade ajudam a transmitir organização, confiança e um padrão de excelência que o paciente percebe imediatamente.
+        </p>
+      </div>
+    </Container>
+  </Section>
+
+  <Section background="bg">
+    <Container>
+      <div class="grid">
+        <article class="card">
+          <h3>Por que esse nicho precisa de uma poltrona de identidade</h3>
+          <p>
+            Recepção, espera e atendimento precisam ser espaços de acolhimento. A poltrona certa reforça a sensação de cuidado e contribui para a percepção de profissionalismo da clínica.
+          </p>
+        </article>
+        <article class="card">
+          <h3>O que o ambiente precisa reforçar</h3>
+          <ul class="card__list">
+            <li>Segurança e serenidade para pacientes e acompanhantes</li>
+            <li>Atmosfera limpa, moderna e institucional</li>
+            <li>Valor percebido em cada ponto do espaço</li>
+          </ul>
+        </article>
+      </div>
+    </Container>
+  </Section>
+
+  <Section background="surface-soft">
+    <Container>
+      <div class="section-heading">
+        <h2>Aplicações no ambiente</h2>
+        <p>O mobiliário KARV funciona em diferentes áreas da operação clínica.</p>
+      </div>
+      <div class="grid grid--three">
+        <article class="card">
+          <h3>Recepção</h3>
+          <p>Peças que acolhem e organizam a primeira impressão do paciente.</p>
+        </article>
+        <article class="card">
+          <h3>Sala de espera</h3>
+          <p>Conforto e presença que suavizam o momento de espera.</p>
+        </article>
+        <article class="card">
+          <h3>Atendimento e consultas</h3>
+          <p>Ambientes com mais presença, cuidado e profissionalismo visual.</p>
+        </article>
+      </div>
+    </Container>
+  </Section>
+
+  <Section background="surface">
+    <Container>
+      <div class="section-heading">
+        <h2>Benefícios comerciais</h2>
+        <p>Um ambiente bem estruturado reforça a percepção de valor do negócio e da marca.</p>
+      </div>
+      <div class="grid grid--three">
+        <article class="card">
+          <h3>Eleva a confiança</h3>
+          <p>O paciente percebe mais solidez e cuidado no espaço.</p>
+        </article>
+        <article class="card">
+          <h3>Melhora a experiência</h3>
+          <p>O atendimento se torna mais agradável, organizado e memorável.</p>
+        </article>
+        <article class="card">
+          <h3>Fortalece a reputação</h3>
+          <p>Ambientes bem pensados reforçam a imagem da clínica no longo prazo.</p>
+        </article>
+      </div>
+    </Container>
+  </Section>
+
+  <Section background="bg" spacing="tight">
+    <Container size="narrow" class="cta">
+      <h2>Quando o ambiente transmite confiança, a clínica se destaca</h2>
+      <p>
+        A KARV desenvolve soluções que unem conforto, identidade e presença para cada espaço clínico.
+      </p>
+      <div class="actions">
+        <Button href="/produtos/" variant="primary" size="lg">Ver coleções</Button>
+        <Button href="mailto:contato@karv.com" variant="secondary" size="lg">Falar com a KARV</Button>
+      </div>
+    </Container>
+  </Section>
+</BaseLayout>
+
+<style>
+  .content {
+    display: grid;
+    gap: var(--space-6);
+  }
+
+  .intro {
+    max-width: 760px;
+  }
+
+  .intro h2,
+  .section-heading h2,
+  .cta h2 {
+    font-size: clamp(24px, 3.5vw, 34px);
+    margin-bottom: var(--space-4);
+  }
+
+  .intro p,
+  .section-heading p,
+  .cta p,
+  .card p,
+  .card li {
+    color: var(--color-muted);
+  }
+
+  .grid {
+    display: grid;
+    gap: var(--space-6);
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  }
+
+  .grid--three {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  }
+
+  .card {
+    padding: var(--space-6);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    background: var(--color-surface);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+  }
+
+  .card h3 {
+    font-size: 20px;
+  }
+
+  .card__list {
+    display: grid;
+    gap: var(--space-2);
+    padding-left: var(--space-4);
+  }
+
+  .actions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--space-3);
+    margin-top: var(--space-6);
+  }
+
+  .cta {
+    text-align: center;
+  }
+</style>

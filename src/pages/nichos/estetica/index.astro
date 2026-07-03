@@ -1,0 +1,179 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import Hero from "../../../components/ui/Hero.astro";
+import Section from "../../../components/ui/Section.astro";
+import Container from "../../../components/ui/Container.astro";
+import Button from "../../../components/ui/Button.astro";
+---
+
+<BaseLayout
+  title="Estética | KARV"
+  description="Mobiliário de identidade para clínicas e salões de estética com foco em conforto, sofisticação e experiência do cliente."
+>
+  <Hero
+    eyebrow="Estética"
+    title="A estética do ambiente impacta a percepção da marca"
+    text="Em estética, a experiência começa no acolhimento. O cliente entra buscando cuidado, relaxamento e um ambiente que transmita profissionalismo desde a primeira impressão."
+    primaryCta={{ label: "Ver produtos", href: "/produtos/" }}
+    secondaryCta={{ label: "Falar com a KARV", href: "mailto:contato@karv.com" }}
+  />
+
+  <Section background="surface">
+    <Container class="content">
+      <div class="intro">
+        <h2>O ambiente reforça o valor do atendimento</h2>
+        <p>
+          Em espaços de estética, cada peça precisa equilibrar conforto, beleza e funcionalidade. Uma poltrona de identidade transforma a recepção em um ponto de diferenciação e ajuda o cliente a sentir que está em um lugar cuidado e premium.
+        </p>
+      </div>
+    </Container>
+  </Section>
+
+  <Section background="bg">
+    <Container>
+      <div class="grid">
+        <article class="card">
+          <h3>Por que esse nicho precisa de uma poltrona de identidade</h3>
+          <p>
+            O tempo de espera e o momento de atendimento devem transmitir tranquilidade. O mobiliário certo cria uma atmosfera que valoriza a proposta do profissional e a confiança do cliente.
+          </p>
+        </article>
+        <article class="card">
+          <h3>O que a experiência precisa transmitir</h3>
+          <ul class="card__list">
+            <li>Conforto visual e físico durante a espera</li>
+            <li>Refinamento que acompanha a identidade da marca</li>
+            <li>Ambiente acolhedor para procedimentos e retorno</li>
+          </ul>
+        </article>
+      </div>
+    </Container>
+  </Section>
+
+  <Section background="surface-soft">
+    <Container>
+      <div class="section-heading">
+        <h2>Aplicações no ambiente</h2>
+        <p>As soluções KARV se encaixam bem em diferentes momentos da jornada do cliente.</p>
+      </div>
+      <div class="grid grid--three">
+        <article class="card">
+          <h3>Recepção e acolhimento</h3>
+          <p>Espaços que recebem com sofisticação e reforçam a imagem da clínica ou salão.</p>
+        </article>
+        <article class="card">
+          <h3>Salas de atendimento</h3>
+          <p>Conforto e presença que elevam a sensação de exclusividade do procedimento.</p>
+        </article>
+        <article class="card">
+          <h3>Áreas de relaxamento</h3>
+          <p>Peças que ajudam o cliente a se sentir cuidado e valorizado antes e depois do atendimento.</p>
+        </article>
+      </div>
+    </Container>
+  </Section>
+
+  <Section background="surface">
+    <Container>
+      <div class="section-heading">
+        <h2>Benefícios comerciais</h2>
+        <p>Investir em identidade visual do ambiente é investir em percepção de valor.</p>
+      </div>
+      <div class="grid grid--three">
+        <article class="card">
+          <h3>Aumenta a percepção de premium</h3>
+          <p>O espaço passa a transmitir mais sofisticação e cuidado.</p>
+        </article>
+        <article class="card">
+          <h3>Melhora a retenção</h3>
+          <p>Clientes tendem a voltar quando o espaço é acolhedor e bem pensado.</p>
+        </article>
+        <article class="card">
+          <h3>Fortalece a recomendação</h3>
+          <p>Ambientes memoráveis viram parte da narrativa da marca.</p>
+        </article>
+      </div>
+    </Container>
+  </Section>
+
+  <Section background="bg" spacing="tight">
+    <Container size="narrow" class="cta">
+      <h2>Quando o ambiente é parte do tratamento, a marca se torna inesquecível</h2>
+      <p>
+        A KARV entrega soluções que unem estética, conforto e posicionamento para transformar cada espaço em uma experiência premium.
+      </p>
+      <div class="actions">
+        <Button href="/produtos/" variant="primary" size="lg">Ver coleções</Button>
+        <Button href="mailto:contato@karv.com" variant="secondary" size="lg">Falar com a KARV</Button>
+      </div>
+    </Container>
+  </Section>
+</BaseLayout>
+
+<style>
+  .content {
+    display: grid;
+    gap: var(--space-6);
+  }
+
+  .intro {
+    max-width: 760px;
+  }
+
+  .intro h2,
+  .section-heading h2,
+  .cta h2 {
+    font-size: clamp(24px, 3.5vw, 34px);
+    margin-bottom: var(--space-4);
+  }
+
+  .intro p,
+  .section-heading p,
+  .cta p,
+  .card p,
+  .card li {
+    color: var(--color-muted);
+  }
+
+  .grid {
+    display: grid;
+    gap: var(--space-6);
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  }
+
+  .grid--three {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  }
+
+  .card {
+    padding: var(--space-6);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    background: var(--color-surface);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+  }
+
+  .card h3 {
+    font-size: 20px;
+  }
+
+  .card__list {
+    display: grid;
+    gap: var(--space-2);
+    padding-left: var(--space-4);
+  }
+
+  .actions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--space-3);
+    margin-top: var(--space-6);
+  }
+
+  .cta {
+    text-align: center;
+  }
+</style>
