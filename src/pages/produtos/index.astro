@@ -55,6 +55,40 @@ const products = [
     </Container>
   </Section>
 
+  <Section background="bg">
+    <Container>
+      <div class="cross-nav">
+        <div class="cross-nav__intro">
+          <p class="cross-nav__eyebrow">Navegação comercial</p>
+          <h2 class="cross-nav__title">Acuradoria por contexto de projeto.</h2>
+          <p class="cross-nav__text">
+            Use os produtos KARV como ponto de partida e navegue até o nicho ou o tecido que dá estrutura ao ambiente.
+          </p>
+        </div>
+
+        <div class="cross-nav__grid">
+          <div class="cross-nav__group">
+            <h3>Por nicho</h3>
+            <div class="cross-nav__actions">
+              <Button href="/nichos/barbearia/" variant="secondary">Barbearia</Button>
+              <Button href="/nichos/clinicas/" variant="secondary">Clínicas</Button>
+              <Button href="/nichos/estetica/" variant="secondary">Estética</Button>
+            </div>
+          </div>
+
+          <div class="cross-nav__group">
+            <h3>Por tecido</h3>
+            <div class="cross-nav__actions">
+              <Button href="/tecidos/premium/" variant="secondary">Premium</Button>
+              <Button href="/tecidos/clinicas-esteticas/" variant="secondary">Clínicas</Button>
+              <Button href="/tecidos/barbearia/" variant="secondary">Barbearia</Button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </Container>
+  </Section>
+
   <Section background="bg" spacing="tight">
     <Container size="narrow" class="cta">
       <h2 class="cta__title">Encontre o tecido ideal para a sua poltrona</h2>
@@ -71,6 +105,53 @@ const products = [
     display: grid;
     gap: var(--space-6);
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  }
+
+  .cross-nav {
+    display: grid;
+    gap: var(--space-8);
+  }
+
+  .cross-nav__eyebrow {
+    color: var(--color-accent-soft);
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    font-size: 13px;
+  }
+
+  .cross-nav__title {
+    margin-top: var(--space-3);
+    font-size: clamp(24px, 3.5vw, 32px);
+  }
+
+  .cross-nav__text {
+    margin-top: var(--space-4);
+    max-width: 680px;
+    color: var(--color-muted);
+  }
+
+  .cross-nav__grid {
+    display: grid;
+    gap: var(--space-6);
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  }
+
+  .cross-nav__group {
+    padding: var(--space-6);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    background: var(--color-surface);
+  }
+
+  .cross-nav__group h3 {
+    font-size: 20px;
+  }
+
+  .cross-nav__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-3);
+    margin-top: var(--space-4);
   }
 
   .cta {

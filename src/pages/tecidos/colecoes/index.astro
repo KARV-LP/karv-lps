@@ -4,6 +4,7 @@ import Hero from "../../../components/ui/Hero.astro";
 import Section from "../../../components/ui/Section.astro";
 import Container from "../../../components/ui/Container.astro";
 import Button from "../../../components/ui/Button.astro";
+import ProductCard from "../../../components/ui/ProductCard.astro";
 
 const pillars = [
   {
@@ -50,6 +51,38 @@ const pillars = [
             <p>{item.text}</p>
           </article>
         ))}
+      </div>
+    </Container>
+  </Section>
+
+  <Section background="bg">
+    <Container>
+      <div class="cross-nav">
+        <div class="cross-nav__intro">
+          <p class="cross-nav__eyebrow">Hub de coleções</p>
+          <h2 class="cross-nav__title">A coleção KARV funciona como ponto de entrada para a experiência do projeto.</h2>
+          <p class="cross-nav__text">
+            A partir da curadoria, o cliente consegue avançar até a biblioteca de tecidos, os produtos e os nichos mais alinhados à proposta.
+          </p>
+        </div>
+
+        <div class="cross-nav__grid">
+          <ProductCard
+            title="Biblioteca de tecidos"
+            description="Aprofunde a seleção por ambiente, aplicação e intenção do espaço."
+            href="/tecidos/"
+          />
+          <ProductCard
+            title="Produtos KARV"
+            description="Conecte a curadoria visual às poltronas e coleções da marca."
+            href="/produtos/"
+          />
+          <ProductCard
+            title="Nichos estratégicos"
+            description="Veja como a curadoria se adapta às demandas de cada segmento."
+            href="/nichos/"
+          />
+        </div>
       </div>
     </Container>
   </Section>
@@ -109,6 +142,35 @@ const pillars = [
 
   .info-card p {
     color: var(--color-muted);
+  }
+
+  .cross-nav {
+    display: grid;
+    gap: var(--space-8);
+  }
+
+  .cross-nav__eyebrow {
+    color: var(--color-accent-soft);
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    font-size: 13px;
+  }
+
+  .cross-nav__title {
+    margin-top: var(--space-3);
+    font-size: clamp(24px, 3.5vw, 32px);
+  }
+
+  .cross-nav__text {
+    margin-top: var(--space-4);
+    max-width: 720px;
+    color: var(--color-muted);
+  }
+
+  .cross-nav__grid {
+    display: grid;
+    gap: var(--space-6);
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   }
 
   .cta {
