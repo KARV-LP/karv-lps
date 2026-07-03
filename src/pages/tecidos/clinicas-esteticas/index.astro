@@ -1,0 +1,195 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import Hero from "../../../components/ui/Hero.astro";
+import Section from "../../../components/ui/Section.astro";
+import Container from "../../../components/ui/Container.astro";
+import Button from "../../../components/ui/Button.astro";
+
+const highlights = [
+  {
+    title: "Linguagem visual limpa",
+    text: "A seleção reforça uma imagem contemporânea, organizada e acolhedora para ambientes profissionais.",
+  },
+  {
+    title: "Acolhimento no primeiro contato",
+    text: "A proposta visual ajuda a transmitir cuidado, presença e conforto desde a recepção.",
+  },
+  {
+    title: "Identidade profissional",
+    text: "Os revestimentos contribuem para uma apresentação sofisticada e alinhada ao posicionamento do espaço.",
+  },
+];
+
+const applications = [
+  "Recepções e áreas de atendimento",
+  "Consultórios e ambientes de conversa",
+  "Espaços que buscam uma imagem contemporânea",
+];
+
+const benefits = [
+  "Ambiente visualmente equilibrado",
+  "Sensação de acolhimento e cuidado",
+  "Apresentação profissional e atual",
+];
+---
+
+<BaseLayout
+  title="Tecidos para Clínicas | Biblioteca de Tecidos KARV"
+  description="Descubra a Curadoria KARV para tecidos para clínicas e estética, com proposta acolhedora, profissional e contemporânea."
+>
+  <Hero
+    eyebrow="Curadoria KARV"
+    title="Tecidos para Clínicas e Estética"
+    text="A Curadoria KARV organiza revestimentos que favorecem uma imagem limpa, acolhedora e contemporânea para clínicas e espaços de estética."
+    primaryCta={{ label: "Voltar à biblioteca", href: "/tecidos/" }}
+    secondaryCta={{ label: "Ver premium", href: "/tecidos/premium/" }}
+  />
+
+  <Section background="surface">
+    <Container>
+      <div class="intro">
+        <p class="intro__eyebrow">Ambientes profissionais</p>
+        <h2 class="intro__title">Uma seleção para quem valoriza cuidado e presença visual.</h2>
+        <p class="intro__text">
+          Em clínicas e estética, cada detalhe comunica confiança. A Curadoria KARV contribui para uma experiência visual mais alinhada ao propósito do ambiente.
+        </p>
+      </div>
+
+      <div class="cards-grid">
+        {highlights.map((item) => (
+          <article class="info-card">
+            <h3>{item.title}</h3>
+            <p>{item.text}</p>
+          </article>
+        ))}
+      </div>
+    </Container>
+  </Section>
+
+  <Section background="bg">
+    <Container class="split">
+      <div class="content-block">
+        <h2>Aplicações recomendadas</h2>
+        <ul class="feature-list">
+          {applications.map((item) => <li>{item}</li>)}
+        </ul>
+      </div>
+      <div class="content-block">
+        <h2>Benefícios da curadoria</h2>
+        <ul class="feature-list">
+          {benefits.map((item) => <li>{item}</li>)}
+        </ul>
+      </div>
+    </Container>
+  </Section>
+
+  <Section background="surface-soft" spacing="tight">
+    <Container size="narrow" class="cta">
+      <h2 class="cta__title">Cada ambiente merece uma leitura visual clara e acolhedora.</h2>
+      <p class="cta__text">
+        Explore a Biblioteca de Tecidos KARV para encontrar uma proposta alinhada ao seu projeto.
+      </p>
+      <Button href="/tecidos/" variant="primary" size="lg">Voltar à biblioteca</Button>
+    </Container>
+  </Section>
+</BaseLayout>
+
+<style>
+  .intro {
+    max-width: 760px;
+    margin-bottom: var(--space-8);
+  }
+
+  .intro__eyebrow {
+    color: var(--color-accent-soft);
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    font-size: 13px;
+    margin-bottom: var(--space-3);
+  }
+
+  .intro__title {
+    font-size: clamp(28px, 4vw, 40px);
+  }
+
+  .intro__text {
+    margin-top: var(--space-4);
+    color: var(--color-muted);
+    font-size: 18px;
+  }
+
+  .cards-grid {
+    display: grid;
+    gap: var(--space-6);
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  }
+
+  .info-card {
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: var(--space-6);
+    background: var(--color-bg);
+  }
+
+  .info-card h3 {
+    font-size: 20px;
+    margin-bottom: var(--space-3);
+  }
+
+  .info-card p {
+    color: var(--color-muted);
+  }
+
+  .split {
+    display: grid;
+    gap: var(--space-8);
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  }
+
+  .content-block {
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: var(--space-6);
+    background: var(--color-surface);
+  }
+
+  .content-block h2 {
+    font-size: 22px;
+    margin-bottom: var(--space-4);
+  }
+
+  .feature-list {
+    display: grid;
+    gap: var(--space-3);
+    color: var(--color-muted);
+  }
+
+  .feature-list li {
+    padding-left: var(--space-4);
+    position: relative;
+  }
+
+  .feature-list li::before {
+    content: "•";
+    color: var(--color-accent-soft);
+    position: absolute;
+    left: 0;
+  }
+
+  .cta {
+    text-align: center;
+  }
+
+  .cta__title {
+    font-size: clamp(22px, 3.5vw, 32px);
+  }
+
+  .cta__text {
+    margin-top: var(--space-4);
+    color: var(--color-muted);
+  }
+
+  .cta :global(.btn) {
+    margin-top: var(--space-6);
+  }
+</style>

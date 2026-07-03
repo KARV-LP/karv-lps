@@ -1,0 +1,195 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import Hero from "../../../components/ui/Hero.astro";
+import Section from "../../../components/ui/Section.astro";
+import Container from "../../../components/ui/Container.astro";
+import Button from "../../../components/ui/Button.astro";
+
+const highlights = [
+  {
+    title: "Atmosfera refinada",
+    text: "Uma linguagem visual mais elaborada, pensada para espaços que desejam presença, conforto e sofisticação.",
+  },
+  {
+    title: "Conforto como parte da experiência",
+    text: "A seleção favorece uma sensação acolhedora, ideal para projetos que valorizam o bem-estar do ambiente.",
+  },
+  {
+    title: "Percepção de valor",
+    text: "A curadoria ajuda a construir uma imagem de alto padrão, com identidade visual forte e acabamento cuidadoso.",
+  },
+];
+
+const applications = [
+  "Salas e recepções com proposta de destaque",
+  "Ambientes residenciais de alto padrão",
+  "Espaços que valorizam presença e sofisticação",
+];
+
+const benefits = [
+  "Seleção com linguagem visual sofisticada",
+  "Proposta acolhedora e elegante",
+  "Orientação para ambientes que desejam valor percebido",
+];
+---
+
+<BaseLayout
+  title="Revestimentos Premium | Biblioteca de Tecidos KARV"
+  description="Conheça a Curadoria KARV para revestimentos premium, com sofisticação, conforto e elegância para ambientes de alto padrão."
+>
+  <Hero
+    eyebrow="Curadoria KARV"
+    title="Revestimentos Premium"
+    text="Para ambientes que valorizam sofisticação, conforto e percepção de valor, a Curadoria KARV organiza revestimentos com presença refinada e linguagem acolhedora."
+    primaryCta={{ label: "Voltar à biblioteca", href: "/tecidos/" }}
+    secondaryCta={{ label: "Ver coleções", href: "/tecidos/colecoes/" }}
+  />
+
+  <Section background="surface">
+    <Container>
+      <div class="intro">
+        <p class="intro__eyebrow">Seleção premium</p>
+        <h2 class="intro__title">Uma curadoria para ambientes de alto padrão.</h2>
+        <p class="intro__text">
+          A KARV desenvolve uma biblioteca própria de revestimentos para orientar a escolha com clareza, reforçando a identidade do projeto e a experiência do espaço.
+        </p>
+      </div>
+
+      <div class="cards-grid">
+        {highlights.map((item) => (
+          <article class="info-card">
+            <h3>{item.title}</h3>
+            <p>{item.text}</p>
+          </article>
+        ))}
+      </div>
+    </Container>
+  </Section>
+
+  <Section background="bg">
+    <Container class="split">
+      <div class="content-block">
+        <h2>Aplicações recomendadas</h2>
+        <ul class="feature-list">
+          {applications.map((item) => <li>{item}</li>)}
+        </ul>
+      </div>
+      <div class="content-block">
+        <h2>Benefícios da curadoria</h2>
+        <ul class="feature-list">
+          {benefits.map((item) => <li>{item}</li>)}
+        </ul>
+      </div>
+    </Container>
+  </Section>
+
+  <Section background="surface-soft" spacing="tight">
+    <Container size="narrow" class="cta">
+      <h2 class="cta__title">A escolha certa começa pela narrativa do ambiente.</h2>
+      <p class="cta__text">
+        Explore a Biblioteca de Tecidos KARV e encontre a direção ideal para cada projeto.
+      </p>
+      <Button href="/tecidos/" variant="primary" size="lg">Voltar à biblioteca</Button>
+    </Container>
+  </Section>
+</BaseLayout>
+
+<style>
+  .intro {
+    max-width: 760px;
+    margin-bottom: var(--space-8);
+  }
+
+  .intro__eyebrow {
+    color: var(--color-accent-soft);
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    font-size: 13px;
+    margin-bottom: var(--space-3);
+  }
+
+  .intro__title {
+    font-size: clamp(28px, 4vw, 40px);
+  }
+
+  .intro__text {
+    margin-top: var(--space-4);
+    color: var(--color-muted);
+    font-size: 18px;
+  }
+
+  .cards-grid {
+    display: grid;
+    gap: var(--space-6);
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  }
+
+  .info-card {
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: var(--space-6);
+    background: var(--color-bg);
+  }
+
+  .info-card h3 {
+    font-size: 20px;
+    margin-bottom: var(--space-3);
+  }
+
+  .info-card p {
+    color: var(--color-muted);
+  }
+
+  .split {
+    display: grid;
+    gap: var(--space-8);
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  }
+
+  .content-block {
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: var(--space-6);
+    background: var(--color-surface);
+  }
+
+  .content-block h2 {
+    font-size: 22px;
+    margin-bottom: var(--space-4);
+  }
+
+  .feature-list {
+    display: grid;
+    gap: var(--space-3);
+    color: var(--color-muted);
+  }
+
+  .feature-list li {
+    padding-left: var(--space-4);
+    position: relative;
+  }
+
+  .feature-list li::before {
+    content: "•";
+    color: var(--color-accent-soft);
+    position: absolute;
+    left: 0;
+  }
+
+  .cta {
+    text-align: center;
+  }
+
+  .cta__title {
+    font-size: clamp(22px, 3.5vw, 32px);
+  }
+
+  .cta__text {
+    margin-top: var(--space-4);
+    color: var(--color-muted);
+  }
+
+  .cta :global(.btn) {
+    margin-top: var(--space-6);
+  }
+</style>

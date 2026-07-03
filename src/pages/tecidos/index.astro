@@ -7,28 +7,59 @@ import ProductCard from "../../components/ui/ProductCard.astro";
 import Button from "../../components/ui/Button.astro";
 
 const categories = [
-  { title: "Veludos", description: "Toque macio e caimento nobre para peças de destaque." },
-  { title: "Linhos", description: "Textura natural e respirável, indicada para ambientes claros." },
-  { title: "Couros", description: "Resistência e sofisticação para uso intenso e comercial." },
-  { title: "Bouclé", description: "Textura contemporânea para composições modernas." },
+  {
+    title: "Premium",
+    description: "Revestimentos para ambientes que valorizam sofisticação, conforto e percepção de valor.",
+    href: "/tecidos/premium/",
+  },
+  {
+    title: "Clínicas Estéticas",
+    description: "Uma curadoria para espaços com linguagem visual limpa, acolhedora e profissional.",
+    href: "/tecidos/clinicas-esteticas/",
+  },
+  {
+    title: "Barbearias",
+    description: "Escolhas com personalidade, presença visual e atmosfera marcante para o conceito do espaço.",
+    href: "/tecidos/barbearia/",
+  },
+  {
+    title: "Pet Friendly",
+    description: "Propostas acolhedoras e práticas para ambientes que convivem com animais no dia a dia.",
+    href: "/tecidos/pet-friendly/",
+  },
+  {
+    title: "Coleções KARV",
+    description: "Uma seleção própria da KARV, pensada para identidade visual, acabamento e experiência do ambiente.",
+    href: "/tecidos/colecoes/",
+  },
 ];
 ---
 
 <BaseLayout
-  title="Tecidos | KARV"
-  description="Biblioteca de tecidos, revestimentos e combinações KARV."
+  title="Biblioteca de Tecidos KARV"
+  description="Explore a Biblioteca de Tecidos KARV, uma curadoria institucional de revestimentos para ambientes, estilos e projetos."
 >
   <Hero
     eyebrow="Tecidos"
-    title="Biblioteca de Tecidos"
-    text="Cada poltrona KARV pode ser combinada com tecidos e revestimentos selecionados para o estilo e o uso do seu ambiente."
+    title="Biblioteca de Tecidos KARV"
+    text="Escolha revestimentos pensados para diferentes ambientes, estilos e necessidades, organizados pela Curadoria KARV."
+    primaryCta={{ label: "Ver coleções", href: "/tecidos/colecoes/" }}
+    secondaryCta={{ label: "Ver produtos", href: "/produtos/" }}
   />
 
   <Section background="surface">
     <Container>
+      <div class="section-intro">
+        <p class="section-intro__eyebrow">Curadoria KARV</p>
+        <h2 class="section-intro__title">Uma biblioteca organizada por ambiente, identidade e objetivo.</h2>
+        <p class="section-intro__text">
+          A KARV desenvolve uma biblioteca própria de revestimentos para orientar a escolha com clareza e reforçar a experiência do espaço.
+        </p>
+      </div>
+
       <div class="cards-grid">
-        {categories.map((c) => (
-          <ProductCard title={c.title} description={c.description} href="/tecidos/" />
+        {categories.map((category) => (
+          <ProductCard title={category.title} description={category.description} href={category.href} />
         ))}
       </div>
     </Container>
@@ -36,9 +67,9 @@ const categories = [
 
   <Section background="bg" spacing="tight">
     <Container size="narrow" class="cta">
-      <h2 class="cta__title">Veja os tecidos aplicados nas coleções KARV</h2>
+      <h2 class="cta__title">A experiência do ambiente começa pela curadoria certa.</h2>
       <p class="cta__text">
-        Explore as poltronas e coleções e escolha a combinação de tecido ideal para o seu projeto.
+        A Biblioteca de Tecidos KARV organiza a seleção de revestimentos com foco em identidade, aplicação e resultado final.
       </p>
       <Button href="/produtos/" variant="primary" size="lg">Ver produtos</Button>
     </Container>
@@ -46,10 +77,33 @@ const categories = [
 </BaseLayout>
 
 <style>
+  .section-intro {
+    max-width: 760px;
+    margin-bottom: var(--space-8);
+  }
+
+  .section-intro__eyebrow {
+    color: var(--color-accent-soft);
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    font-size: 13px;
+    margin-bottom: var(--space-3);
+  }
+
+  .section-intro__title {
+    font-size: clamp(28px, 4vw, 40px);
+  }
+
+  .section-intro__text {
+    margin-top: var(--space-4);
+    color: var(--color-muted);
+    font-size: 18px;
+  }
+
   .cards-grid {
     display: grid;
     gap: var(--space-6);
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   }
 
   .cta {
