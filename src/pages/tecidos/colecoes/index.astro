@@ -1,0 +1,130 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import Hero from "../../../components/ui/Hero.astro";
+import Section from "../../../components/ui/Section.astro";
+import Container from "../../../components/ui/Container.astro";
+import Button from "../../../components/ui/Button.astro";
+
+const pillars = [
+  {
+    title: "Identidade visual",
+    text: "Cada coleção é pensada para reforçar a linguagem do ambiente e o posicionamento da proposta.",
+  },
+  {
+    title: "Paleta de cores",
+    text: "A curadoria organiza a seleção com foco na harmonia e na leitura visual do projeto.",
+  },
+  {
+    title: "Acabamento e aplicação",
+    text: "A experiência do espaço é considerada desde a composição visual até o uso cotidiano.",
+  },
+];
+---
+
+<BaseLayout
+  title="Coleções KARV | Biblioteca de Tecidos KARV"
+  description="Conheça as Coleções KARV, desenvolvidas pela Curadoria KARV para unir identidade visual, paleta, acabamento e experiência do ambiente."
+>
+  <Hero
+    eyebrow="Curadoria KARV"
+    title="Coleções KARV"
+    text="A KARV desenvolve coleções exclusivas que unem identidade visual, paleta de cores, acabamento, aplicação e a experiência do ambiente."
+    primaryCta={{ label: "Voltar à biblioteca", href: "/tecidos/" }}
+    secondaryCta={{ label: "Ver premium", href: "/tecidos/premium/" }}
+  />
+
+  <Section background="surface">
+    <Container>
+      <div class="intro">
+        <p class="intro__eyebrow">Curadoria em expansão</p>
+        <h2 class="intro__title">Uma biblioteca em constante construção.</h2>
+        <p class="intro__text">
+          A Biblioteca de Tecidos KARV reúne uma seleção própria de revestimentos e abre espaço para novas coleções, sempre pensadas para fortalecer a experiência do ambiente.
+        </p>
+      </div>
+
+      <div class="cards-grid">
+        {pillars.map((item) => (
+          <article class="info-card">
+            <h3>{item.title}</h3>
+            <p>{item.text}</p>
+          </article>
+        ))}
+      </div>
+    </Container>
+  </Section>
+
+  <Section background="surface-soft" spacing="tight">
+    <Container size="narrow" class="cta">
+      <h2 class="cta__title">Novas coleções serão incorporadas à biblioteca conforme o projeto evolui.</h2>
+      <p class="cta__text">
+        Enquanto isso, a Curadoria KARV já orienta a escolha por ambientes, identidade e intenção do espaço.
+      </p>
+      <Button href="/tecidos/" variant="primary" size="lg">Explorar biblioteca</Button>
+    </Container>
+  </Section>
+</BaseLayout>
+
+<style>
+  .intro {
+    max-width: 760px;
+    margin-bottom: var(--space-8);
+  }
+
+  .intro__eyebrow {
+    color: var(--color-accent-soft);
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    font-size: 13px;
+    margin-bottom: var(--space-3);
+  }
+
+  .intro__title {
+    font-size: clamp(28px, 4vw, 40px);
+  }
+
+  .intro__text {
+    margin-top: var(--space-4);
+    color: var(--color-muted);
+    font-size: 18px;
+  }
+
+  .cards-grid {
+    display: grid;
+    gap: var(--space-6);
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  }
+
+  .info-card {
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: var(--space-6);
+    background: var(--color-bg);
+  }
+
+  .info-card h3 {
+    font-size: 20px;
+    margin-bottom: var(--space-3);
+  }
+
+  .info-card p {
+    color: var(--color-muted);
+  }
+
+  .cta {
+    text-align: center;
+  }
+
+  .cta__title {
+    font-size: clamp(22px, 3.5vw, 32px);
+  }
+
+  .cta__text {
+    margin-top: var(--space-4);
+    color: var(--color-muted);
+  }
+
+  .cta :global(.btn) {
+    margin-top: var(--space-6);
+  }
+</style>

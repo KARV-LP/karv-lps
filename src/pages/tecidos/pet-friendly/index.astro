@@ -1,0 +1,195 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import Hero from "../../../components/ui/Hero.astro";
+import Section from "../../../components/ui/Section.astro";
+import Container from "../../../components/ui/Container.astro";
+import Button from "../../../components/ui/Button.astro";
+
+const highlights = [
+  {
+    title: "Rotina mais simples",
+    text: "A seleção favorece ambientes que precisam de praticidade no dia a dia sem perder o conforto visual.",
+  },
+  {
+    title: "Conforto diário",
+    text: "A proposta acolhe quem vive com animais em casa ou em ambientes compartilhados.",
+  },
+  {
+    title: "Uso frequente",
+    text: "A curadoria organiza opções que dialogam com a realidade cotidiana de espaços ativos.",
+  },
+];
+
+const applications = [
+  "Residências com rotina intensa",
+  "Ambientes compartilhados com animais",
+  "Espaços que valorizam praticidade e acolhimento",
+];
+
+const benefits = [
+  "Experiência mais prática para o cotidiano",
+  "Ambiente acolhedor e funcional",
+  "Leitura visual equilibrada para uso frequente",
+];
+---
+
+<BaseLayout
+  title="Revestimentos Pet Friendly | Biblioteca de Tecidos KARV"
+  description="Descubra a Curadoria KARV para revestimentos pet friendly, com conforto diário, praticidade e interpretação acolhedora para ambientes com animais."
+>
+  <Hero
+    eyebrow="Curadoria KARV"
+    title="Revestimentos Pet Friendly"
+    text="Para ambientes que convivem com animais no dia a dia, a Curadoria KARV organiza escolhas pensadas para facilitar a rotina e oferecer conforto."
+    primaryCta={{ label: "Voltar à biblioteca", href: "/tecidos/" }}
+    secondaryCta={{ label: "Ver coleções", href: "/tecidos/colecoes/" }}
+  />
+
+  <Section background="surface">
+    <Container>
+      <div class="intro">
+        <p class="intro__eyebrow">Rotina acolhedora</p>
+        <h2 class="intro__title">Uma curadoria para espaços que precisam de praticidade e presença.</h2>
+        <p class="intro__text">
+          A KARV entende que o ambiente precisa funcionar bem para a rotina das pessoas e dos animais. Por isso, a biblioteca organiza opções com linguagem prática e acolhedora.
+        </p>
+      </div>
+
+      <div class="cards-grid">
+        {highlights.map((item) => (
+          <article class="info-card">
+            <h3>{item.title}</h3>
+            <p>{item.text}</p>
+          </article>
+        ))}
+      </div>
+    </Container>
+  </Section>
+
+  <Section background="bg">
+    <Container class="split">
+      <div class="content-block">
+        <h2>Aplicações recomendadas</h2>
+        <ul class="feature-list">
+          {applications.map((item) => <li>{item}</li>)}
+        </ul>
+      </div>
+      <div class="content-block">
+        <h2>Benefícios da curadoria</h2>
+        <ul class="feature-list">
+          {benefits.map((item) => <li>{item}</li>)}
+        </ul>
+      </div>
+    </Container>
+  </Section>
+
+  <Section background="surface-soft" spacing="tight">
+    <Container size="narrow" class="cta">
+      <h2 class="cta__title">Praticidade e acolhimento podem caminhar juntos.</h2>
+      <p class="cta__text">
+        Conheça a Biblioteca de Tecidos KARV e escolha uma proposta alinhada à rotina do seu projeto.
+      </p>
+      <Button href="/tecidos/" variant="primary" size="lg">Voltar à biblioteca</Button>
+    </Container>
+  </Section>
+</BaseLayout>
+
+<style>
+  .intro {
+    max-width: 760px;
+    margin-bottom: var(--space-8);
+  }
+
+  .intro__eyebrow {
+    color: var(--color-accent-soft);
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    font-size: 13px;
+    margin-bottom: var(--space-3);
+  }
+
+  .intro__title {
+    font-size: clamp(28px, 4vw, 40px);
+  }
+
+  .intro__text {
+    margin-top: var(--space-4);
+    color: var(--color-muted);
+    font-size: 18px;
+  }
+
+  .cards-grid {
+    display: grid;
+    gap: var(--space-6);
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  }
+
+  .info-card {
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: var(--space-6);
+    background: var(--color-bg);
+  }
+
+  .info-card h3 {
+    font-size: 20px;
+    margin-bottom: var(--space-3);
+  }
+
+  .info-card p {
+    color: var(--color-muted);
+  }
+
+  .split {
+    display: grid;
+    gap: var(--space-8);
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  }
+
+  .content-block {
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: var(--space-6);
+    background: var(--color-surface);
+  }
+
+  .content-block h2 {
+    font-size: 22px;
+    margin-bottom: var(--space-4);
+  }
+
+  .feature-list {
+    display: grid;
+    gap: var(--space-3);
+    color: var(--color-muted);
+  }
+
+  .feature-list li {
+    padding-left: var(--space-4);
+    position: relative;
+  }
+
+  .feature-list li::before {
+    content: "•";
+    color: var(--color-accent-soft);
+    position: absolute;
+    left: 0;
+  }
+
+  .cta {
+    text-align: center;
+  }
+
+  .cta__title {
+    font-size: clamp(22px, 3.5vw, 32px);
+  }
+
+  .cta__text {
+    margin-top: var(--space-4);
+    color: var(--color-muted);
+  }
+
+  .cta :global(.btn) {
+    margin-top: var(--space-6);
+  }
+</style>
