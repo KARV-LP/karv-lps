@@ -1,0 +1,188 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import Hero from "../../../components/ui/Hero.astro";
+import Section from "../../../components/ui/Section.astro";
+import Container from "../../../components/ui/Container.astro";
+import Button from "../../../components/ui/Button.astro";
+
+const identityPoints = [
+  "Linguagem artística com forte apelo visual e presença decorativa.",
+  "Preserva a identidade do ambiente ao mesmo tempo em que valoriza o projeto.",
+  "Transmite uma sensação de sensibilidade, cultura e refinamento.",
+];
+
+const applications = [
+  "Ambientes residenciais com foco em personalidade e composição.",
+  "Projetos de arquitetura que desejam uma narrativa mais artística.",
+  "Espaços comerciais que valorizam diferenciação e acolhimento.",
+];
+
+const benefits = [
+  "Amplia a percepção de conceito e originalidade do projeto.",
+  "Conecta a peça ao ambiente de forma natural e elegante.",
+  "Gera valor comercial em propostas com forte identidade visual.",
+];
+---
+
+<BaseLayout
+  title="KV_002_MANDALA | Produtos KARV"
+  description="Conheça a coleção KV_002_MANDALA, inspirada em mandalas e arte para transformar ambientes com personalidade e sofisticação."
+>
+  <Hero
+    eyebrow="Produto KARV"
+    title="KV_002_MANDALA"
+    text="Quando a arte inspira, o ambiente se transforma."
+    primaryCta={{ label: "Ver outros produtos", href: "/produtos/" }}
+    secondaryCta={{ label: "Ver tecidos", href: "/tecidos/" }}
+  />
+
+  <Section background="surface">
+    <Container>
+      <div class="intro-card">
+        <p class="intro-card__eyebrow">Texto comercial</p>
+        <p class="intro-card__text">
+          O KV_002_MANDALA traduz a força da arte em uma proposta comercial acessível e premium. A KARV atua como um elemento de reforço, destacando a intenção do ambiente sem roubar protagonismo. A peça se relaciona com o espaço e o eleva com presença e sensibilidade.
+        </p>
+      </div>
+    </Container>
+  </Section>
+
+  <Section background="bg">
+    <Container>
+      <div class="feature-grid">
+        <article class="feature-card">
+          <h2 class="feature-card__title">Identidade do produto</h2>
+          <ul class="feature-card__list">
+            {identityPoints.map((point) => <li>{point}</li>)}
+          </ul>
+        </article>
+
+        <article class="feature-card">
+          <h2 class="feature-card__title">Aplicação em ambientes</h2>
+          <ul class="feature-card__list">
+            {applications.map((point) => <li>{point}</li>)}
+          </ul>
+        </article>
+      </div>
+    </Container>
+  </Section>
+
+  <Section background="surface-soft">
+    <Container>
+      <div class="benefits-block">
+        <h2 class="benefits-block__title">Benefícios comerciais</h2>
+        <div class="benefits-grid">
+          {benefits.map((benefit) => (
+            <div class="benefit-item">{benefit}</div>
+          ))}
+        </div>
+      </div>
+    </Container>
+  </Section>
+
+  <Section background="bg" spacing="tight">
+    <Container size="narrow" class="cta">
+      <h2 class="cta__title">Uma coleção para projetos que querem expressão e equilíbrio</h2>
+      <p class="cta__text">
+        O KV_002_MANDALA conecta arte, ambiente e comunicação comercial com linguagem moderna e elegante.
+      </p>
+      <div class="cta__actions">
+        <Button href="/produtos/" variant="primary" size="lg">Ver catálogo</Button>
+        <Button href="/nichos/" variant="secondary" size="lg">Explorar nichos</Button>
+      </div>
+    </Container>
+  </Section>
+</BaseLayout>
+
+<style>
+  .intro-card {
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: var(--space-8);
+    background: var(--color-surface);
+  }
+
+  .intro-card__eyebrow {
+    color: var(--color-accent-soft);
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    font-size: 13px;
+    margin-bottom: var(--space-3);
+  }
+
+  .intro-card__text {
+    font-size: 18px;
+    line-height: 1.7;
+    color: var(--color-muted);
+    max-width: 70ch;
+  }
+
+  .feature-grid {
+    display: grid;
+    gap: var(--space-6);
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+
+  .feature-card {
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: var(--space-6);
+    background: var(--color-surface);
+  }
+
+  .feature-card__title {
+    font-size: 22px;
+    margin-bottom: var(--space-4);
+  }
+
+  .feature-card__list {
+    display: grid;
+    gap: var(--space-3);
+    color: var(--color-muted);
+    padding-left: 1.2rem;
+  }
+
+  .benefits-block {
+    display: grid;
+    gap: var(--space-6);
+  }
+
+  .benefits-block__title {
+    font-size: 28px;
+  }
+
+  .benefits-grid {
+    display: grid;
+    gap: var(--space-4);
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  }
+
+  .benefit-item {
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    padding: var(--space-5);
+    background: var(--color-surface);
+    color: var(--color-muted);
+  }
+
+  .cta {
+    text-align: center;
+  }
+
+  .cta__title {
+    font-size: clamp(22px, 3.5vw, 32px);
+  }
+
+  .cta__text {
+    margin-top: var(--space-4);
+    color: var(--color-muted);
+  }
+
+  .cta__actions {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: var(--space-3);
+    margin-top: var(--space-6);
+  }
+</style>

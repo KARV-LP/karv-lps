@@ -6,14 +6,31 @@ import Container from "../../components/ui/Container.astro";
 import ProductCard from "../../components/ui/ProductCard.astro";
 import Button from "../../components/ui/Button.astro";
 
-const categories = [
+const products = [
   {
-    title: "Poltronas",
-    description: "Modelos exclusivos KARV para ambientes residenciais e comerciais, unindo conforto e durabilidade.",
+    title: "KV_001_RYUJIN",
+    description: "Identidade oriental, dragão imperial e presença visual forte para ambientes com narrativa marcante.",
+    href: "/produtos/kv-001-ryujin/",
   },
   {
-    title: "Coleções",
-    description: "Linhas completas pensadas para cada estilo de projeto, do executivo ao contemporâneo.",
+    title: "KV_002_MANDALA",
+    description: "Arte, mandala e identidade aplicada ao ambiente para projetos que desejam transformação visual.",
+    href: "/produtos/kv-002-mandala/",
+  },
+  {
+    title: "KV_020_PURE_BALANCE",
+    description: "Clean profissional para clínicas de estética com sensação de tecnologia, limpeza e confiança.",
+    href: "/produtos/kv-020-pure-balance/",
+  },
+  {
+    title: "KV_021_NATURAL_BEAUTY",
+    description: "Premium neutro para clínicas que unem estética avançada, harmonização e bem-estar.",
+    href: "/produtos/kv-021-natural-beauty/",
+  },
+  {
+    title: "KV_022_SOFT_TAUPE",
+    description: "Sofisticação discreta para clínicas premium acessíveis com linguagem elegante e equilibrada.",
+    href: "/produtos/kv-022-soft-taupe/",
   },
 ];
 ---
@@ -24,15 +41,15 @@ const categories = [
 >
   <Hero
     eyebrow="Produtos"
-    title="Poltronas e coleções KARV"
-    text="Da poltrona executiva à peça sob medida, cada linha KARV é desenvolvida para unir conforto, durabilidade e identidade visual ao seu espaço."
+    title="Produtos e coleções KARV"
+    text="Linhas comerciais desenvolvidas para reforçar o ambiente, ampliar a identidade do projeto e apoiar a comunicação de cada nicho."
   />
 
   <Section background="surface">
     <Container>
       <div class="cards-grid">
-        {categories.map((c) => (
-          <ProductCard title={c.title} description={c.description} href="/produtos/" />
+        {products.map((product) => (
+          <ProductCard title={product.title} description={product.description} href={product.href} />
         ))}
       </div>
     </Container>

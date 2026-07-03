@@ -1,0 +1,208 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import Hero from "../../../components/ui/Hero.astro";
+import Section from "../../../components/ui/Section.astro";
+import Container from "../../../components/ui/Container.astro";
+import Button from "../../../components/ui/Button.astro";
+
+const identityPoints = [
+  "Posicionamento Premium Neutro para clínicas premium acessíveis.",
+  "Transmite sofisticação discreta e acabamento refinado.",
+  "Equilibra acolhimento, neutralidade e comunicação comercial forte.",
+];
+
+const applications = [
+  "Clínicas estéticas que desejam uma linguagem elegante e acessível.",
+  "Consultórios de beleza e procedimentos com imagem sofisticada.",
+  "Projetos que priorizam discretude, conforto e identidade premium.",
+];
+
+const materials = [
+  "Andora Taupe — tecido principal.",
+  "Andora Off White — tecido secundário.",
+];
+
+const benefits = [
+  "Aproxima o ambiente da percepção de premium sem excessos visuais.",
+  "Valoriza a experiência do cliente por meio de uma estética equilibrada.",
+  "Se adapta a projetos comerciais de diferentes escalas.",
+];
+---
+
+<BaseLayout
+  title="KV_022 SOFT TAUPE | Produtos KARV"
+  description="Conheça o KV_022 SOFT TAUPE, um produto KARV para clínicas de estética com sofisticada proposta premium neutra e linguagem acessível."
+>
+  <Hero
+    eyebrow="Nicho: clínica estética"
+    title="KV_022 SOFT TAUPE"
+    text="Sofisticação discreta para clínicas premium acessíveis, com neutralidade, elegância e presença sutil."
+    primaryCta={{ label: "Ver outros produtos", href: "/produtos/" }}
+    secondaryCta={{ label: "Ir para nichos", href: "/nichos/clinicas/" }}
+  />
+
+  <Section background="surface">
+    <Container>
+      <div class="intro-card">
+        <p class="intro-card__eyebrow">Texto comercial</p>
+        <p class="intro-card__text">
+          O KV_022 SOFT TAUPE é uma resposta comercial para clínicas que precisam transmitir sofisticação sem perder acessibilidade. A KARV reforça a proposta do ambiente com delicadeza, equilíbrio e valor percebido, elevando a experiência do cliente de forma natural.
+        </p>
+      </div>
+    </Container>
+  </Section>
+
+  <Section background="bg">
+    <Container>
+      <div class="feature-grid">
+        <article class="feature-card">
+          <h2 class="feature-card__title">Identidade do produto</h2>
+          <ul class="feature-card__list">
+            {identityPoints.map((point) => <li>{point}</li>)}
+          </ul>
+        </article>
+
+        <article class="feature-card">
+          <h2 class="feature-card__title">Aplicação em ambientes</h2>
+          <ul class="feature-card__list">
+            {applications.map((point) => <li>{point}</li>)}
+          </ul>
+        </article>
+      </div>
+    </Container>
+  </Section>
+
+  <Section background="surface-soft">
+    <Container>
+      <div class="materials-block">
+        <h2 class="materials-block__title">Materiais e revestimentos</h2>
+        <div class="materials-grid">
+          {materials.map((material) => <div class="material-item">{material}</div>)}
+        </div>
+      </div>
+    </Container>
+  </Section>
+
+  <Section background="bg">
+    <Container>
+      <div class="benefits-block">
+        <h2 class="benefits-block__title">Benefícios comerciais</h2>
+        <div class="benefits-grid">
+          {benefits.map((benefit) => (
+            <div class="benefit-item">{benefit}</div>
+          ))}
+        </div>
+      </div>
+    </Container>
+  </Section>
+
+  <Section background="bg" spacing="tight">
+    <Container size="narrow" class="cta">
+      <h2 class="cta__title">Uma proposta elegante para ambientes que valorizam equilíbrio</h2>
+      <p class="cta__text">
+        O KV_022 SOFT TAUPE transforma a linguagem do espaço em uma experiência premium, acessível e sofisticada.
+      </p>
+      <div class="cta__actions">
+        <Button href="/produtos/" variant="primary" size="lg">Ver catálogo</Button>
+        <Button href="/tecidos/" variant="secondary" size="lg">Explorar tecidos</Button>
+      </div>
+    </Container>
+  </Section>
+</BaseLayout>
+
+<style>
+  .intro-card {
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: var(--space-8);
+    background: var(--color-surface);
+  }
+
+  .intro-card__eyebrow {
+    color: var(--color-accent-soft);
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    font-size: 13px;
+    margin-bottom: var(--space-3);
+  }
+
+  .intro-card__text {
+    font-size: 18px;
+    line-height: 1.7;
+    color: var(--color-muted);
+    max-width: 70ch;
+  }
+
+  .feature-grid {
+    display: grid;
+    gap: var(--space-6);
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+
+  .feature-card {
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: var(--space-6);
+    background: var(--color-surface);
+  }
+
+  .feature-card__title {
+    font-size: 22px;
+    margin-bottom: var(--space-4);
+  }
+
+  .feature-card__list {
+    display: grid;
+    gap: var(--space-3);
+    color: var(--color-muted);
+    padding-left: 1.2rem;
+  }
+
+  .materials-block,
+  .benefits-block {
+    display: grid;
+    gap: var(--space-6);
+  }
+
+  .materials-block__title,
+  .benefits-block__title {
+    font-size: 28px;
+  }
+
+  .materials-grid,
+  .benefits-grid {
+    display: grid;
+    gap: var(--space-4);
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  }
+
+  .material-item,
+  .benefit-item {
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    padding: var(--space-5);
+    background: var(--color-surface);
+    color: var(--color-muted);
+  }
+
+  .cta {
+    text-align: center;
+  }
+
+  .cta__title {
+    font-size: clamp(22px, 3.5vw, 32px);
+  }
+
+  .cta__text {
+    margin-top: var(--space-4);
+    color: var(--color-muted);
+  }
+
+  .cta__actions {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: var(--space-3);
+    margin-top: var(--space-6);
+  }
+</style>
