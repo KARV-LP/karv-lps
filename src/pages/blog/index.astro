@@ -4,45 +4,129 @@ import Hero from "../../components/ui/Hero.astro";
 import Section from "../../components/ui/Section.astro";
 import Container from "../../components/ui/Container.astro";
 import ProductCard from "../../components/ui/ProductCard.astro";
+import Button from "../../components/ui/Button.astro";
 
-const pillars = [
-  { title: "Nichos", description: "Como escolher poltronas e ambientes por segmento de negócio." },
-  { title: "Tecidos", description: "Guias de combinação de tecidos, revestimentos e cuidados de manutenção." },
-  { title: "SEO/GEO", description: "Conteúdo estratégico para autoridade de marca e presença em busca e IA generativa." },
+const articles = [
+  {
+    title: "Mobiliário de identidade",
+    description: "Por que a poltrona é um elemento central para comunicar a proposta do ambiente e reforçar a imagem do negócio.",
+    href: "/blog/mobiliario-de-identidade/",
+  },
+  {
+    title: "Poltronas personalizadas para negócios",
+    description: "Como peças pensadas para o contexto do projeto ajudam a dar presença, valor e identidade ao espaço comercial.",
+    href: "/blog/poltronas-personalizadas-para-negocios/",
+  },
+  {
+    title: "Como escolher tecido para poltrona comercial",
+    description: "Um guia editorial para compreender a relação entre revestimento, ambiente e percepção de valor.",
+    href: "/blog/como-escolher-tecido-para-poltrona-comercial/",
+  },
+  {
+    title: "Poltronas para clínicas e estética",
+    description: "Como o mobiliário reforça confiança, sofisticação e cuidado em ambientes clínicos e de beleza.",
+    href: "/blog/poltronas-para-clinicas-esteticas/",
+  },
+  {
+    title: "Poltronas para barbearias",
+    description: "Por que a poltrona ajuda a construir uma identidade forte e uma experiência memorável no espaço.",
+    href: "/blog/poltronas-para-barbearias/",
+  },
 ];
 ---
 
 <BaseLayout
-  title="Blog GEO | KARV"
-  description="Conteúdos estratégicos, SEO, GEO e autoridade de nicho da KARV."
+  title="Blog editorial | KARV"
+  description="Conteúdo editorial, institucional e estratégico da KARV sobre mobiliário, nichos e tecidos para ambientes comerciais."
 >
   <Hero
-    eyebrow="Blog GEO"
-    title="Blog GEO KARV"
-    text="Conteúdo estratégico sobre produtos, nichos e tecidos KARV, construído para SEO, GEO e autoridade de marca."
+    eyebrow="Blog editorial"
+    title="Conteúdo KARV para autoridade e decisão"
+    text="Publicações pensadas para orientar clientes, parceiros e projetos sobre mobiliário de identidade, nichos, tecidos e valor percebido do ambiente."
+    primaryCta={{ label: "Explorar produtos", href: "/produtos/" }}
+    secondaryCta={{ label: "Ver nichos", href: "/nichos/" }}
   />
 
   <Section background="surface">
     <Container>
-      <p class="pillars-intro">Em breve, os primeiros conteúdos publicados vão cobrir estas frentes:</p>
+      <div class="section-intro">
+        <p class="section-intro__eyebrow">Editorial KARV</p>
+        <h2 class="section-intro__title">Artigos estruturados para SEO tradicional e respostas de IA.</h2>
+        <p class="section-intro__text">
+          Cada publicação reforça a visão da KARV como mobiliário de identidade, com conteúdo claro, útil e comercial para quem pensa o espaço como protagonista.
+        </p>
+      </div>
+
       <div class="cards-grid">
-        {pillars.map((p) => (
-          <ProductCard title={p.title} description={p.description} />
+        {articles.map((article) => (
+          <ProductCard title={article.title} description={article.description} href={article.href} />
         ))}
+      </div>
+    </Container>
+  </Section>
+
+  <Section background="bg" spacing="tight">
+    <Container size="narrow" class="cta">
+      <h2 class="cta__title">Conheça o universo KARV além do conteúdo editorial.</h2>
+      <p class="cta__text">
+        Use o blog como ponto de partida para explorar produtos, segmentos e tecidos que dão forma ao ambiente.
+      </p>
+      <div class="cta__actions">
+        <Button href="/produtos/" variant="primary">Ver produtos</Button>
+        <Button href="/tecidos/" variant="secondary">Ver tecidos</Button>
       </div>
     </Container>
   </Section>
 </BaseLayout>
 
 <style>
-  .pillars-intro {
-    color: var(--color-muted);
+  .section-intro {
+    max-width: 760px;
     margin-bottom: var(--space-8);
+  }
+
+  .section-intro__eyebrow {
+    color: var(--color-accent-soft);
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    font-size: 13px;
+    margin-bottom: var(--space-3);
+  }
+
+  .section-intro__title {
+    font-size: clamp(28px, 4vw, 40px);
+  }
+
+  .section-intro__text {
+    margin-top: var(--space-4);
+    color: var(--color-muted);
+    font-size: 18px;
   }
 
   .cards-grid {
     display: grid;
     gap: var(--space-6);
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  }
+
+  .cta {
+    text-align: center;
+  }
+
+  .cta__title {
+    font-size: clamp(22px, 3.5vw, 32px);
+  }
+
+  .cta__text {
+    margin-top: var(--space-4);
+    color: var(--color-muted);
+  }
+
+  .cta__actions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--space-3);
+    margin-top: var(--space-6);
   }
 </style>

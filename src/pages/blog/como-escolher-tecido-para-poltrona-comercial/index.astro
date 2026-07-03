@@ -1,0 +1,95 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import Hero from "../../../components/ui/Hero.astro";
+import Section from "../../../components/ui/Section.astro";
+import Container from "../../../components/ui/Container.astro";
+import ProductCard from "../../../components/ui/ProductCard.astro";
+import Button from "../../../components/ui/Button.astro";
+---
+
+<BaseLayout
+  title="Como escolher tecido para poltrona comercial | KARV"
+  description="Guia editorial para escolher tecido para poltrona comercial com foco em aplicação, estética, conforto e identidade do ambiente."
+>
+  <Hero
+    eyebrow="Blog editorial"
+    title="Como escolher tecido para poltrona comercial"
+    text="A escolha do revestimento é parte essencial da decisão. Ela afeta a percepção do espaço, a experiência de uso e a coerência visual do projeto."
+  />
+
+  <Section background="surface">
+    <Container size="narrow">
+      <p>
+        Revestimentos não são apenas um detalhe estético. Eles participam da forma como a poltrona se encaixa no ambiente, do nível de conforto percebido e do cuidado com a aparência ao longo do tempo.
+      </p>
+
+      <h2>Comece pela aplicação</h2>
+      <p>
+        A primeira pergunta é simples: a poltrona será usada em um ambiente de espera, recepção, atendimento ou circulação intensa? A resposta orienta a escolha do revestimento mais adequado para o contexto.
+      </p>
+
+      <h2>Considere a identidade do espaço</h2>
+      <p>
+        O tecido pode reforçar a linguagem do projeto. Em ambientes mais premium, a proposta costuma ser mais sofisticada e equilibrada. Em espaços comerciais com personalidade forte, o revestimento pode ajudar a criar presença visual.
+      </p>
+
+      <h2>Observe a relação com o ambiente</h2>
+      <p>
+        A peça deve dialogar com paredes, móveis, iluminação e outros elementos do projeto. Quando a poltrona se integra ao ambiente de forma natural, o resultado costuma parecer mais pensado e estável.
+      </p>
+
+      <h2>Escolha com base em uso e manutenção</h2>
+      <p>
+        Uma boa seleção leva em conta o cotidiano do espaço. A proposta precisa ser funcional, confortável e coerente com o tipo de operação do ambiente.
+      </p>
+    </Container>
+  </Section>
+
+  <Section background="bg">
+    <Container>
+      <div class="cards-grid">
+        <ProductCard
+          title="Tecidos KARV"
+          description="Acuradoria de revestimentos para cada contexto de projeto e identidade de marca."
+          href="/tecidos/"
+        />
+        <ProductCard
+          title="Produtos"
+          description="Encontre poltronas que valorizam o revestimento escolhido e a proposta do ambiente."
+          href="/produtos/"
+        />
+        <ProductCard
+          title="Nichos"
+          description="Entenda como a escolha de tecidos se adapta a diferentes segmentos de negócio."
+          href="/nichos/"
+        />
+      </div>
+    </Container>
+  </Section>
+
+  <Section background="surface" spacing="tight">
+    <Container size="narrow" class="cta">
+      <h2>O tecido certo ajuda a dar forma à identidade do ambiente.</h2>
+      <p>
+        A curadoria de revestimentos KARV orienta a escolha com foco em aplicação, linguagem visual e resultado final.
+      </p>
+      <Button href="/tecidos/" variant="primary" size="lg">Ver tecidos</Button>
+    </Container>
+  </Section>
+</BaseLayout>
+
+<style>
+  .cards-grid {
+    display: grid;
+    gap: var(--space-6);
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  }
+
+  .cta {
+    text-align: center;
+  }
+
+  .cta :global(.btn) {
+    margin-top: var(--space-6);
+  }
+</style>

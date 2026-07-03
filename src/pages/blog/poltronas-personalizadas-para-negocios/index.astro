@@ -1,0 +1,93 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import Hero from "../../../components/ui/Hero.astro";
+import Section from "../../../components/ui/Section.astro";
+import Container from "../../../components/ui/Container.astro";
+import ProductCard from "../../../components/ui/ProductCard.astro";
+import Button from "../../../components/ui/Button.astro";
+---
+
+<BaseLayout
+  title="Poltronas personalizadas para negócios: identidade, conforto e presença | KARV"
+  description="Veja como poltronas personalizadas para negócios ajudam a reforçar a identidade do espaço e elevar a experiência do cliente."
+>
+  <Hero
+    eyebrow="Blog editorial"
+    title="Poltronas personalizadas para negócios: mais do que conforto"
+    text="Para negócios que querem destacar o ambiente, a poltrona certa precisa dialogar com a marca, com o fluxo de uso e com a proposta do espaço."
+  />
+
+  <Section background="surface">
+    <Container size="narrow">
+      <p>
+        Em ambientes comerciais, a poltrona é uma peça de comunicação. Ela participa da imagem do negócio, da experiência de espera e da forma como o cliente percebe o empreendimento.
+      </p>
+
+      <h2>Por que personalizar a poltrona</h2>
+      <p>
+        Quando uma peça é pensada para o contexto do projeto, ela consegue reforçar o tom do espaço sem parecer genérica. Isso é especialmente importante para negócios que desejam transmitir sofisticação, confiança ou uma identidade própria.
+      </p>
+
+      <h2>O que a personalização comunica</h2>
+      <p>
+        A escolha de formato, acabamento, revestimento e visual pode indicar o posicionamento do negócio. Uma proposta mais premium, uma linguagem mais acolhedora ou um ambiente mais contemporâneo podem ser transmitidos por meio da peça certa.
+      </p>
+
+      <h2>Como avaliar a escolha</h2>
+      <ul>
+        <li>Observe a função da peça dentro da rotina do espaço.</li>
+        <li>Considere se a peça precisa reforçar presença ou acolhimento.</li>
+        <li>Verifique se o visual dialoga com a identidade da marca.</li>
+        <li>Escolha uma solução que combine estética, uso diário e manutenção.</li>
+      </ul>
+    </Container>
+  </Section>
+
+  <Section background="bg">
+    <Container>
+      <div class="cards-grid">
+        <ProductCard
+          title="Produtos KARV"
+          description="Conheça coleções voltadas para ambientes comerciais e projetos com identidade forte."
+          href="/produtos/"
+        />
+        <ProductCard
+          title="Nichos"
+          description="Veja como barbearias, clínicas e estética usam a poltrona para reforçar o conceito do espaço."
+          href="/nichos/"
+        />
+        <ProductCard
+          title="Tecidos"
+          description="Acuradoria de revestimentos para ampliar a percepção de valor do ambiente."
+          href="/tecidos/"
+        />
+      </div>
+    </Container>
+  </Section>
+
+  <Section background="surface" spacing="tight">
+    <Container size="narrow" class="cta">
+      <h2>Descubra como a KARV ajuda a transformar a identidade do ambiente em uma experiência mais forte.</h2>
+      <p>
+        Cada projeto exige uma resposta visual e funcional. A poltrona certa pode fazer essa diferença com clareza.
+      </p>
+      <Button href="/nichos/" variant="primary" size="lg">Explorar nichos</Button>
+    </Container>
+  </Section>
+</BaseLayout>
+
+<style>
+  .cards-grid {
+    display: grid;
+    gap: var(--space-6);
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  }
+
+  .cta {
+    text-align: center;
+  }
+
+  .cta :global(.btn) {
+    margin-top: var(--space-6);
+  }
+</style>
