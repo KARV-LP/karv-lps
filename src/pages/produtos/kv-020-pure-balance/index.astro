@@ -1,0 +1,208 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import Hero from "../../../components/ui/Hero.astro";
+import Section from "../../../components/ui/Section.astro";
+import Container from "../../../components/ui/Container.astro";
+import Button from "../../../components/ui/Button.astro";
+
+const identityPoints = [
+  "Posicionamento Clean Profissional para clínicas de estética.",
+  "Comunica limpeza, tecnologia e confiança clínica.",
+  "Trabalha com uma paleta neutra que favorece a percepção de organização.",
+];
+
+const applications = [
+  "Clínicas estéticas que desejam um ambiente técnico e acolhedor.",
+  "Salas de procedimentos e consultas com linguagem contemporânea.",
+  "Projetos que valorizam clareza visual e experiência premium acessível.",
+];
+
+const materials = [
+  "Monaco 03 Off White — tecido principal.",
+  "Monaco 05 Bege Claro — tecido secundário.",
+];
+
+const benefits = [
+  "Reforça a sensação de limpeza e cuidado no atendimento.",
+  "Aumenta a percepção de profissionalismo do espaço.",
+  "Se conecta diretamente ao posicionamento comercial da clínica.",
+];
+---
+
+<BaseLayout
+  title="KV_020 PURE BALANCE | Produtos KARV"
+  description="Conheça o KV_020 PURE BALANCE, um produto KARV para clínicas de estética com posicionamento clean profissional e sensação de tecnologia e acolhimento."
+>
+  <Hero
+    eyebrow="Nicho: clínica estética"
+    title="KV_020 PURE BALANCE"
+    text="Clean Profissional, tecnologia e sensação de limpeza para ambientes de estética com alto padrão de atendimento."
+    primaryCta={{ label: "Ver outros produtos", href: "/produtos/" }}
+    secondaryCta={{ label: "Ir para nichos", href: "/nichos/clinicas/" }}
+  />
+
+  <Section background="surface">
+    <Container>
+      <div class="intro-card">
+        <p class="intro-card__eyebrow">Texto comercial</p>
+        <p class="intro-card__text">
+          O KV_020 PURE BALANCE foi pensado para clínicas que precisam comunicar precisão e sofisticação sem perder acolhimento. A KARV entra como um reforço da identidade do ambiente, destacando o cuidado, a tecnologia e a clareza visual do espaço.
+        </p>
+      </div>
+    </Container>
+  </Section>
+
+  <Section background="bg">
+    <Container>
+      <div class="feature-grid">
+        <article class="feature-card">
+          <h2 class="feature-card__title">Identidade do produto</h2>
+          <ul class="feature-card__list">
+            {identityPoints.map((point) => <li>{point}</li>)}
+          </ul>
+        </article>
+
+        <article class="feature-card">
+          <h2 class="feature-card__title">Aplicação em ambientes</h2>
+          <ul class="feature-card__list">
+            {applications.map((point) => <li>{point}</li>)}
+          </ul>
+        </article>
+      </div>
+    </Container>
+  </Section>
+
+  <Section background="surface-soft">
+    <Container>
+      <div class="materials-block">
+        <h2 class="materials-block__title">Materiais e revestimentos</h2>
+        <div class="materials-grid">
+          {materials.map((material) => <div class="material-item">{material}</div>)}
+        </div>
+      </div>
+    </Container>
+  </Section>
+
+  <Section background="bg">
+    <Container>
+      <div class="benefits-block">
+        <h2 class="benefits-block__title">Benefícios comerciais</h2>
+        <div class="benefits-grid">
+          {benefits.map((benefit) => (
+            <div class="benefit-item">{benefit}</div>
+          ))}
+        </div>
+      </div>
+    </Container>
+  </Section>
+
+  <Section background="bg" spacing="tight">
+    <Container size="narrow" class="cta">
+      <h2 class="cta__title">Um produto para clínicas que querem confiança e presença</h2>
+      <p class="cta__text">
+        O KV_020 PURE BALANCE conecta estética, tecnologia e comunicação premium em um único posicionamento.
+      </p>
+      <div class="cta__actions">
+        <Button href="/produtos/" variant="primary" size="lg">Ver catálogo</Button>
+        <Button href="/tecidos/" variant="secondary" size="lg">Explorar tecidos</Button>
+      </div>
+    </Container>
+  </Section>
+</BaseLayout>
+
+<style>
+  .intro-card {
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: var(--space-8);
+    background: var(--color-surface);
+  }
+
+  .intro-card__eyebrow {
+    color: var(--color-accent-soft);
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    font-size: 13px;
+    margin-bottom: var(--space-3);
+  }
+
+  .intro-card__text {
+    font-size: 18px;
+    line-height: 1.7;
+    color: var(--color-muted);
+    max-width: 70ch;
+  }
+
+  .feature-grid {
+    display: grid;
+    gap: var(--space-6);
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+
+  .feature-card {
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: var(--space-6);
+    background: var(--color-surface);
+  }
+
+  .feature-card__title {
+    font-size: 22px;
+    margin-bottom: var(--space-4);
+  }
+
+  .feature-card__list {
+    display: grid;
+    gap: var(--space-3);
+    color: var(--color-muted);
+    padding-left: 1.2rem;
+  }
+
+  .materials-block,
+  .benefits-block {
+    display: grid;
+    gap: var(--space-6);
+  }
+
+  .materials-block__title,
+  .benefits-block__title {
+    font-size: 28px;
+  }
+
+  .materials-grid,
+  .benefits-grid {
+    display: grid;
+    gap: var(--space-4);
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  }
+
+  .material-item,
+  .benefit-item {
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    padding: var(--space-5);
+    background: var(--color-surface);
+    color: var(--color-muted);
+  }
+
+  .cta {
+    text-align: center;
+  }
+
+  .cta__title {
+    font-size: clamp(22px, 3.5vw, 32px);
+  }
+
+  .cta__text {
+    margin-top: var(--space-4);
+    color: var(--color-muted);
+  }
+
+  .cta__actions {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: var(--space-3);
+    margin-top: var(--space-6);
+  }
+</style>

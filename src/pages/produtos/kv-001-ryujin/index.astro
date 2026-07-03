@@ -1,0 +1,188 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import Hero from "../../../components/ui/Hero.astro";
+import Section from "../../../components/ui/Section.astro";
+import Container from "../../../components/ui/Container.astro";
+import Button from "../../../components/ui/Button.astro";
+
+const identityPoints = [
+  "Linguagem visual inspirada no dragão imperial e na força da tradição oriental.",
+  "Presença marcante para ambientes que desejam impactar desde a entrada.",
+  "Estética sofisticada, premium e com alta capacidade de diferenciação.",
+];
+
+const applications = [
+  "Recepções, salas executivas e ambientes corporativos com identidade forte.",
+  "Hotéis, resorts e projetos de arquitetura que valorizam narrativa visual.",
+  "Espaços que desejam traduzir prestígio, controle e presença.",
+];
+
+const benefits = [
+  "Fortalece a identidade do ambiente sem competir com ele.",
+  "Entrega uma peça com alto impacto visual e memorabilidade comercial.",
+  "Aumenta a percepção de exclusividade em projetos premium.",
+];
+---
+
+<BaseLayout
+  title="KV_001_RYUJIN | Produtos KARV"
+  description="Conheça a coleção KV_001_RYUJIN, com identidade oriental, presença visual forte e linguagem premium para ambientes marcantes."
+>
+  <Hero
+    eyebrow="Produto KARV"
+    title="KV_001_RYUJIN"
+    text="Identidade oriental, dragão imperial e presença visual forte para ambientes que precisam se destacar com autoridade."
+    primaryCta={{ label: "Ver outros produtos", href: "/produtos/" }}
+    secondaryCta={{ label: "Explorar tecidos", href: "/tecidos/" }}
+  />
+
+  <Section background="surface">
+    <Container>
+      <div class="intro-card">
+        <p class="intro-card__eyebrow">Texto comercial</p>
+        <p class="intro-card__text">
+          A KARV não se coloca como protagonista absoluta. Ela reforça a identidade do ambiente e revela a intenção do projeto com presença, profundidade e impacto visual. O KV_001_RYUJIN é uma resposta comercial para espaços que buscam uma linguagem forte e memorável.
+        </p>
+      </div>
+    </Container>
+  </Section>
+
+  <Section background="bg">
+    <Container>
+      <div class="feature-grid">
+        <article class="feature-card">
+          <h2 class="feature-card__title">Identidade do produto</h2>
+          <ul class="feature-card__list">
+            {identityPoints.map((point) => <li>{point}</li>)}
+          </ul>
+        </article>
+
+        <article class="feature-card">
+          <h2 class="feature-card__title">Aplicação em ambientes</h2>
+          <ul class="feature-card__list">
+            {applications.map((point) => <li>{point}</li>)}
+          </ul>
+        </article>
+      </div>
+    </Container>
+  </Section>
+
+  <Section background="surface-soft">
+    <Container>
+      <div class="benefits-block">
+        <h2 class="benefits-block__title">Benefícios comerciais</h2>
+        <div class="benefits-grid">
+          {benefits.map((benefit) => (
+            <div class="benefit-item">{benefit}</div>
+          ))}
+        </div>
+      </div>
+    </Container>
+  </Section>
+
+  <Section background="bg" spacing="tight">
+    <Container size="narrow" class="cta">
+      <h2 class="cta__title">Encontre a solução certa para o seu próximo projeto</h2>
+      <p class="cta__text">
+        A KARV transforma a proposta arquitetônica em peça de alto valor comercial, com presença visual e linguagem precisa.
+      </p>
+      <div class="cta__actions">
+        <Button href="/produtos/" variant="primary" size="lg">Ver catálogo</Button>
+        <Button href="/nichos/" variant="secondary" size="lg">Explorar nichos</Button>
+      </div>
+    </Container>
+  </Section>
+</BaseLayout>
+
+<style>
+  .intro-card {
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: var(--space-8);
+    background: var(--color-surface);
+  }
+
+  .intro-card__eyebrow {
+    color: var(--color-accent-soft);
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    font-size: 13px;
+    margin-bottom: var(--space-3);
+  }
+
+  .intro-card__text {
+    font-size: 18px;
+    line-height: 1.7;
+    color: var(--color-muted);
+    max-width: 70ch;
+  }
+
+  .feature-grid {
+    display: grid;
+    gap: var(--space-6);
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+
+  .feature-card {
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: var(--space-6);
+    background: var(--color-surface);
+  }
+
+  .feature-card__title {
+    font-size: 22px;
+    margin-bottom: var(--space-4);
+  }
+
+  .feature-card__list {
+    display: grid;
+    gap: var(--space-3);
+    color: var(--color-muted);
+    padding-left: 1.2rem;
+  }
+
+  .benefits-block {
+    display: grid;
+    gap: var(--space-6);
+  }
+
+  .benefits-block__title {
+    font-size: 28px;
+  }
+
+  .benefits-grid {
+    display: grid;
+    gap: var(--space-4);
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  }
+
+  .benefit-item {
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    padding: var(--space-5);
+    background: var(--color-surface);
+    color: var(--color-muted);
+  }
+
+  .cta {
+    text-align: center;
+  }
+
+  .cta__title {
+    font-size: clamp(22px, 3.5vw, 32px);
+  }
+
+  .cta__text {
+    margin-top: var(--space-4);
+    color: var(--color-muted);
+  }
+
+  .cta__actions {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: var(--space-3);
+    margin-top: var(--space-6);
+  }
+</style>
