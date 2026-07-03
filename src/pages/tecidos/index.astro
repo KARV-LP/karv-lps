@@ -1,10 +1,15 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
+import Hero from "../../components/ui/Hero.astro";
 ---
 
-<BaseLayout title="Tecidos | KARV">
-  <main>
-    <h1>Biblioteca de Tecidos</h1>
-    <p>Área base para catalogação de tecidos, revestimentos e combinações KARV.</p>
-  </main>
+<BaseLayout
+  title="Tecidos | KARV"
+  description="Biblioteca de tecidos, revestimentos e combinações KARV."
+>
+  <Hero
+    eyebrow="Tecidos"
+    title="Biblioteca de Tecidos"
+    text="Área base para catalogação de tecidos, revestimentos e combinações KARV."
+  />
 </BaseLayout>

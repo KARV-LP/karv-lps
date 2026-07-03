@@ -1,91 +1,65 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-import Header from "../components/Header.astro";
-import Footer from "../components/Footer.astro";
+import Hero from "../components/ui/Hero.astro";
+import Section from "../components/ui/Section.astro";
+import Container from "../components/ui/Container.astro";
+import ProductCard from "../components/ui/ProductCard.astro";
+
+const sections = [
+  {
+    title: "Produtos",
+    label: "Coleções",
+    description: "Poltronas e coleções KARV, pensadas para cada ambiente.",
+    href: "/produtos/",
+  },
+  {
+    title: "Nichos",
+    label: "Segmentos",
+    description: "Soluções para barbearias, clínicas, estética e outros segmentos.",
+    href: "/nichos/",
+  },
+  {
+    title: "Tecidos",
+    label: "Biblioteca",
+    description: "Tecidos e revestimentos selecionados para cada projeto.",
+    href: "/tecidos/",
+  },
+  {
+    title: "Blog GEO",
+    label: "Conteúdo",
+    description: "Conteúdo estratégico de SEO e autoridade de nicho.",
+    href: "/blog/",
+  },
+];
 ---
 
 <BaseLayout
   title="KARV Platform | Infraestrutura Digital"
   description="Plataforma digital oficial da KARV para landing pages, produtos, nichos, tecidos, SEO/GEO e integrações com Netlify Pro."
 >
-  <Header />
+  <Hero
+    eyebrow="KARV Platform"
+    title="Infraestrutura digital da KARV"
+    text="Base oficial para landing pages, produtos, nichos, biblioteca de tecidos, SEO/GEO, analytics e integrações com Netlify Pro."
+    primaryCta={{ label: "Ver produtos", href: "/produtos/" }}
+    secondaryCta={{ label: "Ver nichos", href: "/nichos/" }}
+  />
 
-  <main class="page">
-    <section class="hero">
-      <p class="eyebrow">KARV Platform</p>
-      <h1>Infraestrutura digital da KARV</h1>
-      <p class="text">
-        Base oficial para landing pages, produtos, nichos, biblioteca de tecidos,
-        SEO/GEO, analytics e integrações com Netlify Pro.
-      </p>
-
-      <div class="links">
-        <a href="/produtos/">Produtos</a>
-        <a href="/nichos/">Nichos</a>
-        <a href="/tecidos/">Tecidos</a>
-        <a href="/blog/">Blog GEO</a>
+  <Section background="surface">
+    <Container>
+      <div class="cards-grid">
+        {sections.map((s) => (
+          <ProductCard title={s.title} label={s.label} description={s.description} href={s.href} />
+        ))}
       </div>
-    </section>
-  </main>
-
-  <Footer />
+    </Container>
+  </Section>
 </BaseLayout>
 
 <style>
-  :global(body) {
-    margin: 0;
-    font-family: Inter, Arial, sans-serif;
-    color: #f5f1e8;
-    background:
-      radial-gradient(circle at top right, rgba(174, 133, 76, 0.18), transparent 35%),
-      #111111;
-  }
-
-  .page {
-    min-height: 80vh;
+  .cards-grid {
     display: grid;
-    place-items: center;
-    padding: 32px;
-  }
-
-  .hero {
-    max-width: 920px;
-  }
-
-  .eyebrow {
-    color: #c9a36a;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-    font-size: 14px;
-    margin-bottom: 20px;
-  }
-
-  h1 {
-    font-size: clamp(42px, 8vw, 96px);
-    line-height: 0.95;
-    margin: 0 0 24px;
-  }
-
-  .text {
-    max-width: 700px;
-    font-size: 20px;
-    line-height: 1.6;
-    color: #d8d2c4;
-  }
-
-  .links {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 12px;
-    margin-top: 36px;
-  }
-
-  .links a {
-    border: 1px solid rgba(201, 163, 106, 0.35);
-    border-radius: 999px;
-    padding: 12px 18px;
-    color: #f5f1e8;
-    text-decoration: none;
-    background: rgba(255, 255, 255, 0.04);
+    gap: var(--space-6);
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   }
 </style>

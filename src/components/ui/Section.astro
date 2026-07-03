@@ -1,0 +1,43 @@
+---
+interface Props {
+  background?: "bg" | "surface" | "surface-soft";
+  spacing?: "tight" | "default" | "loose";
+  id?: string;
+  class?: string;
+}
+
+const { background = "bg", spacing = "default", id, class: className = "" } = Astro.props;
+---
+
+<section
+  id={id}
+  class:list={["section", `section--${background}`, `section--${spacing}`, className]}
+>
+  <slot />
+</section>
+
+<style>
+  .section {
+    padding-block: var(--space-16);
+  }
+
+  .section--tight {
+    padding-block: var(--space-10);
+  }
+
+  .section--loose {
+    padding-block: var(--space-24);
+  }
+
+  .section--bg {
+    background: var(--color-bg);
+  }
+
+  .section--surface {
+    background: var(--color-surface);
+  }
+
+  .section--surface-soft {
+    background: var(--color-surface-soft);
+  }
+</style>

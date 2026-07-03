@@ -1,10 +1,15 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
+import Hero from "../../components/ui/Hero.astro";
 ---
 
-<BaseLayout title="Blog GEO | KARV">
-  <main>
-    <h1>Blog GEO KARV</h1>
-    <p>Área base para conteúdos estratégicos, SEO, GEO e autoridade de nicho.</p>
-  </main>
+<BaseLayout
+  title="Blog GEO | KARV"
+  description="Conteúdos estratégicos, SEO, GEO e autoridade de nicho da KARV."
+>
+  <Hero
+    eyebrow="Blog GEO"
+    title="Blog GEO KARV"
+    text="Área base para conteúdos estratégicos, SEO, GEO e autoridade de nicho."
+  />
 </BaseLayout>

@@ -1,10 +1,46 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
+import Hero from "../../components/ui/Hero.astro";
+import Section from "../../components/ui/Section.astro";
+import Container from "../../components/ui/Container.astro";
+import ProductCard from "../../components/ui/ProductCard.astro";
+
+const niches = [
+  "Barbearia",
+  "Estética",
+  "Tatuagem",
+  "Odontologia",
+  "Podologia",
+  "Salões",
+  "Clínicas",
+];
 ---
 
-<BaseLayout title="Nichos | KARV">
-  <main>
-    <h1>Nichos KARV</h1>
-    <p>Área base para clínicas, barbearias, estúdios, estética, odontologia e outros segmentos.</p>
-  </main>
+<BaseLayout
+  title="Nichos | KARV"
+  description="Soluções KARV para clínicas, barbearias, estúdios, estética, odontologia e outros segmentos."
+>
+  <Hero
+    eyebrow="Nichos"
+    title="Segmentos estratégicos KARV"
+    text="Área base para clínicas, barbearias, estúdios, estética, odontologia e outros segmentos."
+  />
+
+  <Section background="surface">
+    <Container>
+      <div class="cards-grid">
+        {niches.map((niche) => (
+          <ProductCard title={niche} href="/nichos/" />
+        ))}
+      </div>
+    </Container>
+  </Section>
 </BaseLayout>
+
+<style>
+  .cards-grid {
+    display: grid;
+    gap: var(--space-6);
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+</style>
