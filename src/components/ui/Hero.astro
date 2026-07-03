@@ -1,0 +1,71 @@
+---
+import Section from "./Section.astro";
+import Container from "./Container.astro";
+import Button from "./Button.astro";
+
+interface CTA {
+  label: string;
+  href: string;
+}
+
+interface Props {
+  eyebrow?: string;
+  title: string;
+  text?: string;
+  primaryCta?: CTA;
+  secondaryCta?: CTA;
+}
+
+const { eyebrow, title, text, primaryCta, secondaryCta } = Astro.props;
+---
+
+<Section background="bg" spacing="loose" class="hero">
+  <Container>
+    {eyebrow && <p class="hero__eyebrow">{eyebrow}</p>}
+    <h1 class="hero__title">{title}</h1>
+    {text && <p class="hero__text">{text}</p>}
+    {(primaryCta || secondaryCta) && (
+      <div class="hero__actions">
+        {primaryCta && (
+          <Button href={primaryCta.href} variant="primary" size="lg">
+            {primaryCta.label}
+          </Button>
+        )}
+        {secondaryCta && (
+          <Button href={secondaryCta.href} variant="secondary" size="lg">
+            {secondaryCta.label}
+          </Button>
+        )}
+      </div>
+    )}
+  </Container>
+</Section>
+
+<style>
+  .hero__eyebrow {
+    color: var(--color-accent-soft);
+    text-transform: uppercase;
+    letter-spacing: 0.22em;
+    font-size: 13px;
+    margin-bottom: var(--space-4);
+  }
+
+  .hero__title {
+    font-size: clamp(36px, 7vw, 72px);
+    max-width: 16ch;
+  }
+
+  .hero__text {
+    margin-top: var(--space-6);
+    max-width: 60ch;
+    color: var(--color-muted);
+    font-size: 18px;
+  }
+
+  .hero__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-3);
+    margin-top: var(--space-8);
+  }
+</style>

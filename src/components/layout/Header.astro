@@ -1,0 +1,90 @@
+---
+const navItems = [
+  { href: "/", label: "Início" },
+  { href: "/produtos/", label: "Produtos" },
+  { href: "/nichos/", label: "Nichos" },
+  { href: "/tecidos/", label: "Tecidos" },
+  { href: "/blog/", label: "Blog GEO" },
+];
+
+const currentPath = Astro.url.pathname;
+---
+
+<header class="site-header">
+  <div class="site-header__inner">
+    <a href="/" class="site-header__logo">KARV</a>
+    <nav class="site-header__nav" aria-label="Navegação principal">
+      {navItems.map((item) => (
+        <a
+          href={item.href}
+          class:list={["site-header__link", { "is-active": currentPath === item.href }]}
+        >
+          {item.label}
+        </a>
+      ))}
+    </nav>
+  </div>
+</header>
+
+<style>
+  .site-header {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: rgba(14, 14, 14, 0.85);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .site-header__inner {
+    max-width: var(--container-width);
+    margin-inline: auto;
+    padding: var(--space-4);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-4);
+  }
+
+  .site-header__logo {
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    color: var(--color-text);
+  }
+
+  .site-header__nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-2) var(--space-6);
+  }
+
+  .site-header__link {
+    font-size: 14px;
+    color: var(--color-muted);
+    padding: var(--space-2) 0;
+    border-bottom: 1px solid transparent;
+    transition:
+      color var(--transition-base),
+      border-color var(--transition-base);
+  }
+
+  .site-header__link:hover,
+  .site-header__link.is-active {
+    color: var(--color-accent-soft);
+    border-color: var(--color-accent);
+  }
+
+  @media (max-width: 640px) {
+    .site-header__inner {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .site-header__nav {
+      width: 100%;
+      overflow-x: auto;
+      padding-bottom: var(--space-1);
+    }
+  }
+</style>

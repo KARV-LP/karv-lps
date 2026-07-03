@@ -1,0 +1,80 @@
+---
+import Container from "../ui/Container.astro";
+
+const year = new Date().getFullYear();
+const links = [
+  { href: "/produtos/", label: "Produtos" },
+  { href: "/nichos/", label: "Nichos" },
+  { href: "/tecidos/", label: "Tecidos" },
+  { href: "/blog/", label: "Blog GEO" },
+];
+---
+
+<footer class="site-footer">
+  <Container>
+    <div class="site-footer__top">
+      <div class="site-footer__brand">
+        <p class="site-footer__logo">KARV</p>
+        <p class="site-footer__tagline">Infraestrutura digital oficial da KARV.</p>
+      </div>
+      <nav class="site-footer__nav" aria-label="Links do rodapé">
+        {links.map((link) => (
+          <a href={link.href}>{link.label}</a>
+        ))}
+      </nav>
+    </div>
+    <div class="site-footer__bottom">
+      <p>&copy; {year} KARV. Todos os direitos reservados.</p>
+    </div>
+  </Container>
+</footer>
+
+<style>
+  .site-footer {
+    border-top: 1px solid var(--color-border);
+    background: var(--color-surface);
+  }
+
+  .site-footer__top {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-8);
+    justify-content: space-between;
+    padding-block: var(--space-16);
+  }
+
+  .site-footer__logo {
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    color: var(--color-accent-soft);
+    margin: 0 0 var(--space-2);
+  }
+
+  .site-footer__tagline {
+    color: var(--color-muted);
+    max-width: 320px;
+  }
+
+  .site-footer__nav {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+  }
+
+  .site-footer__nav a {
+    color: var(--color-muted);
+    transition: color var(--transition-base);
+  }
+
+  .site-footer__nav a:hover {
+    color: var(--color-accent-soft);
+  }
+
+  .site-footer__bottom {
+    border-top: 1px solid var(--color-border);
+    padding-block: var(--space-6);
+    color: var(--color-muted);
+    font-size: 13px;
+  }
+</style>

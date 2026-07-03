@@ -1,10 +1,41 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
+import Hero from "../../components/ui/Hero.astro";
+import Section from "../../components/ui/Section.astro";
+import Container from "../../components/ui/Container.astro";
+import ProductCard from "../../components/ui/ProductCard.astro";
+
+const categories = [
+  { title: "Poltronas", description: "Modelos exclusivos KARV para ambientes residenciais e comerciais." },
+  { title: "Coleções", description: "Linhas completas pensadas para cada estilo e projeto." },
+];
 ---
 
-<BaseLayout title="Produtos | KARV">
-  <main>
-    <h1>Produtos KARV</h1>
-    <p>Área base para as poltronas, coleções e páginas individuais de produto.</p>
-  </main>
+<BaseLayout
+  title="Produtos | KARV"
+  description="Poltronas e coleções KARV — área base para produtos e páginas individuais."
+>
+  <Hero
+    eyebrow="Produtos"
+    title="Poltronas e coleções KARV"
+    text="Área base para as poltronas, coleções e páginas individuais de produto."
+  />
+
+  <Section background="surface">
+    <Container>
+      <div class="cards-grid">
+        {categories.map((c) => (
+          <ProductCard title={c.title} description={c.description} href="/produtos/" />
+        ))}
+      </div>
+    </Container>
+  </Section>
 </BaseLayout>
+
+<style>
+  .cards-grid {
+    display: grid;
+    gap: var(--space-6);
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  }
+</style>

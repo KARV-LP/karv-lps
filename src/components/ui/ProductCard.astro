@@ -1,0 +1,78 @@
+---
+interface Props {
+  title: string;
+  description?: string;
+  href?: string;
+  label?: string;
+}
+
+const { title, description, href, label } = Astro.props;
+const Tag = href ? "a" : "div";
+---
+
+<Tag href={href} class="product-card">
+  <div class="product-card__media" aria-hidden="true">
+    <span class="product-card__initial">{title.charAt(0)}</span>
+  </div>
+  <div class="product-card__body">
+    {label && <span class="product-card__label">{label}</span>}
+    <h3 class="product-card__title">{title}</h3>
+    {description && <p class="product-card__description">{description}</p>}
+  </div>
+</Tag>
+
+<style>
+  .product-card {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    background: var(--color-surface);
+    overflow: hidden;
+    transition:
+      border-color var(--transition-base),
+      transform var(--transition-base);
+  }
+
+  a.product-card:hover {
+    border-color: var(--color-accent);
+    transform: translateY(-2px);
+  }
+
+  .product-card__media {
+    aspect-ratio: 16 / 10;
+    display: grid;
+    place-items: center;
+    background: linear-gradient(135deg, var(--color-surface-soft), var(--color-bg));
+  }
+
+  .product-card__initial {
+    font-size: 40px;
+    font-weight: 700;
+    color: var(--color-accent-soft);
+  }
+
+  .product-card__body {
+    padding: var(--space-6);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+  }
+
+  .product-card__label {
+    color: var(--color-accent-soft);
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+  }
+
+  .product-card__title {
+    font-size: 20px;
+  }
+
+  .product-card__description {
+    color: var(--color-muted);
+    font-size: 14px;
+    line-height: 1.5;
+  }
+</style>
