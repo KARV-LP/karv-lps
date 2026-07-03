@@ -1,17 +1,96 @@
 ---
-
+const title = "KARV Platform";
+const description = "Plataforma digital oficial da KARV para landing pages, produtos, nichos, tecidos e experiências digitais.";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content={description} />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+  </head>
+
+  <body>
+    <main class="page">
+      <section class="hero">
+        <p class="eyebrow">KARV Platform</p>
+        <h1>Infraestrutura digital da KARV</h1>
+        <p class="text">
+          Base oficial para landing pages, produtos, nichos, biblioteca de tecidos,
+          SEO/GEO, analytics e integrações com Netlify Pro.
+        </p>
+
+        <div class="status">
+          <span>GitHub conectado</span>
+          <span>Netlify Pro ativo</span>
+          <span>Astro instalado</span>
+          <span>Deploy automático funcionando</span>
+        </div>
+      </section>
+    </main>
+  </body>
 </html>
+
+<style>
+  :root {
+    font-family: Inter, Arial, sans-serif;
+    color: #f5f1e8;
+    background: #111111;
+  }
+
+  body {
+    margin: 0;
+    background:
+      radial-gradient(circle at top right, rgba(174, 133, 76, 0.18), transparent 35%),
+      #111111;
+  }
+
+  .page {
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    padding: 32px;
+  }
+
+  .hero {
+    max-width: 900px;
+  }
+
+  .eyebrow {
+    color: #c9a36a;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+
+  h1 {
+    font-size: clamp(42px, 8vw, 96px);
+    line-height: 0.95;
+    margin: 0 0 24px;
+  }
+
+  .text {
+    max-width: 680px;
+    font-size: 20px;
+    line-height: 1.6;
+    color: #d8d2c4;
+  }
+
+  .status {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 36px;
+  }
+
+  .status span {
+    border: 1px solid rgba(201, 163, 106, 0.35);
+    border-radius: 999px;
+    padding: 10px 16px;
+    color: #f5f1e8;
+    background: rgba(255, 255, 255, 0.04);
+  }
+</style>
