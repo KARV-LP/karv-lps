@@ -65,6 +65,26 @@ const categories = [
     </Container>
   </Section>
 
+  <Section background="bg">
+    <Container>
+      <div class="cross-nav">
+        <div class="cross-nav__intro">
+          <p class="cross-nav__eyebrow">Conexão comercial</p>
+          <h2 class="cross-nav__title">A biblioteca funciona como guia de decisão entre ambiente, produto e nicho.</h2>
+          <p class="cross-nav__text">
+            A curadoria KARV orienta a escolha do revestimento com base na aplicação, na identidade do projeto e na experiência do espaço.
+          </p>
+        </div>
+
+        <div class="cross-nav__actions">
+          <Button href="/produtos/" variant="primary">Ver produtos</Button>
+          <Button href="/nichos/" variant="secondary">Explorar nichos</Button>
+          <Button href="/tecidos/colecoes/" variant="secondary">Conhecer coleções</Button>
+        </div>
+      </div>
+    </Container>
+  </Section>
+
   <Section background="bg" spacing="tight">
     <Container size="narrow" class="cta">
       <h2 class="cta__title">A experiência do ambiente começa pela curadoria certa.</h2>
@@ -104,6 +124,35 @@ const categories = [
     display: grid;
     gap: var(--space-6);
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  }
+
+  .cross-nav {
+    display: grid;
+    gap: var(--space-6);
+  }
+
+  .cross-nav__eyebrow {
+    color: var(--color-accent-soft);
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    font-size: 13px;
+  }
+
+  .cross-nav__title {
+    margin-top: var(--space-3);
+    font-size: clamp(24px, 3.5vw, 32px);
+  }
+
+  .cross-nav__text {
+    margin-top: var(--space-4);
+    max-width: 720px;
+    color: var(--color-muted);
+  }
+
+  .cross-nav__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-3);
   }
 
   .cta {

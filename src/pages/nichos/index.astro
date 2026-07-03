@@ -38,6 +38,38 @@ const niches = [
     </Container>
   </Section>
 
+  <Section background="bg">
+    <Container>
+      <div class="cross-nav">
+        <div class="cross-nav__intro">
+          <p class="cross-nav__eyebrow">Conexão comercial</p>
+          <h2 class="cross-nav__title">Aprofunde a proposta do segmento pelo produto e pelo tecido.</h2>
+          <p class="cross-nav__text">
+            Cada nicho ganha força quando o ambiente, a poltrona e a curadoria de revestimentos dialogam entre si.
+          </p>
+        </div>
+
+        <div class="cross-nav__grid">
+          <ProductCard
+            title="Produtos de referência"
+            description="Acompanhe as linhas KARV mais alinhadas à identidade do projeto."
+            href="/produtos/"
+          />
+          <ProductCard
+            title="Tecidos para o projeto"
+            description="Conecte a linguagem visual do espaço à curadoria de revestimentos."
+            href="/tecidos/"
+          />
+          <ProductCard
+            title="Coleções KARV"
+            description="Use a biblioteca como base para identidade, acabamento e experiência do ambiente."
+            href="/tecidos/colecoes/"
+          />
+        </div>
+      </div>
+    </Container>
+  </Section>
+
   <Section background="bg" spacing="tight">
     <Container size="narrow" class="cta">
       <h2 class="cta__title">Não encontrou o seu segmento?</h2>
@@ -54,6 +86,35 @@ const niches = [
     display: grid;
     gap: var(--space-6);
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+
+  .cross-nav {
+    display: grid;
+    gap: var(--space-8);
+  }
+
+  .cross-nav__eyebrow {
+    color: var(--color-accent-soft);
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    font-size: 13px;
+  }
+
+  .cross-nav__title {
+    margin-top: var(--space-3);
+    font-size: clamp(24px, 3.5vw, 32px);
+  }
+
+  .cross-nav__text {
+    margin-top: var(--space-4);
+    max-width: 680px;
+    color: var(--color-muted);
+  }
+
+  .cross-nav__grid {
+    display: grid;
+    gap: var(--space-6);
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   }
 
   .cta {
