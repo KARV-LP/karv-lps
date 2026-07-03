@@ -4,10 +4,17 @@ import Hero from "../../components/ui/Hero.astro";
 import Section from "../../components/ui/Section.astro";
 import Container from "../../components/ui/Container.astro";
 import ProductCard from "../../components/ui/ProductCard.astro";
+import Button from "../../components/ui/Button.astro";
 
 const categories = [
-  { title: "Poltronas", description: "Modelos exclusivos KARV para ambientes residenciais e comerciais." },
-  { title: "Coleções", description: "Linhas completas pensadas para cada estilo e projeto." },
+  {
+    title: "Poltronas",
+    description: "Modelos exclusivos KARV para ambientes residenciais e comerciais, unindo conforto e durabilidade.",
+  },
+  {
+    title: "Coleções",
+    description: "Linhas completas pensadas para cada estilo de projeto, do executivo ao contemporâneo.",
+  },
 ];
 ---
 
@@ -18,7 +25,7 @@ const categories = [
   <Hero
     eyebrow="Produtos"
     title="Poltronas e coleções KARV"
-    text="Área base para as poltronas, coleções e páginas individuais de produto."
+    text="Da poltrona executiva à peça sob medida, cada linha KARV é desenvolvida para unir conforto, durabilidade e identidade visual ao seu espaço."
   />
 
   <Section background="surface">
@@ -30,6 +37,16 @@ const categories = [
       </div>
     </Container>
   </Section>
+
+  <Section background="bg" spacing="tight">
+    <Container size="narrow" class="cta">
+      <h2 class="cta__title">Encontre o tecido ideal para a sua poltrona</h2>
+      <p class="cta__text">
+        Explore a biblioteca de tecidos e revestimentos KARV e combine com a coleção certa para o seu projeto.
+      </p>
+      <Button href="/tecidos/" variant="primary" size="lg">Ver tecidos</Button>
+    </Container>
+  </Section>
 </BaseLayout>
 
 <style>
@@ -37,5 +54,22 @@ const categories = [
     display: grid;
     gap: var(--space-6);
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  }
+
+  .cta {
+    text-align: center;
+  }
+
+  .cta__title {
+    font-size: clamp(22px, 3.5vw, 32px);
+  }
+
+  .cta__text {
+    margin-top: var(--space-4);
+    color: var(--color-muted);
+  }
+
+  .cta :global(.btn) {
+    margin-top: var(--space-6);
   }
 </style>

@@ -4,6 +4,7 @@ import Hero from "../components/ui/Hero.astro";
 import Section from "../components/ui/Section.astro";
 import Container from "../components/ui/Container.astro";
 import ProductCard from "../components/ui/ProductCard.astro";
+import Button from "../components/ui/Button.astro";
 
 const sections = [
   {
@@ -54,6 +55,20 @@ const sections = [
       </div>
     </Container>
   </Section>
+
+  <Section background="surface-soft" spacing="tight">
+    <Container size="narrow" class="cta">
+      <h2 class="cta__title">Pronto para elevar o padrão do seu espaço?</h2>
+      <p class="cta__text">
+        Conheça as poltronas e coleções KARV e encontre a combinação certa de tecido
+        para o seu ambiente ou negócio.
+      </p>
+      <div class="cta__actions">
+        <Button href="/produtos/" variant="primary" size="lg">Ver produtos</Button>
+        <Button href="/tecidos/" variant="secondary" size="lg">Ver tecidos</Button>
+      </div>
+    </Container>
+  </Section>
 </BaseLayout>
 
 <style>
@@ -61,5 +76,26 @@ const sections = [
     display: grid;
     gap: var(--space-6);
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  }
+
+  .cta {
+    text-align: center;
+  }
+
+  .cta__title {
+    font-size: clamp(24px, 4vw, 36px);
+  }
+
+  .cta__text {
+    margin-top: var(--space-4);
+    color: var(--color-muted);
+  }
+
+  .cta__actions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--space-3);
+    margin-top: var(--space-6);
   }
 </style>

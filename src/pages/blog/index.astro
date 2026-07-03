@@ -1,6 +1,15 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import Hero from "../../components/ui/Hero.astro";
+import Section from "../../components/ui/Section.astro";
+import Container from "../../components/ui/Container.astro";
+import ProductCard from "../../components/ui/ProductCard.astro";
+
+const pillars = [
+  { title: "Nichos", description: "Como escolher poltronas e ambientes por segmento de negócio." },
+  { title: "Tecidos", description: "Guias de combinação de tecidos, revestimentos e cuidados de manutenção." },
+  { title: "SEO/GEO", description: "Conteúdo estratégico para autoridade de marca e presença em busca e IA generativa." },
+];
 ---
 
 <BaseLayout
@@ -10,6 +19,30 @@ import Hero from "../../components/ui/Hero.astro";
   <Hero
     eyebrow="Blog GEO"
     title="Blog GEO KARV"
-    text="Área base para conteúdos estratégicos, SEO, GEO e autoridade de nicho."
+    text="Conteúdo estratégico sobre produtos, nichos e tecidos KARV, construído para SEO, GEO e autoridade de marca."
   />
+
+  <Section background="surface">
+    <Container>
+      <p class="pillars-intro">Em breve, os primeiros conteúdos publicados vão cobrir estas frentes:</p>
+      <div class="cards-grid">
+        {pillars.map((p) => (
+          <ProductCard title={p.title} description={p.description} />
+        ))}
+      </div>
+    </Container>
+  </Section>
 </BaseLayout>
+
+<style>
+  .pillars-intro {
+    color: var(--color-muted);
+    margin-bottom: var(--space-8);
+  }
+
+  .cards-grid {
+    display: grid;
+    gap: var(--space-6);
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  }
+</style>
