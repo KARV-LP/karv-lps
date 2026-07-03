@@ -1,0 +1,181 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import Hero from "../../../components/ui/Hero.astro";
+import Section from "../../../components/ui/Section.astro";
+import Container from "../../../components/ui/Container.astro";
+import Button from "../../../components/ui/Button.astro";
+---
+
+<BaseLayout
+  title="Briefing Inteligente KARV"
+  description="Teste inicial do Briefing Inteligente KARV para transformar um briefing simples em uma análise comercial inicial."
+>
+  <Hero
+    eyebrow="IA KARV"
+    title="Briefing Inteligente KARV"
+    text="Envie um briefing simples e receba uma análise inicial preparada para orientar a conversa comercial do projeto."
+    primaryCta={{ label: "Voltar para home", href: "/" }}
+  />
+
+  <Section background="surface">
+    <Container size="narrow">
+      <div class="briefing-card">
+        <p class="briefing-card__intro">
+          Esta é uma primeira etapa experimental para transformar um briefing simples em uma leitura comercial inicial, sem expor a chave da OpenAI no frontend.
+        </p>
+
+        <form class="briefing-form" id="briefing-form">
+          <label>
+            <span>Nome</span>
+            <input name="nome" type="text" required />
+          </label>
+
+          <label>
+            <span>Tipo de negócio</span>
+            <input name="tipoNegocio" type="text" placeholder="Ex.: barbearia, clínica, estética" required />
+          </label>
+
+          <label>
+            <span>Ambiente</span>
+            <input name="ambiente" type="text" placeholder="Ex.: recepção, sala de espera, espaço premium" required />
+          </label>
+
+          <label>
+            <span>Objetivo do projeto</span>
+            <textarea name="objetivo" rows="3" required></textarea>
+          </label>
+
+          <label>
+            <span>Estilo desejado</span>
+            <input name="estilo" type="text" placeholder="Ex.: elegante, moderno, acolhedor" required />
+          </label>
+
+          <Button type="submit" variant="primary">Gerar briefing</Button>
+        </form>
+
+        <div class="briefing-result" id="briefing-result" aria-live="polite">
+          <p class="briefing-result__placeholder">Aguardando envio do briefing...</p>
+        </div>
+      </div>
+    </Container>
+  </Section>
+</BaseLayout>
+
+<script>
+  const form = document.getElementById('briefing-form');
+  const result = document.getElementById('briefing-result');
+
+  form?.addEventListener('submit', async (event) => {
+    event.preventDefault();
+
+    const formData = new FormData(form);
+    const payload = Object.fromEntries(formData.entries());
+
+    if (result) {
+      result.innerHTML = '<p class="briefing-result__placeholder">Gerando análise inicial...</p>';
+    }
+
+    try {
+      const response = await fetch('/.netlify/functions/karv-briefing', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(payload),
+      });
+
+      const data = await response.json();
+
+      if (!response.ok || !data.ok) {
+        throw new Error(data.error || 'Não foi possível gerar o briefing.');
+      }
+
+      if (result) {
+        result.innerHTML = `
+          <div class="briefing-result__panel">
+            <p class="briefing-result__label">Resposta inicial</p>
+            <p class="briefing-result__text">${data.analysis}</p>
+          </div>
+        `;
+      }
+    } catch (error) {
+      if (result) {
+        result.innerHTML = `
+          <div class="briefing-result__panel">
+            <p class="briefing-result__label">Erro</p>
+            <p class="briefing-result__text">${error.message}</p>
+          </div>
+        `;
+      }
+    }
+  });
+</script>
+
+<style>
+  .briefing-card {
+    display: grid;
+    gap: var(--space-6);
+    padding: var(--space-8);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    background: var(--color-surface);
+  }
+
+  .briefing-card__intro {
+    color: var(--color-muted);
+    line-height: 1.7;
+  }
+
+  .briefing-form {
+    display: grid;
+    gap: var(--space-4);
+  }
+
+  .briefing-form label {
+    display: grid;
+    gap: var(--space-2);
+    font-weight: 600;
+  }
+
+  .briefing-form input,
+  .briefing-form textarea {
+    width: 100%;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    padding: var(--space-3) var(--space-4);
+    background: var(--color-bg);
+    color: var(--color-text);
+    font: inherit;
+  }
+
+  .briefing-form textarea {
+    resize: vertical;
+  }
+
+  .briefing-result {
+    min-height: 120px;
+  }
+
+  .briefing-result__placeholder {
+    color: var(--color-muted);
+  }
+
+  .briefing-result__panel {
+    padding: var(--space-5);
+    border-radius: var(--radius-md);
+    border: 1px solid var(--color-border);
+    background: var(--color-bg);
+  }
+
+  .briefing-result__label {
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: var(--color-accent-soft);
+    margin-bottom: var(--space-3);
+  }
+
+  .briefing-result__text {
+    line-height: 1.7;
+  }
+</style>

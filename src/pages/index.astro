@@ -67,6 +67,9 @@ const sections = [
         <Button href="/produtos/" variant="primary" size="lg">Ver produtos</Button>
         <Button href="/tecidos/" variant="secondary" size="lg">Ver tecidos</Button>
       </div>
+      <p class="cta__micro-link">
+        <a href="/ia/briefing/">Testar Briefing Inteligente KARV</a>
+      </p>
     </Container>
   </Section>
 </BaseLayout>
@@ -97,5 +100,16 @@ const sections = [
     justify-content: center;
     gap: var(--space-3);
     margin-top: var(--space-6);
+  }
+
+  .cta__micro-link {
+    margin-top: var(--space-4);
+    font-size: 14px;
+  }
+
+  .cta__micro-link a {
+    color: var(--color-muted);
+    text-decoration: underline;
+    text-underline-offset: 0.2em;
   }
 </style>
