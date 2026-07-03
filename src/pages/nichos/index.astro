@@ -7,13 +7,14 @@ import ProductCard from "../../components/ui/ProductCard.astro";
 import Button from "../../components/ui/Button.astro";
 
 const niches = [
-  { title: "Barbearia", description: "Poltronas e ambientes que reforçam a identidade da barbearia moderna." },
-  { title: "Estética", description: "Conforto e sofisticação para salas de atendimento e espera." },
-  { title: "Tatuagem", description: "Peças resistentes e estilosas para estúdios de tatuagem." },
-  { title: "Odontologia", description: "Mobiliário que transmite confiança em clínicas odontológicas." },
-  { title: "Podologia", description: "Soluções ergonômicas para consultórios de podologia." },
-  { title: "Salões", description: "Ambientes premium para salões de beleza e estética capilar." },
-  { title: "Clínicas", description: "Mobiliário institucional para recepções e salas de espera clínicas." },
+  { title: "Barbearia", description: "Poltronas e ambientes que reforçam a identidade da barbearia moderna.", href: "/nichos/barbearia/" },
+  { title: "Estética", description: "Conforto e sofisticação para salas de atendimento e espera.", href: "/nichos/estetica/" },
+  { title: "Tatuagem", description: "Peças resistentes e estilosas para estúdios de tatuagem.", href: "/nichos/tatuagem/" },
+  { title: "Clínicas", description: "Mobiliário institucional para recepções e salas de espera clínicas.", href: "/nichos/clinicas/" },
+  { title: "Studios", description: "Ambientes com presença visual forte para studios criativos e premium.", href: "/nichos/studios/" },
+  { title: "Odontologia", description: "Mobiliário que transmite confiança em clínicas odontológicas.", href: "/produtos/" },
+  { title: "Podologia", description: "Soluções ergonômicas para consultórios de podologia.", href: "/produtos/" },
+  { title: "Salões", description: "Ambientes premium para salões de beleza e estética capilar.", href: "/produtos/" },
 ];
 ---
 
@@ -31,7 +32,7 @@ const niches = [
     <Container>
       <div class="cards-grid">
         {niches.map((niche) => (
-          <ProductCard title={niche.title} description={niche.description} href="/produtos/" />
+          <ProductCard title={niche.title} description={niche.description} href={niche.href} />
         ))}
       </div>
     </Container>

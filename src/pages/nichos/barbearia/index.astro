@@ -1,0 +1,179 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import Hero from "../../../components/ui/Hero.astro";
+import Section from "../../../components/ui/Section.astro";
+import Container from "../../../components/ui/Container.astro";
+import Button from "../../../components/ui/Button.astro";
+---
+
+<BaseLayout
+  title="Barbearia | KARV"
+  description="Poltronas e mobiliário de identidade para barbearias que unem conforto, estilo e presença de marca."
+>
+  <Hero
+    eyebrow="Barbearia"
+    title="A barbearia moderna vende experiência, não apenas corte"
+    text="Na barbearia, o cliente vive um ritual. O ambiente precisa transmitir confiança, presença e um cuidado com cada detalhe, desde o atendimento até o momento da saída."
+    primaryCta={{ label: "Ver produtos", href: "/produtos/" }}
+    secondaryCta={{ label: "Falar com a KARV", href: "mailto:contato@karv.com" }}
+  />
+
+  <Section background="surface">
+    <Container class="content">
+      <div class="intro">
+        <h2>O ambiente precisa refletir o posicionamento da marca</h2>
+        <p>
+          Uma barbearia de alto padrão se destaca quando a identidade do espaço acompanha a qualidade do atendimento. A poltrona certa reforça o desejo de permanência, melhora a percepção do serviço e transforma cada visita em um momento de marca.
+        </p>
+      </div>
+    </Container>
+  </Section>
+
+  <Section background="bg">
+    <Container>
+      <div class="grid">
+        <article class="card">
+          <h3>Por que esse nicho precisa de uma poltrona de identidade</h3>
+          <p>
+            O cliente percebe o espaço antes de falar com o profissional. Uma peça de mobiliário alinhada com o conceito da barbearia reforça autoridade e torna o ambiente mais memorável.
+          </p>
+        </article>
+        <article class="card">
+          <h3>O que o ambiente precisa comunicar</h3>
+          <ul class="card__list">
+            <li>Estilo contemporâneo e masculino</li>
+            <li>Conforto para procedimentos longos</li>
+            <li>Presença forte para fotos, indicação e retorno</li>
+          </ul>
+        </article>
+      </div>
+    </Container>
+  </Section>
+
+  <Section background="surface-soft">
+    <Container>
+      <div class="section-heading">
+        <h2>Aplicações no ambiente</h2>
+        <p>A KARV se adapta a áreas que impactam diretamente na experiência do cliente.</p>
+      </div>
+      <div class="grid grid--three">
+        <article class="card">
+          <h3>Área de corte</h3>
+          <p>Poltronas que elevam o cuidado e a presença visual do ponto principal da barbearia.</p>
+        </article>
+        <article class="card">
+          <h3>Espaço de espera</h3>
+          <p>Uma recepção bem proposta ajuda a construir a sensação de valor do serviço.</p>
+        </article>
+        <article class="card">
+          <h3>Ambiente de marca</h3>
+          <p>Peças que reforçam um posicionamento premium em redes sociais e visitas presenciais.</p>
+        </article>
+      </div>
+    </Container>
+  </Section>
+
+  <Section background="surface">
+    <Container>
+      <div class="section-heading">
+        <h2>Benefícios comerciais</h2>
+        <p>O mobiliário certo é um aliado para ampliar a percepção de valor do negócio.</p>
+      </div>
+      <div class="grid grid--three">
+        <article class="card">
+          <h3>Eleva a percepção do serviço</h3>
+          <p>Clientes associam o ambiente a mais qualidade e cuidado.</p>
+        </article>
+        <article class="card">
+          <h3>Aumenta a diferenciação</h3>
+          <p>Uma proposta visual forte ajuda a se destacar em um mercado competitivo.</p>
+        </article>
+        <article class="card">
+          <h3>Fortalece a recorrência</h3>
+          <p>Ambientes bem construídos incentivam retorno e indicação.</p>
+        </article>
+      </div>
+    </Container>
+  </Section>
+
+  <Section background="bg" spacing="tight">
+    <Container size="narrow" class="cta">
+      <h2>Uma barbearia com identidade merece um móvel que faça parte do ritual</h2>
+      <p>
+        A KARV cria poltronas e peças que unem presença de marca, conforto e um ambiente premium para cada cliente.
+      </p>
+      <div class="actions">
+        <Button href="/produtos/" variant="primary" size="lg">Ver coleções</Button>
+        <Button href="mailto:contato@karv.com" variant="secondary" size="lg">Falar com a KARV</Button>
+      </div>
+    </Container>
+  </Section>
+</BaseLayout>
+
+<style>
+  .content {
+    display: grid;
+    gap: var(--space-6);
+  }
+
+  .intro {
+    max-width: 760px;
+  }
+
+  .intro h2,
+  .section-heading h2,
+  .cta h2 {
+    font-size: clamp(24px, 3.5vw, 34px);
+    margin-bottom: var(--space-4);
+  }
+
+  .intro p,
+  .section-heading p,
+  .cta p,
+  .card p,
+  .card li {
+    color: var(--color-muted);
+  }
+
+  .grid {
+    display: grid;
+    gap: var(--space-6);
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  }
+
+  .grid--three {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  }
+
+  .card {
+    padding: var(--space-6);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    background: var(--color-surface);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+  }
+
+  .card h3 {
+    font-size: 20px;
+  }
+
+  .card__list {
+    display: grid;
+    gap: var(--space-2);
+    padding-left: var(--space-4);
+  }
+
+  .actions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--space-3);
+    margin-top: var(--space-6);
+  }
+
+  .cta {
+    text-align: center;
+  }
+</style>

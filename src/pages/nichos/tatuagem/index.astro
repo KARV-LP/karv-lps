@@ -1,0 +1,179 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import Hero from "../../../components/ui/Hero.astro";
+import Section from "../../../components/ui/Section.astro";
+import Container from "../../../components/ui/Container.astro";
+import Button from "../../../components/ui/Button.astro";
+---
+
+<BaseLayout
+  title="Tatuagem | KARV"
+  description="Poltronas e mobiliário de identidade para estúdios de tatuagem que valorizam o ambiente e a experiência do cliente."
+>
+  <Hero
+    eyebrow="Tatuagem"
+    title="Um estúdio de tatuagem precisa falar com personalidade"
+    text="Na tatuagem, o ambiente é parte do trabalho. Cada detalhe reforça a identidade do artista, o cuidado da execução e a impressão que o cliente leva ao sair."
+    primaryCta={{ label: "Ver produtos", href: "/produtos/" }}
+    secondaryCta={{ label: "Falar com a KARV", href: "mailto:contato@karv.com" }}
+  />
+
+  <Section background="surface">
+    <Container class="content">
+      <div class="intro">
+        <h2>O cliente sente o espaço antes mesmo da primeira sessão</h2>
+        <p>
+          Em estúdios de tatuagem, o mobiliário não é apenas funcional. Ele comunica estilo, autoridade e cuidado. Uma poltrona bem pensada ajuda a criar uma experiência mais segura, confortável e memorável para o cliente.
+        </p>
+      </div>
+    </Container>
+  </Section>
+
+  <Section background="bg">
+    <Container>
+      <div class="grid">
+        <article class="card">
+          <h3>Por que esse nicho precisa de uma poltrona de identidade</h3>
+          <p>
+            O cliente entra em um estúdio para viver uma experiência íntima e personalizada. A poltrona precisa reforçar presença, conforto e uma estética alinhada ao trabalho do tatuador.
+          </p>
+        </article>
+        <article class="card">
+          <h3>O que o ambiente transmite</h3>
+          <ul class="card__list">
+            <li>Conforto para sessões longas e detalhadas</li>
+            <li>Estética marcante para fotos, redes e indicação</li>
+            <li>Profissionalismo que transmite confiança</li>
+          </ul>
+        </article>
+      </div>
+    </Container>
+  </Section>
+
+  <Section background="surface-soft">
+    <Container>
+      <div class="section-heading">
+        <h2>Aplicações no ambiente</h2>
+        <p>O mobiliário KARV funciona de forma natural em diferentes pontos do estúdio.</p>
+      </div>
+      <div class="grid grid--three">
+        <article class="card">
+          <h3>Área de atendimento</h3>
+          <p>Poltronas que valorizam o momento de conversa, preparação e execução.</p>
+        </article>
+        <article class="card">
+          <h3>Recepção e espera</h3>
+          <p>Elementos que deixam a chegada do cliente mais sofisticada e acolhedora.</p>
+        </article>
+        <article class="card">
+          <h3>Espaços de imagem</h3>
+          <p>Peças fortes visualmente, ideais para reforçar o posicionamento da marca.</p>
+        </article>
+      </div>
+    </Container>
+  </Section>
+
+  <Section background="surface">
+    <Container>
+      <div class="section-heading">
+        <h2>Benefícios comerciais</h2>
+        <p>Uma proposta de mobiliário com identidade transforma o ambiente em um ativo de marca.</p>
+      </div>
+      <div class="grid grid--three">
+        <article class="card">
+          <h3>Eleva a percepção do espaço</h3>
+          <p>O cliente percebe mais valor e cuidado desde o primeiro contato.</p>
+        </article>
+        <article class="card">
+          <h3>Fortalece a marca</h3>
+          <p>O ambiente passa a ser um reflexo do estilo do profissional e da sua obra.</p>
+        </article>
+        <article class="card">
+          <h3>Gera mais recorrência</h3>
+          <p>Experiências bem construídas aumentam a vontade de voltar e indicar.</p>
+        </article>
+      </div>
+    </Container>
+  </Section>
+
+  <Section background="bg" spacing="tight">
+    <Container size="narrow" class="cta">
+      <h2>Um estúdio com identidade merece um mobiliário que acompanhe o nível da sua marca</h2>
+      <p>
+        A KARV cria soluções que unem conforto, presença e presença visual para transformar cada visita em uma experiência premium.
+      </p>
+      <div class="actions">
+        <Button href="/produtos/" variant="primary" size="lg">Ver coleções</Button>
+        <Button href="mailto:contato@karv.com" variant="secondary" size="lg">Falar com a KARV</Button>
+      </div>
+    </Container>
+  </Section>
+</BaseLayout>
+
+<style>
+  .content {
+    display: grid;
+    gap: var(--space-6);
+  }
+
+  .intro {
+    max-width: 760px;
+  }
+
+  .intro h2,
+  .section-heading h2,
+  .cta h2 {
+    font-size: clamp(24px, 3.5vw, 34px);
+    margin-bottom: var(--space-4);
+  }
+
+  .intro p,
+  .section-heading p,
+  .cta p,
+  .card p,
+  .card li {
+    color: var(--color-muted);
+  }
+
+  .grid {
+    display: grid;
+    gap: var(--space-6);
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  }
+
+  .grid--three {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  }
+
+  .card {
+    padding: var(--space-6);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    background: var(--color-surface);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+  }
+
+  .card h3 {
+    font-size: 20px;
+  }
+
+  .card__list {
+    display: grid;
+    gap: var(--space-2);
+    padding-left: var(--space-4);
+  }
+
+  .actions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--space-3);
+    margin-top: var(--space-6);
+  }
+
+  .cta {
+    text-align: center;
+  }
+</style>
