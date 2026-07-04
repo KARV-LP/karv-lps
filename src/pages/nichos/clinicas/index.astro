@@ -4,6 +4,7 @@ import Hero from "../../../components/ui/Hero.astro";
 import Section from "../../../components/ui/Section.astro";
 import Container from "../../../components/ui/Container.astro";
 import Button from "../../../components/ui/Button.astro";
+import { KARV_CONTACT_LINKS } from "../../../data/contactLinks";
 ---
 
 <BaseLayout
@@ -15,7 +16,7 @@ import Button from "../../../components/ui/Button.astro";
     title="Conforto e confiança começam no ambiente"
     text="Em clínicas, cada detalhe precisa transmitir segurança. O espaço precisa acolher o paciente, reforçar a autoridade do profissional e apoiar uma experiência organizada desde a chegada."
     primaryCta={{ label: "Ver produtos", href: "/produtos/" }}
-    secondaryCta={{ label: "Falar com a KARV", href: "mailto:contato@karv.com" }}
+    secondaryCta={{ label: "Falar com a KARV", href: KARV_CONTACT_LINKS.whatsapp }}
   />
 
   <Section background="surface">
@@ -104,7 +105,16 @@ import Button from "../../../components/ui/Button.astro";
       </p>
       <div class="actions">
         <Button href="/produtos/" variant="primary" size="lg">Ver coleções</Button>
-        <Button href="mailto:contato@karv.com" variant="secondary" size="lg">Falar com a KARV</Button>
+        <Button
+          href={KARV_CONTACT_LINKS.whatsapp}
+          target="_blank"
+          variant="secondary"
+          size="lg"
+          data-event="cta_whatsapp"
+          data-location="nicho"
+        >
+          Falar com a KARV
+        </Button>
       </div>
     </Container>
   </Section>

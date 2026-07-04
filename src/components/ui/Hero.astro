@@ -6,6 +6,9 @@ import Button from "./Button.astro";
 interface CTA {
   label: string;
   href: string;
+  target?: string;
+  event?: string;
+  location?: string;
 }
 
 interface Props {
@@ -27,12 +30,26 @@ const { eyebrow, title, text, primaryCta, secondaryCta } = Astro.props;
     {(primaryCta || secondaryCta) && (
       <div class="hero__actions">
         {primaryCta && (
-          <Button href={primaryCta.href} variant="primary" size="lg">
+          <Button
+            href={primaryCta.href}
+            target={primaryCta.target}
+            variant="primary"
+            size="lg"
+            data-event={primaryCta.event}
+            data-location={primaryCta.location}
+          >
             {primaryCta.label}
           </Button>
         )}
         {secondaryCta && (
-          <Button href={secondaryCta.href} variant="secondary" size="lg">
+          <Button
+            href={secondaryCta.href}
+            target={secondaryCta.target}
+            variant="secondary"
+            size="lg"
+            data-event={secondaryCta.event}
+            data-location={secondaryCta.location}
+          >
             {secondaryCta.label}
           </Button>
         )}
