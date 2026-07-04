@@ -2,6 +2,16 @@ function normalizeValue(value) {
   return typeof value === 'string' ? value.trim() : '';
 }
 
+function jsonResponse(body, status = 200, headers = {}) {
+  return new Response(JSON.stringify(body), {
+    status,
+    headers: {
+      'Content-Type': 'application/json',
+      ...headers,
+    },
+  });
+}
+
 export function validateBriefingData(payload = {}) {
   const data = {
     nome: normalizeValue(payload.nome),
@@ -36,17 +46,23 @@ export function buildBriefingAnalysis(data) {
 }
 
 export async function handler(event) {
-  if (event.httpMethod !== 'POST') {
-    return {
-      statusCode: 405,
+  if (event.httpMethod === 'OPTIONS') {
+    return new Response(null, {
+      status: 204,
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify({
+    });
+  }
+
+  if (event.httpMethod !== 'POST') {
+    return jsonResponse(
+      {
         ok: false,
         error: 'Método não permitido. Envie uma requisição POST.',
-      }),
-    };
+      },
+      405,
+    );
   }
 
   let payload = {};
@@ -54,37 +70,32 @@ export async function handler(event) {
   try {
     payload = JSON.parse(event.body || '{}');
   } catch (error) {
-    return {
-      statusCode: 400,
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
+    return jsonResponse(
+      {
         ok: false,
         error: 'O corpo da requisição precisa ser um JSON válido.',
-      }),
-    };
+      },
+      400,
+    );
   }
 
   const validation = validateBriefingData(payload);
 
   if (!validation.ok) {
-    return {
-      statusCode: 400,
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
+    return jsonResponse(
+      {
         ok: false,
         error: 'Campos obrigatórios ausentes.',
         missing: validation.errors,
-      }),
-    };
+      },
+      400,
+    );
   }
 
   let analysis = buildBriefingAnalysis(validation.data);
+  const hasOpenAiKey = Boolean(process.env.OPENAI_API_KEY);
 
-  if (process.env.OPENAI_API_KEY) {
+  if (hasOpenAiKey) {
     try {
       const response = await fetch('https://api.openai.com/v1/chat/completions', {
         method: 'POST',
@@ -122,18 +133,15 @@ export async function handler(event) {
     }
   }
 
-  return {
-    statusCode: 200,
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify({
+  return jsonResponse(
+    {
       ok: true,
       analysis,
-      source: process.env.OPENAI_API_KEY ? 'openai' : 'local',
+      source: hasOpenAiKey ? 'openai' : 'local',
       data: validation.data,
-    }),
-  };
+    },
+    200,
+  );
 }
 
 export default handler;
