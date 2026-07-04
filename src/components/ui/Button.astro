@@ -6,6 +6,7 @@ interface Props {
   target?: string;
   type?: "button" | "submit" | "reset";
   class?: string;
+  [key: string]: unknown;
 }
 
 const {
@@ -15,12 +16,14 @@ const {
   target,
   type = "button",
   class: className = "",
+  ...attrs
 } = Astro.props;
 
 const Tag = href ? "a" : "button";
 ---
 
 <Tag
+  {...attrs}
   href={href}
   target={target}
   type={href ? undefined : type}

@@ -5,6 +5,7 @@ import Section from "../components/ui/Section.astro";
 import Container from "../components/ui/Container.astro";
 import ProductCard from "../components/ui/ProductCard.astro";
 import Button from "../components/ui/Button.astro";
+import { KARV_CONTACT_LINKS, KARV_CONTACT_LABELS } from "../data/contactLinks";
 
 const sections = [
   {
@@ -58,14 +59,26 @@ const sections = [
 
   <Section background="surface-soft" spacing="tight">
     <Container size="narrow" class="cta">
-      <h2 class="cta__title">Pronto para elevar o padrão do seu espaço?</h2>
+      <h2 class="cta__title">Fale com a KARV</h2>
       <p class="cta__text">
-        Conheça as poltronas e coleções KARV e encontre a combinação certa de tecido
-        para o seu ambiente ou negócio.
+        Conte sobre o seu ambiente e o tipo de presença que deseja criar. A KARV
+        desenvolve poltronas para reforçar a identidade do espaço com conforto,
+        expressão visual e aplicação comercial.
       </p>
       <div class="cta__actions">
-        <Button href="/produtos/" variant="primary" size="lg">Ver produtos</Button>
-        <Button href="/tecidos/" variant="secondary" size="lg">Ver tecidos</Button>
+        <Button
+          href={KARV_CONTACT_LINKS.whatsapp}
+          target="_blank"
+          variant="primary"
+          size="lg"
+          data-event="cta_whatsapp"
+          data-location="home-main"
+        >
+          {KARV_CONTACT_LABELS.whatsapp}
+        </Button>
+        <Button href="/produtos/" variant="secondary" size="lg" data-event="cta_produtos" data-location="home-main">
+          Ver produtos
+        </Button>
       </div>
     </Container>
   </Section>
@@ -76,33 +89,53 @@ const sections = [
         <div class="contact-section__intro">
           <h2>Fale com a KARV</h2>
           <p>
-            Converse com a KARV para entender possibilidades de poltronas, tecidos e
-            aplicações para o seu ambiente.
-          </p>
+              Escolha o canal mais direto para iniciar uma proposta comercial e contar
+              sobre o espaço que deseja transformar.
+            </p>
         </div>
 
         <div class="contact-grid">
           <article class="contact-card">
             <h3 class="contact-card__title">WhatsApp</h3>
             <p class="contact-card__text">+55 11 94519-7063</p>
-            <Button href="https://wa.me/5511945197063" target="_blank" variant="secondary" size="lg">
-              Chamar no WhatsApp
+            <Button
+              href={KARV_CONTACT_LINKS.whatsapp}
+              target="_blank"
+              variant="secondary"
+              size="lg"
+              data-event="cta_whatsapp"
+              data-location="home-contact"
+            >
+              {KARV_CONTACT_LABELS.whatsapp}
             </Button>
           </article>
 
           <article class="contact-card">
             <h3 class="contact-card__title">Instagram</h3>
             <p class="contact-card__text">@karv.dna</p>
-            <Button href="https://www.instagram.com/karv.dna/" target="_blank" variant="secondary" size="lg">
-              Ver Instagram
+            <Button
+              href={KARV_CONTACT_LINKS.instagram}
+              target="_blank"
+              variant="secondary"
+              size="lg"
+              data-event="cta_instagram"
+              data-location="home-contact"
+            >
+              {KARV_CONTACT_LABELS.instagram}
             </Button>
           </article>
 
           <article class="contact-card">
             <h3 class="contact-card__title">E-mail</h3>
             <p class="contact-card__text">comercial.karv.sp@gmail.com</p>
-            <Button href="mailto:comercial.karv.sp@gmail.com" variant="secondary" size="lg">
-              Enviar e-mail
+            <Button
+              href={KARV_CONTACT_LINKS.email}
+              variant="secondary"
+              size="lg"
+              data-event="cta_email"
+              data-location="home-contact"
+            >
+              {KARV_CONTACT_LABELS.email}
             </Button>
           </article>
         </div>

@@ -1,53 +1,58 @@
 ---
 import BaseLayout from "../../../layouts/BaseLayout.astro";
-import Hero from "../../../components/ui/Hero.astro";
 import Section from "../../../components/ui/Section.astro";
 import Container from "../../../components/ui/Container.astro";
 import Button from "../../../components/ui/Button.astro";
+import { KARV_CONTACT_LINKS, KARV_CONTACT_LABELS } from "../../../data/contactLinks";
 ---
 
 <BaseLayout
-  title="Fale com a KARV"
-  description="Contato comercial da KARV para orçamentos, projetos e parcerias."
+  title="Fale com a KARV | Contato Comercial"
+  description="Entre em contato com a KARV para conversar sobre poltronas comerciais que reforçam a identidade do seu ambiente."
 >
-  <Hero
-    eyebrow="Contato KARV"
-    title="Fale com a KARV"
-    text="Converse com a KARV para entender possibilidades de poltronas, tecidos e aplicações para o seu ambiente."
-    primaryCta={{ label: "Voltar para home", href: "/" }}
-  />
-
-  <Section background="surface">
+  <Section background="surface-soft">
     <Container size="narrow">
-      <div class="contact-card">
-        <p class="contact-card__intro">
-          Para atendimento comercial, escolha um dos canais abaixo e fale direto com a nossa equipe.
+      <div class="contact-hero">
+        <p class="contact-hero__eyebrow">Contato comercial</p>
+        <h1>Fale com a KARV</h1>
+        <p>
+          Conte sobre o seu ambiente e o tipo de presença que deseja criar. A KARV
+          desenvolve poltronas que reforçam a identidade do espaço com conforto,
+          expressão visual e aplicação comercial.
         </p>
 
-        <div class="contact-grid">
-          <article class="contact-card__item">
-            <h3>WhatsApp</h3>
-            <p>+55 11 94519-7063</p>
-            <Button href="https://wa.me/5511945197063" target="_blank" variant="secondary" size="lg">
-              Chamar no WhatsApp
-            </Button>
-          </article>
+        <div class="contact-actions">
+          <Button
+            href={KARV_CONTACT_LINKS.whatsapp}
+            target="_blank"
+            variant="primary"
+            size="lg"
+            data-event="cta_whatsapp"
+            data-location="ia-briefing"
+          >
+            {KARV_CONTACT_LABELS.whatsapp}
+          </Button>
 
-          <article class="contact-card__item">
-            <h3>Instagram</h3>
-            <p>@karv.dna</p>
-            <Button href="https://www.instagram.com/karv.dna/" target="_blank" variant="secondary" size="lg">
-              Ver Instagram
-            </Button>
-          </article>
+          <Button
+            href={KARV_CONTACT_LINKS.instagram}
+            target="_blank"
+            variant="secondary"
+            size="lg"
+            data-event="cta_instagram"
+            data-location="ia-briefing"
+          >
+            {KARV_CONTACT_LABELS.instagram}
+          </Button>
 
-          <article class="contact-card__item">
-            <h3>E-mail</h3>
-            <p>comercial.karv.sp@gmail.com</p>
-            <Button href="mailto:comercial.karv.sp@gmail.com" variant="secondary" size="lg">
-              Enviar e-mail
-            </Button>
-          </article>
+          <Button
+            href={KARV_CONTACT_LINKS.email}
+            variant="secondary"
+            size="lg"
+            data-event="cta_email"
+            data-location="ia-briefing"
+          >
+            {KARV_CONTACT_LABELS.email}
+          </Button>
         </div>
       </div>
     </Container>
@@ -55,43 +60,34 @@ import Button from "../../../components/ui/Button.astro";
 </BaseLayout>
 
 <style>
-  .contact-card {
-    display: grid;
-    gap: var(--space-6);
-    padding: var(--space-8);
-    border: 1px solid var(--color-border);
-    border-radius: var(--radius-lg);
-    background: var(--color-surface);
+  .contact-hero {
+    text-align: center;
   }
 
-  .contact-card__intro {
+  .contact-hero__eyebrow {
+    margin-bottom: var(--space-3);
+    color: var(--color-accent-soft);
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+
+  .contact-hero h1 {
+    margin-bottom: var(--space-4);
+  }
+
+  .contact-hero p {
+    margin-inline: auto;
+    max-width: 680px;
     color: var(--color-muted);
-    line-height: 1.7;
   }
 
-  .contact-grid {
-    display: grid;
-    gap: var(--space-6);
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  }
-
-  .contact-card__item {
-    display: grid;
-    gap: var(--space-4);
-    padding: var(--space-6);
-    border-radius: var(--radius-lg);
-    border: 1px solid var(--color-border);
-    background: var(--color-bg);
-  }
-
-  .contact-card__item h3 {
-    margin: 0;
-    font-size: 1.15rem;
-  }
-
-  .contact-card__item p {
-    margin: 0;
-    color: var(--color-muted);
-    line-height: 1.75;
+  .contact-actions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--space-3);
+    margin-top: var(--space-8);
   }
 </style>
