@@ -68,6 +68,10 @@ import Button from "../../../components/ui/Button.astro";
   form?.addEventListener('submit', async (event) => {
     event.preventDefault();
 
+    if (!(form instanceof HTMLFormElement)) {
+      return;
+    }
+
     const formData = new FormData(form);
     const payload = Object.fromEntries(formData.entries());
 
@@ -85,27 +89,50 @@ import Button from "../../../components/ui/Button.astro";
       });
 
       const data = await response.json();
+      const briefing = typeof data?.analysis === 'string'
+        ? data.analysis
+        : typeof data?.briefing === 'string'
+          ? data.briefing
+          : '';
 
-      if (!response.ok || !data.ok) {
-        throw new Error(data.error || 'Não foi possível gerar o briefing.');
+      if (!response.ok || !data?.ok || !briefing) {
+        throw new Error(data?.error || 'Não foi possível gerar o briefing.');
       }
 
       if (result) {
-        result.innerHTML = `
-          <div class="briefing-result__panel">
-            <p class="briefing-result__label">Resposta inicial</p>
-            <p class="briefing-result__text">${data.analysis}</p>
-          </div>
-        `;
+        const panel = document.createElement('div');
+        panel.className = 'briefing-result__panel';
+
+        const label = document.createElement('p');
+        label.className = 'briefing-result__label';
+        label.textContent = 'Resposta inicial';
+
+        const text = document.createElement('p');
+        text.className = 'briefing-result__text';
+        text.textContent = briefing;
+
+        panel.append(label, text);
+        result.replaceChildren(panel);
       }
     } catch (error) {
+      const message = error instanceof Error && error.message
+        ? error.message
+        : 'Não foi possível gerar o briefing.';
+
       if (result) {
-        result.innerHTML = `
-          <div class="briefing-result__panel">
-            <p class="briefing-result__label">Erro</p>
-            <p class="briefing-result__text">${error.message}</p>
-          </div>
-        `;
+        const panel = document.createElement('div');
+        panel.className = 'briefing-result__panel';
+
+        const label = document.createElement('p');
+        label.className = 'briefing-result__label';
+        label.textContent = 'Erro';
+
+        const text = document.createElement('p');
+        text.className = 'briefing-result__text';
+        text.textContent = message;
+
+        panel.append(label, text);
+        result.replaceChildren(panel);
       }
     }
   });
