@@ -27,24 +27,30 @@ const sections = [
     href: "/tecidos/",
   },
   {
-    title: "Blog GEO",
-    label: "Conteúdo",
-    description: "Conteúdo estratégico de SEO e autoridade de nicho.",
+    title: "Conteúdo",
+    label: "Guias",
+    description: "Ideias e orientações para valorizar ambientes comerciais com mobiliário de identidade.",
     href: "/blog/",
   },
 ];
 ---
 
 <BaseLayout
-  title="KARV Platform | Infraestrutura Digital"
-  description="Plataforma digital oficial da KARV para landing pages, produtos, nichos, tecidos, SEO/GEO e integrações com Netlify Pro."
+  title="KARV | Poltronas comerciais com identidade visual"
+  description="Poltronas comerciais para barbearias, clínicas, studios, estética e negócios autorais que desejam reforçar a identidade do ambiente."
 >
   <Hero
-    eyebrow="KARV Platform"
-    title="Infraestrutura digital da KARV"
-    text="Base oficial para landing pages, produtos, nichos, biblioteca de tecidos, SEO/GEO, analytics e integrações com Netlify Pro."
-    primaryCta={{ label: "Ver produtos", href: "/produtos/" }}
-    secondaryCta={{ label: "Ver nichos", href: "/nichos/" }}
+    eyebrow="Poltronas comerciais com identidade"
+    title="Poltronas que reforçam a identidade do seu espaço"
+    text="A KARV desenvolve poltronas para barbearias, clínicas, studios, estética e negócios autorais, unindo conforto, presença visual e aplicação profissional."
+    primaryCta={{
+      label: KARV_CONTACT_LABELS.whatsapp,
+      href: KARV_CONTACT_LINKS.whatsapp,
+      target: "_blank",
+      event: "cta_whatsapp",
+      location: "home-hero",
+    }}
+    secondaryCta={{ label: "Ver nichos", href: "/nichos/", event: "cta_nichos", location: "home-hero" }}
   />
 
   <Section background="surface">
@@ -59,22 +65,14 @@ const sections = [
 
   <Section background="surface-soft" spacing="tight">
     <Container size="narrow" class="cta">
-      <h2 class="cta__title">Fale com a KARV</h2>
+      <h2 class="cta__title">Presença visual para ambientes comerciais</h2>
       <p class="cta__text">
-        Conte sobre o seu ambiente e o tipo de presença que deseja criar. A KARV
-        desenvolve poltronas para reforçar a identidade do espaço com conforto,
-        expressão visual e aplicação comercial.
+        Cada projeto parte do espaço, do público e da experiência que o cliente deseja
+        construir. A poltrona entra como peça de conforto, identidade e valor percebido.
       </p>
       <div class="cta__actions">
-        <Button
-          href={KARV_CONTACT_LINKS.whatsapp}
-          target="_blank"
-          variant="primary"
-          size="lg"
-          data-event="cta_whatsapp"
-          data-location="home-main"
-        >
-          {KARV_CONTACT_LABELS.whatsapp}
+        <Button href="/nichos/" variant="primary" size="lg" data-event="cta_nichos" data-location="home-main">
+          Ver nichos
         </Button>
         <Button href="/produtos/" variant="secondary" size="lg" data-event="cta_produtos" data-location="home-main">
           Ver produtos
