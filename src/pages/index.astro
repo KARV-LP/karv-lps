@@ -50,7 +50,13 @@ const sections = [
       event: "cta_whatsapp",
       location: "home-hero",
     }}
-    secondaryCta={{ label: "Ver nichos", href: "/nichos/", event: "cta_nichos", location: "home-hero" }}
+    secondaryCta={{
+      label: KARV_CONTACT_LABELS.store,
+      href: KARV_CONTACT_LINKS.store,
+      target: "_blank",
+      event: "cta_store",
+      location: "home-hero",
+    }}
   />
 
   <Section background="surface">
@@ -76,6 +82,16 @@ const sections = [
         </Button>
         <Button href="/produtos/" variant="secondary" size="lg" data-event="cta_produtos" data-location="home-main">
           Ver produtos
+        </Button>
+        <Button
+          href={KARV_CONTACT_LINKS.store}
+          target="_blank"
+          variant="secondary"
+          size="lg"
+          data-event="cta_store"
+          data-location="home-main"
+        >
+          {KARV_CONTACT_LABELS.store}
         </Button>
       </div>
     </Container>
