@@ -7,112 +7,55 @@ import Button from "../../../components/ui/Button.astro";
 ---
 
 <BaseLayout
-  title="Briefing Inteligente KARV"
-  description="Teste inicial do Briefing Inteligente KARV para transformar um briefing simples em uma análise comercial inicial."
+  title="Fale com a KARV"
+  description="Contato comercial da KARV para orçamentos, projetos e parcerias."
 >
   <Hero
-    eyebrow="IA KARV"
-    title="Briefing Inteligente KARV"
-    text="Envie um briefing simples e receba uma análise inicial preparada para orientar a conversa comercial do projeto."
+    eyebrow="Contato KARV"
+    title="Fale com a KARV"
+    text="Converse com a KARV para entender possibilidades de poltronas, tecidos e aplicações para o seu ambiente."
     primaryCta={{ label: "Voltar para home", href: "/" }}
   />
 
   <Section background="surface">
     <Container size="narrow">
-      <div class="briefing-card">
-        <p class="briefing-card__intro">
-          Esta é uma primeira etapa experimental para transformar um briefing simples em uma leitura comercial inicial, sem expor a chave da OpenAI no frontend.
+      <div class="contact-card">
+        <p class="contact-card__intro">
+          Para atendimento comercial, escolha um dos canais abaixo e fale direto com a nossa equipe.
         </p>
 
-        <form class="briefing-form" id="briefing-form">
-          <label>
-            <span>Nome</span>
-            <input name="nome" type="text" required />
-          </label>
+        <div class="contact-grid">
+          <article class="contact-card__item">
+            <h3>WhatsApp</h3>
+            <p>+55 11 94519-7063</p>
+            <Button href="https://wa.me/5511945197063" target="_blank" variant="secondary" size="lg">
+              Chamar no WhatsApp
+            </Button>
+          </article>
 
-          <label>
-            <span>Tipo de negócio</span>
-            <input name="tipoNegocio" type="text" placeholder="Ex.: barbearia, clínica, estética" required />
-          </label>
+          <article class="contact-card__item">
+            <h3>Instagram</h3>
+            <p>@karv.dna</p>
+            <Button href="https://www.instagram.com/karv.dna/" target="_blank" variant="secondary" size="lg">
+              Ver Instagram
+            </Button>
+          </article>
 
-          <label>
-            <span>Ambiente</span>
-            <input name="ambiente" type="text" placeholder="Ex.: recepção, sala de espera, espaço premium" required />
-          </label>
-
-          <label>
-            <span>Objetivo do projeto</span>
-            <textarea name="objetivo" rows="3" required></textarea>
-          </label>
-
-          <label>
-            <span>Estilo desejado</span>
-            <input name="estilo" type="text" placeholder="Ex.: elegante, moderno, acolhedor" required />
-          </label>
-
-          <Button type="submit" variant="primary">Gerar briefing</Button>
-        </form>
-
-        <div class="briefing-result" id="briefing-result" aria-live="polite">
-          <p class="briefing-result__placeholder">Aguardando envio do briefing...</p>
+          <article class="contact-card__item">
+            <h3>E-mail</h3>
+            <p>comercial.karv.sp@gmail.com</p>
+            <Button href="mailto:comercial.karv.sp@gmail.com" variant="secondary" size="lg">
+              Enviar e-mail
+            </Button>
+          </article>
         </div>
       </div>
     </Container>
   </Section>
 </BaseLayout>
 
-<script>
-  const form = document.getElementById('briefing-form');
-  const result = document.getElementById('briefing-result');
-
-  form?.addEventListener('submit', async (event) => {
-    event.preventDefault();
-
-    const formData = new FormData(form);
-    const payload = Object.fromEntries(formData.entries());
-
-    if (result) {
-      result.innerHTML = '<p class="briefing-result__placeholder">Gerando análise inicial...</p>';
-    }
-
-    try {
-      const response = await fetch('/.netlify/functions/karv-briefing', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(payload),
-      });
-
-      const data = await response.json();
-
-      if (!response.ok || !data.ok) {
-        throw new Error(data.error || 'Não foi possível gerar o briefing.');
-      }
-
-      if (result) {
-        result.innerHTML = `
-          <div class="briefing-result__panel">
-            <p class="briefing-result__label">Resposta inicial</p>
-            <p class="briefing-result__text">${data.analysis}</p>
-          </div>
-        `;
-      }
-    } catch (error) {
-      if (result) {
-        result.innerHTML = `
-          <div class="briefing-result__panel">
-            <p class="briefing-result__label">Erro</p>
-            <p class="briefing-result__text">${error.message}</p>
-          </div>
-        `;
-      }
-    }
-  });
-</script>
-
 <style>
-  .briefing-card {
+  .contact-card {
     display: grid;
     gap: var(--space-6);
     padding: var(--space-8);
@@ -121,61 +64,34 @@ import Button from "../../../components/ui/Button.astro";
     background: var(--color-surface);
   }
 
-  .briefing-card__intro {
+  .contact-card__intro {
     color: var(--color-muted);
     line-height: 1.7;
   }
 
-  .briefing-form {
+  .contact-grid {
+    display: grid;
+    gap: var(--space-6);
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  }
+
+  .contact-card__item {
     display: grid;
     gap: var(--space-4);
-  }
-
-  .briefing-form label {
-    display: grid;
-    gap: var(--space-2);
-    font-weight: 600;
-  }
-
-  .briefing-form input,
-  .briefing-form textarea {
-    width: 100%;
+    padding: var(--space-6);
+    border-radius: var(--radius-lg);
     border: 1px solid var(--color-border);
-    border-radius: var(--radius-md);
-    padding: var(--space-3) var(--space-4);
     background: var(--color-bg);
-    color: var(--color-text);
-    font: inherit;
   }
 
-  .briefing-form textarea {
-    resize: vertical;
+  .contact-card__item h3 {
+    margin: 0;
+    font-size: 1.15rem;
   }
 
-  .briefing-result {
-    min-height: 120px;
-  }
-
-  .briefing-result__placeholder {
+  .contact-card__item p {
+    margin: 0;
     color: var(--color-muted);
-  }
-
-  .briefing-result__panel {
-    padding: var(--space-5);
-    border-radius: var(--radius-md);
-    border: 1px solid var(--color-border);
-    background: var(--color-bg);
-  }
-
-  .briefing-result__label {
-    font-size: 13px;
-    text-transform: uppercase;
-    letter-spacing: 0.2em;
-    color: var(--color-accent-soft);
-    margin-bottom: var(--space-3);
-  }
-
-  .briefing-result__text {
-    line-height: 1.7;
+    line-height: 1.75;
   }
 </style>
