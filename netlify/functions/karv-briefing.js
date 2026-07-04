@@ -2,12 +2,11 @@ function normalizeValue(value) {
   return typeof value === 'string' ? value.trim() : '';
 }
 
-function jsonResponse(body, status = 200, headers = {}) {
+function createJsonResponse(body, status = 200) {
   return new Response(JSON.stringify(body), {
     status,
     headers: {
       'Content-Type': 'application/json',
-      ...headers,
     },
   });
 }
@@ -46,7 +45,9 @@ export function buildBriefingAnalysis(data) {
 }
 
 export async function handler(event) {
-  if (event.httpMethod === 'OPTIONS') {
+  const method = event?.httpMethod || 'GET';
+
+  if (method === 'OPTIONS') {
     return new Response(null, {
       status: 204,
       headers: {
@@ -55,8 +56,8 @@ export async function handler(event) {
     });
   }
 
-  if (event.httpMethod !== 'POST') {
-    return jsonResponse(
+  if (method !== 'POST') {
+    return createJsonResponse(
       {
         ok: false,
         error: 'Método não permitido. Envie uma requisição POST.',
@@ -68,9 +69,9 @@ export async function handler(event) {
   let payload = {};
 
   try {
-    payload = JSON.parse(event.body || '{}');
+    payload = JSON.parse(event?.body || '{}');
   } catch (error) {
-    return jsonResponse(
+    return createJsonResponse(
       {
         ok: false,
         error: 'O corpo da requisição precisa ser um JSON válido.',
@@ -82,7 +83,7 @@ export async function handler(event) {
   const validation = validateBriefingData(payload);
 
   if (!validation.ok) {
-    return jsonResponse(
+    return createJsonResponse(
       {
         ok: false,
         error: 'Campos obrigatórios ausentes.',
@@ -133,7 +134,7 @@ export async function handler(event) {
     }
   }
 
-  return jsonResponse(
+  return createJsonResponse(
     {
       ok: true,
       analysis,
