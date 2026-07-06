@@ -1,0 +1,927 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import Section from "../../../components/ui/Section.astro";
+import Container from "../../../components/ui/Container.astro";
+import Button from "../../../components/ui/Button.astro";
+
+const WHATSAPP_NUMBER = "5511945197063";
+const WHATSAPP_MESSAGE =
+  "Olá, tenho interesse na poltrona KV-001 RYUJIN da KARV. Gostaria de solicitar um orçamento.";
+const whatsappHref = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(WHATSAPP_MESSAGE)}`;
+
+const IMG = "/images/produtos/kv-001-ryujin";
+---
+
+<BaseLayout
+  title="RYUJIN | Poltrona autoral KV-001 — KARV"
+  description="RYUJIN é a poltrona autoral KARV que amplifica ambientes de identidade forte — studios de tatuagem, barbearias autorais e espaços expressivos. Estrutura que sustenta, identidade que transforma."
+>
+  <div class="ryujin">
+    <section class="ryujin__hero">
+      <img
+        class="ryujin__hero-img"
+        src={`${IMG}/hero-ambiente.jpg`}
+        alt="Poltrona RYUJIN em estúdio de tatuagem com letreiro neon Tattoo Studio"
+        loading="eager"
+        fetchpriority="high"
+        width="1100"
+        height="733"
+      />
+      <div class="ryujin__scrim" aria-hidden="true"></div>
+      <div class="ryujin__kmark" aria-hidden="true">
+        <div class="ryujin__k">龍神</div>
+        <div class="ryujin__r">Ryujin · o dragão</div>
+      </div>
+      <div class="ryujin__htxt">
+        <p class="ryujin__eyebrow ryujin__eyebrow--onink">
+          KV-001<span class="ryujin__dot">·</span>Poltrona autoral
+        </p>
+        <h1 class="ryujin__h1">RYUJIN</h1>
+        <p class="ryujin__sub">A poltrona que amplifica ambientes de identidade forte.</p>
+        <div class="ryujin__actions">
+          <Button href={whatsappHref} target="_blank" variant="primary" size="lg">
+            Solicitar orçamento
+          </Button>
+          <a class="ryujin__linkcta ryujin__linkcta--onink" href="#ambientes">Ver ambientes</a>
+        </div>
+      </div>
+    </section>
+
+    <Section id="conceito" spacing="loose">
+      <Container>
+        <div class="ryujin__split">
+          <div class="ryujin__txtcol">
+            <p class="ryujin__eyebrow">01<span class="ryujin__dot">·</span>Conceito</p>
+            <h2 class="ryujin__disp ryujin__disp--big">
+              Estrutura que sustenta.<br />Identidade que transforma.
+            </h2>
+            <p class="ryujin__lead">
+              RYUJIN nasce de uma estampa autoral — o dragão e as peônias sobre fundo profundo —
+              contida por laterais em bouclé cinza e base em madeira natural. A estrutura garante
+              a qualidade da peça. Quem define a identidade é o revestimento.
+            </p>
+          </div>
+          <div class="ryujin__imgcol">
+            <img
+              src={`${IMG}/produto-isolado.jpg`}
+              alt="Poltrona RYUJIN isolada em fundo branco, estrutura em madeira natural"
+              loading="lazy"
+              decoding="async"
+              width="1100"
+              height="733"
+            />
+          </div>
+        </div>
+      </Container>
+    </Section>
+
+    <Section id="arte-aplicada" background="surface" spacing="loose">
+      <Container>
+        <div class="ryujin__sechead">
+          <p class="ryujin__eyebrow">02<span class="ryujin__dot">·</span>Arte aplicada</p>
+          <h2 class="ryujin__disp ryujin__disp--mid">O detalhe que se aproxima.</h2>
+        </div>
+        <div class="ryujin__grid3">
+          <figure>
+            <img
+              src={`${IMG}/arte-dragao-peonia.jpg`}
+              alt="Detalhe da estampa autoral de dragão e peônias do revestimento RYUJIN"
+              loading="lazy"
+              decoding="async"
+              width="900"
+              height="600"
+            />
+            <figcaption class="ryujin__cap">Dragão &amp; peônia</figcaption>
+          </figure>
+          <figure>
+            <img
+              src={`${IMG}/arte-costura.jpg`}
+              alt="Detalhe da costura entre bouclé cinza e veludo vermelho da poltrona RYUJIN"
+              loading="lazy"
+              decoding="async"
+              width="900"
+              height="600"
+            />
+            <figcaption class="ryujin__cap">Costura bouclé × veludo</figcaption>
+          </figure>
+          <figure>
+            <img
+              src={`${IMG}/arte-vermelho.jpg`}
+              alt="Detalhe da profundidade do vermelho no revestimento da poltrona RYUJIN"
+              loading="lazy"
+              decoding="async"
+              width="900"
+              height="600"
+            />
+            <figcaption class="ryujin__cap">Profundidade do vermelho</figcaption>
+          </figure>
+        </div>
+      </Container>
+    </Section>
+
+    <Section id="ambientes" spacing="loose">
+      <Container>
+        <div class="ryujin__sechead">
+          <p class="ryujin__eyebrow">03<span class="ryujin__dot">·</span>Ambientes</p>
+          <h2 class="ryujin__disp ryujin__disp--mid">
+            Feita para espaços que já têm o que dizer.
+          </h2>
+          <p class="ryujin__lead">
+            Studios de tatuagem, barbearias autorais e espaços de estética de identidade
+            expressiva. Onde a parede já é arte, RYUJIN pertence.
+          </p>
+        </div>
+        <div class="ryujin__envs">
+          <figure>
+            <img
+              src={`${IMG}/ambiente-tattoo-studio.jpg`}
+              alt="Poltrona RYUJIN em estúdio de tatuagem autoral"
+              loading="lazy"
+              decoding="async"
+              width="1100"
+              height="733"
+            />
+            <figcaption class="ryujin__cap">Studio de tatuagem</figcaption>
+          </figure>
+          <figure>
+            <img
+              src={`${IMG}/ambiente-barbearia.jpg`}
+              alt="Poltrona RYUJIN em barbearia de identidade autoral"
+              loading="lazy"
+              decoding="async"
+              width="1100"
+              height="733"
+            />
+            <figcaption class="ryujin__cap">Barbearia autoral</figcaption>
+          </figure>
+          <figure class="ryujin__envs-third">
+            <img
+              src={`${IMG}/ambiente-expressivo.jpg`}
+              alt="Poltrona RYUJIN amplificando um espaço de identidade expressiva"
+              loading="lazy"
+              decoding="async"
+              width="1100"
+              height="733"
+            />
+            <figcaption class="ryujin__cap">Espaço expressivo</figcaption>
+          </figure>
+        </div>
+      </Container>
+    </Section>
+
+    <Section id="valor" background="surface" spacing="loose" class="ryujin__valor">
+      <div class="ryujin__valor-inner">
+        <div class="ryujin__valor-img">
+          <img
+            src={`${IMG}/ambiente-expressivo.jpg`}
+            alt="Poltrona RYUJIN amplificando o espaço ao redor"
+            loading="lazy"
+            decoding="async"
+            width="1400"
+            height="933"
+          />
+        </div>
+        <div class="ryujin__valor-text">
+          <p class="ryujin__eyebrow">04<span class="ryujin__dot">·</span>Valor para o espaço</p>
+          <h2 class="ryujin__disp ryujin__disp--big">Ela não ocupa o ambiente.<br />Ela o revela.</h2>
+          <div class="ryujin__metarow">
+            <div class="ryujin__meta">
+              <div class="ryujin__meta-t">Amplifica identidade</div>
+              <div class="ryujin__meta-x">
+                Reforça o que o espaço já comunica, sem competir com ele.
+              </div>
+            </div>
+            <div class="ryujin__meta">
+              <div class="ryujin__meta-t">Base estrutural em EPS</div>
+              <div class="ryujin__meta-x">
+                Resistência a umidade, cupim e fogo. Durável para ambientes de alto giro.
+              </div>
+            </div>
+            <div class="ryujin__meta">
+              <div class="ryujin__meta-t">Sem percinta tradicional</div>
+              <div class="ryujin__meta-x">
+                Construção que sustenta o conforto ao longo do tempo.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </Section>
+
+    <section class="ryujin__cond">
+      <Container size="narrow">
+        <p class="ryujin__eyebrow ryujin__eyebrow--onink">05<span class="ryujin__dot">·</span>Condições</p>
+        <h2 class="ryujin__disp">Personalização sob medida.</h2>
+        <p class="ryujin__lead ryujin__lead--onink">
+          Revestimento configurável e produção autoral. Condições comerciais e prazos definidos
+          sob consulta, de acordo com o projeto do seu espaço.
+        </p>
+      </Container>
+    </section>
+
+    <section class="ryujin__cta">
+      <div class="ryujin__k ryujin__k--cta" aria-hidden="true">龍神</div>
+      <h2 class="ryujin__disp">Traga o RYUJIN<br />para o seu espaço.</h2>
+      <div class="ryujin__actions ryujin__actions--center">
+        <Button href={whatsappHref} target="_blank" variant="primary" size="lg">
+          Solicitar orçamento da RYUJIN
+        </Button>
+        <a class="ryujin__linkcta ryujin__linkcta--onink" href={whatsappHref} target="_blank" rel="noopener noreferrer">
+          Falar com a KARV
+        </a>
+      </div>
+    </section>
+
+    <section class="ryujin__closer">
+      <img
+        src={`${IMG}/ambiente-tattoo-studio.jpg`}
+        alt="Fechamento editorial: poltrona RYUJIN em estúdio de tatuagem"
+        loading="lazy"
+        decoding="async"
+        width="1600"
+        height="1067"
+      />
+    </section>
+
+    <footer class="ryujin__foot">
+      <Container>
+        <div class="ryujin__foot-inner">
+          <div>
+            <p class="ryujin__wm">K<b>·</b>ARV</p>
+            <p class="ryujin__tag">estrutura sustenta · identidade transforma</p>
+          </div>
+          <div class="ryujin__foot-cols">
+            <div>
+              <p class="ryujin__foot-h">Contato</p>
+              <a class="ryujin__foot-whatsapp" href={whatsappHref} target="_blank" rel="noopener noreferrer">
+                WhatsApp KARV
+              </a>
+              <span>Atendimento: Sul e Sudeste</span>
+            </div>
+            <div>
+              <p class="ryujin__foot-h">Social</p>
+              <a href="https://www.instagram.com/karv.dna/" target="_blank" rel="noopener noreferrer">
+                Instagram · @karv.dna
+              </a>
+            </div>
+          </div>
+        </div>
+      </Container>
+    </footer>
+  </div>
+</BaseLayout>
+
+<style>
+  .ryujin {
+    --ink: #15120e;
+    --bg: #f3eee6;
+    --sand: #e7decf;
+    --line: #d8cfbe;
+    --bronze: #96774b;
+    --bronze2: #b79a6b;
+    --stone: #6c6357;
+    --serif: "Iowan Old Style", "Palatino Linotype", "Palatino", "Georgia", serif;
+    --mincho: "Hiragino Mincho ProN", "Yu Mincho", "Songti SC", "MS Mincho", serif;
+
+    --color-bg: var(--bg);
+    --color-surface: var(--sand);
+    --color-surface-soft: var(--ink);
+    --color-text: var(--ink);
+    --color-muted: var(--stone);
+    --color-accent: var(--bronze);
+    --color-accent-soft: var(--bronze2);
+    --color-border: var(--line);
+
+    background: var(--bg);
+    color: var(--ink);
+  }
+
+  .ryujin :global(.section) {
+    padding-block: 64px;
+  }
+
+  @media (min-width: 900px) {
+    .ryujin :global(.section) {
+      padding-block: 150px;
+    }
+  }
+
+  /* ---------- shared type ---------- */
+  .ryujin__eyebrow {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: var(--bronze);
+  }
+
+  .ryujin__eyebrow--onink {
+    color: var(--bronze2);
+  }
+
+  .ryujin__dot {
+    color: var(--bronze);
+    margin: 0 0.5em;
+  }
+
+  .ryujin__disp {
+    font-family: var(--serif);
+    color: var(--ink);
+    font-weight: 500;
+    line-height: 1.06;
+    letter-spacing: -0.01em;
+    font-size: 30px;
+    margin-top: 16px;
+  }
+
+  .ryujin__disp--big {
+    font-size: 30px;
+  }
+
+  .ryujin__disp--mid {
+    font-size: 26px;
+  }
+
+  @media (min-width: 900px) {
+    .ryujin__disp--big {
+      font-size: 50px;
+    }
+    .ryujin__disp--mid {
+      font-size: 40px;
+    }
+  }
+
+  .ryujin__lead {
+    margin-top: 18px;
+    font-size: 15px;
+    line-height: 1.72;
+    color: var(--stone);
+    max-width: 52ch;
+  }
+
+  .ryujin__lead--onink {
+    color: #c9bfae;
+    margin-inline: auto;
+  }
+
+  @media (min-width: 900px) {
+    .ryujin__lead {
+      margin-top: 26px;
+      font-size: 18px;
+    }
+  }
+
+  .ryujin__cap {
+    margin-top: 10px;
+    font-size: 11px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: #8a8072;
+  }
+
+  @media (min-width: 900px) {
+    .ryujin__cap {
+      margin-top: 14px;
+    }
+  }
+
+  .ryujin__linkcta {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--ink);
+    text-decoration: none;
+    border-bottom: 1px solid var(--bronze);
+    padding-bottom: 4px;
+  }
+
+  .ryujin__linkcta--onink {
+    color: #ede4d5;
+  }
+
+  .ryujin__actions {
+    margin-top: 26px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 18px;
+  }
+
+  .ryujin__actions--center {
+    align-items: center;
+  }
+
+  @media (min-width: 900px) {
+    .ryujin__actions {
+      flex-direction: row;
+      align-items: center;
+      gap: 26px;
+      margin-top: 36px;
+    }
+  }
+
+  /* ---------- hero ---------- */
+  .ryujin__hero {
+    position: relative;
+    height: 600px;
+    background: #000;
+  }
+
+  @media (min-width: 900px) {
+    .ryujin__hero {
+      height: 760px;
+    }
+  }
+
+  .ryujin__hero-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 50% 42%;
+    display: block;
+  }
+
+  @media (min-width: 900px) {
+    .ryujin__hero-img {
+      object-position: center 40%;
+    }
+  }
+
+  .ryujin__scrim {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(0deg, rgba(10, 8, 6, 0.78), rgba(10, 8, 6, 0.05) 60%);
+  }
+
+  @media (min-width: 900px) {
+    .ryujin__scrim {
+      background:
+        linear-gradient(90deg, rgba(10, 8, 6, 0.72) 0%, rgba(10, 8, 6, 0.3) 42%, rgba(10, 8, 6, 0) 68%),
+        linear-gradient(0deg, rgba(10, 8, 6, 0.55), rgba(10, 8, 6, 0) 55%);
+    }
+  }
+
+  .ryujin__kmark {
+    position: absolute;
+    right: 24px;
+    top: 26px;
+    text-align: right;
+  }
+
+  .ryujin__kmark .ryujin__k {
+    font-family: var(--mincho);
+    font-size: 34px;
+    color: rgba(246, 241, 232, 0.9);
+    line-height: 1;
+  }
+
+  .ryujin__kmark .ryujin__r {
+    display: none;
+  }
+
+  @media (min-width: 900px) {
+    .ryujin__kmark {
+      right: 120px;
+      top: 64px;
+    }
+    .ryujin__kmark .ryujin__k {
+      font-size: 56px;
+    }
+    .ryujin__kmark .ryujin__r {
+      display: block;
+      margin-top: 10px;
+      font-size: 11px;
+      letter-spacing: 0.32em;
+      color: rgba(246, 241, 232, 0.7);
+      text-transform: uppercase;
+    }
+  }
+
+  .ryujin__htxt {
+    position: absolute;
+    left: 24px;
+    right: 24px;
+    bottom: 40px;
+  }
+
+  @media (min-width: 900px) {
+    .ryujin__htxt {
+      left: 120px;
+      right: auto;
+      bottom: 96px;
+      max-width: 620px;
+    }
+  }
+
+  .ryujin__h1 {
+    font-family: var(--serif);
+    color: #f6f1e8;
+    font-weight: 500;
+    font-size: 56px;
+    line-height: 0.94;
+    margin: 14px 0 0;
+  }
+
+  @media (min-width: 900px) {
+    .ryujin__h1 {
+      font-size: 104px;
+      line-height: 0.92;
+      letter-spacing: -0.02em;
+    }
+  }
+
+  .ryujin__sub {
+    font-family: var(--serif);
+    font-style: italic;
+    color: #eae1d2;
+    font-size: 17px;
+    line-height: 1.4;
+    margin-top: 16px;
+  }
+
+  @media (min-width: 900px) {
+    .ryujin__sub {
+      font-size: 23px;
+      margin-top: 22px;
+      max-width: 440px;
+    }
+  }
+
+  /* ---------- split (conceito) ---------- */
+  .ryujin__split {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 32px;
+    align-items: center;
+  }
+
+  @media (min-width: 900px) {
+    .ryujin__split {
+      grid-template-columns: 1fr 1fr;
+      gap: 96px;
+    }
+  }
+
+  .ryujin__imgcol img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    display: block;
+  }
+
+  @media (min-width: 900px) {
+    .ryujin__imgcol img {
+      height: 560px;
+    }
+  }
+
+  /* ---------- sechead / grids ---------- */
+  .ryujin__sechead {
+    max-width: 1200px;
+  }
+
+  .ryujin__grid3 {
+    margin-top: 26px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  @media (min-width: 900px) {
+    .ryujin__grid3 {
+      margin-top: 56px;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+    }
+  }
+
+  .ryujin__grid3 img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    display: block;
+  }
+
+  @media (min-width: 900px) {
+    .ryujin__grid3 img {
+      height: 360px;
+    }
+  }
+
+  .ryujin__envs {
+    margin-top: 26px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  @media (min-width: 900px) {
+    .ryujin__envs {
+      margin-top: 60px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+  }
+
+  .ryujin__envs img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    display: block;
+  }
+
+  @media (min-width: 900px) {
+    .ryujin__envs img {
+      height: 440px;
+    }
+  }
+
+  .ryujin__envs-third {
+    display: none;
+  }
+
+  @media (min-width: 900px) {
+    .ryujin__envs-third {
+      display: block;
+    }
+  }
+
+  /* ---------- valor ---------- */
+  .ryujin :global(.ryujin__valor) {
+    padding: 0 !important;
+  }
+
+  .ryujin__valor-inner {
+    display: flex;
+    flex-direction: column;
+  }
+
+  @media (min-width: 900px) {
+    .ryujin__valor-inner {
+      flex-direction: row;
+      align-items: stretch;
+    }
+  }
+
+  .ryujin__valor-img {
+    flex: 1 1 55%;
+  }
+
+  .ryujin__valor-img img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    display: block;
+  }
+
+  @media (min-width: 900px) {
+    .ryujin__valor-img img {
+      height: 100%;
+      min-height: 560px;
+    }
+  }
+
+  .ryujin__valor-text {
+    flex: 1 1 45%;
+    padding: 64px 24px;
+  }
+
+  @media (min-width: 900px) {
+    .ryujin__valor-text {
+      padding: 96px 120px 96px 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+  }
+
+  .ryujin__metarow {
+    margin-top: 26px;
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+  }
+
+  @media (min-width: 900px) {
+    .ryujin__metarow {
+      margin-top: 40px;
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 40px;
+    }
+  }
+
+  .ryujin__meta {
+    max-width: 230px;
+  }
+
+  .ryujin__meta-t {
+    font-family: var(--serif);
+    font-size: 17px;
+    color: var(--ink);
+    margin-bottom: 6px;
+  }
+
+  @media (min-width: 900px) {
+    .ryujin__meta-t {
+      font-size: 19px;
+      margin-bottom: 8px;
+    }
+  }
+
+  .ryujin__meta-x {
+    font-size: 14px;
+    color: var(--stone);
+    line-height: 1.6;
+  }
+
+  /* ---------- condições ---------- */
+  .ryujin__cond {
+    background: var(--ink);
+    color: #ede4d5;
+    padding: 64px 24px;
+    text-align: center;
+  }
+
+  @media (min-width: 900px) {
+    .ryujin__cond {
+      padding: 150px 120px;
+    }
+  }
+
+  .ryujin__cond .ryujin__disp {
+    color: #f5eee1;
+    font-size: 27px;
+  }
+
+  @media (min-width: 900px) {
+    .ryujin__cond .ryujin__disp {
+      font-size: 44px;
+    }
+  }
+
+  .ryujin__cond .ryujin__lead {
+    margin-inline: auto;
+  }
+
+  /* ---------- cta ---------- */
+  .ryujin__cta {
+    background: #1e1a15;
+    padding: 72px 24px;
+    text-align: center;
+    border-top: 1px solid rgba(183, 154, 107, 0.28);
+  }
+
+  @media (min-width: 900px) {
+    .ryujin__cta {
+      padding: 170px 120px;
+    }
+  }
+
+  .ryujin__k--cta {
+    font-family: var(--mincho);
+    color: var(--bronze2);
+    font-size: 30px;
+  }
+
+  @media (min-width: 900px) {
+    .ryujin__k--cta {
+      font-size: 40px;
+    }
+  }
+
+  .ryujin__cta .ryujin__disp {
+    color: #f6f1e8;
+    font-size: 34px;
+  }
+
+  @media (min-width: 900px) {
+    .ryujin__cta .ryujin__disp {
+      font-size: 58px;
+    }
+  }
+
+  /* ---------- closer / footer ---------- */
+  .ryujin__closer img {
+    width: 100%;
+    height: 360px;
+    object-fit: cover;
+    display: block;
+  }
+
+  @media (min-width: 900px) {
+    .ryujin__closer img {
+      height: 560px;
+    }
+  }
+
+  .ryujin__foot {
+    background: var(--ink);
+    color: #b7ac9b;
+    padding-block: 48px 56px;
+  }
+
+  @media (min-width: 900px) {
+    .ryujin__foot {
+      padding: 80px 0 90px;
+    }
+  }
+
+  .ryujin__foot-inner {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+  }
+
+  @media (min-width: 900px) {
+    .ryujin__foot-inner {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-end;
+      gap: 40px;
+    }
+  }
+
+  .ryujin__wm {
+    font-family: var(--serif);
+    font-size: 30px;
+    color: #f1e9da;
+    margin: 0;
+  }
+
+  @media (min-width: 900px) {
+    .ryujin__wm {
+      font-size: 40px;
+      letter-spacing: 0.04em;
+    }
+  }
+
+  .ryujin__wm b {
+    color: var(--bronze2);
+    font-weight: 500;
+  }
+
+  .ryujin__tag {
+    font-size: 11px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: #8a8072;
+    margin-top: 10px;
+  }
+
+  @media (min-width: 900px) {
+    .ryujin__tag {
+      font-size: 12px;
+      margin-top: 12px;
+    }
+  }
+
+  .ryujin__foot-cols {
+    display: flex;
+    gap: 48px;
+  }
+
+  @media (min-width: 900px) {
+    .ryujin__foot-cols {
+      gap: 64px;
+      text-align: right;
+    }
+  }
+
+  .ryujin__foot-h {
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #7c7264;
+    margin: 0 0 8px;
+  }
+
+  @media (min-width: 900px) {
+    .ryujin__foot-h {
+      font-size: 11px;
+      margin-bottom: 12px;
+    }
+  }
+
+  .ryujin__foot-cols a,
+  .ryujin__foot-cols span {
+    display: block;
+    color: #cfc5b3;
+    font-size: 14px;
+    text-decoration: none;
+    line-height: 1.9;
+  }
+
+  .ryujin__foot-whatsapp {
+    color: #b7ac9b !important;
+    text-decoration: underline;
+    text-decoration-color: rgba(183, 154, 107, 0.5);
+    text-underline-offset: 3px;
+  }
+
+  .ryujin__foot-whatsapp:hover {
+    color: var(--bronze2) !important;
+  }
+</style>

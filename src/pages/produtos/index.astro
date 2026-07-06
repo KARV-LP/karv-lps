@@ -8,6 +8,12 @@ import Button from "../../components/ui/Button.astro";
 
 const categories = [
   {
+    title: "KV-001 RYUJIN",
+    label: "Poltrona autoral",
+    description: "A poltrona que amplifica ambientes de identidade forte — studios de tatuagem, barbearias autorais e espaços expressivos.",
+    href: "/produtos/kv-001-ryujin/",
+  },
+  {
     title: "Poltronas",
     description: "Modelos exclusivos KARV para ambientes residenciais e comerciais, unindo conforto e durabilidade.",
   },
@@ -32,7 +38,7 @@ const categories = [
     <Container>
       <div class="cards-grid">
         {categories.map((c) => (
-          <ProductCard title={c.title} description={c.description} href="/produtos/" />
+          <ProductCard title={c.title} label={c.label} description={c.description} href={c.href ?? "/produtos/"} />
         ))}
       </div>
     </Container>
