@@ -1,10 +1,13 @@
 ---
+import { KARV_CONTACT_LINKS, KARV_CONTACT_LABELS } from "../../data/contactLinks";
+
 const navItems = [
   { href: "/", label: "Início" },
   { href: "/produtos/", label: "Produtos" },
   { href: "/nichos/", label: "Nichos" },
   { href: "/tecidos/", label: "Tecidos" },
   { href: "/blog/", label: "Conteúdo" },
+  { href: KARV_CONTACT_LINKS.manual, label: "Manual Técnico", external: true },
 ];
 
 const currentPath = Astro.url.pathname;
@@ -17,6 +20,8 @@ const currentPath = Astro.url.pathname;
       {navItems.map((item) => (
         <a
           href={item.href}
+          target={item.external ? "_blank" : undefined}
+          rel={item.external ? "noopener noreferrer" : undefined}
           class:list={["site-header__link", { "is-active": currentPath === item.href }]}
         >
           {item.label}
