@@ -69,6 +69,52 @@ const sections = [
     </Container>
   </Section>
 
+  <Section background="bg" id="colecoes-autorais">
+    <Container>
+      <div class="autoral">
+        <div class="autoral__intro">
+          <p class="autoral__eyebrow">Coleções autorais</p>
+          <h2 class="autoral__title">Coleções autorais KARV</h2>
+          <p class="autoral__text">
+            Cada poltrona KARV pode expressar uma identidade própria, conectando
+            arte, conforto e presença visual ao ambiente.
+          </p>
+        </div>
+
+        <article class="autoral-card">
+          <div
+            class="autoral-card__media"
+            role="img"
+            aria-label="Poltrona KARV KV_002_MANDALA com arte mandala aplicada ao revestimento."
+          >
+            <span class="autoral-card__mandala" aria-hidden="true"></span>
+          </div>
+          <div class="autoral-card__body">
+            <span class="autoral-card__label">Coleção autoral</span>
+            <h3 class="autoral-card__title">KV_002_MANDALA</h3>
+            <p class="autoral-card__lead">
+              Arte, presença e conforto para ambientes com personalidade.
+            </p>
+            <p class="autoral-card__support">
+              Quando a arte inspira, o ambiente se transforma.
+            </p>
+            <div class="autoral-card__actions">
+              <Button
+                href="https://kv-002-mandala.netlify.app/"
+                target="_blank"
+                variant="primary"
+                data-event="cta_kv_002_mandala"
+                data-location="home-colecoes-autorais"
+              >
+                Ver poltrona
+              </Button>
+            </div>
+          </div>
+        </article>
+      </div>
+    </Container>
+  </Section>
+
   <Section background="surface-soft" spacing="tight">
     <Container size="narrow" class="cta">
       <h2 class="cta__title">Presença visual para ambientes comerciais</h2>
@@ -163,6 +209,121 @@ const sections = [
     display: grid;
     gap: var(--space-6);
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  }
+
+  .autoral {
+    display: grid;
+    gap: var(--space-8);
+  }
+
+  .autoral__eyebrow {
+    color: var(--color-accent-soft);
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    font-size: 13px;
+  }
+
+  .autoral__title {
+    margin-top: var(--space-3);
+    font-size: clamp(24px, 3.5vw, 32px);
+  }
+
+  .autoral__text {
+    margin-top: var(--space-4);
+    max-width: 680px;
+    color: var(--color-muted);
+  }
+
+  .autoral-card {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr);
+    align-items: stretch;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    background: var(--color-surface);
+    overflow: hidden;
+    transition: border-color var(--transition-base);
+  }
+
+  .autoral-card:hover {
+    border-color: var(--color-accent);
+  }
+
+  .autoral-card__media {
+    position: relative;
+    min-height: 280px;
+    display: grid;
+    place-items: center;
+    background: linear-gradient(135deg, var(--color-surface-soft), var(--color-bg));
+    overflow: hidden;
+  }
+
+  .autoral-card__mandala {
+    width: min(220px, 62%);
+    aspect-ratio: 1;
+    border-radius: 50%;
+    border: 1px solid var(--color-border);
+    background:
+      repeating-radial-gradient(circle at center, transparent 0 13px, rgba(224, 192, 138, 0.16) 13px 14px),
+      conic-gradient(
+        from 0deg,
+        rgba(196, 154, 90, 0) 0deg,
+        rgba(224, 192, 138, 0.32) 45deg,
+        rgba(196, 154, 90, 0) 90deg,
+        rgba(224, 192, 138, 0.32) 135deg,
+        rgba(196, 154, 90, 0) 180deg,
+        rgba(224, 192, 138, 0.32) 225deg,
+        rgba(196, 154, 90, 0) 270deg,
+        rgba(224, 192, 138, 0.32) 315deg,
+        rgba(196, 154, 90, 0) 360deg
+      );
+    box-shadow: 0 0 60px rgba(196, 154, 90, 0.15);
+  }
+
+  .autoral-card__body {
+    padding: var(--space-8);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: var(--space-3);
+  }
+
+  .autoral-card__label {
+    color: var(--color-accent-soft);
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+  }
+
+  .autoral-card__title {
+    font-size: clamp(22px, 3vw, 28px);
+    letter-spacing: 0.02em;
+  }
+
+  .autoral-card__lead {
+    color: var(--color-text);
+    font-size: 16px;
+    line-height: 1.55;
+  }
+
+  .autoral-card__support {
+    color: var(--color-muted);
+    font-style: italic;
+    font-size: 15px;
+  }
+
+  .autoral-card__actions {
+    margin-top: var(--space-4);
+  }
+
+  @media (max-width: 720px) {
+    .autoral-card {
+      grid-template-columns: 1fr;
+    }
+
+    .autoral-card__media {
+      min-height: 200px;
+    }
   }
 
   .cta {

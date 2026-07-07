@@ -4,6 +4,9 @@ import Hero from "../../../components/ui/Hero.astro";
 import Section from "../../../components/ui/Section.astro";
 import Container from "../../../components/ui/Container.astro";
 import Button from "../../../components/ui/Button.astro";
+import { shopifyUrlFor } from "../../../data/contactLinks";
+
+const shopifyUrl = shopifyUrlFor("KV_002_MANDALA");
 
 const identityPoints = [
   "Linguagem artística com forte apelo visual e presença decorativa.",
@@ -34,6 +37,7 @@ const benefits = [
     text="Quando a arte inspira, o ambiente se transforma."
     primaryCta={{ label: "Ver outros produtos", href: "/produtos/" }}
     secondaryCta={{ label: "Ver tecidos", href: "/tecidos/" }}
+    commerceCta={{ label: "Comprar", href: shopifyUrl, target: "_blank" }}
   />
 
   <Section background="surface">
@@ -88,6 +92,7 @@ const benefits = [
       </p>
       <div class="cta__actions">
         <Button href="/produtos/" variant="primary" size="lg">Ver catálogo</Button>
+        <Button href={shopifyUrl} target="_blank" variant="secondary" size="lg">Comprar pelo Shopify</Button>
         <Button href="/nichos/" variant="secondary" size="lg">Explorar nichos</Button>
       </div>
     </Container>

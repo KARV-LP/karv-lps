@@ -1,4 +1,6 @@
 ---
+import { KARV_HOME_URL } from "../../data/contactLinks";
+
 const navItems = [
   { href: "/", label: "Início" },
   { href: "/produtos/", label: "Produtos" },
@@ -12,7 +14,11 @@ const currentPath = Astro.url.pathname;
 
 <header class="site-header">
   <div class="site-header__inner">
-    <a href="/" class="site-header__logo">KARV</a>
+    <a
+      href={KARV_HOME_URL}
+      class="site-header__logo"
+      aria-label="Voltar para a página principal da KARV"
+    >KARV</a>
     <nav class="site-header__nav" aria-label="Navegação principal">
       {navItems.map((item) => (
         <a

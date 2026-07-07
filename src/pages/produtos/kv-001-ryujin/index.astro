@@ -3,11 +3,13 @@ import BaseLayout from "../../../layouts/BaseLayout.astro";
 import Section from "../../../components/ui/Section.astro";
 import Container from "../../../components/ui/Container.astro";
 import Button from "../../../components/ui/Button.astro";
+import { shopifyUrlFor } from "../../../data/contactLinks";
 
 const WHATSAPP_NUMBER = "5511945197063";
 const WHATSAPP_MESSAGE =
   "Olá, tenho interesse na poltrona KV-001 RYUJIN da KARV. Gostaria de solicitar um orçamento.";
 const whatsappHref = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(WHATSAPP_MESSAGE)}`;
+const shopifyHref = shopifyUrlFor("KV_001_RYUJIN");
 
 const IMG = "/images/produtos/kv-001-ryujin";
 ---
@@ -41,6 +43,9 @@ const IMG = "/images/produtos/kv-001-ryujin";
         <div class="ryujin__actions">
           <Button href={whatsappHref} target="_blank" variant="primary" size="lg">
             Solicitar orçamento
+          </Button>
+          <Button href={shopifyHref} target="_blank" variant="secondary" size="lg">
+            Comprar
           </Button>
           <a class="ryujin__linkcta ryujin__linkcta--onink" href="#ambientes">Ver ambientes</a>
         </div>
@@ -226,6 +231,9 @@ const IMG = "/images/produtos/kv-001-ryujin";
         <Button href={whatsappHref} target="_blank" variant="primary" size="lg">
           Solicitar orçamento da RYUJIN
         </Button>
+        <Button href={shopifyHref} target="_blank" variant="secondary" size="lg">
+          Comprar pelo Shopify
+        </Button>
         <a class="ryujin__linkcta ryujin__linkcta--onink" href={whatsappHref} target="_blank" rel="noopener noreferrer">
           Falar com a KARV
         </a>
@@ -410,6 +418,20 @@ const IMG = "/images/produtos/kv-001-ryujin";
 
   .ryujin__actions--center {
     align-items: center;
+  }
+
+  /* Botão secundário "Comprar" legível sobre fundos escuros (hero e CTA). */
+  .ryujin__htxt :global(.btn--secondary),
+  .ryujin__cta :global(.btn--secondary) {
+    color: #ede4d5;
+    border-color: rgba(237, 228, 213, 0.45);
+    background: rgba(237, 228, 213, 0.04);
+  }
+
+  .ryujin__htxt :global(.btn--secondary:hover),
+  .ryujin__cta :global(.btn--secondary:hover) {
+    color: #fff;
+    border-color: var(--bronze2);
   }
 
   @media (min-width: 900px) {

@@ -4,13 +4,15 @@ interface Props {
   description?: string;
   href?: string;
   label?: string;
+  target?: string;
 }
 
-const { title, description, href, label } = Astro.props;
+const { title, description, href, label, target } = Astro.props;
 const Tag = href ? "a" : "div";
+const rel = target === "_blank" ? "noopener noreferrer" : undefined;
 ---
 
-<Tag href={href} class="product-card">
+<Tag href={href} target={href ? target : undefined} rel={href ? rel : undefined} class="product-card">
   <div class="product-card__media" aria-hidden="true">
     <span class="product-card__initial">{title.charAt(0)}</span>
   </div>
@@ -32,6 +34,12 @@ const Tag = href ? "a" : "div";
     transition:
       border-color var(--transition-base),
       transform var(--transition-base);
+  }
+
+  a.product-card {
+    cursor: pointer;
+    text-decoration: none;
+    color: inherit;
   }
 
   a.product-card:hover {

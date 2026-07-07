@@ -17,9 +17,10 @@ interface Props {
   text?: string;
   primaryCta?: CTA;
   secondaryCta?: CTA;
+  commerceCta?: CTA;
 }
 
-const { eyebrow, title, text, primaryCta, secondaryCta } = Astro.props;
+const { eyebrow, title, text, primaryCta, secondaryCta, commerceCta } = Astro.props;
 ---
 
 <Section background="bg" spacing="loose" class="hero">
@@ -27,7 +28,7 @@ const { eyebrow, title, text, primaryCta, secondaryCta } = Astro.props;
     {eyebrow && <p class="hero__eyebrow">{eyebrow}</p>}
     <h1 class="hero__title">{title}</h1>
     {text && <p class="hero__text">{text}</p>}
-    {(primaryCta || secondaryCta) && (
+    {(primaryCta || secondaryCta || commerceCta) && (
       <div class="hero__actions">
         {primaryCta && (
           <Button
@@ -39,6 +40,18 @@ const { eyebrow, title, text, primaryCta, secondaryCta } = Astro.props;
             data-location={primaryCta.location}
           >
             {primaryCta.label}
+          </Button>
+        )}
+        {commerceCta && (
+          <Button
+            href={commerceCta.href}
+            target={commerceCta.target}
+            variant="secondary"
+            size="lg"
+            data-event={commerceCta.event}
+            data-location={commerceCta.location}
+          >
+            {commerceCta.label}
           </Button>
         )}
         {secondaryCta && (

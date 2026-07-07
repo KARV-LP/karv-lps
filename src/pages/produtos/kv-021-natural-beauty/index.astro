@@ -4,6 +4,7 @@ import Hero from "../../../components/ui/Hero.astro";
 import Section from "../../../components/ui/Section.astro";
 import Container from "../../../components/ui/Container.astro";
 import Button from "../../../components/ui/Button.astro";
+import { KARV_SHOPIFY } from "../../../data/contactLinks";
 
 const identityPoints = [
   "Posicionamento Premium Neutro para clínicas que valorizam sofisticação discreta.",
@@ -39,6 +40,7 @@ const benefits = [
     text="Premium Neutro e estética avançada para clínicas que unem bem-estar, harmonização facial e sofisticação."
     primaryCta={{ label: "Ver outros produtos", href: "/produtos/" }}
     secondaryCta={{ label: "Ir para nichos", href: "/nichos/clinicas/" }}
+    commerceCta={{ label: "Comprar", href: KARV_SHOPIFY.store, target: "_blank" }}
   />
 
   <Section background="surface">
@@ -104,6 +106,7 @@ const benefits = [
       </p>
       <div class="cta__actions">
         <Button href="/produtos/" variant="primary" size="lg">Ver catálogo</Button>
+        <Button href={KARV_SHOPIFY.store} target="_blank" variant="secondary" size="lg">Comprar pelo Shopify</Button>
         <Button href="/tecidos/" variant="secondary" size="lg">Explorar tecidos</Button>
       </div>
     </Container>
