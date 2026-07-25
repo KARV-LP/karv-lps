@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://karv-platform.netlify.app/sitemap-index.xml
+Sitemap: https://k-arv.com/sitemap-index.xml

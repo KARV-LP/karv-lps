@@ -2,6 +2,6 @@ import { defineConfig } from 'astro/config';
 import sitemap from '@astrojs/sitemap';
 
 export default defineConfig({
-  site: 'https://karv-platform.netlify.app',
+  site: 'https://k-arv.com',
   integrations: [sitemap()],
 });
