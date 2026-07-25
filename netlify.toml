@@ -13,3 +13,22 @@
     X-Content-Type-Options = "nosniff"
     Referrer-Policy = "strict-origin-when-cross-origin"
     Permissions-Policy = "camera=(), microphone=(), geolocation=()"
+
+# --- Preserva SEO da loja após migração do apex (Shopify -> loja.k-arv.com) ---
+[[redirects]]
+  from = "/products/*"
+  to = "https://loja.k-arv.com/products/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/collections/*"
+  to = "https://loja.k-arv.com/collections/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/cart"
+  to = "https://loja.k-arv.com/cart"
+  status = 301
+  force = true
