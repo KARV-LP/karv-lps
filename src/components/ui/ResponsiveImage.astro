@@ -1,0 +1,50 @@
+---
+interface Props {
+  src: string;
+  alt: string;
+  widths: readonly number[];
+  sizes: string;
+  width: number;
+  height: number;
+  loading?: "eager" | "lazy";
+  decoding?: "async" | "auto" | "sync";
+  fetchpriority?: "high" | "low" | "auto";
+  class?: string;
+}
+
+const {
+  src,
+  alt,
+  widths,
+  sizes,
+  width,
+  height,
+  loading = "lazy",
+  decoding = "async",
+  fetchpriority,
+  class: className
+} = Astro.props;
+const extensionIndex = src.lastIndexOf(".");
+const pathIndex = src.lastIndexOf("/");
+const imageDirectory = src.slice(0, pathIndex);
+const imageName = src.slice(pathIndex + 1, extensionIndex);
+const sourceSet = (format: "avif" | "webp") =>
+  widths
+    .map((candidateWidth) => `${imageDirectory}/responsive/${imageName}-${candidateWidth}.${format} ${candidateWidth}w`)
+    .join(", ");
+---
+
+<picture>
+  <source type="image/avif" srcset={sourceSet("avif")} sizes={sizes} />
+  <source type="image/webp" srcset={sourceSet("webp")} sizes={sizes} />
+  <img
+    class={className}
+    src={src}
+    alt={alt}
+    loading={loading}
+    decoding={decoding}
+    fetchpriority={fetchpriority}
+    width={width}
+    height={height}
+  />
+</picture>

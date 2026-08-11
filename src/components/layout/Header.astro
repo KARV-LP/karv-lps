@@ -26,6 +26,7 @@ const currentPath = localizedPath(locale, path);
         <a
           href={localizedPath(locale, item.slug)}
           class:list={["site-header__link", { "is-active": currentPath === localizedPath(locale, item.slug) }]}
+          aria-current={currentPath === localizedPath(locale, item.slug) ? "page" : undefined}
         >
           {item.label}
         </a>

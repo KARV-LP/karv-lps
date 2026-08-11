@@ -14,6 +14,9 @@
       "tagline": "Commercial armchairs with identity for professional spaces.",
       "copyright": "All rights reserved."
     },
+    "accessibility": {
+      "skipToContent": "Skip to main content"
+    },
     "contact": {
       "heading": "Talk to KARV",
       "intro": "Choose the most direct channel to start a commercial conversation and tell us about the space you want to transform.",
