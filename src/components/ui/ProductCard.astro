@@ -13,69 +13,42 @@ const Tag = href ? "a" : "div";
 const localizedCardHref = localizedHref(getLocaleFromPath(Astro.url.pathname), href);
 ---
 
-<Tag href={localizedCardHref} class="product-card">
-  <div class="product-card__media" aria-hidden="true">
-    <span class="product-card__initial">{title.charAt(0)}</span>
+<Tag
+  href={localizedCardHref}
+  class:list={[
+    "product-card flex flex-col overflow-hidden rounded-karv-lg border border-karv-border bg-karv-ink-raised transition-[border-color,box-shadow,transform] duration-[var(--duration-fast)] ease-[var(--easing-standard)]",
+  ]}
+>
+  <div class="product-card__media grid aspect-[16/10] place-items-center" aria-hidden="true">
+    <span class="product-card__initial font-karv-display text-[2.5rem] font-bold text-karv-glow">{title.charAt(0)}</span>
   </div>
-  <div class="product-card__body">
-    {label && <span class="product-card__label">{label}</span>}
-    <h3 class="product-card__title">{title}</h3>
-    {description && <p class="product-card__description">{description}</p>}
+  <div class="product-card__body flex flex-1 flex-col gap-karv-2 p-karv-6">
+    {label && (
+      <span class="product-card__label font-karv-text text-karv-xs uppercase tracking-[0.14em] text-karv-glow">{label}</span>
+    )}
+    <h3 class="product-card__title font-karv-display text-karv-xl leading-karv-tight tracking-karv-tight">{title}</h3>
+    {description && <p class="product-card__description text-karv-sm text-karv-greige">{description}</p>}
   </div>
 </Tag>
 
 <style>
   .product-card {
-    display: flex;
-    flex-direction: column;
-    border: 1px solid var(--color-border);
-    border-radius: var(--radius-lg);
-    background: var(--color-surface);
-    overflow: hidden;
-    transition:
-      border-color var(--transition-base),
-      transform var(--transition-base);
+    box-shadow: inset 0 1px 0 rgb(241 236 228 / 5%);
   }
 
   a.product-card:hover {
     border-color: var(--color-accent);
     transform: translateY(-2px);
+    box-shadow:
+      inset 0 1px 0 rgb(232 213 181 / 14%),
+      var(--shadow-contact);
   }
 
   .product-card__media {
-    aspect-ratio: 16 / 10;
-    display: grid;
-    place-items: center;
     background: linear-gradient(135deg, var(--color-surface-soft), var(--color-bg));
   }
 
-  .product-card__initial {
-    font-size: 40px;
-    font-weight: 700;
-    color: var(--color-accent-soft);
-  }
-
-  .product-card__body {
-    padding: var(--space-6);
-    display: flex;
-    flex-direction: column;
-    gap: var(--space-2);
-  }
-
-  .product-card__label {
-    color: var(--color-accent-soft);
-    font-size: 12px;
-    text-transform: uppercase;
-    letter-spacing: 0.14em;
-  }
-
-  .product-card__title {
-    font-size: 20px;
-  }
-
   .product-card__description {
-    color: var(--color-muted);
-    font-size: 14px;
     line-height: 1.5;
   }
 </style>

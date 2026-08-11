@@ -72,10 +72,10 @@ const englishURL = new URL(localizedPath("en", path), Astro.site);
     <meta property="og:locale:alternate" content={ogLocale(locale === "pt" ? "en" : "pt")} />
     <title>{title}</title>
   </head>
-  <body>
+  <body class="min-h-screen bg-karv-ink font-karv-text text-karv-base leading-karv-body text-karv-paper antialiased">
     <a class="skip-link" href="#main-content">{t(locale, "accessibility").skipToContent}</a>
     <Header locale={locale} path={path} />
-    <main id="main-content">
+    <main id="main-content" tabindex="-1" class="isolate">
       <slot />
     </main>
     <Footer locale={locale} />

@@ -31,46 +31,39 @@ const localizedButtonHref = localizedHref(getLocaleFromPath(Astro.url.pathname),
   target={target}
   type={href ? undefined : type}
   rel={target === "_blank" ? "noopener noreferrer" : undefined}
-  class:list={["btn", `btn--${variant}`, `btn--${size}`, className]}
+  class:list={[
+    "btn",
+    "inline-flex min-h-11 items-center justify-center gap-karv-2 rounded-karv-pill border font-karv-text text-karv-sm font-semibold tracking-[0.02em] transition-[background,color,border-color,box-shadow,transform] duration-[var(--duration-fast)] ease-[var(--easing-standard)]",
+    {
+      "px-karv-6 py-karv-3": size === "md",
+      "px-karv-8 py-karv-4 text-[15px]": size === "lg",
+    },
+    `btn--${variant}`,
+    className,
+  ]}
 >
   <slot />
 </Tag>
 
 <style>
   .btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: var(--space-2);
-    border-radius: var(--radius-pill);
-    font-size: 14px;
-    font-weight: 600;
-    letter-spacing: 0.02em;
     cursor: pointer;
-    border: 1px solid transparent;
-    transition:
-      background var(--transition-base),
-      color var(--transition-base),
-      border-color var(--transition-base),
-      transform var(--transition-base);
-  }
-
-  .btn--md {
-    padding: var(--space-3) var(--space-6);
-  }
-
-  .btn--lg {
-    padding: var(--space-4) var(--space-8);
-    font-size: 15px;
+    border-color: transparent;
   }
 
   .btn--primary {
-    background: linear-gradient(135deg, var(--color-accent-soft), var(--color-accent));
-    color: var(--color-bg);
+    background: linear-gradient(135deg, var(--color-glow) -35%, var(--color-bronze) 52%, var(--color-bronze-ink));
+    box-shadow:
+      inset 0 1px 0 rgb(241 236 228 / 40%),
+      var(--shadow-contact);
+    color: var(--color-ink);
   }
 
   .btn--primary:hover {
     transform: translateY(-1px);
+    box-shadow:
+      inset 0 1px 0 rgb(241 236 228 / 55%),
+      0 10px 28px rgb(24 21 19 / 26%);
   }
 
   .btn--secondary {
