@@ -1,4 +1,6 @@
 ---
+import { getLocaleFromPath, localizedHref } from "../../utils/i18n";
+
 interface Props {
   href?: string;
   variant?: "primary" | "secondary" | "ghost";
@@ -20,11 +22,12 @@ const {
 } = Astro.props;
 
 const Tag = href ? "a" : "button";
+const localizedButtonHref = localizedHref(getLocaleFromPath(Astro.url.pathname), href);
 ---
 
 <Tag
   {...attrs}
-  href={href}
+  href={localizedButtonHref}
   target={target}
   type={href ? undefined : type}
   rel={target === "_blank" ? "noopener noreferrer" : undefined}

@@ -1,0 +1,340 @@
+{
+  "common": {
+    "navigation": {
+      "home": "Home",
+      "products": "Products",
+      "niches": "Markets",
+      "fabrics": "Fabrics",
+      "content": "Insights",
+      "primary": "Primary navigation",
+      "languageSwitcher": "Select language"
+    },
+    "footer": {
+      "navigation": "Footer links",
+      "tagline": "Commercial armchairs with identity for professional spaces.",
+      "copyright": "All rights reserved."
+    },
+    "contact": {
+      "heading": "Talk to KARV",
+      "intro": "Choose the most direct channel to start a commercial conversation and tell us about the space you want to transform.",
+      "whatsapp": "Chat on WhatsApp",
+      "instagram": "View Instagram",
+      "email": "Send an email",
+      "store": "Visit KARV store",
+      "whatsappMessage": "Hello, I would like to speak with KARV about an armchair for my space.",
+      "emailSubject": "KARV commercial contact",
+      "emailMessage": "Hello, I would like to speak with KARV about an armchair for my space."
+    }
+  },
+  "pages": {
+    "": {
+      "seo": {
+        "title": "KARV | Commercial armchairs with visual identity",
+        "description": "Commercial armchairs for barbershops, clinics, studios, beauty spaces and independent businesses that want to strengthen their space's identity."
+      },
+      "hero": {
+        "eyebrow": "Commercial armchairs with identity",
+        "title": "Armchairs that strengthen the identity of your space",
+        "text": "KARV creates armchairs for barbershops, clinics, studios, beauty spaces and independent businesses, combining comfort, visual presence and professional use.",
+        "primaryCta": { "label": "Chat on WhatsApp", "href": "contact.whatsapp" },
+        "secondaryCta": { "label": "Visit KARV store", "href": "contact.store" }
+      },
+      "cards": [
+        { "title": "Products", "label": "Collections", "description": "KARV armchairs and collections, designed for every setting.", "href": "produtos" },
+        { "title": "Markets", "label": "Segments", "description": "Solutions for barbershops, clinics, beauty spaces and other segments.", "href": "nichos" },
+        { "title": "Fabrics", "label": "Library", "description": "Fabrics and coverings selected for each project.", "href": "tecidos" },
+        { "title": "Insights", "label": "Guides", "description": "Ideas and guidance for elevating commercial spaces with identity-led furniture.", "href": "blog" }
+      ],
+      "sections": [
+        {
+          "title": "Visual presence for commercial spaces",
+          "paragraphs": ["Each project starts with the space, its audience and the experience a client wants to build. The armchair becomes a piece of comfort, identity and perceived value."],
+          "actions": [
+            { "label": "Explore markets", "href": "nichos" },
+            { "label": "View products", "href": "produtos" }
+          ]
+        }
+      ],
+      "contact": true
+    },
+    "produtos": {
+      "seo": { "title": "Products | KARV", "description": "KARV commercial armchairs and collections for professional spaces." },
+      "hero": {
+        "eyebrow": "Products",
+        "title": "KARV products and collections",
+        "text": "Commercial lines designed to strengthen the setting, expand a project's identity and support each market's communication."
+      },
+      "cards": [
+        { "title": "KV_001_RYUJIN", "description": "Eastern identity, imperial dragon and strong visual presence for spaces with a striking narrative.", "href": "produtos/kv-001-ryujin" },
+        { "title": "KV_002_MANDALA", "description": "Art, mandala and applied identity for projects seeking visual transformation.", "href": "produtos/kv-002-mandala" },
+        { "title": "KV_020_PURE_BALANCE", "description": "Professional clarity for beauty clinics, with a sense of technology, cleanliness and confidence.", "href": "produtos/kv-020-pure-balance" },
+        { "title": "KV_021_NATURAL_BEAUTY", "description": "Neutral premium for clinics that combine advanced aesthetics, harmonization and wellbeing.", "href": "produtos/kv-021-natural-beauty" },
+        { "title": "KV_022_SOFT_TAUPE", "description": "Quiet sophistication for accessible premium clinics with an elegant, balanced language.", "href": "produtos/kv-022-soft-taupe" }
+      ],
+      "sections": [
+        {
+          "title": "Curation begins with project context",
+          "paragraphs": ["Use KARV products as a starting point, then move to the market or fabric that gives the setting its structure."],
+          "actions": [
+            { "label": "By market: barbershop", "href": "nichos/barbearia" },
+            { "label": "By market: clinics", "href": "nichos/clinicas" },
+            { "label": "By fabric: premium", "href": "tecidos/premium" }
+          ]
+        }
+      ],
+      "cta": { "title": "Find the ideal fabric for your armchair", "text": "Explore KARV's fabric and covering library and pair the right collection with your project.", "action": { "label": "View fabrics", "href": "tecidos" } }
+    },
+    "produtos/kv-001-ryujin": {
+      "seo": { "title": "KV_001_RYUJIN | KARV Products", "description": "Meet KV_001_RYUJIN, a KARV commercial armchair with an Eastern presence and striking narrative." },
+      "hero": { "eyebrow": "KARV product", "title": "KV_001_RYUJIN", "text": "Strength, narrative and presence for spaces that seek a memorable visual signature.", "primaryCta": { "label": "View other products", "href": "produtos" }, "secondaryCta": { "label": "View fabrics", "href": "tecidos" } },
+      "sections": [
+        { "title": "A presence that structures the space's narrative", "paragraphs": ["KV_001_RYUJIN combines an Eastern reading with a high-impact commercial composition. It was designed for projects that use furniture as an active part of a space's identity."] },
+        { "title": "Identity and application", "items": ["Eastern references and an intense visual narrative.", "Presence for independent, hospitality and premium projects.", "Comfort and finishing designed for professional use."] },
+        { "title": "Commercial value", "paragraphs": ["The collection creates a memorable focal point, strengthens the project's concept and supports the sense of a carefully constructed setting."] }
+      ],
+      "cta": { "title": "A piece for spaces that need to be remembered", "text": "Talk to KARV to find the configuration that fits your project.", "action": { "label": "Talk to KARV", "href": "contact.whatsapp" } }
+    },
+    "produtos/kv-002-mandala": {
+      "seo": { "title": "KV_002_MANDALA | KARV Products", "description": "Meet the KV_002_MANDALA collection, inspired by mandalas and art to transform spaces with personality and sophistication." },
+      "hero": { "eyebrow": "KARV product", "title": "KV_002_MANDALA", "text": "When art inspires, the setting transforms.", "primaryCta": { "label": "View other products", "href": "produtos" }, "secondaryCta": { "label": "View fabrics", "href": "tecidos" } },
+      "sections": [
+        { "title": "Art as a commercial language", "paragraphs": ["KV_002_MANDALA translates the power of art into an accessible premium commercial proposition. The piece reinforces the room's intention without taking over the scene."] },
+        { "title": "Product identity", "items": ["Artistic language with strong visual appeal.", "Sensitivity, culture and refinement for the project.", "A composition that values the setting's identity."] },
+        { "title": "Applications and benefits", "paragraphs": ["The collection serves residential and commercial projects that value distinction, welcome and a more artistic narrative."] }
+      ],
+      "cta": { "title": "A collection for projects seeking expression and balance", "text": "KV_002_MANDALA connects art, environment and commercial communication through a modern, elegant language.", "action": { "label": "View catalog", "href": "produtos" } }
+    },
+    "produtos/kv-020-pure-balance": {
+      "seo": { "title": "KV_020_PURE_BALANCE | KARV Products", "description": "Meet KV_020_PURE_BALANCE for beauty clinics seeking visual clarity, confidence and balance." },
+      "hero": { "eyebrow": "KARV product", "title": "KV_020_PURE_BALANCE", "text": "Visual balance and confidence for beauty clinics.", "primaryCta": { "label": "View other products", "href": "produtos" }, "secondaryCta": { "label": "View fabrics", "href": "tecidos" } },
+      "sections": [
+        { "title": "Visual clarity with professional presence", "paragraphs": ["KV_020_PURE_BALANCE was created for clinics that want to communicate technology, care and clarity without compromising comfort."] },
+        { "title": "For environments of confidence", "items": ["A clean, contemporary language.", "Comfort for service and waiting.", "A presence aligned with care and wellbeing protocols."] }
+      ],
+      "cta": { "title": "A collection that balances welcome and precision", "text": "Explore fabrics and configurations that best relate to your clinic.", "action": { "label": "View clinic fabrics", "href": "tecidos/clinicas-esteticas" } }
+    },
+    "produtos/kv-021-natural-beauty": {
+      "seo": { "title": "KV_021_NATURAL_BEAUTY | KARV Products", "description": "Meet KV_021_NATURAL_BEAUTY for aesthetics, harmonization and wellbeing clinics." },
+      "hero": { "eyebrow": "KARV product", "title": "KV_021_NATURAL_BEAUTY", "text": "A natural, premium and welcoming reading for contemporary care.", "primaryCta": { "label": "View other products", "href": "produtos" }, "secondaryCta": { "label": "View fabrics", "href": "tecidos" } },
+      "sections": [
+        { "title": "Wellbeing translated into space", "paragraphs": ["KV_021_NATURAL_BEAUTY combines neutrality, comfort and sophistication for clinics that bring together advanced aesthetics, harmonization and wellbeing."] },
+        { "title": "A foundation for welcoming experiences", "items": ["A calm presence in palette and finish.", "Application for service, waiting and recovery.", "Balance between care, identity and perceived value."] }
+      ],
+      "cta": { "title": "Natural sophistication for your clinic", "text": "Talk to KARV about a composition aligned with the experience you want to create.", "action": { "label": "Talk to KARV", "href": "contact.whatsapp" } }
+    },
+    "produtos/kv-022-soft-taupe": {
+      "seo": { "title": "KV_022_SOFT_TAUPE | KARV Products", "description": "Meet KV_022_SOFT_TAUPE for premium clinics seeking an elegant, balanced language." },
+      "hero": { "eyebrow": "KARV product", "title": "KV_022_SOFT_TAUPE", "text": "Quiet sophistication for an accessible premium experience.", "primaryCta": { "label": "View other products", "href": "produtos" }, "secondaryCta": { "label": "View fabrics", "href": "tecidos" } },
+      "sections": [
+        { "title": "Elegance that welcomes without excess", "paragraphs": ["KV_022_SOFT_TAUPE offers a balanced presence for clinics seeking to communicate care, maturity and sophistication at every touchpoint."] },
+        { "title": "Language for premium projects", "items": ["Neutral tones and a timeless reading.", "Comfort designed for service journeys.", "A foundation for elegant, consistent settings."] }
+      ],
+      "cta": { "title": "An elegant foundation for your brand experience", "text": "Explore products and coverings to form the ideal composition.", "action": { "label": "View products", "href": "produtos" } }
+    },
+    "nichos": {
+      "seo": { "title": "Markets | KARV", "description": "KARV solutions for clinics, barbershops, studios, beauty spaces, dentistry and other sectors." },
+      "hero": { "eyebrow": "Markets", "title": "KARV's strategic markets", "text": "Each market has its own demands for comfort, durability and presentation. KARV develops armchairs and collections for every segment's daily life." },
+      "cards": [
+        { "title": "Barbershop", "description": "Armchairs and spaces that strengthen the identity of the modern barbershop.", "href": "nichos/barbearia" },
+        { "title": "Beauty", "description": "Comfort and sophistication for treatment and waiting rooms.", "href": "nichos/estetica" },
+        { "title": "Tattoo", "description": "Durable, stylish pieces for tattoo studios.", "href": "nichos/tatuagem" },
+        { "title": "Clinics", "description": "Institutional furniture for clinical reception and waiting rooms.", "href": "nichos/clinicas" },
+        { "title": "Studios", "description": "Spaces with strong visual presence for creative and premium studios.", "href": "nichos/studios" },
+        { "title": "Dentistry", "description": "Furniture that conveys confidence in dental clinics.", "href": "produtos" },
+        { "title": "Podiatry", "description": "Ergonomic solutions for podiatry practices.", "href": "produtos" },
+        { "title": "Salons", "description": "Premium settings for hair and beauty salons.", "href": "produtos" }
+      ],
+      "sections": [
+        { "title": "A proposition gains strength when every element speaks together", "paragraphs": ["Each market gains force when the environment, armchair and covering curation speak to one another."], "actions": [{ "label": "Reference products", "href": "produtos" }, { "label": "Project fabrics", "href": "tecidos" }, { "label": "KARV collections", "href": "tecidos/colecoes" }] }
+      ],
+      "cta": { "title": "Can't find your market?", "text": "KARV serves new segments on demand. Explore the collections and fabrics available for your project.", "action": { "label": "View products", "href": "produtos" } }
+    },
+    "nichos/barbearia": {
+      "seo": { "title": "Barbershop | KARV", "description": "Identity-led armchairs and furniture for barbershops that combine comfort, style and brand presence." },
+      "hero": { "eyebrow": "Barbershop", "title": "The modern barbershop sells an experience, not just a haircut", "text": "In a barbershop, the client lives a ritual. The environment should convey confidence, presence and care in every detail.", "primaryCta": { "label": "View products", "href": "produtos" }, "secondaryCta": { "label": "Talk to KARV", "href": "contact.whatsapp" } },
+      "sections": [
+        { "title": "The setting should reflect the brand's positioning", "paragraphs": ["A high-end barbershop stands out when the space's identity matches the quality of its service. The right armchair deepens the desire to stay and turns every visit into a brand moment."] },
+        { "title": "What a barbershop should communicate", "items": ["Contemporary, masculine style.", "Comfort for long services.", "Strong presence for photos, referrals and return visits."] },
+        { "title": "Applications that expand the experience", "paragraphs": ["Cutting areas, waiting areas and reception can gain a more consistent reading with pieces that strengthen the brand's premium positioning."] }
+      ],
+      "cta": { "title": "A barbershop with identity deserves furniture that is part of the ritual", "text": "KARV creates armchairs and pieces that combine brand presence, comfort and a premium setting for every client.", "action": { "label": "View collections", "href": "produtos" } }
+    },
+    "nichos/clinicas": {
+      "seo": { "title": "Clinics | KARV", "description": "Armchairs for clinics seeking to convey care, confidence and professional presence." },
+      "hero": { "eyebrow": "Clinics", "title": "In clinics, the setting is also part of care", "text": "Every detail helps patients perceive organization, welcome and confidence from the moment they arrive.", "primaryCta": { "label": "View products", "href": "produtos" }, "secondaryCta": { "label": "Talk to KARV", "href": "contact.whatsapp" } },
+      "sections": [
+        { "title": "Confidence starts before the appointment", "paragraphs": ["Reception and waiting rooms shape the first impression. An armchair aligned with the project creates comfort and reinforces the clinic's standard of care."] },
+        { "title": "What the space should communicate", "items": ["Welcome without losing precision.", "Comfort for different waiting times.", "Visual organization and professional credibility."] },
+        { "title": "Applications for a consistent journey", "paragraphs": ["From reception to consultation room, furniture can connect each moment of the experience and sustain a perception of quality."] }
+      ],
+      "cta": { "title": "Care perceived at every touchpoint", "text": "Discover collections and coverings suited to your clinic's language.", "action": { "label": "View clinic fabrics", "href": "tecidos/clinicas-esteticas" } }
+    },
+    "nichos/estetica": {
+      "seo": { "title": "Beauty | KARV", "description": "Armchairs for beauty clinics and spaces that combine sophistication, comfort and care." },
+      "hero": { "eyebrow": "Beauty", "title": "The beauty experience begins before the treatment", "text": "A beauty space should welcome, communicate technical expertise and translate the care each client seeks.", "primaryCta": { "label": "View products", "href": "produtos" }, "secondaryCta": { "label": "Talk to KARV", "href": "contact.whatsapp" } },
+      "sections": [
+        { "title": "Sophistication that supports confidence", "paragraphs": ["In beauty, the perception of care is built by the whole. Furniture with comfort and visual presence helps make the experience safer and more desirable."] },
+        { "title": "A language for wellbeing", "items": ["Welcome for waiting and service.", "A feeling of cleanliness, lightness and order.", "Materials aligned with daily use and brand positioning."] },
+        { "title": "From the first glance to the return visit", "paragraphs": ["A consistent composition strengthens perceived value, encourages recommendations and makes the setting part of the beauty experience."] }
+      ],
+      "cta": { "title": "A beauty experience deserves comfort and presence", "text": "Explore KARV options to create a beauty clinic consistent with your brand.", "action": { "label": "View products", "href": "produtos" } }
+    },
+    "nichos/studios": {
+      "seo": { "title": "Studios | KARV", "description": "Armchairs for creative and premium studios that want to build a striking visual presence." },
+      "hero": { "eyebrow": "Studios", "title": "Independent studios call for a setting that signs the experience", "text": "In creative spaces, every piece should contribute to an identifiable, functional atmosphere ready to be shared.", "primaryCta": { "label": "View products", "href": "produtos" }, "secondaryCta": { "label": "Talk to KARV", "href": "contact.whatsapp" } },
+      "sections": [
+        { "title": "The setting as part of authorship", "paragraphs": ["The armchair can work as a stage, meeting point and visual mark. It helps the studio express its language without compromising comfort."] },
+        { "title": "For experiences with personality", "items": ["Strong visuals for content and in-person meetings.", "Comfort for long creative days.", "Finishes that speak to the project's identity."] },
+        { "title": "A presence that travels", "paragraphs": ["When a setting is memorable, it gains strength in records, referrals and ongoing relationships with the studio's community."] }
+      ],
+      "cta": { "title": "Build a visual signature for your studio", "text": "Discover KARV collections that match the creative ambition of your space.", "action": { "label": "Explore products", "href": "produtos" } }
+    },
+    "nichos/tatuagem": {
+      "seo": { "title": "Tattoo | KARV", "description": "Armchairs for tattoo studios that combine durability, comfort and visual identity." },
+      "hero": { "eyebrow": "Tattoo", "title": "A tattoo studio needs presence, precision and comfort", "text": "The setting supports long hours of work, a relationship of trust and a visual identity that must be its own.", "primaryCta": { "label": "View products", "href": "produtos" }, "secondaryCta": { "label": "Talk to KARV", "href": "contact.whatsapp" } },
+      "sections": [
+        { "title": "Identity is also endurance", "paragraphs": ["Studio furniture needs to accompany an intense routine while helping clients feel they are in a safe, independent space."] },
+        { "title": "What matters to the studio", "items": ["Comfort for long sessions.", "Materials and finishes suited to professional use.", "Memorable aesthetics for a space of expression."] },
+        { "title": "An experience that becomes a recommendation", "paragraphs": ["Well-built spaces make the process more welcoming and strengthen confidence on every new visit."] }
+      ],
+      "cta": { "title": "Give your studio a presence worthy of your linework", "text": "Explore products and fabrics for a singular composition.", "action": { "label": "View products", "href": "produtos" } }
+    },
+    "tecidos": {
+      "seo": { "title": "KARV Fabric Library", "description": "Explore the KARV Fabric Library, an institutional curation of coverings for spaces, styles and projects." },
+      "hero": { "eyebrow": "Fabrics", "title": "KARV Fabric Library", "text": "Choose coverings for different spaces, styles and needs, organized by KARV Curation.", "primaryCta": { "label": "View collections", "href": "tecidos/colecoes" }, "secondaryCta": { "label": "View products", "href": "produtos" } },
+      "cards": [
+        { "title": "Premium", "description": "Coverings for settings that value sophistication, comfort and perceived value.", "href": "tecidos/premium" },
+        { "title": "Beauty clinics", "description": "A curation for spaces with a clean, welcoming and professional visual language.", "href": "tecidos/clinicas-esteticas" },
+        { "title": "Barbershops", "description": "Choices with personality, visual presence and a memorable atmosphere for the space.", "href": "tecidos/barbearia" },
+        { "title": "Pet friendly", "description": "Welcoming, practical proposals for spaces that live with animals every day.", "href": "tecidos/pet-friendly" },
+        { "title": "KARV collections", "description": "KARV's own selection for visual identity, finishing and the setting's experience.", "href": "tecidos/colecoes" }
+      ],
+      "sections": [
+        { "title": "A library organized by space, identity and purpose", "paragraphs": ["KARV develops its own covering library to guide choices clearly and reinforce the experience of every space."], "actions": [{ "label": "View products", "href": "produtos" }, { "label": "Explore markets", "href": "nichos" }, { "label": "Discover collections", "href": "tecidos/colecoes" }] }
+      ],
+      "cta": { "title": "The experience of a setting starts with the right curation", "text": "The KARV Fabric Library organizes coverings around identity, application and the final result.", "action": { "label": "View products", "href": "produtos" } }
+    },
+    "tecidos/premium": {
+      "seo": { "title": "Premium Fabrics | KARV", "description": "KARV coverings for spaces that value sophistication, comfort and perceived value." },
+      "hero": { "eyebrow": "Premium fabrics", "title": "Coverings for spaces that make sophistication an experience", "text": "A curation for projects seeking presence, comfort and careful finishing.", "primaryCta": { "label": "View products", "href": "produtos" }, "secondaryCta": { "label": "Talk to KARV", "href": "contact.whatsapp" } },
+      "sections": [
+        { "title": "Material that strengthens perceived value", "paragraphs": ["Premium fabrics help structure a more refined reading of the setting and sustain a feeling of comfort from the first contact."] },
+        { "title": "For high-perception projects", "items": ["Textures that value light, volume and finishing.", "Comfort for recurring use.", "A selection that speaks to hospitality, clinics and independent spaces."] }
+      ],
+      "cta": { "title": "Choose a covering worthy of your project", "text": "Explore KARV collections and find a composition aligned with your brand.", "action": { "label": "View collections", "href": "tecidos/colecoes" } }
+    },
+    "tecidos/clinicas-esteticas": {
+      "seo": { "title": "Fabrics for Beauty Clinics | KARV", "description": "KARV covering curation for beauty clinics, wellbeing and professional care." },
+      "hero": { "eyebrow": "Beauty clinics", "title": "Coverings for spaces of care, lightness and confidence", "text": "A selection for clinics that want to welcome through a clean, professional visual language.", "primaryCta": { "label": "View products", "href": "produtos" }, "secondaryCta": { "label": "Talk to KARV", "href": "contact.whatsapp" } },
+      "sections": [
+        { "title": "A selection for those who value care and visual presence", "paragraphs": ["This curation balances application, comfort and a sense of clarity that follows the clinical experience."] },
+        { "title": "Recommended applications", "items": ["Reception and waiting rooms.", "Assessment and treatment settings.", "Wellbeing and recovery spaces."] },
+        { "title": "Benefits of curation", "paragraphs": ["Consistent choices help create an atmosphere that is welcoming, trustworthy and aligned with a clinic's standard of care."] }
+      ],
+      "cta": { "title": "Every space deserves a clear, welcoming visual reading", "text": "Talk to KARV to find the best composition for your clinic.", "action": { "label": "Talk to KARV", "href": "contact.whatsapp" } }
+    },
+    "tecidos/barbearia": {
+      "seo": { "title": "Fabrics for Barbershops | KARV", "description": "KARV fabric and covering curation for barbershops with visual presence and personality." },
+      "hero": { "eyebrow": "Barbershops", "title": "Coverings that help build the barbershop ritual", "text": "Choices with personality, comfort and presence for a setting that needs to be remembered.", "primaryCta": { "label": "View products", "href": "produtos" }, "secondaryCta": { "label": "Talk to KARV", "href": "contact.whatsapp" } },
+      "sections": [
+        { "title": "Material also communicates style", "paragraphs": ["The covering creates texture, depth and a sense of quality that follows the service experience."] },
+        { "title": "For an experience with a signature", "items": ["Colors and textures that strengthen identity.", "Comfort for service and waiting.", "A selection suited to an intense commercial routine."] },
+        { "title": "A composition that becomes a stage", "paragraphs": ["The right choice connects furniture, lighting and brand language in a space ready to be lived in and shared."] }
+      ],
+      "cta": { "title": "Find the material that gives your barbershop substance", "text": "Explore products and collections for a complete composition.", "action": { "label": "Back to library", "href": "tecidos" } }
+    },
+    "tecidos/pet-friendly": {
+      "seo": { "title": "Pet Friendly Fabrics | KARV", "description": "KARV coverings for spaces that live with animals and value comfort, practicality and identity." },
+      "hero": { "eyebrow": "Pet friendly", "title": "Comfort and practicality for spaces shared with animals", "text": "A welcoming curation for projects seeking balance between routine, care and visual presence.", "primaryCta": { "label": "View products", "href": "produtos" }, "secondaryCta": { "label": "Talk to KARV", "href": "contact.whatsapp" } },
+      "sections": [
+        { "title": "A choice designed for real life", "paragraphs": ["Spaces that welcome animals need materials that follow the routine without losing comfort or aesthetic intention."] },
+        { "title": "What the curation considers", "items": ["Recurring use and everyday maintenance.", "Comfort for people and animals.", "Textures and colors that sustain a welcoming atmosphere."] },
+        { "title": "Practicality with identity", "paragraphs": ["The selection helps create functional spaces that still express the personality of the project."] }
+      ],
+      "cta": { "title": "Create a welcoming setting for every presence", "text": "Discover coverings and products that adapt to your routine.", "action": { "label": "Back to library", "href": "tecidos" } }
+    },
+    "tecidos/colecoes": {
+      "seo": { "title": "KARV Fabric Collections", "description": "Discover KARV covering collections for spaces with identity, finishing and experience." },
+      "hero": { "eyebrow": "KARV collections", "title": "A covering curation that gives a project coherence", "text": "Collections organized to connect visual identity, professional application and the experience of a setting.", "primaryCta": { "label": "View products", "href": "produtos" }, "secondaryCta": { "label": "Explore markets", "href": "nichos" } },
+      "sections": [
+        { "title": "Collections that help decisions feel clear", "paragraphs": ["The KARV library brings together references to guide choices around finishing, comfort and visual presence through the project."] },
+        { "title": "How to use the curation", "items": ["Start with the feeling the space should convey.", "Consider the armchair's routine and application.", "Connect covering, product and market through one language."] },
+        { "title": "A foundation for consistent experiences", "paragraphs": ["Each collection supports a composition that works in use and strengthens what a brand wants to communicate."] }
+      ],
+      "cta": { "title": "Turn curation into a project choice", "text": "Explore the complete library and talk to KARV about your application.", "action": { "label": "Back to library", "href": "tecidos" } }
+    },
+    "blog": {
+      "seo": { "title": "Editorial journal | KARV", "description": "KARV editorial, institutional and strategic content about furniture, markets and fabrics for commercial spaces." },
+      "hero": { "eyebrow": "Editorial journal", "title": "KARV insight for authority and decisions", "text": "Publications designed to guide clients, partners and projects through identity-led furniture, markets, fabrics and a setting's perceived value.", "primaryCta": { "label": "Explore products", "href": "produtos" }, "secondaryCta": { "label": "View markets", "href": "nichos" } },
+      "cards": [
+        { "title": "Identity-led furniture", "description": "Why the armchair is central to communicating a setting's proposition and strengthening a business's image.", "href": "blog/mobiliario-de-identidade" },
+        { "title": "Custom armchairs for business", "description": "How pieces designed for a project's context give presence, value and identity to commercial spaces.", "href": "blog/poltronas-personalizadas-para-negocios" },
+        { "title": "How to choose commercial armchair fabric", "description": "An editorial guide to the relationship between covering, environment and perceived value.", "href": "blog/como-escolher-tecido-para-poltrona-comercial" },
+        { "title": "Armchairs for clinics and beauty", "description": "How furniture reinforces confidence, sophistication and care in clinical and beauty settings.", "href": "blog/poltronas-para-clinicas-esteticas" },
+        { "title": "Armchairs for barbershops", "description": "Why an armchair helps create a strong identity and memorable experience in the space.", "href": "blog/poltronas-para-barbearias" }
+      ],
+      "sections": [
+        { "title": "Articles structured for traditional SEO and AI answers", "paragraphs": ["Each publication reinforces KARV's view of identity-led furniture with clear, useful, commercial content for anyone who sees the space as a protagonist."] }
+      ],
+      "cta": { "title": "Discover the KARV universe beyond editorial content", "text": "Use the journal as a starting point to explore products, markets and fabrics that give shape to a setting.", "action": { "label": "View products", "href": "produtos" } }
+    },
+    "blog/mobiliario-de-identidade": {
+      "seo": { "title": "Identity-led furniture: how an armchair strengthens a setting | KARV", "description": "Learn why identity-led furniture is essential for brands, clinics, barbershops and premium spaces, with a focus on KARV armchairs." },
+      "hero": { "eyebrow": "Editorial journal", "title": "Identity-led furniture: when the setting speaks for itself", "text": "A commercial armchair is not only an object of comfort. It can reinforce brand perception, give a space personality and translate a business's positioning." },
+      "sections": [
+        { "title": "What is identity-led furniture?", "paragraphs": ["Identity-led furniture expresses the essence of a setting. It communicates values, tone and behavior before a client or patient even has a conversation.", "When visual language aligns with the business proposition, the perception of professionalism and care tends to become stronger."] },
+        { "title": "The armchair as an element of language", "paragraphs": ["An armchair occupies visual space, receives attention from anyone entering and helps create an atmosphere that can be welcoming, sophisticated, contemporary or striking."] },
+        { "title": "How to choose clearly", "items": ["Define the feeling the setting should convey.", "Consider the piece's function: reception, waiting, service or rest.", "Balance comfort, visual quality and durability.", "Choose coverings aligned with the space's commercial proposition."] }
+      ],
+      "cta": { "title": "Turn environment into identity", "text": "The right armchair can bring more presence, refinement and authority to your project.", "action": { "label": "Discover products", "href": "produtos" } }
+    },
+    "blog/poltronas-personalizadas-para-negocios": {
+      "seo": { "title": "Custom armchairs for business | KARV", "description": "How custom armchairs help businesses communicate value, identity and experience." },
+      "hero": { "eyebrow": "Editorial journal", "title": "Custom armchairs: a choice that positions a business", "text": "A piece designed for a project's context can transform the setting into a more recognizable, valuable experience." },
+      "sections": [
+        { "title": "Customization is not only finishing", "paragraphs": ["A custom armchair considers use, audience, visual language and business routine. It stops being a generic item and begins participating in the proposition."] },
+        { "title": "Where the choice makes a difference", "items": ["Receptions that need to build confidence.", "Barbershops and studios that live through identity.", "Clinics and beauty spaces that welcome before service begins."] },
+        { "title": "Perceived value is born from coherence", "paragraphs": ["When product, fabric and environment speak together, the experience gains clarity and the business communicates more care at every contact."] }
+      ],
+      "cta": { "title": "Create a piece coherent with your business", "text": "Explore KARV collections and find a foundation for your proposition.", "action": { "label": "View products", "href": "produtos" } }
+    },
+    "blog/como-escolher-tecido-para-poltrona-comercial": {
+      "seo": { "title": "How to choose commercial armchair fabric | KARV", "description": "A KARV guide to commercial armchair coverings based on environment, use and perceived value." },
+      "hero": { "eyebrow": "Editorial journal", "title": "How to choose a fabric for a commercial armchair", "text": "Choosing a covering brings together application, comfort and the visual reading a setting needs to convey." },
+      "sections": [
+        { "title": "Start with the experience the space must create", "paragraphs": ["Fabric influences first impressions, the sense of comfort and the way an armchair relates to light, colors and other materials."] },
+        { "title": "Criteria that guide the decision", "items": ["Observe use and service frequency.", "Consider maintenance and the setting's routine.", "Choose texture and color coherent with identity.", "Connect the covering to the product and market."] },
+        { "title": "Curation reduces uncertainty", "paragraphs": ["A library organized by application turns a broad choice into a safer, more intentional composition."] }
+      ],
+      "cta": { "title": "Explore the KARV Fabric Library", "text": "Find references to form a composition suited to your project.", "action": { "label": "View fabrics", "href": "tecidos" } }
+    },
+    "blog/poltronas-para-clinicas-esteticas": {
+      "seo": { "title": "Armchairs for clinics and beauty | KARV", "description": "How KARV armchairs help clinical and beauty spaces communicate care, confidence and sophistication." },
+      "hero": { "eyebrow": "Editorial journal", "title": "Armchairs for clinics and beauty: comfort that also communicates care", "text": "The experience of confidence starts at reception and continues through every environmental choice." },
+      "sections": [
+        { "title": "The setting prepares the service", "paragraphs": ["Before treatment, a client perceives cleanliness, order and welcome. Furniture helps give those feelings form."] },
+        { "title": "What an armchair needs to solve", "items": ["Comfort through different waiting times.", "A light, professional visual presence.", "Materials coherent with clinical routine.", "Integration with the brand's identity."] },
+        { "title": "Sophistication as part of care", "paragraphs": ["When an environment is coherent, it reinforces the perception of quality and makes the journey more desirable."] }
+      ],
+      "cta": { "title": "Discover solutions for clinics and beauty", "text": "Explore products and fabrics designed for this context.", "action": { "label": "View beauty market", "href": "nichos/estetica" } }
+    },
+    "blog/poltronas-para-barbearias": {
+      "seo": { "title": "Armchairs for barbershops | KARV", "description": "Why armchairs help barbershops create a memorable, comfortable experience with identity." },
+      "hero": { "eyebrow": "Editorial journal", "title": "Armchairs for barbershops: furniture that takes part in the ritual", "text": "In a barbershop, comfort and visual presence work together to create an experience clients recognize." },
+      "sections": [
+        { "title": "The ritual begins in the setting", "paragraphs": ["A barbershop is a place for staying, conversation and care. The armchair helps form its atmosphere and standard of service."] },
+        { "title": "A piece that communicates value", "items": ["Comfort for extended sessions.", "Visual presence for photos and referrals.", "Finishing aligned with brand positioning.", "Integration with the waiting and service experience."] },
+        { "title": "Identity that invites a return", "paragraphs": ["A consistent composition makes clients perceive more intention in the service and supports lasting relationships with the brand."] }
+      ],
+      "cta": { "title": "Build a barbershop with more presence", "text": "Discover KARV products and coverings for this type of setting.", "action": { "label": "View barbershop market", "href": "nichos/barbearia" } }
+    },
+    "ia/briefing": {
+      "seo": { "title": "Talk to KARV | Commercial Contact", "description": "Contact KARV to discuss commercial armchairs that strengthen the identity of your setting." },
+      "hero": { "eyebrow": "Commercial contact", "title": "Talk to KARV", "text": "Tell us about your space and the kind of presence you want to create. KARV develops armchairs that strengthen a setting's identity through comfort, visual expression and commercial application.", "primaryCta": { "label": "Chat on WhatsApp", "href": "contact.whatsapp" }, "secondaryCta": { "label": "View Instagram", "href": "contact.instagram" } },
+      "sections": [
+        { "title": "Start with your space", "paragraphs": ["Share the market, routine and experience you want to build. From there, KARV helps guide products and coverings that suit the project."] }
+      ],
+      "contact": true
+    }
+  }
+}

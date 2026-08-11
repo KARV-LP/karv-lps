@@ -1,4 +1,6 @@
 ---
+import { getLocaleFromPath, localizedHref } from "../../utils/i18n";
+
 interface Props {
   title: string;
   description?: string;
@@ -8,9 +10,10 @@ interface Props {
 
 const { title, description, href, label } = Astro.props;
 const Tag = href ? "a" : "div";
+const localizedCardHref = localizedHref(getLocaleFromPath(Astro.url.pathname), href);
 ---
 
-<Tag href={href} class="product-card">
+<Tag href={localizedCardHref} class="product-card">
   <div class="product-card__media" aria-hidden="true">
     <span class="product-card__initial">{title.charAt(0)}</span>
   </div>

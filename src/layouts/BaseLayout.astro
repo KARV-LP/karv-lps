@@ -2,32 +2,133 @@
 import "../styles/global.css";
 import Header from "../components/layout/Header.astro";
 import Footer from "../components/layout/Footer.astro";
+import { getEnglishTextTranslations } from "../data/englishText";
+import {
+  documentLanguage,
+  getLocaleFromPath,
+  getPage,
+  getPathFromLocalePath,
+  localizedPath,
+  ogLocale,
+  type Locale
+} from "../utils/i18n";
+
+interface Props {
+  locale?: Locale;
+  path?: string;
+  title?: string;
+  description?: string;
+}
 
 const {
-  title = "KARV Platform",
-  description = "Plataforma digital oficial da KARV."
+  locale = getLocaleFromPath(Astro.url.pathname),
+  path = getPathFromLocalePath(Astro.url.pathname),
+  title: suppliedTitle = "KARV Platform",
+  description: suppliedDescription = "Plataforma digital oficial da KARV."
 } = Astro.props;
+const localizedSeo = getPage(locale, path)?.seo;
+const title = locale === "en" && localizedSeo ? localizedSeo.title : suppliedTitle;
+const description = locale === "en" && localizedSeo ? localizedSeo.description : suppliedDescription;
+const canonicalURL = new URL(localizedPath(locale, path), Astro.site);
+const portugueseURL = new URL(localizedPath("pt", path), Astro.site);
+const englishURL = new URL(localizedPath("en", path), Astro.site);
+const englishTextTranslations = locale === "en" ? getEnglishTextTranslations() : undefined;
+const mainContent = await Astro.slots.render("default");
 
-const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+function decodeHtml(value: string): string {
+  return value
+    .replace(/&amp;/g, "&")
+    .replace(/&quot;/g, '"')
+    .replace(/&#x27;/g, "'")
+    .replace(/&lt;/g, "<")
+    .replace(/&gt;/g, ">");
+}
+
+function escapeHtml(value: string): string {
+  return value
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#x27;");
+}
+
+function localizeContent(content: string): string {
+  if (!englishTextTranslations) {
+    return content;
+  }
+
+  const translate = (value: string) => englishTextTranslations[value.replace(/\s+/g, " ").trim()];
+  const localizeValue = (value: string) => {
+    const translation = translate(decodeHtml(value));
+
+    if (!translation) {
+      return value;
+    }
+
+    const leadingWhitespace = value.match(/^\s*/)?.[0] ?? "";
+    const trailingWhitespace = value.match(/\s*$/)?.[0] ?? "";
+
+    return `${leadingWhitespace}${escapeHtml(translation)}${trailingWhitespace}`;
+  };
+
+  return content
+    .replace(/>([^<]+)</g, (_, value) => `>${localizeValue(value)}<`)
+    .replace(/\b(alt|aria-label|title)="([^"]*)"/g, (_, attribute, value) => {
+      const translation = translate(decodeHtml(value));
+
+      return translation ? `${attribute}="${escapeHtml(translation)}"` : `${attribute}="${value}"`;
+    })
+    .replace(/href="(https:\/\/wa\.me\/[^"]+)"/g, (_, href) => {
+      const url = new URL(decodeHtml(href));
+      url.searchParams.set(
+        "text",
+        "Hello, I would like to speak with KARV about an armchair for my space."
+      );
+
+      return `href="${escapeHtml(url.href)}"`;
+    })
+    .replace(/href="(mailto:[^"]+)"/g, (_, href) => {
+      const url = new URL(decodeHtml(href));
+      url.searchParams.set("subject", "Commercial contact with KARV");
+      url.searchParams.set(
+        "body",
+        "Hello, I would like to speak with KARV about an armchair for my space."
+      );
+
+      return `href="${escapeHtml(url.href)}"`;
+    });
+}
+
+const localizedMainContent = localizeContent(mainContent);
 ---
 
 <!doctype html>
-<html lang="pt-BR">
+<html lang={documentLanguage(locale)}>
   <head>
     <meta charset="UTF-8" />
     <meta name="description" content={description} />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="canonical" href={canonicalURL} />
+    <link rel="alternate" hreflang="pt-BR" href={portugueseURL} />
+    <link rel="alternate" hreflang="en" href={englishURL} />
+    <link rel="alternate" hreflang="x-default" href={portugueseURL} />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="icon" href="/favicon.ico" sizes="any" />
     <meta name="theme-color" content="#0E0E0E" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:locale" content={ogLocale(locale)} />
+    <meta property="og:locale:alternate" content={ogLocale(locale === "pt" ? "en" : "pt")} />
     <title>{title}</title>
   </head>
   <body>
-    <Header />
+    <Header locale={locale} path={path} />
     <main>
-      <slot />
+      <Fragment set:html={localizedMainContent} />
     </main>
-    <Footer />
+    <Footer locale={locale} />
   </body>
 </html>

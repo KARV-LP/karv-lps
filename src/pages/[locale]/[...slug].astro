@@ -1,0 +1,89 @@
+---
+import Home from "../../templates/index.astro";
+import Blog from "../blog/index.astro";
+import ChoosingCommercialUpholstery from "../blog/como-escolher-tecido-para-poltrona-comercial/index.astro";
+import IdentityFurniture from "../blog/mobiliario-de-identidade/index.astro";
+import ArmchairsForBarbershops from "../blog/poltronas-para-barbearias/index.astro";
+import ArmchairsForBeautyClinics from "../blog/poltronas-para-clinicas-esteticas/index.astro";
+import CustomArmchairsForBusinesses from "../blog/poltronas-personalizadas-para-negocios/index.astro";
+import Briefing from "../ia/briefing/index.astro";
+import Niches from "../nichos/index.astro";
+import Barbershop from "../nichos/barbearia/index.astro";
+import Clinics from "../nichos/clinicas/index.astro";
+import Beauty from "../nichos/estetica/index.astro";
+import Studios from "../nichos/studios/index.astro";
+import Tattoo from "../nichos/tatuagem/index.astro";
+import Products from "../produtos/index.astro";
+import Ryujin from "../produtos/kv-001-ryujin/index.astro";
+import Mandala from "../produtos/kv-002-mandala/index.astro";
+import PureBalance from "../produtos/kv-020-pure-balance/index.astro";
+import NaturalBeauty from "../produtos/kv-021-natural-beauty/index.astro";
+import SoftTaupe from "../produtos/kv-022-soft-taupe/index.astro";
+import Fabrics from "../tecidos/index.astro";
+import FabricsForBarbershops from "../tecidos/barbearia/index.astro";
+import FabricsForBeautyClinics from "../tecidos/clinicas-esteticas/index.astro";
+import Collections from "../tecidos/colecoes/index.astro";
+import PetFriendly from "../tecidos/pet-friendly/index.astro";
+import Premium from "../tecidos/premium/index.astro";
+import { pagePaths, type PagePath } from "../../data/pageRoutes";
+import { isLocale, locales, type Locale } from "../../utils/i18n";
+
+const pages = {
+  "": Home,
+  "blog": Blog,
+  "blog/como-escolher-tecido-para-poltrona-comercial": ChoosingCommercialUpholstery,
+  "blog/mobiliario-de-identidade": IdentityFurniture,
+  "blog/poltronas-para-barbearias": ArmchairsForBarbershops,
+  "blog/poltronas-para-clinicas-esteticas": ArmchairsForBeautyClinics,
+  "blog/poltronas-personalizadas-para-negocios": CustomArmchairsForBusinesses,
+  "ia/briefing": Briefing,
+  "nichos": Niches,
+  "nichos/barbearia": Barbershop,
+  "nichos/clinicas": Clinics,
+  "nichos/estetica": Beauty,
+  "nichos/studios": Studios,
+  "nichos/tatuagem": Tattoo,
+  "produtos": Products,
+  "produtos/kv-001-ryujin": Ryujin,
+  "produtos/kv-002-mandala": Mandala,
+  "produtos/kv-020-pure-balance": PureBalance,
+  "produtos/kv-021-natural-beauty": NaturalBeauty,
+  "produtos/kv-022-soft-taupe": SoftTaupe,
+  "tecidos": Fabrics,
+  "tecidos/barbearia": FabricsForBarbershops,
+  "tecidos/clinicas-esteticas": FabricsForBeautyClinics,
+  "tecidos/colecoes": Collections,
+  "tecidos/pet-friendly": PetFriendly,
+  "tecidos/premium": Premium
+} satisfies Record<PagePath, unknown>;
+
+export function getStaticPaths() {
+  return locales.flatMap((locale) =>
+    pagePaths.map((path) => ({
+      params: {
+        locale,
+        slug: path || undefined
+      },
+      props: {
+        locale,
+        path
+      }
+    }))
+  );
+}
+
+const { locale: localeParam, slug: slugParam } = Astro.params;
+const locale = Astro.props.locale as Locale;
+const path = Astro.props.path as PagePath;
+
+if (!isLocale(localeParam) || !isLocale(locale) || slugParam !== (path || undefined)) {
+  return new Response(null, { status: 404 });
+}
+
+const Page = pages[path];
+if (!Page) {
+  return new Response(null, { status: 404 });
+}
+---
+
+<Page />
