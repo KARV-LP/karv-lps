@@ -25,6 +25,19 @@ There's nothing special about `src/components/`, but that's where we like to put
 
 Any static assets, like images, can be placed in the `public/` directory.
 
+## 🎨 Design tokens
+
+KARV tokens live in `src/styles/tokens.css` and are imported once by `src/styles/global.css`.
+Use the CSS custom properties in component styles, for example:
+
+```css
+.example {
+  color: var(--color-paper);
+  font-family: var(--font-display);
+  padding: var(--space-6);
+}
+```
+
 ## 🧞 Commands
 
 All commands are run from the root of the project, from a terminal:

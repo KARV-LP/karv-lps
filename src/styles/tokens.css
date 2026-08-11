@@ -1,0 +1,65 @@
+:root {
+  /* Color */
+  --color-ink: #181513;
+  --color-ink-raised: #28221e;
+  --color-paper: #f1ece4;
+  --color-sand: #d3c3af;
+  --color-greige: #a89d90;
+  --color-clay: #806b5b;
+  --color-bronze: #a77b48;
+  --color-bronze-ink: #75502c;
+  --color-glow: #e8d5b5;
+  --color-ink-overlay: rgb(24 21 19 / 85%);
+  --color-border: rgb(241 236 228 / 12%);
+
+  /* Typography */
+  --font-display: "Fraunces", Georgia, serif;
+  --font-text: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.875rem;
+  --font-size-base: 1rem;
+  --font-size-body: 1.0625rem;
+  --font-size-lg: 1.125rem;
+  --font-size-xl: 1.25rem;
+  --font-size-2xl: 1.375rem;
+  --step-hero: clamp(2.75rem, 6vw, 5.5rem);
+  --step-h2: clamp(1.75rem, 3vw, 2.75rem);
+  --line-height-tight: 1.1;
+  --line-height-body: 1.6;
+  --letter-spacing-tight: -0.01em;
+
+  /* Spacing and layout */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-10: 40px;
+  --space-16: 64px;
+  --space-24: 96px;
+  --container-width: 1200px;
+
+  /* Shape, elevation, and motion */
+  --radius-sm: 4px;
+  --radius-md: 10px;
+  --radius-lg: 20px;
+  --radius-pill: 999px;
+  --shadow-contact: 0 8px 24px rgb(24 21 19 / 18%);
+  --duration-fast: 200ms;
+  --easing-standard: ease;
+  --transition-base: var(--duration-fast) var(--easing-standard);
+
+  /*
+   * Semantic aliases preserve component contracts and page-level theme
+   * overrides while resolving to the canonical KARV palette above.
+   */
+  --color-bg: var(--color-ink);
+  --color-surface: var(--color-ink-raised);
+  --color-surface-soft: var(--color-clay);
+  --color-text: var(--color-paper);
+  --color-muted: var(--color-greige);
+  --color-accent: var(--color-bronze);
+  --color-accent-soft: var(--color-glow);
+  --font-sans: var(--font-text);
+}
