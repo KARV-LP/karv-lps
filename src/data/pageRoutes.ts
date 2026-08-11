@@ -1,0 +1,30 @@
+export const pagePaths = [
+  "",
+  "blog",
+  "blog/como-escolher-tecido-para-poltrona-comercial",
+  "blog/mobiliario-de-identidade",
+  "blog/poltronas-para-barbearias",
+  "blog/poltronas-para-clinicas-esteticas",
+  "blog/poltronas-personalizadas-para-negocios",
+  "ia/briefing",
+  "nichos",
+  "nichos/barbearia",
+  "nichos/clinicas",
+  "nichos/estetica",
+  "nichos/studios",
+  "nichos/tatuagem",
+  "produtos",
+  "produtos/kv-001-ryujin",
+  "produtos/kv-002-mandala",
+  "produtos/kv-020-pure-balance",
+  "produtos/kv-021-natural-beauty",
+  "produtos/kv-022-soft-taupe",
+  "tecidos",
+  "tecidos/barbearia",
+  "tecidos/clinicas-esteticas",
+  "tecidos/colecoes",
+  "tecidos/pet-friendly",
+  "tecidos/premium"
+] as const;
+
+export type PagePath = (typeof pagePaths)[number];

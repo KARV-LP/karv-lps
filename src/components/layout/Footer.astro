@@ -1,12 +1,20 @@
 ---
 import Container from "../ui/Container.astro";
+import { localizedPath, t, type Locale } from "../../utils/i18n";
 
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
 const year = new Date().getFullYear();
+const navigation = t(locale, "navigation");
+const footer = t(locale, "footer");
 const links = [
-  { href: "/produtos/", label: "Produtos" },
-  { href: "/nichos/", label: "Nichos" },
-  { href: "/tecidos/", label: "Tecidos" },
-  { href: "/blog/", label: "Conteúdo" },
+  { slug: "produtos", label: navigation.products },
+  { slug: "nichos", label: navigation.niches },
+  { slug: "tecidos", label: navigation.fabrics },
+  { slug: "blog", label: navigation.content }
 ];
 ---
 
@@ -15,16 +23,16 @@ const links = [
     <div class="site-footer__top">
       <div class="site-footer__brand">
         <p class="site-footer__logo">KARV</p>
-        <p class="site-footer__tagline">Poltronas comerciais com identidade para ambientes profissionais.</p>
+        <p class="site-footer__tagline">{footer.tagline}</p>
       </div>
-      <nav class="site-footer__nav" aria-label="Links do rodapé">
+      <nav class="site-footer__nav" aria-label={footer.navigation}>
         {links.map((link) => (
-          <a href={link.href}>{link.label}</a>
+          <a href={localizedPath(locale, link.slug)}>{link.label}</a>
         ))}
       </nav>
     </div>
     <div class="site-footer__bottom">
-      <p>&copy; {year} KARV. Todos os direitos reservados.</p>
+      <p>&copy; {year} KARV. {footer.copyright}</p>
     </div>
   </Container>
 </footer>
