@@ -18,26 +18,33 @@ const navItems = [
 const currentPath = localizedPath(locale, path);
 ---
 
-<header class="site-header">
-  <div class="site-header__inner">
-    <a href={localizedPath(locale)} class="site-header__logo">KARV</a>
-    <nav class="site-header__nav" aria-label={navigation.primary}>
+<header class="site-header sticky top-0 z-50 border-b border-karv-border bg-karv-ink-overlay backdrop-blur-[10px]">
+  <div class="site-header__inner mx-auto flex max-w-karv items-center justify-between gap-karv-4 p-karv-4">
+    <a href={localizedPath(locale)} class="site-header__logo font-karv-display text-karv-xl font-bold tracking-[0.08em] text-karv-paper">
+      KARV
+    </a>
+    <nav class="site-header__nav flex min-w-0 flex-wrap gap-x-karv-6 gap-y-karv-2" aria-label={navigation.primary}>
       {navItems.map((item) => (
         <a
           href={localizedPath(locale, item.slug)}
-          class:list={["site-header__link", { "is-active": currentPath === localizedPath(locale, item.slug) }]}
+          class:list={[
+            "site-header__link border-b py-karv-2 font-karv-text text-karv-sm transition-[color,border-color] duration-[var(--duration-fast)] ease-[var(--easing-standard)]",
+            { "is-active": currentPath === localizedPath(locale, item.slug) },
+          ]}
           aria-current={currentPath === localizedPath(locale, item.slug) ? "page" : undefined}
         >
           {item.label}
         </a>
       ))}
     </nav>
-    <nav class="site-header__languages" aria-label={navigation.languageSwitcher}>
+    <nav class="site-header__languages flex flex-none items-center gap-karv-1 rounded-karv-pill border border-karv-border p-[2px]" aria-label={navigation.languageSwitcher}>
       {(["pt", "en"] as const).map((language) => (
         <a
           href={localizedPath(language, path)}
+          class="site-header__language rounded-karv-pill px-[7px] py-[5px] font-karv-text text-karv-xs font-bold tracking-[0.08em]"
           lang={language === "pt" ? "pt-BR" : "en"}
           hreflang={language === "pt" ? "pt-BR" : "en"}
+          aria-label={language === "pt" ? "Português do Brasil" : "English"}
           aria-current={language === locale ? "page" : undefined}
         >
           {language.toUpperCase()}
@@ -48,47 +55,9 @@ const currentPath = localizedPath(locale, path);
 </header>
 
 <style>
-  .site-header {
-    position: sticky;
-    top: 0;
-    z-index: 50;
-    background: var(--color-ink-overlay);
-    backdrop-filter: blur(10px);
-    border-bottom: 1px solid var(--color-border);
-  }
-
-  .site-header__inner {
-    max-width: var(--container-width);
-    margin-inline: auto;
-    padding: var(--space-4);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: var(--space-4);
-  }
-
-  .site-header__logo {
-    font-size: 20px;
-    font-weight: 700;
-    letter-spacing: 0.08em;
-    color: var(--color-text);
-  }
-
-  .site-header__nav {
-    display: flex;
-    flex-wrap: wrap;
-    gap: var(--space-2) var(--space-6);
-    min-width: 0;
-  }
-
   .site-header__link {
-    font-size: 14px;
     color: var(--color-muted);
-    padding: var(--space-2) 0;
-    border-bottom: 1px solid transparent;
-    transition:
-      color var(--transition-base),
-      border-color var(--transition-base);
+    border-color: transparent;
   }
 
   .site-header__link:hover,
@@ -97,31 +66,16 @@ const currentPath = localizedPath(locale, path);
     border-color: var(--color-accent);
   }
 
-  .site-header__languages {
-    display: flex;
-    align-items: center;
-    gap: var(--space-1);
-    border: 1px solid var(--color-border);
-    border-radius: var(--radius-pill);
-    padding: 2px;
-    flex: 0 0 auto;
-  }
-
-  .site-header__languages a {
-    border-radius: var(--radius-pill);
+  .site-header__language {
     color: var(--color-muted);
-    font-size: 12px;
-    font-weight: 700;
-    letter-spacing: 0.08em;
-    padding: 5px 7px;
   }
 
-  .site-header__languages a[aria-current="page"] {
+  .site-header__language[aria-current="page"] {
     background: var(--color-accent);
     color: var(--color-bg);
   }
 
-  .site-header__languages a:not([aria-current="page"]):hover {
+  .site-header__language:not([aria-current="page"]):hover {
     color: var(--color-accent-soft);
   }
 

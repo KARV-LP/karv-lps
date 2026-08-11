@@ -22,13 +22,17 @@ interface Props {
 const { eyebrow, title, text, primaryCta, secondaryCta } = Astro.props;
 ---
 
-<Section background="bg" spacing="loose" class="hero">
-  <Container>
-    {eyebrow && <p class="hero__eyebrow">{eyebrow}</p>}
-    <h1 class="hero__title">{title}</h1>
-    {text && <p class="hero__text">{text}</p>}
+<Section background="bg" spacing="loose" class="hero relative isolate overflow-hidden">
+  <Container class="hero__content relative z-10">
+    {eyebrow && (
+      <p class="hero__eyebrow mb-karv-4 font-karv-text text-karv-xs uppercase tracking-[0.22em] text-karv-glow">
+        {eyebrow}
+      </p>
+    )}
+    <h1 class="hero__title font-karv-display text-karv-hero leading-karv-tight tracking-karv-tight">{title}</h1>
+    {text && <p class="hero__text mt-karv-6 max-w-[60ch] text-karv-lg text-karv-greige">{text}</p>}
     {(primaryCta || secondaryCta) && (
-      <div class="hero__actions">
+      <div class="hero__actions mt-karv-8 flex flex-wrap gap-karv-3">
         {primaryCta && (
           <Button
             href={primaryCta.href}
@@ -59,30 +63,22 @@ const { eyebrow, title, text, primaryCta, secondaryCta } = Astro.props;
 </Section>
 
 <style>
-  .hero__eyebrow {
-    color: var(--color-accent-soft);
-    text-transform: uppercase;
-    letter-spacing: 0.22em;
-    font-size: 13px;
-    margin-bottom: var(--space-4);
+  .hero {
+    background:
+      radial-gradient(circle at 78% 18%, rgb(167 123 72 / 18%), transparent 34rem),
+      var(--color-bg);
+  }
+
+  .hero::before {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: linear-gradient(112deg, rgb(24 21 19 / 28%), transparent 58%);
+    content: "";
+    pointer-events: none;
   }
 
   .hero__title {
-    font-size: var(--step-hero);
     max-width: 16ch;
-  }
-
-  .hero__text {
-    margin-top: var(--space-6);
-    max-width: 60ch;
-    color: var(--color-muted);
-    font-size: var(--font-size-lg);
-  }
-
-  .hero__actions {
-    display: flex;
-    flex-wrap: wrap;
-    gap: var(--space-3);
-    margin-top: var(--space-8);
   }
 </style>
