@@ -1,4 +1,13 @@
-## Development
+# Instruções de trabalho
+
+## Contexto KARV
+
+- O conhecimento institucional, comercial e de marca da KARV é fornecido pelo usuário nesta conversa. Não duplique esse conteúdo em documentos de contexto, atas, relatórios ou listas de tarefas.
+- Use `DESIGN.md` como fonte de verdade para decisões visuais e `docs/copilot-workflow.md` como padrão de colaboração.
+- Quando uma decisão essencial não estiver disponível no pedido ou nos arquivos canônicos, peça esclarecimento antes de implementar. Não invente informações sobre a empresa.
+- Mantenha cada alteração restrita ao objetivo pedido. Não crie trabalho administrativo, documentação de acompanhamento ou arquivos temporários no repositório.
+
+## Desenvolvimento
 
 When starting the dev server, use background mode:
 
