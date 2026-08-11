@@ -1,6 +1,6 @@
 # DESIGN.md — KARV
 
-> Design system da KARV para o Claude Design. **Fonte única dos tokens = este arquivo**, versionado no `karv-lps`. Importe daqui via `/design-sync`; não regenere do zero.
+> Design system da KARV para o Claude Design. Os tokens canônicos pertencem ao repositório institucional `KARV-LP/karv-brand-system`; este arquivo os espelha e orienta sua aplicação via `/design-sync`.
 > Status: **proposta estrutural (aguardando sign-off)**. Refinamento só após confirmação.
 
 ---
@@ -35,7 +35,7 @@ KARV deve parecer uma peça de mobiliário premium em um espaço cuidadosamente 
 
 ## 4. Cores e iluminação (tokens)
 
-> A paleta trabalha por camadas de profundidade. Não use uma cor sólida isolada como solução visual padrão.
+> Valores de direção visual; sincronize-os com os tokens canônicos do repositório institucional antes de implementar.
 
 ```
 --color-ink:        #181513   /* fundo escuro profundo, quente */
@@ -113,6 +113,6 @@ Títulos podem sobrepor discretamente uma imagem, bloco tonal ou linha de grade,
 ## 11. Governança
 
 - **Arquitetura primeiro**, sem mudança automática sem sign-off.
-- Este `DESIGN.md` é a **fonte única** dos tokens KARV, versionado no `karv-lps`.
+- Os tokens canônicos moram no `KARV-LP/karv-brand-system`; este arquivo espelha e explica sua aplicação.
 - Sequência fixa: **estrutura → confirmação → refinamento**.
 - Para cada nova LP, mantenha a base KARV e defina apenas: duas ou três cores de apoio, uma direção de luz/textura e um elemento 3D opcional.
