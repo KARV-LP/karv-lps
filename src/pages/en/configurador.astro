@@ -1,0 +1,15 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+const configuratorUrl = "https://personalize.k-arv.com/configurador";
+---
+<BaseLayout locale="en" path="configurador" title="3D Configurator | KARV" description="Personalize the official KARV armchair, area by area, with KARV fabrics and prints.">
+  <section class="mx-auto grid min-h-[calc(100vh-12rem)] max-w-karv content-center gap-karv-6 px-karv-4 py-karv-12">
+    <p class="font-karv-text text-karv-sm uppercase tracking-[0.16em] text-karv-accent">KARV experience</p>
+    <h1 class="max-w-3xl font-karv-display text-karv-4xl font-bold leading-karv-display text-karv-paper">Configure your armchair, area by area.</h1>
+    <p class="max-w-2xl text-karv-lg text-karv-muted">Explore KARV fabrics and prints directly on the official armchair. Configuration takes place in a dedicated 3D experience.</p>
+    <div class="flex flex-wrap gap-karv-3">
+      <a class="rounded-karv-pill bg-karv-accent px-karv-5 py-karv-3 font-karv-text font-bold text-karv-ink transition hover:bg-karv-accent-soft" href={configuratorUrl}>Open 3D configurator</a>
+      <a class="rounded-karv-pill border border-karv-border px-karv-5 py-karv-3 font-karv-text font-bold text-karv-paper transition hover:border-karv-accent" href="/en/tecidos/">Explore fabrics</a>
+    </div>
+  </section>
+</BaseLayout>
