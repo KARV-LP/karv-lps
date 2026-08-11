@@ -68,7 +68,7 @@ const { eyebrow, title, text, primaryCta, secondaryCta } = Astro.props;
   }
 
   .hero__title {
-    font-size: clamp(36px, 7vw, 72px);
+    font-size: var(--step-hero);
     max-width: 16ch;
   }
 
@@ -76,7 +76,7 @@ const { eyebrow, title, text, primaryCta, secondaryCta } = Astro.props;
     margin-top: var(--space-6);
     max-width: 60ch;
     color: var(--color-muted);
-    font-size: 18px;
+    font-size: var(--font-size-lg);
   }
 
   .hero__actions {
