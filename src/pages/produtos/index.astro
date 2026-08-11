@@ -5,44 +5,45 @@ import Section from "../../components/ui/Section.astro";
 import Container from "../../components/ui/Container.astro";
 import ProductCard from "../../components/ui/ProductCard.astro";
 import Button from "../../components/ui/Button.astro";
+import { getPageText } from "../../utils/i18n";
+
+const text = getPageText(Astro.url.pathname);
 
 const products = [
   {
-    title: "KV_001_RYUJIN",
-    description: "Identidade oriental, dragão imperial e presença visual forte para ambientes com narrativa marcante.",
+    title: text("text15"),
+    description: text("text16"),
     href: "/produtos/kv-001-ryujin/",
   },
   {
-    title: "KV_002_MANDALA",
-    description: "Arte, mandala e identidade aplicada ao ambiente para projetos que desejam transformação visual.",
+    title: text("text17"),
+    description: text("text18"),
     href: "/produtos/kv-002-mandala/",
   },
   {
-    title: "KV_020_PURE_BALANCE",
-    description: "Clean profissional para clínicas de estética com sensação de tecnologia, limpeza e confiança.",
+    title: text("text19"),
+    description: text("text20"),
     href: "/produtos/kv-020-pure-balance/",
   },
   {
-    title: "KV_021_NATURAL_BEAUTY",
-    description: "Premium neutro para clínicas que unem estética avançada, harmonização e bem-estar.",
+    title: text("text21"),
+    description: text("text22"),
     href: "/produtos/kv-021-natural-beauty/",
   },
   {
-    title: "KV_022_SOFT_TAUPE",
-    description: "Sofisticação discreta para clínicas premium acessíveis com linguagem elegante e equilibrada.",
+    title: text("text23"),
+    description: text("text24"),
     href: "/produtos/kv-022-soft-taupe/",
   },
 ];
 ---
 
 <BaseLayout
-  title="Produtos | KARV"
-  description="Poltronas e coleções KARV — área base para produtos e páginas individuais."
 >
   <Hero
-    eyebrow="Produtos"
-    title="Produtos e coleções KARV"
-    text="Linhas comerciais desenvolvidas para reforçar o ambiente, ampliar a identidade do projeto e apoiar a comunicação de cada nicho."
+    eyebrow={text("text25")}
+    title={text("text2")}
+    text={text("text26")}
   />
 
   <Section background="surface">
@@ -59,29 +60,29 @@ const products = [
     <Container>
       <div class="cross-nav">
         <div class="cross-nav__intro">
-          <p class="cross-nav__eyebrow">Navegação comercial</p>
-          <h2 class="cross-nav__title">Acuradoria por contexto de projeto.</h2>
+          <p class="cross-nav__eyebrow">{text("text3")}</p>
+          <h2 class="cross-nav__title">{text("text4")}</h2>
           <p class="cross-nav__text">
-            Use os produtos KARV como ponto de partida e navegue até o nicho ou o tecido que dá estrutura ao ambiente.
+            {text("text5")}
           </p>
         </div>
 
         <div class="cross-nav__grid">
           <div class="cross-nav__group">
-            <h3>Por nicho</h3>
+            <h3>{text("text6")}</h3>
             <div class="cross-nav__actions">
-              <Button href="/nichos/barbearia/" variant="secondary">Barbearia</Button>
-              <Button href="/nichos/clinicas/" variant="secondary">Clínicas</Button>
-              <Button href="/nichos/estetica/" variant="secondary">Estética</Button>
+              <Button href="/nichos/barbearia/" variant="secondary">{text("text7")}</Button>
+              <Button href="/nichos/clinicas/" variant="secondary">{text("text8")}</Button>
+              <Button href="/nichos/estetica/" variant="secondary">{text("text9")}</Button>
             </div>
           </div>
 
           <div class="cross-nav__group">
-            <h3>Por tecido</h3>
+            <h3>{text("text10")}</h3>
             <div class="cross-nav__actions">
-              <Button href="/tecidos/premium/" variant="secondary">Premium</Button>
-              <Button href="/tecidos/clinicas-esteticas/" variant="secondary">Clínicas</Button>
-              <Button href="/tecidos/barbearia/" variant="secondary">Barbearia</Button>
+              <Button href="/tecidos/premium/" variant="secondary">{text("text11")}</Button>
+              <Button href="/tecidos/clinicas-esteticas/" variant="secondary">{text("text8")}</Button>
+              <Button href="/tecidos/barbearia/" variant="secondary">{text("text7")}</Button>
             </div>
           </div>
         </div>
@@ -91,11 +92,11 @@ const products = [
 
   <Section background="bg" spacing="tight">
     <Container size="narrow" class="cta">
-      <h2 class="cta__title">Encontre o tecido ideal para a sua poltrona</h2>
+      <h2 class="cta__title">{text("text12")}</h2>
       <p class="cta__text">
-        Explore a biblioteca de tecidos e revestimentos KARV e combine com a coleção certa para o seu projeto.
+        {text("text13")}
       </p>
-      <Button href="/tecidos/" variant="primary" size="lg">Ver tecidos</Button>
+      <Button href="/tecidos/" variant="primary" size="lg">{text("text14")}</Button>
     </Container>
   </Section>
 </BaseLayout>

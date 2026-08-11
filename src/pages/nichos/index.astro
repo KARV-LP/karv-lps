@@ -5,27 +5,28 @@ import Section from "../../components/ui/Section.astro";
 import Container from "../../components/ui/Container.astro";
 import ProductCard from "../../components/ui/ProductCard.astro";
 import Button from "../../components/ui/Button.astro";
+import { getPageText } from "../../utils/i18n";
+
+const text = getPageText(Astro.url.pathname);
 
 const niches = [
-  { title: "Barbearia", description: "Poltronas e ambientes que reforçam a identidade da barbearia moderna.", href: "/nichos/barbearia/" },
-  { title: "Estética", description: "Conforto e sofisticação para salas de atendimento e espera.", href: "/nichos/estetica/" },
-  { title: "Tatuagem", description: "Peças resistentes e estilosas para estúdios de tatuagem.", href: "/nichos/tatuagem/" },
-  { title: "Clínicas", description: "Mobiliário institucional para recepções e salas de espera clínicas.", href: "/nichos/clinicas/" },
-  { title: "Studios", description: "Ambientes com presença visual forte para studios criativos e premium.", href: "/nichos/studios/" },
-  { title: "Odontologia", description: "Mobiliário que transmite confiança em clínicas odontológicas.", href: "/produtos/" },
-  { title: "Podologia", description: "Soluções ergonômicas para consultórios de podologia.", href: "/produtos/" },
-  { title: "Salões", description: "Ambientes premium para salões de beleza e estética capilar.", href: "/produtos/" },
+  { title: text("text12"), description: text("text13"), href: "/nichos/barbearia/" },
+  { title: text("text14"), description: text("text15"), href: "/nichos/estetica/" },
+  { title: text("text16"), description: text("text17"), href: "/nichos/tatuagem/" },
+  { title: text("text18"), description: text("text19"), href: "/nichos/clinicas/" },
+  { title: text("text20"), description: text("text21"), href: "/nichos/studios/" },
+  { title: text("text22"), description: text("text23"), href: "/produtos/" },
+  { title: text("text24"), description: text("text25"), href: "/produtos/" },
+  { title: text("text26"), description: text("text27"), href: "/produtos/" },
 ];
 ---
 
 <BaseLayout
-  title="Nichos | KARV"
-  description="Soluções KARV para clínicas, barbearias, estúdios, estética, odontologia e outros segmentos."
 >
   <Hero
-    eyebrow="Nichos"
-    title="Segmentos estratégicos KARV"
-    text="Cada segmento tem exigências próprias de conforto, durabilidade e apresentação. A KARV desenvolve poltronas e coleções pensadas para o dia a dia de cada nicho."
+    eyebrow={text("text29")}
+    title={text("text2")}
+    text={text("text30")}
   />
 
   <Section background="surface">
@@ -42,27 +43,27 @@ const niches = [
     <Container>
       <div class="cross-nav">
         <div class="cross-nav__intro">
-          <p class="cross-nav__eyebrow">Conexão comercial</p>
-          <h2 class="cross-nav__title">Aprofunde a proposta do segmento pelo produto e pelo tecido.</h2>
+          <p class="cross-nav__eyebrow">{text("text6")}</p>
+          <h2 class="cross-nav__title">{text("text7")}</h2>
           <p class="cross-nav__text">
-            Cada nicho ganha força quando o ambiente, a poltrona e a curadoria de revestimentos dialogam entre si.
+            {text("text8")}
           </p>
         </div>
 
         <div class="cross-nav__grid">
           <ProductCard
-            title="Produtos de referência"
+            title={text("text3")}
             description="Acompanhe as linhas KARV mais alinhadas à identidade do projeto."
             href="/produtos/"
           />
           <ProductCard
-            title="Tecidos para o projeto"
-            description="Conecte a linguagem visual do espaço à curadoria de revestimentos."
+            title={text("text4")}
+            description={text("text31")}
             href="/tecidos/"
           />
           <ProductCard
-            title="Coleções KARV"
-            description="Use a biblioteca como base para identidade, acabamento e experiência do ambiente."
+            title={text("text5")}
+            description={text("text32")}
             href="/tecidos/colecoes/"
           />
         </div>
@@ -72,11 +73,11 @@ const niches = [
 
   <Section background="bg" spacing="tight">
     <Container size="narrow" class="cta">
-      <h2 class="cta__title">Não encontrou o seu segmento?</h2>
+      <h2 class="cta__title">{text("text9")}</h2>
       <p class="cta__text">
-        A KARV atende novos nichos sob demanda. Explore as coleções e tecidos disponíveis para o seu projeto.
+        {text("text10")}
       </p>
-      <Button href="/produtos/" variant="primary" size="lg">Ver produtos</Button>
+      <Button href="/produtos/" variant="primary" size="lg">{text("text11")}</Button>
     </Container>
   </Section>
 </BaseLayout>

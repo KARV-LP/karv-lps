@@ -4,27 +4,31 @@ import Hero from "../../../components/ui/Hero.astro";
 import Section from "../../../components/ui/Section.astro";
 import Container from "../../../components/ui/Container.astro";
 import Button from "../../../components/ui/Button.astro";
-import { KARV_CONTACT_LINKS } from "../../../data/contactLinks";
+import { getContactLabels, getContactLinks } from "../../../data/contactLinks";
+import { getLocaleFromPath, getPageText } from "../../../utils/i18n";
+
+const text = getPageText(Astro.url.pathname);
+const locale = getLocaleFromPath(Astro.url.pathname);
+const contactLinks = getContactLinks(locale);
+const contactLabels = getContactLabels(locale);
 ---
 
 <BaseLayout
-  title="Estética | KARV"
-  description="Mobiliário de identidade para clínicas e salões de estética com foco em conforto, sofisticação e experiência do cliente."
 >
   <Hero
-    eyebrow="Estética"
-    title="A estética do ambiente impacta a percepção da marca"
-    text="Em estética, a experiência começa no acolhimento. O cliente entra buscando cuidado, relaxamento e um ambiente que transmita profissionalismo desde a primeira impressão."
-    primaryCta={{ label: "Ver produtos", href: "/produtos/" }}
-    secondaryCta={{ label: "Falar com a KARV", href: KARV_CONTACT_LINKS.whatsapp }}
+    eyebrow={text("text31")}
+    title={text("text2")}
+    text={text("text32")}
+    primaryCta={{ label: text("text33"), href: "/produtos/" }}
+    secondaryCta={{ label: text("text30"), href: contactLinks.whatsapp }}
   />
 
   <Section background="surface">
     <Container class="content">
       <div class="intro">
-        <h2>O ambiente reforça o valor do atendimento</h2>
+        <h2>{text("text3")}</h2>
         <p>
-          Em espaços de estética, cada peça precisa equilibrar conforto, beleza e funcionalidade. Uma poltrona de identidade transforma a recepção em um ponto de diferenciação e ajuda o cliente a sentir que está em um lugar cuidado e premium.
+          {text("text4")}
         </p>
       </div>
     </Container>
@@ -34,17 +38,17 @@ import { KARV_CONTACT_LINKS } from "../../../data/contactLinks";
     <Container>
       <div class="grid">
         <article class="card">
-          <h3>Por que esse nicho precisa de uma poltrona de identidade</h3>
+          <h3>{text("text5")}</h3>
           <p>
-            O tempo de espera e o momento de atendimento devem transmitir tranquilidade. O mobiliário certo cria uma atmosfera que valoriza a proposta do profissional e a confiança do cliente.
+            {text("text6")}
           </p>
         </article>
         <article class="card">
-          <h3>O que a experiência precisa transmitir</h3>
+          <h3>{text("text7")}</h3>
           <ul class="card__list">
-            <li>Conforto visual e físico durante a espera</li>
-            <li>Refinamento que acompanha a identidade da marca</li>
-            <li>Ambiente acolhedor para procedimentos e retorno</li>
+            <li>{text("text8")}</li>
+            <li>{text("text9")}</li>
+            <li>{text("text10")}</li>
           </ul>
         </article>
       </div>
@@ -54,21 +58,21 @@ import { KARV_CONTACT_LINKS } from "../../../data/contactLinks";
   <Section background="surface-soft">
     <Container>
       <div class="section-heading">
-        <h2>Aplicações no ambiente</h2>
-        <p>As soluções KARV se encaixam bem em diferentes momentos da jornada do cliente.</p>
+        <h2>{text("text11")}</h2>
+        <p>{text("text12")}</p>
       </div>
       <div class="grid grid--three">
         <article class="card">
-          <h3>Recepção e acolhimento</h3>
-          <p>Espaços que recebem com sofisticação e reforçam a imagem da clínica ou salão.</p>
+          <h3>{text("text13")}</h3>
+          <p>{text("text14")}</p>
         </article>
         <article class="card">
-          <h3>Salas de atendimento</h3>
-          <p>Conforto e presença que elevam a sensação de exclusividade do procedimento.</p>
+          <h3>{text("text15")}</h3>
+          <p>{text("text16")}</p>
         </article>
         <article class="card">
-          <h3>Áreas de relaxamento</h3>
-          <p>Peças que ajudam o cliente a se sentir cuidado e valorizado antes e depois do atendimento.</p>
+          <h3>{text("text17")}</h3>
+          <p>{text("text18")}</p>
         </article>
       </div>
     </Container>
@@ -77,21 +81,21 @@ import { KARV_CONTACT_LINKS } from "../../../data/contactLinks";
   <Section background="surface">
     <Container>
       <div class="section-heading">
-        <h2>Benefícios comerciais</h2>
-        <p>Investir em identidade visual do ambiente é investir em percepção de valor.</p>
+        <h2>{text("text19")}</h2>
+        <p>{text("text20")}</p>
       </div>
       <div class="grid grid--three">
         <article class="card">
-          <h3>Aumenta a percepção de premium</h3>
-          <p>O espaço passa a transmitir mais sofisticação e cuidado.</p>
+          <h3>{text("text21")}</h3>
+          <p>{text("text22")}</p>
         </article>
         <article class="card">
-          <h3>Melhora a retenção</h3>
-          <p>Clientes tendem a voltar quando o espaço é acolhedor e bem pensado.</p>
+          <h3>{text("text23")}</h3>
+          <p>{text("text24")}</p>
         </article>
         <article class="card">
-          <h3>Fortalece a recomendação</h3>
-          <p>Ambientes memoráveis viram parte da narrativa da marca.</p>
+          <h3>{text("text25")}</h3>
+          <p>{text("text26")}</p>
         </article>
       </div>
     </Container>
@@ -99,21 +103,21 @@ import { KARV_CONTACT_LINKS } from "../../../data/contactLinks";
 
   <Section background="bg" spacing="tight">
     <Container size="narrow" class="cta">
-      <h2>Quando o ambiente é parte do tratamento, a marca se torna inesquecível</h2>
+      <h2>{text("text27")}</h2>
       <p>
-        A KARV entrega soluções que unem estética, conforto e posicionamento para transformar cada espaço em uma experiência premium.
+        {text("text28")}
       </p>
       <div class="actions">
-        <Button href="/produtos/" variant="primary" size="lg">Ver coleções</Button>
+        <Button href="/produtos/" variant="primary" size="lg">{text("text29")}</Button>
         <Button
-          href={KARV_CONTACT_LINKS.whatsapp}
+          href={contactLinks.whatsapp}
           target="_blank"
           variant="secondary"
           size="lg"
           data-event="cta_whatsapp"
           data-location="nicho"
         >
-          Falar com a KARV
+          {text("text30")}
         </Button>
       </div>
     </Container>

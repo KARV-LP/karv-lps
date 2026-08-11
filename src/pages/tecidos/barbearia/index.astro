@@ -4,54 +4,55 @@ import Hero from "../../../components/ui/Hero.astro";
 import Section from "../../../components/ui/Section.astro";
 import Container from "../../../components/ui/Container.astro";
 import Button from "../../../components/ui/Button.astro";
+import { getPageText } from "../../../utils/i18n";
+
+const text = getPageText(Astro.url.pathname);
 
 const highlights = [
   {
-    title: "Personalidade visual",
-    text: "A seleção valoriza ambientes com presença forte, identidade marcante e linguagem mais assertiva.",
+    title: text("text21"),
+    text: text("text10"),
   },
   {
-    title: "Atmosfera masculina",
-    text: "Tons e composições mais profundos ajudam a construir uma experiência visual distinta.",
+    title: text("text22"),
+    text: text("text11"),
   },
   {
-    title: "Presença no ambiente",
-    text: "Os revestimentos reforçam a percepção do espaço como um lugar com caráter próprio e memorável.",
+    title: text("text12"),
+    text: text("text13"),
   },
 ];
 
 const applications = [
-  "Áreas de atendimento e recepção",
-  "Espaços de espera com identidade forte",
-  "Ambientes que desejam uma presença visual marcante",
+  text("text14"),
+  text("text15"),
+  text("text16"),
 ];
 
 const benefits = [
-  "Linguagem visual com personalidade",
-  "Atmosfera mais marcante e memorável",
-  "Posicionamento claro para o conceito do espaço",
+  text("text17"),
+  text("text24"),
+  text("text18"),
 ];
 ---
 
 <BaseLayout
-  title="Revestimentos para Barbearias | Biblioteca de Tecidos KARV"
-  description="Conheça a Curadoria KARV para revestimentos para barbearias, com personalidade visual, presença e atmosfera marcante."
 >
   <Hero
-    eyebrow="Curadoria KARV"
-    title="Revestimentos para Barbearias"
-    text="A Curadoria KARV organiza opções com presença visual marcante para barbearias que desejam uma identidade forte e uma atmosfera masculina."
-    primaryCta={{ label: "Voltar à biblioteca", href: "/tecidos/" }}
+    eyebrow={text("text19")}
+    title={text("text1")}
+    text={text("text20")}
+    primaryCta={{ label: text("text9"), href: "/tecidos/" }}
     secondaryCta={{ label: "Ver pet friendly", href: "/tecidos/pet-friendly/" }}
   />
 
   <Section background="surface">
     <Container>
       <div class="intro">
-        <p class="intro__eyebrow">Identidade marcante</p>
-        <h2 class="intro__title">Uma curadoria para espaços com caráter e presença.</h2>
+        <p class="intro__eyebrow">{text("text2")}</p>
+        <h2 class="intro__title">{text("text3")}</h2>
         <p class="intro__text">
-          Em barbearias, a experiência do ambiente é parte da marca. A Curadoria KARV ajuda a traduzir essa personalidade com clareza visual.
+          {text("text4")}
         </p>
       </div>
 
@@ -69,13 +70,13 @@ const benefits = [
   <Section background="bg">
     <Container class="split">
       <div class="content-block">
-        <h2>Aplicações recomendadas</h2>
+        <h2>{text("text5")}</h2>
         <ul class="feature-list">
           {applications.map((item) => <li>{item}</li>)}
         </ul>
       </div>
       <div class="content-block">
-        <h2>Benefícios da curadoria</h2>
+        <h2>{text("text6")}</h2>
         <ul class="feature-list">
           {benefits.map((item) => <li>{item}</li>)}
         </ul>
@@ -85,11 +86,11 @@ const benefits = [
 
   <Section background="surface-soft" spacing="tight">
     <Container size="narrow" class="cta">
-      <h2 class="cta__title">A presença do espaço pode ser tão importante quanto o atendimento.</h2>
+      <h2 class="cta__title">{text("text7")}</h2>
       <p class="cta__text">
-        Acesse a Biblioteca de Tecidos KARV para construir uma experiência visual mais forte.
+        {text("text8")}
       </p>
-      <Button href="/tecidos/" variant="primary" size="lg">Voltar à biblioteca</Button>
+      <Button href="/tecidos/" variant="primary" size="lg">{text("text9")}</Button>
     </Container>
   </Section>
 </BaseLayout>

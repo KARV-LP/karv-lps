@@ -5,47 +5,48 @@ import Section from "../../../components/ui/Section.astro";
 import Container from "../../../components/ui/Container.astro";
 import ProductCard from "../../../components/ui/ProductCard.astro";
 import Button from "../../../components/ui/Button.astro";
+import { getPageText } from "../../../utils/i18n";
+
+const text = getPageText(Astro.url.pathname);
 ---
 
 <BaseLayout
-  title="Mobiliário de identidade: como a poltrona reforça o ambiente | KARV"
-  description="Entenda por que o mobiliário de identidade é essencial para marcas, clínicas, barbearias e espaços premium, com foco em poltronas KARV."
 >
   <Hero
-    eyebrow="Blog editorial"
-    title="Mobiliário de identidade: quando o ambiente fala por si"
-    text="Uma poltrona comercial não é apenas um objeto de conforto. Ela pode reforçar a percepção de marca, dar personalidade ao espaço e traduzir o posicionamento do negócio."
+    eyebrow={text("text21")}
+    title={text("text2")}
+    text={text("text22")}
   />
 
   <Section background="surface">
     <Container size="narrow">
       <p>
-        Em muitos projetos, a escolha de mobiliário é tratada como detalhe final. No entanto, a peça certa pode reorganizar a experiência do ambiente e dar maior clareza à proposta do espaço.
+        {text("text5")}
       </p>
 
-      <h2>O que é mobiliário de identidade</h2>
+      <h2>{text("text6")}</h2>
       <p>
-        Mobiliário de identidade é aquele que expressa a essência do ambiente. Ele ajuda a comunicar valores, tom e comportamento antes mesmo de uma conversa com o cliente ou paciente.
+        {text("text7")}
       </p>
 
       <p>
-        Quando a linguagem visual do espaço está alinhada à proposta do negócio, a percepção de profissionalismo e cuidado tende a ficar mais forte. Isso vale para recepções, salas de espera, consultórios, barbearias e ambientes premium.
+        {text("text8")}
       </p>
 
-      <h2>A poltrona como elemento de linguagem</h2>
+      <h2>{text("text9")}</h2>
       <p>
-        Entre as peças de mobiliário, a poltrona tem papel estratégico. Ela ocupa espaço visual, recebe atenção de quem entra no ambiente e ajuda a criar uma atmosfera que pode ser acolhedora, sofisticada, contemporânea ou marcante.
+        {text("text10")}
       </p>
       <p>
-        A KARV desenvolve poltronas que atuam como parte da identidade do espaço, reforçando o posicionamento do projeto e ampliando a narrativa do ambiente.
+        {text("text11")}
       </p>
 
-      <h2>Como escolher com clareza</h2>
+      <h2>{text("text12")}</h2>
       <ul>
-        <li>Defina a sensação que o ambiente deve transmitir.</li>
-        <li>Considere a função da peça: recepção, espera, atendimento ou descanso.</li>
-        <li>Observe o equilíbrio entre conforto, visual e durabilidade.</li>
-        <li>Escolha revestimentos e linhas que dialoguem com a proposta comercial do espaço.</li>
+        <li>{text("text13")}</li>
+        <li>{text("text14")}</li>
+        <li>{text("text15")}</li>
+        <li>{text("text16")}</li>
       </ul>
     </Container>
   </Section>
@@ -54,18 +55,18 @@ import Button from "../../../components/ui/Button.astro";
     <Container>
       <div class="cards-grid">
         <ProductCard
-          title="Produtos KARV"
-          description="Explore linhas de poltronas pensadas para reforçar identidade e presença visual."
+          title={text("text26")}
+          description={text("text23")}
           href="/produtos/"
         />
         <ProductCard
-          title="Nichos"
-          description="Entenda como cada segmento usa o mobiliário para comunicar valor e posicionamento."
+          title={text("text3")}
+          description={text("text24")}
           href="/nichos/"
         />
         <ProductCard
-          title="Tecidos"
-          description="Descubra como a curadoria de revestimentos ajuda a estruturar o ambiente."
+          title={text("text4")}
+          description={text("text25")}
           href="/tecidos/"
         />
       </div>
@@ -74,11 +75,11 @@ import Button from "../../../components/ui/Button.astro";
 
   <Section background="surface" spacing="tight">
     <Container size="narrow" class="cta">
-      <h2>Conheça as soluções KARV para transformar o ambiente em identidade.</h2>
+      <h2>{text("text17")}</h2>
       <p>
-        A escolha certa de poltrona pode dar mais presença, mais refinamento e mais autoridade ao seu projeto.
+        {text("text18")}
       </p>
-      <Button href="/produtos/" variant="primary" size="lg">Conhecer produtos</Button>
+      <Button href="/produtos/" variant="primary" size="lg">{text("text19")}</Button>
     </Container>
   </Section>
 </BaseLayout>

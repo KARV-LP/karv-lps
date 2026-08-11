@@ -4,44 +4,45 @@ import Hero from "../../../components/ui/Hero.astro";
 import Section from "../../../components/ui/Section.astro";
 import Container from "../../../components/ui/Container.astro";
 import Button from "../../../components/ui/Button.astro";
+import { getPageText } from "../../../utils/i18n";
+
+const text = getPageText(Astro.url.pathname);
 
 const identityPoints = [
-  "Linguagem artística com forte apelo visual e presença decorativa.",
-  "Preserva a identidade do ambiente ao mesmo tempo em que valoriza o projeto.",
-  "Transmite uma sensação de sensibilidade, cultura e refinamento.",
+  text("text12"),
+  text("text13"),
+  text("text14"),
 ];
 
 const applications = [
-  "Ambientes residenciais com foco em personalidade e composição.",
-  "Projetos de arquitetura que desejam uma narrativa mais artística.",
-  "Espaços comerciais que valorizam diferenciação e acolhimento.",
+  text("text15"),
+  text("text16"),
+  text("text17"),
 ];
 
 const benefits = [
-  "Amplia a percepção de conceito e originalidade do projeto.",
-  "Conecta a peça ao ambiente de forma natural e elegante.",
-  "Gera valor comercial em propostas com forte identidade visual.",
+  text("text18"),
+  text("text19"),
+  text("text20"),
 ];
 ---
 
 <BaseLayout
-  title="KV_002_MANDALA | Produtos KARV"
-  description="Conheça a coleção KV_002_MANDALA, inspirada em mandalas e arte para transformar ambientes com personalidade e sofisticação."
 >
   <Hero
-    eyebrow="Produto KARV"
-    title="KV_002_MANDALA"
-    text="Quando a arte inspira, o ambiente se transforma."
-    primaryCta={{ label: "Ver outros produtos", href: "/produtos/" }}
-    secondaryCta={{ label: "Ver tecidos", href: "/tecidos/" }}
+    eyebrow={text("text22")}
+    title={text("text2")}
+    text={text("text23")}
+    primaryCta={{ label: text("text24"), href: "/produtos/" }}
+    secondaryCta={{ label: text("text25"), href: "/tecidos/" }}
   />
 
   <Section background="surface">
     <Container>
       <div class="intro-card">
-        <p class="intro-card__eyebrow">Texto comercial</p>
+        <p class="intro-card__eyebrow">{text("text3")}</p>
         <p class="intro-card__text">
-          O KV_002_MANDALA traduz a força da arte em uma proposta comercial acessível e premium. A KARV atua como um elemento de reforço, destacando a intenção do ambiente sem roubar protagonismo. A peça se relaciona com o espaço e o eleva com presença e sensibilidade.
+          {text("text4")}
         </p>
       </div>
     </Container>
@@ -51,14 +52,14 @@ const benefits = [
     <Container>
       <div class="feature-grid">
         <article class="feature-card">
-          <h2 class="feature-card__title">Identidade do produto</h2>
+          <h2 class="feature-card__title">{text("text5")}</h2>
           <ul class="feature-card__list">
             {identityPoints.map((point) => <li>{point}</li>)}
           </ul>
         </article>
 
         <article class="feature-card">
-          <h2 class="feature-card__title">Aplicação em ambientes</h2>
+          <h2 class="feature-card__title">{text("text6")}</h2>
           <ul class="feature-card__list">
             {applications.map((point) => <li>{point}</li>)}
           </ul>
@@ -70,7 +71,7 @@ const benefits = [
   <Section background="surface-soft">
     <Container>
       <div class="benefits-block">
-        <h2 class="benefits-block__title">Benefícios comerciais</h2>
+        <h2 class="benefits-block__title">{text("text7")}</h2>
         <div class="benefits-grid">
           {benefits.map((benefit) => (
             <div class="benefit-item">{benefit}</div>
@@ -82,13 +83,13 @@ const benefits = [
 
   <Section background="bg" spacing="tight">
     <Container size="narrow" class="cta">
-      <h2 class="cta__title">Uma coleção para projetos que querem expressão e equilíbrio</h2>
+      <h2 class="cta__title">{text("text8")}</h2>
       <p class="cta__text">
-        O KV_002_MANDALA conecta arte, ambiente e comunicação comercial com linguagem moderna e elegante.
+        {text("text9")}
       </p>
       <div class="cta__actions">
-        <Button href="/produtos/" variant="primary" size="lg">Ver catálogo</Button>
-        <Button href="/nichos/" variant="secondary" size="lg">Explorar nichos</Button>
+        <Button href="/produtos/" variant="primary" size="lg">{text("text10")}</Button>
+        <Button href="/nichos/" variant="secondary" size="lg">{text("text11")}</Button>
       </div>
     </Container>
   </Section>

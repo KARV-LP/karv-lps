@@ -3,55 +3,57 @@ import BaseLayout from "../../../layouts/BaseLayout.astro";
 import Section from "../../../components/ui/Section.astro";
 import Container from "../../../components/ui/Container.astro";
 import Button from "../../../components/ui/Button.astro";
-import { KARV_CONTACT_LINKS, KARV_CONTACT_LABELS } from "../../../data/contactLinks";
+import { getContactLabels, getContactLinks } from "../../../data/contactLinks";
+import { getLocaleFromPath, getPageText } from "../../../utils/i18n";
+
+const text = getPageText(Astro.url.pathname);
+const locale = getLocaleFromPath(Astro.url.pathname);
+const contactLinks = getContactLinks(locale);
+const contactLabels = getContactLabels(locale);
 ---
 
 <BaseLayout
-  title="Fale com a KARV | Contato Comercial"
-  description="Entre em contato com a KARV para conversar sobre poltronas comerciais que reforçam a identidade do seu ambiente."
 >
   <Section background="surface-soft">
     <Container size="narrow">
       <div class="contact-hero">
-        <p class="contact-hero__eyebrow">Contato comercial</p>
-        <h1>Fale com a KARV</h1>
+        <p class="contact-hero__eyebrow">{text("text2")}</p>
+        <h1>{text("text3")}</h1>
         <p>
-          Conte sobre o seu ambiente e o tipo de presença que deseja criar. A KARV
-          desenvolve poltronas que reforçam a identidade do espaço com conforto,
-          expressão visual e aplicação comercial.
+          {text("text4")}
         </p>
 
         <div class="contact-actions">
           <Button
-            href={KARV_CONTACT_LINKS.whatsapp}
+            href={contactLinks.whatsapp}
             target="_blank"
             variant="primary"
             size="lg"
             data-event="cta_whatsapp"
             data-location="ia-briefing"
           >
-            {KARV_CONTACT_LABELS.whatsapp}
+            {contactLabels.whatsapp}
           </Button>
 
           <Button
-            href={KARV_CONTACT_LINKS.instagram}
+            href={contactLinks.instagram}
             target="_blank"
             variant="secondary"
             size="lg"
             data-event="cta_instagram"
             data-location="ia-briefing"
           >
-            {KARV_CONTACT_LABELS.instagram}
+            {contactLabels.instagram}
           </Button>
 
           <Button
-            href={KARV_CONTACT_LINKS.email}
+            href={contactLinks.email}
             variant="secondary"
             size="lg"
             data-event="cta_email"
             data-location="ia-briefing"
           >
-            {KARV_CONTACT_LABELS.email}
+            {contactLabels.email}
           </Button>
         </div>
       </div>

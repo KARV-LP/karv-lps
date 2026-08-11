@@ -4,54 +4,55 @@ import Hero from "../../../components/ui/Hero.astro";
 import Section from "../../../components/ui/Section.astro";
 import Container from "../../../components/ui/Container.astro";
 import Button from "../../../components/ui/Button.astro";
+import { getPageText } from "../../../utils/i18n";
+
+const text = getPageText(Astro.url.pathname);
 
 const highlights = [
   {
-    title: "Rotina mais simples",
-    text: "A seleção favorece ambientes que precisam de praticidade no dia a dia sem perder o conforto visual.",
+    title: text("text21"),
+    text: text("text9"),
   },
   {
-    title: "Conforto diário",
-    text: "A proposta acolhe quem vive com animais em casa ou em ambientes compartilhados.",
+    title: text("text25"),
+    text: text("text10"),
   },
   {
-    title: "Uso frequente",
-    text: "A curadoria organiza opções que dialogam com a realidade cotidiana de espaços ativos.",
+    title: text("text22"),
+    text: text("text11"),
   },
 ];
 
 const applications = [
-  "Residências com rotina intensa",
-  "Ambientes compartilhados com animais",
-  "Espaços que valorizam praticidade e acolhimento",
+  text("text12"),
+  text("text13"),
+  text("text14"),
 ];
 
 const benefits = [
-  "Experiência mais prática para o cotidiano",
-  "Ambiente acolhedor e funcional",
-  "Leitura visual equilibrada para uso frequente",
+  text("text15"),
+  text("text16"),
+  text("text17"),
 ];
 ---
 
 <BaseLayout
-  title="Revestimentos Pet Friendly | Biblioteca de Tecidos KARV"
-  description="Descubra a Curadoria KARV para revestimentos pet friendly, com conforto diário, praticidade e interpretação acolhedora para ambientes com animais."
 >
   <Hero
-    eyebrow="Curadoria KARV"
-    title="Revestimentos Pet Friendly"
-    text="Para ambientes que convivem com animais no dia a dia, a Curadoria KARV organiza escolhas pensadas para facilitar a rotina e oferecer conforto."
-    primaryCta={{ label: "Voltar à biblioteca", href: "/tecidos/" }}
-    secondaryCta={{ label: "Ver coleções", href: "/tecidos/colecoes/" }}
+    eyebrow={text("text18")}
+    title={text("text23")}
+    text={text("text19")}
+    primaryCta={{ label: text("text8"), href: "/tecidos/" }}
+    secondaryCta={{ label: text("text20"), href: "/tecidos/colecoes/" }}
   />
 
   <Section background="surface">
     <Container>
       <div class="intro">
-        <p class="intro__eyebrow">Rotina acolhedora</p>
-        <h2 class="intro__title">Uma curadoria para espaços que precisam de praticidade e presença.</h2>
+        <p class="intro__eyebrow">{text("text1")}</p>
+        <h2 class="intro__title">{text("text2")}</h2>
         <p class="intro__text">
-          A KARV entende que o ambiente precisa funcionar bem para a rotina das pessoas e dos animais. Por isso, a biblioteca organiza opções com linguagem prática e acolhedora.
+          {text("text3")}
         </p>
       </div>
 
@@ -69,13 +70,13 @@ const benefits = [
   <Section background="bg">
     <Container class="split">
       <div class="content-block">
-        <h2>Aplicações recomendadas</h2>
+        <h2>{text("text4")}</h2>
         <ul class="feature-list">
           {applications.map((item) => <li>{item}</li>)}
         </ul>
       </div>
       <div class="content-block">
-        <h2>Benefícios da curadoria</h2>
+        <h2>{text("text5")}</h2>
         <ul class="feature-list">
           {benefits.map((item) => <li>{item}</li>)}
         </ul>
@@ -85,11 +86,11 @@ const benefits = [
 
   <Section background="surface-soft" spacing="tight">
     <Container size="narrow" class="cta">
-      <h2 class="cta__title">Praticidade e acolhimento podem caminhar juntos.</h2>
+      <h2 class="cta__title">{text("text6")}</h2>
       <p class="cta__text">
-        Conheça a Biblioteca de Tecidos KARV e escolha uma proposta alinhada à rotina do seu projeto.
+        {text("text7")}
       </p>
-      <Button href="/tecidos/" variant="primary" size="lg">Voltar à biblioteca</Button>
+      <Button href="/tecidos/" variant="primary" size="lg">{text("text8")}</Button>
     </Container>
   </Section>
 </BaseLayout>

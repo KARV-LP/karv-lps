@@ -4,54 +4,55 @@ import Hero from "../../../components/ui/Hero.astro";
 import Section from "../../../components/ui/Section.astro";
 import Container from "../../../components/ui/Container.astro";
 import Button from "../../../components/ui/Button.astro";
+import { getPageText } from "../../../utils/i18n";
+
+const text = getPageText(Astro.url.pathname);
 
 const highlights = [
   {
-    title: "Linguagem visual limpa",
-    text: "A seleção reforça uma imagem contemporânea, organizada e acolhedora para ambientes profissionais.",
+    title: text("text20"),
+    text: text("text10"),
   },
   {
-    title: "Acolhimento no primeiro contato",
-    text: "A proposta visual ajuda a transmitir cuidado, presença e conforto desde a recepção.",
+    title: text("text11"),
+    text: text("text12"),
   },
   {
-    title: "Identidade profissional",
-    text: "Os revestimentos contribuem para uma apresentação sofisticada e alinhada ao posicionamento do espaço.",
+    title: text("text21"),
+    text: text("text13"),
   },
 ];
 
 const applications = [
   "Recepções e áreas de atendimento",
   "Consultórios e ambientes de conversa",
-  "Espaços que buscam uma imagem contemporânea",
+  text("text14"),
 ];
 
 const benefits = [
-  "Ambiente visualmente equilibrado",
-  "Sensação de acolhimento e cuidado",
-  "Apresentação profissional e atual",
+  text("text15"),
+  text("text16"),
+  text("text17"),
 ];
 ---
 
 <BaseLayout
-  title="Tecidos para Clínicas | Biblioteca de Tecidos KARV"
-  description="Descubra a Curadoria KARV para tecidos para clínicas e estética, com proposta acolhedora, profissional e contemporânea."
 >
   <Hero
-    eyebrow="Curadoria KARV"
-    title="Tecidos para Clínicas e Estética"
-    text="A Curadoria KARV organiza revestimentos que favorecem uma imagem limpa, acolhedora e contemporânea para clínicas e espaços de estética."
-    primaryCta={{ label: "Voltar à biblioteca", href: "/tecidos/" }}
+    eyebrow={text("text18")}
+    title={text("text1")}
+    text={text("text19")}
+    primaryCta={{ label: text("text9"), href: "/tecidos/" }}
     secondaryCta={{ label: "Ver premium", href: "/tecidos/premium/" }}
   />
 
   <Section background="surface">
     <Container>
       <div class="intro">
-        <p class="intro__eyebrow">Ambientes profissionais</p>
-        <h2 class="intro__title">Uma seleção para quem valoriza cuidado e presença visual.</h2>
+        <p class="intro__eyebrow">{text("text2")}</p>
+        <h2 class="intro__title">{text("text3")}</h2>
         <p class="intro__text">
-          Em clínicas e estética, cada detalhe comunica confiança. A Curadoria KARV contribui para uma experiência visual mais alinhada ao propósito do ambiente.
+          {text("text4")}
         </p>
       </div>
 
@@ -69,13 +70,13 @@ const benefits = [
   <Section background="bg">
     <Container class="split">
       <div class="content-block">
-        <h2>Aplicações recomendadas</h2>
+        <h2>{text("text5")}</h2>
         <ul class="feature-list">
           {applications.map((item) => <li>{item}</li>)}
         </ul>
       </div>
       <div class="content-block">
-        <h2>Benefícios da curadoria</h2>
+        <h2>{text("text6")}</h2>
         <ul class="feature-list">
           {benefits.map((item) => <li>{item}</li>)}
         </ul>
@@ -85,11 +86,11 @@ const benefits = [
 
   <Section background="surface-soft" spacing="tight">
     <Container size="narrow" class="cta">
-      <h2 class="cta__title">Cada ambiente merece uma leitura visual clara e acolhedora.</h2>
+      <h2 class="cta__title">{text("text7")}</h2>
       <p class="cta__text">
-        Explore a Biblioteca de Tecidos KARV para encontrar uma proposta alinhada ao seu projeto.
+        {text("text8")}
       </p>
-      <Button href="/tecidos/" variant="primary" size="lg">Voltar à biblioteca</Button>
+      <Button href="/tecidos/" variant="primary" size="lg">{text("text9")}</Button>
     </Container>
   </Section>
 </BaseLayout>

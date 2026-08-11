@@ -5,40 +5,41 @@ import Section from "../../../components/ui/Section.astro";
 import Container from "../../../components/ui/Container.astro";
 import ProductCard from "../../../components/ui/ProductCard.astro";
 import Button from "../../../components/ui/Button.astro";
+import { getPageText } from "../../../utils/i18n";
+
+const text = getPageText(Astro.url.pathname);
 ---
 
 <BaseLayout
-  title="Poltronas para barbearias: personalidade, ambiente e experiência | KARV"
-  description="Entenda como poltronas para barbearias ajudam a construir ambiente, reforçar identidade e elevar a experiência do cliente."
 >
   <Hero
-    eyebrow="Blog editorial"
-    title="Poltronas para barbearias: identidade em cada detalhe"
-    text="Na barbearia, a poltrona participa do conceito do espaço e da experiência do cliente. Ela precisa comunicar personalidade e se encaixar na rotina do atendimento."
+    eyebrow={text("text17")}
+    title={text("text1")}
+    text={text("text18")}
   />
 
   <Section background="surface">
     <Container size="narrow">
       <p>
-        A barbearia contemporânea vai além do corte. O ambiente comunica estilo, presença e nível de atenção ao detalhe. A poltrona é parte dessa construção.
+        {text("text4")}
       </p>
 
-      <h2>O ambiente como protagonista</h2>
+      <h2>{text("text5")}</h2>
       <p>
-        Um espaço bem pensado transmite intenção. A poltrona ajuda a consolidar essa percepção, tornando o ambiente mais alinhado ao conceito de marca e à proposta de experiência do cliente.
+        {text("text6")}
       </p>
 
-      <h2>Como a peça contribui para o resultado</h2>
+      <h2>{text("text7")}</h2>
       <p>
-        A poltrona pode reforçar uma linguagem mais sofisticada, mais urbana ou mais acolhedora. Quando escolhida com clareza, ela ajuda o ambiente a parecer mais completo e mais intencional.
+        {text("text8")}
       </p>
 
-      <h2>O que considerar na escolha</h2>
+      <h2>{text("text9")}</h2>
       <ul>
-        <li>O tipo de atendimento e o fluxo de clientes.</li>
-        <li>A personalidade do espaço e a imagem da marca.</li>
-        <li>A relação entre design, conforto e visual geral.</li>
-        <li>A integração com a curadoria de tecidos e acabamento.</li>
+        <li>{text("text10")}</li>
+        <li>{text("text11")}</li>
+        <li>{text("text12")}</li>
+        <li>{text("text13")}</li>
       </ul>
     </Container>
   </Section>
@@ -47,18 +48,18 @@ import Button from "../../../components/ui/Button.astro";
     <Container>
       <div class="cards-grid">
         <ProductCard
-          title="Produtos KARV"
-          description="Conheça soluções que dialogam com ambientes comerciais e de alto impacto visual."
+          title={text("text22")}
+          description={text("text19")}
           href="/produtos/"
         />
         <ProductCard
-          title="Nichos"
-          description="Aprofunde a relação entre barbearia, identidade e design de ambiente."
+          title={text("text2")}
+          description={text("text20")}
           href="/nichos/barbearia/"
         />
         <ProductCard
-          title="Tecidos"
-          description="Explore a biblioteca de revestimentos para dar personalidade ao projeto."
+          title={text("text3")}
+          description={text("text21")}
           href="/tecidos/barbearia/"
         />
       </div>
@@ -67,11 +68,11 @@ import Button from "../../../components/ui/Button.astro";
 
   <Section background="surface" spacing="tight">
     <Container size="narrow" class="cta">
-      <h2>Eleve a identidade da sua barbearia com uma poltrona que fala a linguagem do ambiente.</h2>
+      <h2>{text("text14")}</h2>
       <p>
-        A KARV ajuda a transformar a peça em parte da estratégia visual e comercial do espaço.
+        {text("text15")}
       </p>
-      <Button href="/nichos/barbearia/" variant="primary" size="lg">Ver nicho</Button>
+      <Button href="/nichos/barbearia/" variant="primary" size="lg">{text("text16")}</Button>
     </Container>
   </Section>
 </BaseLayout>

@@ -5,55 +5,56 @@ import Section from "../../components/ui/Section.astro";
 import Container from "../../components/ui/Container.astro";
 import ProductCard from "../../components/ui/ProductCard.astro";
 import Button from "../../components/ui/Button.astro";
+import { getPageText } from "../../utils/i18n";
+
+const text = getPageText(Astro.url.pathname);
 
 const categories = [
   {
-    title: "Premium",
-    description: "Revestimentos para ambientes que valorizam sofisticação, conforto e percepção de valor.",
+    title: text("text13"),
+    description: text("text14"),
     href: "/tecidos/premium/",
   },
   {
-    title: "Clínicas Estéticas",
-    description: "Uma curadoria para espaços com linguagem visual limpa, acolhedora e profissional.",
+    title: text("text15"),
+    description: text("text16"),
     href: "/tecidos/clinicas-esteticas/",
   },
   {
-    title: "Barbearias",
-    description: "Escolhas com personalidade, presença visual e atmosfera marcante para o conceito do espaço.",
+    title: text("text17"),
+    description: text("text18"),
     href: "/tecidos/barbearia/",
   },
   {
-    title: "Pet Friendly",
-    description: "Propostas acolhedoras e práticas para ambientes que convivem com animais no dia a dia.",
+    title: text("text19"),
+    description: text("text20"),
     href: "/tecidos/pet-friendly/",
   },
   {
-    title: "Coleções KARV",
-    description: "Uma seleção própria da KARV, pensada para identidade visual, acabamento e experiência do ambiente.",
+    title: text("text21"),
+    description: text("text22"),
     href: "/tecidos/colecoes/",
   },
 ];
 ---
 
 <BaseLayout
-  title="Biblioteca de Tecidos KARV"
-  description="Explore a Biblioteca de Tecidos KARV, uma curadoria institucional de revestimentos para ambientes, estilos e projetos."
 >
   <Hero
-    eyebrow="Tecidos"
-    title="Biblioteca de Tecidos KARV"
-    text="Escolha revestimentos pensados para diferentes ambientes, estilos e necessidades, organizados pela Curadoria KARV."
-    primaryCta={{ label: "Ver coleções", href: "/tecidos/colecoes/" }}
-    secondaryCta={{ label: "Ver produtos", href: "/produtos/" }}
+    eyebrow={text("text24")}
+    title={text("text1")}
+    text={text("text25")}
+    primaryCta={{ label: text("text26"), href: "/tecidos/colecoes/" }}
+    secondaryCta={{ label: text("text8"), href: "/produtos/" }}
   />
 
   <Section background="surface">
     <Container>
       <div class="section-intro">
-        <p class="section-intro__eyebrow">Curadoria KARV</p>
-        <h2 class="section-intro__title">Uma biblioteca organizada por ambiente, identidade e objetivo.</h2>
+        <p class="section-intro__eyebrow">{text("text2")}</p>
+        <h2 class="section-intro__title">{text("text3")}</h2>
         <p class="section-intro__text">
-          A KARV desenvolve uma biblioteca própria de revestimentos para orientar a escolha com clareza e reforçar a experiência do espaço.
+          {text("text4")}
         </p>
       </div>
 
@@ -69,17 +70,17 @@ const categories = [
     <Container>
       <div class="cross-nav">
         <div class="cross-nav__intro">
-          <p class="cross-nav__eyebrow">Conexão comercial</p>
-          <h2 class="cross-nav__title">A biblioteca funciona como guia de decisão entre ambiente, produto e nicho.</h2>
+          <p class="cross-nav__eyebrow">{text("text5")}</p>
+          <h2 class="cross-nav__title">{text("text6")}</h2>
           <p class="cross-nav__text">
-            A curadoria KARV orienta a escolha do revestimento com base na aplicação, na identidade do projeto e na experiência do espaço.
+            {text("text7")}
           </p>
         </div>
 
         <div class="cross-nav__actions">
-          <Button href="/produtos/" variant="primary">Ver produtos</Button>
-          <Button href="/nichos/" variant="secondary">Explorar nichos</Button>
-          <Button href="/tecidos/colecoes/" variant="secondary">Conhecer coleções</Button>
+          <Button href="/produtos/" variant="primary">{text("text8")}</Button>
+          <Button href="/nichos/" variant="secondary">{text("text9")}</Button>
+          <Button href="/tecidos/colecoes/" variant="secondary">{text("text10")}</Button>
         </div>
       </div>
     </Container>
@@ -87,11 +88,11 @@ const categories = [
 
   <Section background="bg" spacing="tight">
     <Container size="narrow" class="cta">
-      <h2 class="cta__title">A experiência do ambiente começa pela curadoria certa.</h2>
+      <h2 class="cta__title">{text("text11")}</h2>
       <p class="cta__text">
-        A Biblioteca de Tecidos KARV organiza a seleção de revestimentos com foco em identidade, aplicação e resultado final.
+        {text("text12")}
       </p>
-      <Button href="/produtos/" variant="primary" size="lg">Ver produtos</Button>
+      <Button href="/produtos/" variant="primary" size="lg">{text("text8")}</Button>
     </Container>
   </Section>
 </BaseLayout>

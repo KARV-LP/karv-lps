@@ -4,27 +4,31 @@ import Hero from "../../../components/ui/Hero.astro";
 import Section from "../../../components/ui/Section.astro";
 import Container from "../../../components/ui/Container.astro";
 import Button from "../../../components/ui/Button.astro";
-import { KARV_CONTACT_LINKS } from "../../../data/contactLinks";
+import { getContactLabels, getContactLinks } from "../../../data/contactLinks";
+import { getLocaleFromPath, getPageText } from "../../../utils/i18n";
+
+const text = getPageText(Astro.url.pathname);
+const locale = getLocaleFromPath(Astro.url.pathname);
+const contactLinks = getContactLinks(locale);
+const contactLabels = getContactLabels(locale);
 ---
 
 <BaseLayout
-  title="Clínicas | KARV"
-  description="Mobiliário de identidade para clínicas que transmite confiança, conforto e profissionalismo em cada ambiente."
 >
   <Hero
-    eyebrow="Clínicas"
-    title="Conforto e confiança começam no ambiente"
-    text="Em clínicas, cada detalhe precisa transmitir segurança. O espaço precisa acolher o paciente, reforçar a autoridade do profissional e apoiar uma experiência organizada desde a chegada."
-    primaryCta={{ label: "Ver produtos", href: "/produtos/" }}
-    secondaryCta={{ label: "Falar com a KARV", href: KARV_CONTACT_LINKS.whatsapp }}
+    eyebrow={text("text31")}
+    title={text("text2")}
+    text={text("text32")}
+    primaryCta={{ label: text("text33"), href: "/produtos/" }}
+    secondaryCta={{ label: text("text30"), href: contactLinks.whatsapp }}
   />
 
   <Section background="surface">
     <Container class="content">
       <div class="intro">
-        <h2>Uma clínica precisa parecer tão confiável quanto o atendimento</h2>
+        <h2>{text("text3")}</h2>
         <p>
-          O mobiliário de uma clínica é parte da experiência de cuidado. Poltronas e peças de identidade ajudam a transmitir organização, confiança e um padrão de excelência que o paciente percebe imediatamente.
+          {text("text4")}
         </p>
       </div>
     </Container>
@@ -34,17 +38,17 @@ import { KARV_CONTACT_LINKS } from "../../../data/contactLinks";
     <Container>
       <div class="grid">
         <article class="card">
-          <h3>Por que esse nicho precisa de uma poltrona de identidade</h3>
+          <h3>{text("text5")}</h3>
           <p>
-            Recepção, espera e atendimento precisam ser espaços de acolhimento. A poltrona certa reforça a sensação de cuidado e contribui para a percepção de profissionalismo da clínica.
+            {text("text6")}
           </p>
         </article>
         <article class="card">
-          <h3>O que o ambiente precisa reforçar</h3>
+          <h3>{text("text7")}</h3>
           <ul class="card__list">
-            <li>Segurança e serenidade para pacientes e acompanhantes</li>
-            <li>Atmosfera limpa, moderna e institucional</li>
-            <li>Valor percebido em cada ponto do espaço</li>
+            <li>{text("text8")}</li>
+            <li>{text("text9")}</li>
+            <li>{text("text10")}</li>
           </ul>
         </article>
       </div>
@@ -54,21 +58,21 @@ import { KARV_CONTACT_LINKS } from "../../../data/contactLinks";
   <Section background="surface-soft">
     <Container>
       <div class="section-heading">
-        <h2>Aplicações no ambiente</h2>
-        <p>O mobiliário KARV funciona em diferentes áreas da operação clínica.</p>
+        <h2>{text("text11")}</h2>
+        <p>{text("text12")}</p>
       </div>
       <div class="grid grid--three">
         <article class="card">
-          <h3>Recepção</h3>
-          <p>Peças que acolhem e organizam a primeira impressão do paciente.</p>
+          <h3>{text("text13")}</h3>
+          <p>{text("text14")}</p>
         </article>
         <article class="card">
-          <h3>Sala de espera</h3>
-          <p>Conforto e presença que suavizam o momento de espera.</p>
+          <h3>{text("text15")}</h3>
+          <p>{text("text16")}</p>
         </article>
         <article class="card">
-          <h3>Atendimento e consultas</h3>
-          <p>Ambientes com mais presença, cuidado e profissionalismo visual.</p>
+          <h3>{text("text17")}</h3>
+          <p>{text("text18")}</p>
         </article>
       </div>
     </Container>
@@ -77,21 +81,21 @@ import { KARV_CONTACT_LINKS } from "../../../data/contactLinks";
   <Section background="surface">
     <Container>
       <div class="section-heading">
-        <h2>Benefícios comerciais</h2>
-        <p>Um ambiente bem estruturado reforça a percepção de valor do negócio e da marca.</p>
+        <h2>{text("text19")}</h2>
+        <p>{text("text20")}</p>
       </div>
       <div class="grid grid--three">
         <article class="card">
-          <h3>Eleva a confiança</h3>
-          <p>O paciente percebe mais solidez e cuidado no espaço.</p>
+          <h3>{text("text21")}</h3>
+          <p>{text("text22")}</p>
         </article>
         <article class="card">
-          <h3>Melhora a experiência</h3>
-          <p>O atendimento se torna mais agradável, organizado e memorável.</p>
+          <h3>{text("text23")}</h3>
+          <p>{text("text24")}</p>
         </article>
         <article class="card">
-          <h3>Fortalece a reputação</h3>
-          <p>Ambientes bem pensados reforçam a imagem da clínica no longo prazo.</p>
+          <h3>{text("text25")}</h3>
+          <p>{text("text26")}</p>
         </article>
       </div>
     </Container>
@@ -99,21 +103,21 @@ import { KARV_CONTACT_LINKS } from "../../../data/contactLinks";
 
   <Section background="bg" spacing="tight">
     <Container size="narrow" class="cta">
-      <h2>Quando o ambiente transmite confiança, a clínica se destaca</h2>
+      <h2>{text("text27")}</h2>
       <p>
-        A KARV desenvolve soluções que unem conforto, identidade e presença para cada espaço clínico.
+        {text("text28")}
       </p>
       <div class="actions">
-        <Button href="/produtos/" variant="primary" size="lg">Ver coleções</Button>
+        <Button href="/produtos/" variant="primary" size="lg">{text("text29")}</Button>
         <Button
-          href={KARV_CONTACT_LINKS.whatsapp}
+          href={contactLinks.whatsapp}
           target="_blank"
           variant="secondary"
           size="lg"
           data-event="cta_whatsapp"
           data-location="nicho"
         >
-          Falar com a KARV
+          {text("text30")}
         </Button>
       </div>
     </Container>
