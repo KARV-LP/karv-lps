@@ -4,27 +4,31 @@ import Hero from "../../../components/ui/Hero.astro";
 import Section from "../../../components/ui/Section.astro";
 import Container from "../../../components/ui/Container.astro";
 import Button from "../../../components/ui/Button.astro";
-import { KARV_CONTACT_LINKS } from "../../../data/contactLinks";
+import { getContactLabels, getContactLinks } from "../../../data/contactLinks";
+import { getLocaleFromPath, getPageText } from "../../../utils/i18n";
+
+const text = getPageText(Astro.url.pathname);
+const locale = getLocaleFromPath(Astro.url.pathname);
+const contactLinks = getContactLinks(locale);
+const contactLabels = getContactLabels(locale);
 ---
 
 <BaseLayout
-  title="Barbearia | KARV"
-  description="Poltronas e mobiliário de identidade para barbearias que unem conforto, estilo e presença de marca."
 >
   <Hero
-    eyebrow="Barbearia"
-    title="A barbearia moderna vende experiência, não apenas corte"
-    text="Na barbearia, o cliente vive um ritual. O ambiente precisa transmitir confiança, presença e um cuidado com cada detalhe, desde o atendimento até o momento da saída."
-    primaryCta={{ label: "Ver produtos", href: "/produtos/" }}
-    secondaryCta={{ label: "Falar com a KARV", href: KARV_CONTACT_LINKS.whatsapp }}
+    eyebrow={text("text32")}
+    title={text("text2")}
+    text={text("text33")}
+    primaryCta={{ label: text("text34"), href: "/produtos/" }}
+    secondaryCta={{ label: text("text30"), href: contactLinks.whatsapp }}
   />
 
   <Section background="surface">
     <Container class="content">
       <div class="intro">
-        <h2>O ambiente precisa refletir o posicionamento da marca</h2>
+        <h2>{text("text3")}</h2>
         <p>
-          Uma barbearia de alto padrão se destaca quando a identidade do espaço acompanha a qualidade do atendimento. A poltrona certa reforça o desejo de permanência, melhora a percepção do serviço e transforma cada visita em um momento de marca.
+          {text("text4")}
         </p>
       </div>
     </Container>
@@ -34,17 +38,17 @@ import { KARV_CONTACT_LINKS } from "../../../data/contactLinks";
     <Container>
       <div class="grid">
         <article class="card">
-          <h3>Por que esse nicho precisa de uma poltrona de identidade</h3>
+          <h3>{text("text5")}</h3>
           <p>
-            O cliente percebe o espaço antes de falar com o profissional. Uma peça de mobiliário alinhada com o conceito da barbearia reforça autoridade e torna o ambiente mais memorável.
+            {text("text6")}
           </p>
         </article>
         <article class="card">
-          <h3>O que o ambiente precisa comunicar</h3>
+          <h3>{text("text7")}</h3>
           <ul class="card__list">
-            <li>Estilo contemporâneo e masculino</li>
-            <li>Conforto para procedimentos longos</li>
-            <li>Presença forte para fotos, indicação e retorno</li>
+            <li>{text("text8")}</li>
+            <li>{text("text9")}</li>
+            <li>{text("text10")}</li>
           </ul>
         </article>
       </div>
@@ -54,21 +58,21 @@ import { KARV_CONTACT_LINKS } from "../../../data/contactLinks";
   <Section background="surface-soft">
     <Container>
       <div class="section-heading">
-        <h2>Aplicações no ambiente</h2>
-        <p>A KARV se adapta a áreas que impactam diretamente na experiência do cliente.</p>
+        <h2>{text("text11")}</h2>
+        <p>{text("text12")}</p>
       </div>
       <div class="grid grid--three">
         <article class="card">
-          <h3>Área de corte</h3>
-          <p>Poltronas que elevam o cuidado e a presença visual do ponto principal da barbearia.</p>
+          <h3>{text("text13")}</h3>
+          <p>{text("text14")}</p>
         </article>
         <article class="card">
-          <h3>Espaço de espera</h3>
-          <p>Uma recepção bem proposta ajuda a construir a sensação de valor do serviço.</p>
+          <h3>{text("text15")}</h3>
+          <p>{text("text16")}</p>
         </article>
         <article class="card">
-          <h3>Ambiente de marca</h3>
-          <p>Peças que reforçam um posicionamento premium em redes sociais e visitas presenciais.</p>
+          <h3>{text("text17")}</h3>
+          <p>{text("text18")}</p>
         </article>
       </div>
     </Container>
@@ -77,21 +81,21 @@ import { KARV_CONTACT_LINKS } from "../../../data/contactLinks";
   <Section background="surface">
     <Container>
       <div class="section-heading">
-        <h2>Benefícios comerciais</h2>
-        <p>O mobiliário certo é um aliado para ampliar a percepção de valor do negócio.</p>
+        <h2>{text("text19")}</h2>
+        <p>{text("text20")}</p>
       </div>
       <div class="grid grid--three">
         <article class="card">
-          <h3>Eleva a percepção do serviço</h3>
-          <p>Clientes associam o ambiente a mais qualidade e cuidado.</p>
+          <h3>{text("text21")}</h3>
+          <p>{text("text22")}</p>
         </article>
         <article class="card">
-          <h3>Aumenta a diferenciação</h3>
-          <p>Uma proposta visual forte ajuda a se destacar em um mercado competitivo.</p>
+          <h3>{text("text23")}</h3>
+          <p>{text("text24")}</p>
         </article>
         <article class="card">
-          <h3>Fortalece a recorrência</h3>
-          <p>Ambientes bem construídos incentivam retorno e indicação.</p>
+          <h3>{text("text25")}</h3>
+          <p>{text("text26")}</p>
         </article>
       </div>
     </Container>
@@ -99,21 +103,21 @@ import { KARV_CONTACT_LINKS } from "../../../data/contactLinks";
 
   <Section background="bg" spacing="tight">
     <Container size="narrow" class="cta">
-      <h2>Uma barbearia com identidade merece um móvel que faça parte do ritual</h2>
+      <h2>{text("text27")}</h2>
       <p>
-        A KARV cria poltronas e peças que unem presença de marca, conforto e um ambiente premium para cada cliente.
+        {text("text28")}
       </p>
       <div class="actions">
-        <Button href="/produtos/" variant="primary" size="lg">Ver coleções</Button>
+        <Button href="/produtos/" variant="primary" size="lg">{text("text29")}</Button>
         <Button
-          href={KARV_CONTACT_LINKS.whatsapp}
+          href={contactLinks.whatsapp}
           target="_blank"
           variant="secondary"
           size="lg"
           data-event="cta_whatsapp"
           data-location="nicho"
         >
-          Falar com a KARV
+          {text("text30")}
         </Button>
       </div>
     </Container>

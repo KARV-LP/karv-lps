@@ -4,49 +4,50 @@ import Hero from "../../../components/ui/Hero.astro";
 import Section from "../../../components/ui/Section.astro";
 import Container from "../../../components/ui/Container.astro";
 import Button from "../../../components/ui/Button.astro";
+import { getPageText } from "../../../utils/i18n";
+
+const text = getPageText(Astro.url.pathname);
 
 const identityPoints = [
-  "Posicionamento Premium Neutro para clínicas que valorizam sofisticação discreta.",
+  text("text11"),
   "Transmite harmonia, bem-estar e cuidado estético avançado.",
-  "Equilibra visual sofisticado com linguagem acessível e comercial.",
+  text("text12"),
 ];
 
 const applications = [
-  "Ambientes de estética com foco em experiência premium e acolhimento.",
-  "Consultórios, clínicas e centros de beleza com identidade refinada.",
-  "Espaços que desejam comunicar tecnologia, procedimento e bem-estar.",
+  text("text13"),
+  text("text14"),
+  text("text15"),
 ];
 
 const materials = [
-  "Nice 05 Areia — tecido principal.",
-  "Nice 03 Off White — tecido secundário.",
+  text("text16"),
+  text("text17"),
 ];
 
 const benefits = [
-  "Reforça a sensação de bem-estar e cuidado no atendimento.",
-  "Se encaixa em projetos premium sem parecer excessivo.",
-  "Aproxima o posicionamento do espaço da experiência do cliente.",
+  text("text18"),
+  text("text23"),
+  text("text19"),
 ];
 ---
 
 <BaseLayout
-  title="KV_021 NATURAL BEAUTY | Produtos KARV"
-  description="Conheça o KV_021 NATURAL BEAUTY, um produto KARV para clínicas de estética com linguagem premium neutra e sensação de harmonização facial."
 >
   <Hero
     eyebrow="Nicho: clínica estética"
     title="KV_021 NATURAL BEAUTY"
-    text="Premium Neutro e estética avançada para clínicas que unem bem-estar, harmonização facial e sofisticação."
-    primaryCta={{ label: "Ver outros produtos", href: "/produtos/" }}
-    secondaryCta={{ label: "Ir para nichos", href: "/nichos/clinicas/" }}
+    text={text("text20")}
+    primaryCta={{ label: text("text21"), href: "/produtos/" }}
+    secondaryCta={{ label: text("text22"), href: "/nichos/clinicas/" }}
   />
 
   <Section background="surface">
     <Container>
       <div class="intro-card">
-        <p class="intro-card__eyebrow">Texto comercial</p>
+        <p class="intro-card__eyebrow">{text("text1")}</p>
         <p class="intro-card__text">
-          O KV_021 NATURAL BEAUTY é uma solução comercial para clínicas de estética que buscam uma linguagem mais refinada, neutra e acolhedora. A KARV reforça a proposta do ambiente, revelando a intenção do espaço e elevando a percepção de cuidado e excelência.
+          {text("text2")}
         </p>
       </div>
     </Container>
@@ -56,14 +57,14 @@ const benefits = [
     <Container>
       <div class="feature-grid">
         <article class="feature-card">
-          <h2 class="feature-card__title">Identidade do produto</h2>
+          <h2 class="feature-card__title">{text("text3")}</h2>
           <ul class="feature-card__list">
             {identityPoints.map((point) => <li>{point}</li>)}
           </ul>
         </article>
 
         <article class="feature-card">
-          <h2 class="feature-card__title">Aplicação em ambientes</h2>
+          <h2 class="feature-card__title">{text("text4")}</h2>
           <ul class="feature-card__list">
             {applications.map((point) => <li>{point}</li>)}
           </ul>
@@ -75,7 +76,7 @@ const benefits = [
   <Section background="surface-soft">
     <Container>
       <div class="materials-block">
-        <h2 class="materials-block__title">Materiais e revestimentos</h2>
+        <h2 class="materials-block__title">{text("text5")}</h2>
         <div class="materials-grid">
           {materials.map((material) => <div class="material-item">{material}</div>)}
         </div>
@@ -86,7 +87,7 @@ const benefits = [
   <Section background="bg">
     <Container>
       <div class="benefits-block">
-        <h2 class="benefits-block__title">Benefícios comerciais</h2>
+        <h2 class="benefits-block__title">{text("text6")}</h2>
         <div class="benefits-grid">
           {benefits.map((benefit) => (
             <div class="benefit-item">{benefit}</div>
@@ -98,13 +99,13 @@ const benefits = [
 
   <Section background="bg" spacing="tight">
     <Container size="narrow" class="cta">
-      <h2 class="cta__title">Uma solução para clínicas premium e acessíveis</h2>
+      <h2 class="cta__title">{text("text7")}</h2>
       <p class="cta__text">
-        O KV_021 NATURAL BEAUTY une sofisticação, acolhimento e posicionamento comercial em uma linguagem limpa e contemporânea.
+        {text("text8")}
       </p>
       <div class="cta__actions">
-        <Button href="/produtos/" variant="primary" size="lg">Ver catálogo</Button>
-        <Button href="/tecidos/" variant="secondary" size="lg">Explorar tecidos</Button>
+        <Button href="/produtos/" variant="primary" size="lg">{text("text9")}</Button>
+        <Button href="/tecidos/" variant="secondary" size="lg">{text("text10")}</Button>
       </div>
     </Container>
   </Section>

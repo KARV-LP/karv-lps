@@ -8,6 +8,12 @@ export type PageSlug = keyof typeof pt.pages;
 
 type Dictionary = typeof pt;
 type CommonMessages = Dictionary["common"];
+type PageMessages = Dictionary["pages"][PageSlug];
+type PageContentKey = {
+  [Slug in PageSlug]: Dictionary["pages"][Slug] extends { content: infer Content }
+    ? keyof Content
+    : never;
+}[PageSlug];
 
 const dictionaries: Record<Locale, Dictionary> = { pt, en };
 
@@ -21,6 +27,29 @@ export function getDictionary(locale: Locale): Dictionary {
 
 export function getPage(locale: Locale, slug: string) {
   return getDictionary(locale).pages[slug as PageSlug];
+}
+
+export function getPageText(pathname: string): <Key extends PageContentKey>(key: Key) => string {
+  const locale = getLocaleFromPath(pathname);
+  const path = getPathFromLocalePath(pathname);
+  const page = getPage(locale, path) as PageMessages & {
+    content?: Record<string, string>;
+  };
+  const content = page?.content;
+
+  if (!content) {
+    throw new Error(`Missing localized content for "${path}"`);
+  }
+
+  return (key) => {
+    const message = content[key];
+
+    if (message === undefined) {
+      throw new Error(`Missing localized message "${key}" for "${path}"`);
+    }
+
+    return message;
+  };
 }
 
 export function getPageSlugs(): PageSlug[] {

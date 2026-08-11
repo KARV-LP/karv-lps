@@ -5,42 +5,43 @@ import Section from "../../../components/ui/Section.astro";
 import Container from "../../../components/ui/Container.astro";
 import ProductCard from "../../../components/ui/ProductCard.astro";
 import Button from "../../../components/ui/Button.astro";
+import { getPageText } from "../../../utils/i18n";
+
+const text = getPageText(Astro.url.pathname);
 ---
 
 <BaseLayout
-  title="Como escolher tecido para poltrona comercial | KARV"
-  description="Guia editorial para escolher tecido para poltrona comercial com foco em aplicação, estética, conforto e identidade do ambiente."
 >
   <Hero
-    eyebrow="Blog editorial"
-    title="Como escolher tecido para poltrona comercial"
-    text="A escolha do revestimento é parte essencial da decisão. Ela afeta a percepção do espaço, a experiência de uso e a coerência visual do projeto."
+    eyebrow={text("text17")}
+    title={text("text2")}
+    text={text("text18")}
   />
 
   <Section background="surface">
     <Container size="narrow">
       <p>
-        Revestimentos não são apenas um detalhe estético. Eles participam da forma como a poltrona se encaixa no ambiente, do nível de conforto percebido e do cuidado com a aparência ao longo do tempo.
+        {text("text5")}
       </p>
 
-      <h2>Comece pela aplicação</h2>
+      <h2>{text("text6")}</h2>
       <p>
-        A primeira pergunta é simples: a poltrona será usada em um ambiente de espera, recepção, atendimento ou circulação intensa? A resposta orienta a escolha do revestimento mais adequado para o contexto.
+        {text("text7")}
       </p>
 
-      <h2>Considere a identidade do espaço</h2>
+      <h2>{text("text8")}</h2>
       <p>
-        O tecido pode reforçar a linguagem do projeto. Em ambientes mais premium, a proposta costuma ser mais sofisticada e equilibrada. Em espaços comerciais com personalidade forte, o revestimento pode ajudar a criar presença visual.
+        {text("text9")}
       </p>
 
-      <h2>Observe a relação com o ambiente</h2>
+      <h2>{text("text10")}</h2>
       <p>
-        A peça deve dialogar com paredes, móveis, iluminação e outros elementos do projeto. Quando a poltrona se integra ao ambiente de forma natural, o resultado costuma parecer mais pensado e estável.
+        {text("text11")}
       </p>
 
-      <h2>Escolha com base em uso e manutenção</h2>
+      <h2>{text("text12")}</h2>
       <p>
-        Uma boa seleção leva em conta o cotidiano do espaço. A proposta precisa ser funcional, confortável e coerente com o tipo de operação do ambiente.
+        {text("text13")}
       </p>
     </Container>
   </Section>
@@ -49,18 +50,18 @@ import Button from "../../../components/ui/Button.astro";
     <Container>
       <div class="cards-grid">
         <ProductCard
-          title="Tecidos KARV"
-          description="Acuradoria de revestimentos para cada contexto de projeto e identidade de marca."
+          title={text("text21")}
+          description={text("text19")}
           href="/tecidos/"
         />
         <ProductCard
-          title="Produtos"
-          description="Encontre poltronas que valorizam o revestimento escolhido e a proposta do ambiente."
+          title={text("text3")}
+          description={text("text20")}
           href="/produtos/"
         />
         <ProductCard
-          title="Nichos"
-          description="Entenda como a escolha de tecidos se adapta a diferentes segmentos de negócio."
+          title={text("text4")}
+          description={text("text22")}
           href="/nichos/"
         />
       </div>
@@ -69,11 +70,11 @@ import Button from "../../../components/ui/Button.astro";
 
   <Section background="surface" spacing="tight">
     <Container size="narrow" class="cta">
-      <h2>O tecido certo ajuda a dar forma à identidade do ambiente.</h2>
+      <h2>{text("text14")}</h2>
       <p>
-        A curadoria de revestimentos KARV orienta a escolha com foco em aplicação, linguagem visual e resultado final.
+        {text("text15")}
       </p>
-      <Button href="/tecidos/" variant="primary" size="lg">Ver tecidos</Button>
+      <Button href="/tecidos/" variant="primary" size="lg">{text("text16")}</Button>
     </Container>
   </Section>
 </BaseLayout>

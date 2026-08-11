@@ -5,55 +5,56 @@ import Section from "../../components/ui/Section.astro";
 import Container from "../../components/ui/Container.astro";
 import ProductCard from "../../components/ui/ProductCard.astro";
 import Button from "../../components/ui/Button.astro";
+import { getPageText } from "../../utils/i18n";
+
+const text = getPageText(Astro.url.pathname);
 
 const articles = [
   {
-    title: "Mobiliário de identidade",
-    description: "Por que a poltrona é um elemento central para comunicar a proposta do ambiente e reforçar a imagem do negócio.",
+    title: text("text10"),
+    description: text("text11"),
     href: "/blog/mobiliario-de-identidade/",
   },
   {
-    title: "Poltronas personalizadas para negócios",
-    description: "Como peças pensadas para o contexto do projeto ajudam a dar presença, valor e identidade ao espaço comercial.",
+    title: text("text12"),
+    description: text("text13"),
     href: "/blog/poltronas-personalizadas-para-negocios/",
   },
   {
-    title: "Como escolher tecido para poltrona comercial",
-    description: "Um guia editorial para compreender a relação entre revestimento, ambiente e percepção de valor.",
+    title: text("text14"),
+    description: text("text15"),
     href: "/blog/como-escolher-tecido-para-poltrona-comercial/",
   },
   {
-    title: "Poltronas para clínicas e estética",
-    description: "Como o mobiliário reforça confiança, sofisticação e cuidado em ambientes clínicos e de beleza.",
+    title: text("text16"),
+    description: text("text17"),
     href: "/blog/poltronas-para-clinicas-esteticas/",
   },
   {
-    title: "Poltronas para barbearias",
-    description: "Por que a poltrona ajuda a construir uma identidade forte e uma experiência memorável no espaço.",
+    title: text("text18"),
+    description: text("text19"),
     href: "/blog/poltronas-para-barbearias/",
   },
 ];
 ---
 
 <BaseLayout
-  title="Blog editorial | KARV"
-  description="Conteúdo editorial, institucional e estratégico da KARV sobre mobiliário, nichos e tecidos para ambientes comerciais."
 >
   <Hero
-    eyebrow="Blog editorial"
-    title="Conteúdo KARV para autoridade e decisão"
-    text="Publicações pensadas para orientar clientes, parceiros e projetos sobre mobiliário de identidade, nichos, tecidos e valor percebido do ambiente."
-    primaryCta={{ label: "Explorar produtos", href: "/produtos/" }}
-    secondaryCta={{ label: "Ver nichos", href: "/nichos/" }}
+    eyebrow={text("text21")}
+    title={text("text2")}
+    text={text("text22")}
+    primaryCta={{ label: text("text23"), href: "/produtos/" }}
+    secondaryCta={{ label: text("text24"), href: "/nichos/" }}
   />
 
   <Section background="surface">
     <Container>
       <div class="section-intro">
-        <p class="section-intro__eyebrow">Editorial KARV</p>
-        <h2 class="section-intro__title">Artigos estruturados para SEO tradicional e respostas de IA.</h2>
+        <p class="section-intro__eyebrow">{text("text3")}</p>
+        <h2 class="section-intro__title">{text("text4")}</h2>
         <p class="section-intro__text">
-          Cada publicação reforça a visão da KARV como mobiliário de identidade, com conteúdo claro, útil e comercial para quem pensa o espaço como protagonista.
+          {text("text5")}
         </p>
       </div>
 
@@ -67,13 +68,13 @@ const articles = [
 
   <Section background="bg" spacing="tight">
     <Container size="narrow" class="cta">
-      <h2 class="cta__title">Conheça o universo KARV além do conteúdo editorial.</h2>
+      <h2 class="cta__title">{text("text6")}</h2>
       <p class="cta__text">
-        Use o blog como ponto de partida para explorar produtos, segmentos e tecidos que dão forma ao ambiente.
+        {text("text7")}
       </p>
       <div class="cta__actions">
-        <Button href="/produtos/" variant="primary">Ver produtos</Button>
-        <Button href="/tecidos/" variant="secondary">Ver tecidos</Button>
+        <Button href="/produtos/" variant="primary">{text("text8")}</Button>
+        <Button href="/tecidos/" variant="secondary">{text("text9")}</Button>
       </div>
     </Container>
   </Section>

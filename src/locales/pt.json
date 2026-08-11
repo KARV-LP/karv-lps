@@ -36,305 +36,2054 @@
         "eyebrow": "Poltronas comerciais com identidade",
         "title": "Poltronas que reforçam a identidade do seu espaço",
         "text": "A KARV desenvolve poltronas para barbearias, clínicas, studios, estética e negócios autorais, unindo conforto, presença visual e aplicação profissional.",
-        "primaryCta": { "label": "Conversar pelo WhatsApp", "href": "contact.whatsapp" },
-        "secondaryCta": { "label": "Ver loja KARV", "href": "contact.store" }
+        "primaryCta": {
+          "label": "Conversar pelo WhatsApp",
+          "href": "contact.whatsapp"
+        },
+        "secondaryCta": {
+          "label": "Ver loja KARV",
+          "href": "contact.store"
+        }
       },
       "cards": [
-        { "title": "Produtos", "label": "Coleções", "description": "Poltronas e coleções KARV, pensadas para cada ambiente.", "href": "produtos" },
-        { "title": "Nichos", "label": "Segmentos", "description": "Soluções para barbearias, clínicas, estética e outros segmentos.", "href": "nichos" },
-        { "title": "Tecidos", "label": "Biblioteca", "description": "Tecidos e revestimentos selecionados para cada projeto.", "href": "tecidos" },
-        { "title": "Conteúdo", "label": "Guias", "description": "Ideias e orientações para valorizar ambientes comerciais com mobiliário de identidade.", "href": "blog" }
+        {
+          "title": "Produtos",
+          "label": "Coleções",
+          "description": "Poltronas e coleções KARV, pensadas para cada ambiente.",
+          "href": "produtos"
+        },
+        {
+          "title": "Nichos",
+          "label": "Segmentos",
+          "description": "Soluções para barbearias, clínicas, estética e outros segmentos.",
+          "href": "nichos"
+        },
+        {
+          "title": "Tecidos",
+          "label": "Biblioteca",
+          "description": "Tecidos e revestimentos selecionados para cada projeto.",
+          "href": "tecidos"
+        },
+        {
+          "title": "Conteúdo",
+          "label": "Guias",
+          "description": "Ideias e orientações para valorizar ambientes comerciais com mobiliário de identidade.",
+          "href": "blog"
+        }
       ],
       "sections": [
         {
           "title": "Presença visual para ambientes comerciais",
-          "paragraphs": ["Cada projeto parte do espaço, do público e da experiência que o cliente deseja construir. A poltrona entra como peça de conforto, identidade e valor percebido."],
+          "paragraphs": [
+            "Cada projeto parte do espaço, do público e da experiência que o cliente deseja construir. A poltrona entra como peça de conforto, identidade e valor percebido."
+          ],
           "actions": [
-            { "label": "Ver nichos", "href": "nichos" },
-            { "label": "Ver produtos", "href": "produtos" }
+            {
+              "label": "Ver nichos",
+              "href": "nichos"
+            },
+            {
+              "label": "Ver produtos",
+              "href": "produtos"
+            }
           ]
         }
       ],
-      "contact": true
+      "contact": true,
+      "content": {
+        "text1": "KARV | Poltronas comerciais com identidade visual",
+        "text2": "Poltronas que reforçam a identidade do seu espaço",
+        "text3": "Presença visual para ambientes comerciais",
+        "text4": "Cada projeto parte do espaço, do público e da experiência que o cliente deseja construir. A poltrona entra como peça de conforto, identidade e valor percebido.",
+        "text5": "Ver nichos",
+        "text6": "Ver produtos",
+        "text7": "Fale com a KARV",
+        "text8": "Escolha o canal mais direto para iniciar uma proposta comercial e contar sobre o espaço que deseja transformar.",
+        "text9": "Produtos",
+        "text10": "Coleções",
+        "text11": "Poltronas e coleções KARV, pensadas para cada ambiente.",
+        "text12": "Nichos",
+        "text13": "Segmentos",
+        "text14": "Soluções para barbearias, clínicas, estética e outros segmentos.",
+        "text15": "Tecidos",
+        "text16": "Biblioteca",
+        "text17": "Tecidos e revestimentos selecionados para cada projeto.",
+        "text18": "Conteúdo",
+        "text19": "Guias",
+        "text20": "Ideias e orientações para valorizar ambientes comerciais com mobiliário de identidade.",
+        "text21": "Poltronas comerciais para barbearias, clínicas, studios, estética e negócios autorais que desejam reforçar a identidade do ambiente.",
+        "text22": "Poltronas comerciais com identidade",
+        "text23": "A KARV desenvolve poltronas para barbearias, clínicas, studios, estética e negócios autorais, unindo conforto, presença visual e aplicação profissional.",
+        "text24": "WhatsApp",
+        "text25": "+55 11 94519-7063",
+        "text26": "Instagram",
+        "text27": "@karv.dna",
+        "text28": "E-mail",
+        "text29": "comercial@k-arv.com"
+      }
     },
     "produtos": {
-      "seo": { "title": "Produtos | KARV", "description": "Poltronas e coleções KARV para ambientes comerciais." },
+      "seo": {
+        "title": "Produtos | KARV",
+        "description": "Poltronas e coleções KARV para ambientes comerciais."
+      },
       "hero": {
         "eyebrow": "Produtos",
         "title": "Produtos e coleções KARV",
         "text": "Linhas comerciais desenvolvidas para reforçar o ambiente, ampliar a identidade do projeto e apoiar a comunicação de cada nicho."
       },
       "cards": [
-        { "title": "KV_001_RYUJIN", "description": "Identidade oriental, dragão imperial e presença visual forte para ambientes com narrativa marcante.", "href": "produtos/kv-001-ryujin" },
-        { "title": "KV_002_MANDALA", "description": "Arte, mandala e identidade aplicada ao ambiente para projetos que desejam transformação visual.", "href": "produtos/kv-002-mandala" },
-        { "title": "KV_020_PURE_BALANCE", "description": "Clean profissional para clínicas de estética com sensação de tecnologia, limpeza e confiança.", "href": "produtos/kv-020-pure-balance" },
-        { "title": "KV_021_NATURAL_BEAUTY", "description": "Premium neutro para clínicas que unem estética avançada, harmonização e bem-estar.", "href": "produtos/kv-021-natural-beauty" },
-        { "title": "KV_022_SOFT_TAUPE", "description": "Sofisticação discreta para clínicas premium acessíveis com linguagem elegante e equilibrada.", "href": "produtos/kv-022-soft-taupe" }
+        {
+          "title": "KV_001_RYUJIN",
+          "description": "Identidade oriental, dragão imperial e presença visual forte para ambientes com narrativa marcante.",
+          "href": "produtos/kv-001-ryujin"
+        },
+        {
+          "title": "KV_002_MANDALA",
+          "description": "Arte, mandala e identidade aplicada ao ambiente para projetos que desejam transformação visual.",
+          "href": "produtos/kv-002-mandala"
+        },
+        {
+          "title": "KV_020_PURE_BALANCE",
+          "description": "Clean profissional para clínicas de estética com sensação de tecnologia, limpeza e confiança.",
+          "href": "produtos/kv-020-pure-balance"
+        },
+        {
+          "title": "KV_021_NATURAL_BEAUTY",
+          "description": "Premium neutro para clínicas que unem estética avançada, harmonização e bem-estar.",
+          "href": "produtos/kv-021-natural-beauty"
+        },
+        {
+          "title": "KV_022_SOFT_TAUPE",
+          "description": "Sofisticação discreta para clínicas premium acessíveis com linguagem elegante e equilibrada.",
+          "href": "produtos/kv-022-soft-taupe"
+        }
       ],
       "sections": [
         {
           "title": "A curadoria parte do contexto do projeto",
-          "paragraphs": ["Use os produtos KARV como ponto de partida e navegue até o nicho ou o tecido que dá estrutura ao ambiente."],
+          "paragraphs": [
+            "Use os produtos KARV como ponto de partida e navegue até o nicho ou o tecido que dá estrutura ao ambiente."
+          ],
           "actions": [
-            { "label": "Por nicho: barbearia", "href": "nichos/barbearia" },
-            { "label": "Por nicho: clínicas", "href": "nichos/clinicas" },
-            { "label": "Por tecido: premium", "href": "tecidos/premium" }
+            {
+              "label": "Por nicho: barbearia",
+              "href": "nichos/barbearia"
+            },
+            {
+              "label": "Por nicho: clínicas",
+              "href": "nichos/clinicas"
+            },
+            {
+              "label": "Por tecido: premium",
+              "href": "tecidos/premium"
+            }
           ]
         }
       ],
-      "cta": { "title": "Encontre o tecido ideal para a sua poltrona", "text": "Explore a biblioteca de tecidos e revestimentos KARV e combine com a coleção certa para o seu projeto.", "action": { "label": "Ver tecidos", "href": "tecidos" } }
+      "cta": {
+        "title": "Encontre o tecido ideal para a sua poltrona",
+        "text": "Explore a biblioteca de tecidos e revestimentos KARV e combine com a coleção certa para o seu projeto.",
+        "action": {
+          "label": "Ver tecidos",
+          "href": "tecidos"
+        }
+      },
+      "content": {
+        "text1": "Produtos | KARV",
+        "text2": "Produtos e coleções KARV",
+        "text3": "Navegação comercial",
+        "text4": "Acuradoria por contexto de projeto.",
+        "text5": "Use os produtos KARV como ponto de partida e navegue até o nicho ou o tecido que dá estrutura ao ambiente.",
+        "text6": "Por nicho",
+        "text7": "Barbearia",
+        "text8": "Clínicas",
+        "text9": "Estética",
+        "text10": "Por tecido",
+        "text11": "Premium",
+        "text12": "Encontre o tecido ideal para a sua poltrona",
+        "text13": "Explore a biblioteca de tecidos e revestimentos KARV e combine com a coleção certa para o seu projeto.",
+        "text14": "Ver tecidos",
+        "text15": "KV_001_RYUJIN",
+        "text16": "Identidade oriental, dragão imperial e presença visual forte para ambientes com narrativa marcante.",
+        "text17": "KV_002_MANDALA",
+        "text18": "Arte, mandala e identidade aplicada ao ambiente para projetos que desejam transformação visual.",
+        "text19": "KV_020_PURE_BALANCE",
+        "text20": "Clean profissional para clínicas de estética com sensação de tecnologia, limpeza e confiança.",
+        "text21": "KV_021_NATURAL_BEAUTY",
+        "text22": "Premium neutro para clínicas que unem estética avançada, harmonização e bem-estar.",
+        "text23": "KV_022_SOFT_TAUPE",
+        "text24": "Sofisticação discreta para clínicas premium acessíveis com linguagem elegante e equilibrada.",
+        "text25": "Produtos",
+        "text26": "Linhas comerciais desenvolvidas para reforçar o ambiente, ampliar a identidade do projeto e apoiar a comunicação de cada nicho."
+      }
     },
     "produtos/kv-001-ryujin": {
-      "seo": { "title": "KV_001_RYUJIN | Produtos KARV", "description": "Conheça a KV_001_RYUJIN, uma poltrona comercial KARV de presença oriental e narrativa marcante." },
-      "hero": { "eyebrow": "Produto KARV", "title": "KV_001_RYUJIN", "text": "Força, narrativa e presença para ambientes que desejam uma assinatura visual marcante.", "primaryCta": { "label": "Ver outros produtos", "href": "produtos" }, "secondaryCta": { "label": "Ver tecidos", "href": "tecidos" } },
+      "seo": {
+        "title": "KV_001_RYUJIN | Produtos KARV",
+        "description": "Conheça a KV_001_RYUJIN, uma poltrona comercial KARV de presença oriental e narrativa marcante."
+      },
+      "hero": {
+        "eyebrow": "Produto KARV",
+        "title": "KV_001_RYUJIN",
+        "text": "Força, narrativa e presença para ambientes que desejam uma assinatura visual marcante.",
+        "primaryCta": {
+          "label": "Ver outros produtos",
+          "href": "produtos"
+        },
+        "secondaryCta": {
+          "label": "Ver tecidos",
+          "href": "tecidos"
+        }
+      },
       "sections": [
-        { "title": "Uma presença que estrutura a narrativa do ambiente", "paragraphs": ["A KV_001_RYUJIN une uma leitura oriental a uma composição comercial de alto impacto. A peça foi pensada para projetos que usam o mobiliário como parte ativa da identidade do espaço."] },
-        { "title": "Identidade e aplicação", "items": ["Referências orientais e narrativa visual intensa.", "Presença para ambientes autorais, hospitality e projetos premium.", "Conforto e acabamento pensados para uso profissional."] },
-        { "title": "Valor comercial", "paragraphs": ["A coleção cria um ponto de atenção memorável, reforça o conceito do projeto e apoia a percepção de um ambiente cuidadosamente construído."] }
+        {
+          "title": "Uma presença que estrutura a narrativa do ambiente",
+          "paragraphs": [
+            "A KV_001_RYUJIN une uma leitura oriental a uma composição comercial de alto impacto. A peça foi pensada para projetos que usam o mobiliário como parte ativa da identidade do espaço."
+          ]
+        },
+        {
+          "title": "Identidade e aplicação",
+          "items": [
+            "Referências orientais e narrativa visual intensa.",
+            "Presença para ambientes autorais, hospitality e projetos premium.",
+            "Conforto e acabamento pensados para uso profissional."
+          ]
+        },
+        {
+          "title": "Valor comercial",
+          "paragraphs": [
+            "A coleção cria um ponto de atenção memorável, reforça o conceito do projeto e apoia a percepção de um ambiente cuidadosamente construído."
+          ]
+        }
       ],
-      "cta": { "title": "Uma peça para ambientes que precisam ser lembrados", "text": "Converse com a KARV para encontrar a configuração adequada ao seu projeto.", "action": { "label": "Falar com a KARV", "href": "contact.whatsapp" } }
+      "cta": {
+        "title": "Uma peça para ambientes que precisam ser lembrados",
+        "text": "Converse com a KARV para encontrar a configuração adequada ao seu projeto.",
+        "action": {
+          "label": "Falar com a KARV",
+          "href": "contact.whatsapp"
+        }
+      },
+      "content": {
+        "text1": "Poltrona RYUJIN em estúdio de tatuagem com letreiro neon Tattoo Studio",
+        "text2": "Poltrona RYUJIN isolada em fundo branco, estrutura em madeira natural",
+        "text3": "Detalhe da estampa autoral de dragão e peônias do revestimento RYUJIN",
+        "text4": "Detalhe da costura entre bouclé cinza e veludo vermelho da poltrona RYUJIN",
+        "text5": "Detalhe da profundidade do vermelho no revestimento da poltrona RYUJIN",
+        "text6": "Poltrona RYUJIN em estúdio de tatuagem autoral",
+        "text7": "Poltrona RYUJIN em barbearia de identidade autoral",
+        "text8": "Poltrona RYUJIN amplificando um espaço de identidade expressiva",
+        "text9": "Poltrona RYUJIN amplificando o espaço ao redor",
+        "text10": "Fechamento editorial: poltrona RYUJIN em estúdio de tatuagem",
+        "text11": "Ryujin · o dragão",
+        "text12": "KV-001",
+        "text13": "Poltrona autoral",
+        "text14": "RYUJIN",
+        "text15": "A poltrona que amplifica ambientes de identidade forte.",
+        "text16": "Solicitar orçamento",
+        "text17": "Ver ambientes",
+        "text18": "01",
+        "text19": "Conceito",
+        "text20": "Estrutura que sustenta.",
+        "text21": "Identidade que transforma.",
+        "text22": "RYUJIN nasce de uma estampa autoral — o dragão e as peônias sobre fundo profundo — contida por laterais em bouclé cinza e base em madeira natural. A estrutura garante a qualidade da peça. Quem define a identidade é o revestimento.",
+        "text23": "02",
+        "text24": "Arte aplicada",
+        "text25": "O detalhe que se aproxima.",
+        "text26": "Dragão & peônia",
+        "text27": "Costura bouclé × veludo",
+        "text28": "Profundidade do vermelho",
+        "text29": "03",
+        "text30": "Ambientes",
+        "text31": "Feita para espaços que já têm o que dizer.",
+        "text32": "Studios de tatuagem, barbearias autorais e espaços de estética de identidade expressiva. Onde a parede já é arte, RYUJIN pertence.",
+        "text33": "Studio de tatuagem",
+        "text34": "Barbearia autoral",
+        "text35": "Espaço expressivo",
+        "text36": "04",
+        "text37": "Valor para o espaço",
+        "text38": "Ela não ocupa o ambiente.",
+        "text39": "Ela o revela.",
+        "text40": "Amplifica identidade",
+        "text41": "Reforça o que o espaço já comunica, sem competir com ele.",
+        "text42": "Base estrutural em EPS",
+        "text43": "Resistência a umidade, cupim e fogo. Durável para ambientes de alto giro.",
+        "text44": "Sem percinta tradicional",
+        "text45": "Construção que sustenta o conforto ao longo do tempo.",
+        "text46": "05",
+        "text47": "Condições",
+        "text48": "Personalização sob medida.",
+        "text49": "Revestimento configurável e produção autoral. Condições comerciais e prazos definidos sob consulta, de acordo com o projeto do seu espaço.",
+        "text50": "Traga o RYUJIN",
+        "text51": "para o seu espaço.",
+        "text52": "Solicitar orçamento da RYUJIN",
+        "text53": "Falar com a KARV",
+        "text54": "K",
+        "text55": "ARV",
+        "text56": "estrutura sustenta · identidade transforma",
+        "text57": "Contato",
+        "text58": "WhatsApp KARV",
+        "text59": "Atendimento: Sul e Sudeste",
+        "text60": "Social",
+        "text61": "Ol?, tenho interesse na poltrona KV-001 RYUJIN da KARV. Gostaria de solicitar um or?amento.",
+        "text62": "??",
+        "text63": "Instagram ? @karv.dna"
+      }
     },
     "produtos/kv-002-mandala": {
-      "seo": { "title": "KV_002_MANDALA | Produtos KARV", "description": "Conheça a coleção KV_002_MANDALA, inspirada em mandalas e arte para transformar ambientes com personalidade e sofisticação." },
-      "hero": { "eyebrow": "Produto KARV", "title": "KV_002_MANDALA", "text": "Quando a arte inspira, o ambiente se transforma.", "primaryCta": { "label": "Ver outros produtos", "href": "produtos" }, "secondaryCta": { "label": "Ver tecidos", "href": "tecidos" } },
+      "seo": {
+        "title": "KV_002_MANDALA | Produtos KARV",
+        "description": "Conheça a coleção KV_002_MANDALA, inspirada em mandalas e arte para transformar ambientes com personalidade e sofisticação."
+      },
+      "hero": {
+        "eyebrow": "Produto KARV",
+        "title": "KV_002_MANDALA",
+        "text": "Quando a arte inspira, o ambiente se transforma.",
+        "primaryCta": {
+          "label": "Ver outros produtos",
+          "href": "produtos"
+        },
+        "secondaryCta": {
+          "label": "Ver tecidos",
+          "href": "tecidos"
+        }
+      },
       "sections": [
-        { "title": "Arte como linguagem comercial", "paragraphs": ["A KV_002_MANDALA traduz a força da arte em uma proposta comercial acessível e premium. A peça reforça a intenção do ambiente sem roubar protagonismo."] },
-        { "title": "Identidade do produto", "items": ["Linguagem artística com forte apelo visual.", "Sensibilidade, cultura e refinamento para o projeto.", "Uma composição que valoriza a identidade do ambiente."] },
-        { "title": "Aplicações e benefícios", "paragraphs": ["A coleção atende projetos residenciais e comerciais que valorizam diferenciação, acolhimento e uma narrativa mais artística."] }
+        {
+          "title": "Arte como linguagem comercial",
+          "paragraphs": [
+            "A KV_002_MANDALA traduz a força da arte em uma proposta comercial acessível e premium. A peça reforça a intenção do ambiente sem roubar protagonismo."
+          ]
+        },
+        {
+          "title": "Identidade do produto",
+          "items": [
+            "Linguagem artística com forte apelo visual.",
+            "Sensibilidade, cultura e refinamento para o projeto.",
+            "Uma composição que valoriza a identidade do ambiente."
+          ]
+        },
+        {
+          "title": "Aplicações e benefícios",
+          "paragraphs": [
+            "A coleção atende projetos residenciais e comerciais que valorizam diferenciação, acolhimento e uma narrativa mais artística."
+          ]
+        }
       ],
-      "cta": { "title": "Uma coleção para projetos que querem expressão e equilíbrio", "text": "A KV_002_MANDALA conecta arte, ambiente e comunicação comercial com linguagem moderna e elegante.", "action": { "label": "Ver catálogo", "href": "produtos" } }
+      "cta": {
+        "title": "Uma coleção para projetos que querem expressão e equilíbrio",
+        "text": "A KV_002_MANDALA conecta arte, ambiente e comunicação comercial com linguagem moderna e elegante.",
+        "action": {
+          "label": "Ver catálogo",
+          "href": "produtos"
+        }
+      },
+      "content": {
+        "text1": "KV_002_MANDALA | Produtos KARV",
+        "text2": "KV_002_MANDALA",
+        "text3": "Texto comercial",
+        "text4": "O KV_002_MANDALA traduz a força da arte em uma proposta comercial acessível e premium. A KARV atua como um elemento de reforço, destacando a intenção do ambiente sem roubar protagonismo. A peça se relaciona com o espaço e o eleva com presença e sensibilidade.",
+        "text5": "Identidade do produto",
+        "text6": "Aplicação em ambientes",
+        "text7": "Benefícios comerciais",
+        "text8": "Uma coleção para projetos que querem expressão e equilíbrio",
+        "text9": "O KV_002_MANDALA conecta arte, ambiente e comunicação comercial com linguagem moderna e elegante.",
+        "text10": "Ver catálogo",
+        "text11": "Explorar nichos",
+        "text12": "Linguagem artística com forte apelo visual e presença decorativa.",
+        "text13": "Preserva a identidade do ambiente ao mesmo tempo em que valoriza o projeto.",
+        "text14": "Transmite uma sensação de sensibilidade, cultura e refinamento.",
+        "text15": "Ambientes residenciais com foco em personalidade e composição.",
+        "text16": "Projetos de arquitetura que desejam uma narrativa mais artística.",
+        "text17": "Espaços comerciais que valorizam diferenciação e acolhimento.",
+        "text18": "Amplia a percepção de conceito e originalidade do projeto.",
+        "text19": "Conecta a peça ao ambiente de forma natural e elegante.",
+        "text20": "Gera valor comercial em propostas com forte identidade visual.",
+        "text21": "Conheça a coleção KV_002_MANDALA, inspirada em mandalas e arte para transformar ambientes com personalidade e sofisticação.",
+        "text22": "Produto KARV",
+        "text23": "Quando a arte inspira, o ambiente se transforma.",
+        "text24": "Ver outros produtos",
+        "text25": "Ver tecidos"
+      }
     },
     "produtos/kv-020-pure-balance": {
-      "seo": { "title": "KV_020_PURE_BALANCE | Produtos KARV", "description": "Conheça a KV_020_PURE_BALANCE para clínicas de estética que buscam limpeza visual, confiança e equilíbrio." },
-      "hero": { "eyebrow": "Produto KARV", "title": "KV_020_PURE_BALANCE", "text": "Equilíbrio visual e confiança para clínicas de estética.", "primaryCta": { "label": "Ver outros produtos", "href": "produtos" }, "secondaryCta": { "label": "Ver tecidos", "href": "tecidos" } },
+      "seo": {
+        "title": "KV_020_PURE_BALANCE | Produtos KARV",
+        "description": "Conheça a KV_020_PURE_BALANCE para clínicas de estética que buscam limpeza visual, confiança e equilíbrio."
+      },
+      "hero": {
+        "eyebrow": "Produto KARV",
+        "title": "KV_020_PURE_BALANCE",
+        "text": "Equilíbrio visual e confiança para clínicas de estética.",
+        "primaryCta": {
+          "label": "Ver outros produtos",
+          "href": "produtos"
+        },
+        "secondaryCta": {
+          "label": "Ver tecidos",
+          "href": "tecidos"
+        }
+      },
       "sections": [
-        { "title": "Limpeza visual com presença profissional", "paragraphs": ["A KV_020_PURE_BALANCE foi criada para clínicas que desejam comunicar tecnologia, cuidado e clareza sem abrir mão do conforto."] },
-        { "title": "Para ambientes de confiança", "items": ["Linguagem clean e contemporânea.", "Conforto para atendimento e espera.", "Presença coerente com protocolos de cuidado e bem-estar."] }
+        {
+          "title": "Limpeza visual com presença profissional",
+          "paragraphs": [
+            "A KV_020_PURE_BALANCE foi criada para clínicas que desejam comunicar tecnologia, cuidado e clareza sem abrir mão do conforto."
+          ]
+        },
+        {
+          "title": "Para ambientes de confiança",
+          "items": [
+            "Linguagem clean e contemporânea.",
+            "Conforto para atendimento e espera.",
+            "Presença coerente com protocolos de cuidado e bem-estar."
+          ]
+        }
       ],
-      "cta": { "title": "Uma coleção que equilibra acolhimento e precisão", "text": "Explore os tecidos e configurações que melhor se relacionam com a sua clínica.", "action": { "label": "Ver tecidos", "href": "tecidos/clinicas-esteticas" } }
+      "cta": {
+        "title": "Uma coleção que equilibra acolhimento e precisão",
+        "text": "Explore os tecidos e configurações que melhor se relacionam com a sua clínica.",
+        "action": {
+          "label": "Ver tecidos",
+          "href": "tecidos/clinicas-esteticas"
+        }
+      },
+      "content": {
+        "text1": "Texto comercial",
+        "text2": "O KV_020 PURE BALANCE foi pensado para clínicas que precisam comunicar precisão e sofisticação sem perder acolhimento. A KARV entra como um reforço da identidade do ambiente, destacando o cuidado, a tecnologia e a clareza visual do espaço.",
+        "text3": "Identidade do produto",
+        "text4": "Aplicação em ambientes",
+        "text5": "Materiais e revestimentos",
+        "text6": "Benefícios comerciais",
+        "text7": "Um produto para clínicas que querem confiança e presença",
+        "text8": "O KV_020 PURE BALANCE conecta estética, tecnologia e comunicação premium em um único posicionamento.",
+        "text9": "Ver catálogo",
+        "text10": "Explorar tecidos",
+        "text11": "Posicionamento Clean Profissional para clínicas de estética.",
+        "text12": "Trabalha com uma paleta neutra que favorece a percepção de organização.",
+        "text13": "Clínicas estéticas que desejam um ambiente técnico e acolhedor.",
+        "text14": "Salas de procedimentos e consultas com linguagem contemporânea.",
+        "text15": "Projetos que valorizam clareza visual e experiência premium acessível.",
+        "text16": "Monaco 03 Off White — tecido principal.",
+        "text17": "Monaco 05 Bege Claro — tecido secundário.",
+        "text18": "Reforça a sensação de limpeza e cuidado no atendimento.",
+        "text19": "Aumenta a percepção de profissionalismo do espaço.",
+        "text20": "Clean Profissional, tecnologia e sensação de limpeza para ambientes de estética com alto padrão de atendimento.",
+        "text21": "Ver outros produtos",
+        "text22": "Ir para nichos",
+        "text23": "Produtos KARV"
+      }
     },
     "produtos/kv-021-natural-beauty": {
-      "seo": { "title": "KV_021_NATURAL_BEAUTY | Produtos KARV", "description": "Conheça a KV_021_NATURAL_BEAUTY para clínicas de estética, harmonização e bem-estar." },
-      "hero": { "eyebrow": "Produto KARV", "title": "KV_021_NATURAL_BEAUTY", "text": "Uma leitura natural, premium e acolhedora para o cuidado contemporâneo.", "primaryCta": { "label": "Ver outros produtos", "href": "produtos" }, "secondaryCta": { "label": "Ver tecidos", "href": "tecidos" } },
+      "seo": {
+        "title": "KV_021_NATURAL_BEAUTY | Produtos KARV",
+        "description": "Conheça a KV_021_NATURAL_BEAUTY para clínicas de estética, harmonização e bem-estar."
+      },
+      "hero": {
+        "eyebrow": "Produto KARV",
+        "title": "KV_021_NATURAL_BEAUTY",
+        "text": "Uma leitura natural, premium e acolhedora para o cuidado contemporâneo.",
+        "primaryCta": {
+          "label": "Ver outros produtos",
+          "href": "produtos"
+        },
+        "secondaryCta": {
+          "label": "Ver tecidos",
+          "href": "tecidos"
+        }
+      },
       "sections": [
-        { "title": "Bem-estar traduzido em ambiente", "paragraphs": ["A KV_021_NATURAL_BEAUTY combina neutralidade, conforto e sofisticação para clínicas que unem estética avançada, harmonização e bem-estar."] },
-        { "title": "Uma base para experiências acolhedoras", "items": ["Paleta e acabamento de presença serena.", "Aplicação para atendimento, espera e recuperação.", "Equilíbrio entre cuidado, identidade e valor percebido."] }
+        {
+          "title": "Bem-estar traduzido em ambiente",
+          "paragraphs": [
+            "A KV_021_NATURAL_BEAUTY combina neutralidade, conforto e sofisticação para clínicas que unem estética avançada, harmonização e bem-estar."
+          ]
+        },
+        {
+          "title": "Uma base para experiências acolhedoras",
+          "items": [
+            "Paleta e acabamento de presença serena.",
+            "Aplicação para atendimento, espera e recuperação.",
+            "Equilíbrio entre cuidado, identidade e valor percebido."
+          ]
+        }
       ],
-      "cta": { "title": "Sofisticação natural para sua clínica", "text": "Converse com a KARV sobre uma composição alinhada à experiência que você deseja criar.", "action": { "label": "Falar com a KARV", "href": "contact.whatsapp" } }
+      "cta": {
+        "title": "Sofisticação natural para sua clínica",
+        "text": "Converse com a KARV sobre uma composição alinhada à experiência que você deseja criar.",
+        "action": {
+          "label": "Falar com a KARV",
+          "href": "contact.whatsapp"
+        }
+      },
+      "content": {
+        "text1": "Texto comercial",
+        "text2": "O KV_021 NATURAL BEAUTY é uma solução comercial para clínicas de estética que buscam uma linguagem mais refinada, neutra e acolhedora. A KARV reforça a proposta do ambiente, revelando a intenção do espaço e elevando a percepção de cuidado e excelência.",
+        "text3": "Identidade do produto",
+        "text4": "Aplicação em ambientes",
+        "text5": "Materiais e revestimentos",
+        "text6": "Benefícios comerciais",
+        "text7": "Uma solução para clínicas premium e acessíveis",
+        "text8": "O KV_021 NATURAL BEAUTY une sofisticação, acolhimento e posicionamento comercial em uma linguagem limpa e contemporânea.",
+        "text9": "Ver catálogo",
+        "text10": "Explorar tecidos",
+        "text11": "Posicionamento Premium Neutro para clínicas que valorizam sofisticação discreta.",
+        "text12": "Equilibra visual sofisticado com linguagem acessível e comercial.",
+        "text13": "Ambientes de estética com foco em experiência premium e acolhimento.",
+        "text14": "Consultórios, clínicas e centros de beleza com identidade refinada.",
+        "text15": "Espaços que desejam comunicar tecnologia, procedimento e bem-estar.",
+        "text16": "Nice 05 Areia — tecido principal.",
+        "text17": "Nice 03 Off White — tecido secundário.",
+        "text18": "Reforça a sensação de bem-estar e cuidado no atendimento.",
+        "text19": "Aproxima o posicionamento do espaço da experiência do cliente.",
+        "text20": "Premium Neutro e estética avançada para clínicas que unem bem-estar, harmonização facial e sofisticação.",
+        "text21": "Ver outros produtos",
+        "text22": "Ir para nichos",
+        "text23": "Se encaixa em projetos premium sem parecer excessivo.",
+        "text24": "Produtos KARV"
+      }
     },
     "produtos/kv-022-soft-taupe": {
-      "seo": { "title": "KV_022_SOFT_TAUPE | Produtos KARV", "description": "Conheça a KV_022_SOFT_TAUPE para clínicas premium que desejam uma linguagem elegante e equilibrada." },
-      "hero": { "eyebrow": "Produto KARV", "title": "KV_022_SOFT_TAUPE", "text": "Sofisticação discreta para uma experiência premium acessível.", "primaryCta": { "label": "Ver outros produtos", "href": "produtos" }, "secondaryCta": { "label": "Ver tecidos", "href": "tecidos" } },
+      "seo": {
+        "title": "KV_022_SOFT_TAUPE | Produtos KARV",
+        "description": "Conheça a KV_022_SOFT_TAUPE para clínicas premium que desejam uma linguagem elegante e equilibrada."
+      },
+      "hero": {
+        "eyebrow": "Produto KARV",
+        "title": "KV_022_SOFT_TAUPE",
+        "text": "Sofisticação discreta para uma experiência premium acessível.",
+        "primaryCta": {
+          "label": "Ver outros produtos",
+          "href": "produtos"
+        },
+        "secondaryCta": {
+          "label": "Ver tecidos",
+          "href": "tecidos"
+        }
+      },
       "sections": [
-        { "title": "Elegância que acolhe sem excessos", "paragraphs": ["A KV_022_SOFT_TAUPE oferece uma presença equilibrada para clínicas que buscam comunicar cuidado, maturidade e sofisticação em cada ponto de contato."] },
-        { "title": "Linguagem para projetos premium", "items": ["Tons neutros e leitura atemporal.", "Conforto pensado para jornadas de atendimento.", "Um ponto de apoio para ambientes elegantes e consistentes."] }
+        {
+          "title": "Elegância que acolhe sem excessos",
+          "paragraphs": [
+            "A KV_022_SOFT_TAUPE oferece uma presença equilibrada para clínicas que buscam comunicar cuidado, maturidade e sofisticação em cada ponto de contato."
+          ]
+        },
+        {
+          "title": "Linguagem para projetos premium",
+          "items": [
+            "Tons neutros e leitura atemporal.",
+            "Conforto pensado para jornadas de atendimento.",
+            "Um ponto de apoio para ambientes elegantes e consistentes."
+          ]
+        }
       ],
-      "cta": { "title": "Uma base elegante para a sua experiência de marca", "text": "Explore produtos e revestimentos para formar a composição ideal.", "action": { "label": "Ver produtos", "href": "produtos" } }
+      "cta": {
+        "title": "Uma base elegante para a sua experiência de marca",
+        "text": "Explore produtos e revestimentos para formar a composição ideal.",
+        "action": {
+          "label": "Ver produtos",
+          "href": "produtos"
+        }
+      },
+      "content": {
+        "text1": "Texto comercial",
+        "text2": "O KV_022 SOFT TAUPE é uma resposta comercial para clínicas que precisam transmitir sofisticação sem perder acessibilidade. A KARV reforça a proposta do ambiente com delicadeza, equilíbrio e valor percebido, elevando a experiência do cliente de forma natural.",
+        "text3": "Identidade do produto",
+        "text4": "Aplicação em ambientes",
+        "text5": "Materiais e revestimentos",
+        "text6": "Benefícios comerciais",
+        "text7": "Uma proposta elegante para ambientes que valorizam equilíbrio",
+        "text8": "O KV_022 SOFT TAUPE transforma a linguagem do espaço em uma experiência premium, acessível e sofisticada.",
+        "text9": "Ver catálogo",
+        "text10": "Explorar tecidos",
+        "text11": "Posicionamento Premium Neutro para clínicas premium acessíveis.",
+        "text12": "Transmite sofisticação discreta e acabamento refinado.",
+        "text13": "Equilibra acolhimento, neutralidade e comunicação comercial forte.",
+        "text14": "Clínicas estéticas que desejam uma linguagem elegante e acessível.",
+        "text15": "Consultórios de beleza e procedimentos com imagem sofisticada.",
+        "text16": "Projetos que priorizam discretude, conforto e identidade premium.",
+        "text17": "Andora Taupe — tecido principal.",
+        "text18": "Andora Off White — tecido secundário.",
+        "text19": "Aproxima o ambiente da percepção de premium sem excessos visuais.",
+        "text20": "Valoriza a experiência do cliente por meio de uma estética equilibrada.",
+        "text21": "Sofisticação discreta para clínicas premium acessíveis, com neutralidade, elegância e presença sutil.",
+        "text22": "Ver outros produtos",
+        "text23": "Ir para nichos",
+        "text24": "Se adapta a projetos comerciais de diferentes escalas.",
+        "text25": "Produtos KARV"
+      }
     },
     "nichos": {
-      "seo": { "title": "Nichos | KARV", "description": "Soluções KARV para clínicas, barbearias, estúdios, estética, odontologia e outros segmentos." },
-      "hero": { "eyebrow": "Nichos", "title": "Segmentos estratégicos KARV", "text": "Cada segmento tem exigências próprias de conforto, durabilidade e apresentação. A KARV desenvolve poltronas e coleções pensadas para o dia a dia de cada nicho." },
+      "seo": {
+        "title": "Nichos | KARV",
+        "description": "Soluções KARV para clínicas, barbearias, estúdios, estética, odontologia e outros segmentos."
+      },
+      "hero": {
+        "eyebrow": "Nichos",
+        "title": "Segmentos estratégicos KARV",
+        "text": "Cada segmento tem exigências próprias de conforto, durabilidade e apresentação. A KARV desenvolve poltronas e coleções pensadas para o dia a dia de cada nicho."
+      },
       "cards": [
-        { "title": "Barbearia", "description": "Poltronas e ambientes que reforçam a identidade da barbearia moderna.", "href": "nichos/barbearia" },
-        { "title": "Estética", "description": "Conforto e sofisticação para salas de atendimento e espera.", "href": "nichos/estetica" },
-        { "title": "Tatuagem", "description": "Peças resistentes e estilosas para estúdios de tatuagem.", "href": "nichos/tatuagem" },
-        { "title": "Clínicas", "description": "Mobiliário institucional para recepções e salas de espera clínicas.", "href": "nichos/clinicas" },
-        { "title": "Studios", "description": "Ambientes com presença visual forte para studios criativos e premium.", "href": "nichos/studios" },
-        { "title": "Odontologia", "description": "Mobiliário que transmite confiança em clínicas odontológicas.", "href": "produtos" },
-        { "title": "Podologia", "description": "Soluções ergonômicas para consultórios de podologia.", "href": "produtos" },
-        { "title": "Salões", "description": "Ambientes premium para salões de beleza e estética capilar.", "href": "produtos" }
+        {
+          "title": "Barbearia",
+          "description": "Poltronas e ambientes que reforçam a identidade da barbearia moderna.",
+          "href": "nichos/barbearia"
+        },
+        {
+          "title": "Estética",
+          "description": "Conforto e sofisticação para salas de atendimento e espera.",
+          "href": "nichos/estetica"
+        },
+        {
+          "title": "Tatuagem",
+          "description": "Peças resistentes e estilosas para estúdios de tatuagem.",
+          "href": "nichos/tatuagem"
+        },
+        {
+          "title": "Clínicas",
+          "description": "Mobiliário institucional para recepções e salas de espera clínicas.",
+          "href": "nichos/clinicas"
+        },
+        {
+          "title": "Studios",
+          "description": "Ambientes com presença visual forte para studios criativos e premium.",
+          "href": "nichos/studios"
+        },
+        {
+          "title": "Odontologia",
+          "description": "Mobiliário que transmite confiança em clínicas odontológicas.",
+          "href": "produtos"
+        },
+        {
+          "title": "Podologia",
+          "description": "Soluções ergonômicas para consultórios de podologia.",
+          "href": "produtos"
+        },
+        {
+          "title": "Salões",
+          "description": "Ambientes premium para salões de beleza e estética capilar.",
+          "href": "produtos"
+        }
       ],
       "sections": [
-        { "title": "A proposta ganha força quando tudo dialoga", "paragraphs": ["Cada nicho ganha força quando o ambiente, a poltrona e a curadoria de revestimentos dialogam entre si."], "actions": [{ "label": "Produtos de referência", "href": "produtos" }, { "label": "Tecidos para o projeto", "href": "tecidos" }, { "label": "Coleções KARV", "href": "tecidos/colecoes" }] }
+        {
+          "title": "A proposta ganha força quando tudo dialoga",
+          "paragraphs": [
+            "Cada nicho ganha força quando o ambiente, a poltrona e a curadoria de revestimentos dialogam entre si."
+          ],
+          "actions": [
+            {
+              "label": "Produtos de referência",
+              "href": "produtos"
+            },
+            {
+              "label": "Tecidos para o projeto",
+              "href": "tecidos"
+            },
+            {
+              "label": "Coleções KARV",
+              "href": "tecidos/colecoes"
+            }
+          ]
+        }
       ],
-      "cta": { "title": "Não encontrou o seu segmento?", "text": "A KARV atende novos nichos sob demanda. Explore as coleções e tecidos disponíveis para o seu projeto.", "action": { "label": "Ver produtos", "href": "produtos" } }
+      "cta": {
+        "title": "Não encontrou o seu segmento?",
+        "text": "A KARV atende novos nichos sob demanda. Explore as coleções e tecidos disponíveis para o seu projeto.",
+        "action": {
+          "label": "Ver produtos",
+          "href": "produtos"
+        }
+      },
+      "content": {
+        "text1": "Nichos | KARV",
+        "text2": "Segmentos estratégicos KARV",
+        "text3": "Produtos de referência",
+        "text4": "Tecidos para o projeto",
+        "text5": "Coleções KARV",
+        "text6": "Conexão comercial",
+        "text7": "Aprofunde a proposta do segmento pelo produto e pelo tecido.",
+        "text8": "Cada nicho ganha força quando o ambiente, a poltrona e a curadoria de revestimentos dialogam entre si.",
+        "text9": "Não encontrou o seu segmento?",
+        "text10": "A KARV atende novos nichos sob demanda. Explore as coleções e tecidos disponíveis para o seu projeto.",
+        "text11": "Ver produtos",
+        "text12": "Barbearia",
+        "text13": "Poltronas e ambientes que reforçam a identidade da barbearia moderna.",
+        "text14": "Estética",
+        "text15": "Conforto e sofisticação para salas de atendimento e espera.",
+        "text16": "Tatuagem",
+        "text17": "Peças resistentes e estilosas para estúdios de tatuagem.",
+        "text18": "Clínicas",
+        "text19": "Mobiliário institucional para recepções e salas de espera clínicas.",
+        "text20": "Studios",
+        "text21": "Ambientes com presença visual forte para studios criativos e premium.",
+        "text22": "Odontologia",
+        "text23": "Mobiliário que transmite confiança em clínicas odontológicas.",
+        "text24": "Podologia",
+        "text25": "Soluções ergonômicas para consultórios de podologia.",
+        "text26": "Salões",
+        "text27": "Ambientes premium para salões de beleza e estética capilar.",
+        "text28": "Soluções KARV para clínicas, barbearias, estúdios, estética, odontologia e outros segmentos.",
+        "text29": "Nichos",
+        "text30": "Cada segmento tem exigências próprias de conforto, durabilidade e apresentação. A KARV desenvolve poltronas e coleções pensadas para o dia a dia de cada nicho.",
+        "text31": "Conecte a linguagem visual do espaço à curadoria de revestimentos.",
+        "text32": "Use a biblioteca como base para identidade, acabamento e experiência do ambiente."
+      }
     },
     "nichos/barbearia": {
-      "seo": { "title": "Barbearia | KARV", "description": "Poltronas e mobiliário de identidade para barbearias que unem conforto, estilo e presença de marca." },
-      "hero": { "eyebrow": "Barbearia", "title": "A barbearia moderna vende experiência, não apenas corte", "text": "Na barbearia, o cliente vive um ritual. O ambiente precisa transmitir confiança, presença e cuidado em cada detalhe.", "primaryCta": { "label": "Ver produtos", "href": "produtos" }, "secondaryCta": { "label": "Falar com a KARV", "href": "contact.whatsapp" } },
+      "seo": {
+        "title": "Barbearia | KARV",
+        "description": "Poltronas e mobiliário de identidade para barbearias que unem conforto, estilo e presença de marca."
+      },
+      "hero": {
+        "eyebrow": "Barbearia",
+        "title": "A barbearia moderna vende experiência, não apenas corte",
+        "text": "Na barbearia, o cliente vive um ritual. O ambiente precisa transmitir confiança, presença e cuidado em cada detalhe.",
+        "primaryCta": {
+          "label": "Ver produtos",
+          "href": "produtos"
+        },
+        "secondaryCta": {
+          "label": "Falar com a KARV",
+          "href": "contact.whatsapp"
+        }
+      },
       "sections": [
-        { "title": "O ambiente precisa refletir o posicionamento da marca", "paragraphs": ["Uma barbearia de alto padrão se destaca quando a identidade do espaço acompanha a qualidade do atendimento. A poltrona certa reforça o desejo de permanência e transforma cada visita em um momento de marca."] },
-        { "title": "O que a barbearia precisa comunicar", "items": ["Estilo contemporâneo e masculino.", "Conforto para procedimentos longos.", "Presença forte para fotos, indicação e retorno."] },
-        { "title": "Aplicações que ampliam a experiência", "paragraphs": ["Área de corte, espera e recepção podem ganhar uma leitura mais consistente com peças que reforçam o posicionamento premium da marca."] }
+        {
+          "title": "O ambiente precisa refletir o posicionamento da marca",
+          "paragraphs": [
+            "Uma barbearia de alto padrão se destaca quando a identidade do espaço acompanha a qualidade do atendimento. A poltrona certa reforça o desejo de permanência e transforma cada visita em um momento de marca."
+          ]
+        },
+        {
+          "title": "O que a barbearia precisa comunicar",
+          "items": [
+            "Estilo contemporâneo e masculino.",
+            "Conforto para procedimentos longos.",
+            "Presença forte para fotos, indicação e retorno."
+          ]
+        },
+        {
+          "title": "Aplicações que ampliam a experiência",
+          "paragraphs": [
+            "Área de corte, espera e recepção podem ganhar uma leitura mais consistente com peças que reforçam o posicionamento premium da marca."
+          ]
+        }
       ],
-      "cta": { "title": "Uma barbearia com identidade merece um móvel que faça parte do ritual", "text": "A KARV cria poltronas e peças que unem presença de marca, conforto e um ambiente premium para cada cliente.", "action": { "label": "Ver coleções", "href": "produtos" } }
+      "cta": {
+        "title": "Uma barbearia com identidade merece um móvel que faça parte do ritual",
+        "text": "A KARV cria poltronas e peças que unem presença de marca, conforto e um ambiente premium para cada cliente.",
+        "action": {
+          "label": "Ver coleções",
+          "href": "produtos"
+        }
+      },
+      "content": {
+        "text1": "Barbearia | KARV",
+        "text2": "A barbearia moderna vende experiência, não apenas corte",
+        "text3": "O ambiente precisa refletir o posicionamento da marca",
+        "text4": "Uma barbearia de alto padrão se destaca quando a identidade do espaço acompanha a qualidade do atendimento. A poltrona certa reforça o desejo de permanência, melhora a percepção do serviço e transforma cada visita em um momento de marca.",
+        "text5": "Por que esse nicho precisa de uma poltrona de identidade",
+        "text6": "O cliente percebe o espaço antes de falar com o profissional. Uma peça de mobiliário alinhada com o conceito da barbearia reforça autoridade e torna o ambiente mais memorável.",
+        "text7": "O que o ambiente precisa comunicar",
+        "text8": "Estilo contemporâneo e masculino",
+        "text9": "Conforto para procedimentos longos",
+        "text10": "Presença forte para fotos, indicação e retorno",
+        "text11": "Aplicações no ambiente",
+        "text12": "A KARV se adapta a áreas que impactam diretamente na experiência do cliente.",
+        "text13": "Área de corte",
+        "text14": "Poltronas que elevam o cuidado e a presença visual do ponto principal da barbearia.",
+        "text15": "Espaço de espera",
+        "text16": "Uma recepção bem proposta ajuda a construir a sensação de valor do serviço.",
+        "text17": "Ambiente de marca",
+        "text18": "Peças que reforçam um posicionamento premium em redes sociais e visitas presenciais.",
+        "text19": "Benefícios comerciais",
+        "text20": "O mobiliário certo é um aliado para ampliar a percepção de valor do negócio.",
+        "text21": "Eleva a percepção do serviço",
+        "text22": "Clientes associam o ambiente a mais qualidade e cuidado.",
+        "text23": "Aumenta a diferenciação",
+        "text24": "Uma proposta visual forte ajuda a se destacar em um mercado competitivo.",
+        "text25": "Fortalece a recorrência",
+        "text26": "Ambientes bem construídos incentivam retorno e indicação.",
+        "text27": "Uma barbearia com identidade merece um móvel que faça parte do ritual",
+        "text28": "A KARV cria poltronas e peças que unem presença de marca, conforto e um ambiente premium para cada cliente.",
+        "text29": "Ver coleções",
+        "text30": "Falar com a KARV",
+        "text31": "Poltronas e mobiliário de identidade para barbearias que unem conforto, estilo e presença de marca.",
+        "text32": "Barbearia",
+        "text33": "Na barbearia, o cliente vive um ritual. O ambiente precisa transmitir confiança, presença e um cuidado com cada detalhe, desde o atendimento até o momento da saída.",
+        "text34": "Ver produtos"
+      }
     },
     "nichos/clinicas": {
-      "seo": { "title": "Clínicas | KARV", "description": "Poltronas para clínicas que desejam transmitir cuidado, confiança e presença profissional." },
-      "hero": { "eyebrow": "Clínicas", "title": "Em clínicas, o ambiente também é parte do cuidado", "text": "Cada detalhe ajuda pacientes a perceber organização, acolhimento e confiança desde a chegada.", "primaryCta": { "label": "Ver produtos", "href": "produtos" }, "secondaryCta": { "label": "Falar com a KARV", "href": "contact.whatsapp" } },
+      "seo": {
+        "title": "Clínicas | KARV",
+        "description": "Poltronas para clínicas que desejam transmitir cuidado, confiança e presença profissional."
+      },
+      "hero": {
+        "eyebrow": "Clínicas",
+        "title": "Em clínicas, o ambiente também é parte do cuidado",
+        "text": "Cada detalhe ajuda pacientes a perceber organização, acolhimento e confiança desde a chegada.",
+        "primaryCta": {
+          "label": "Ver produtos",
+          "href": "produtos"
+        },
+        "secondaryCta": {
+          "label": "Falar com a KARV",
+          "href": "contact.whatsapp"
+        }
+      },
       "sections": [
-        { "title": "Confiança começa antes do atendimento", "paragraphs": ["Recepções e salas de espera estruturam a primeira impressão. Uma poltrona coerente com o projeto cria conforto e reforça o padrão de cuidado da clínica."] },
-        { "title": "O que o espaço precisa comunicar", "items": ["Acolhimento sem perder precisão.", "Conforto para diferentes tempos de espera.", "Organização visual e credibilidade profissional."] },
-        { "title": "Aplicações para uma jornada consistente", "paragraphs": ["Da recepção ao consultório, o mobiliário pode conectar os momentos da experiência e sustentar uma percepção de qualidade."] }
+        {
+          "title": "Confiança começa antes do atendimento",
+          "paragraphs": [
+            "Recepções e salas de espera estruturam a primeira impressão. Uma poltrona coerente com o projeto cria conforto e reforça o padrão de cuidado da clínica."
+          ]
+        },
+        {
+          "title": "O que o espaço precisa comunicar",
+          "items": [
+            "Acolhimento sem perder precisão.",
+            "Conforto para diferentes tempos de espera.",
+            "Organização visual e credibilidade profissional."
+          ]
+        },
+        {
+          "title": "Aplicações para uma jornada consistente",
+          "paragraphs": [
+            "Da recepção ao consultório, o mobiliário pode conectar os momentos da experiência e sustentar uma percepção de qualidade."
+          ]
+        }
       ],
-      "cta": { "title": "Cuidado percebido em cada ponto de contato", "text": "Conheça coleções e revestimentos adequados para a linguagem da sua clínica.", "action": { "label": "Ver tecidos para clínicas", "href": "tecidos/clinicas-esteticas" } }
+      "cta": {
+        "title": "Cuidado percebido em cada ponto de contato",
+        "text": "Conheça coleções e revestimentos adequados para a linguagem da sua clínica.",
+        "action": {
+          "label": "Ver tecidos para clínicas",
+          "href": "tecidos/clinicas-esteticas"
+        }
+      },
+      "content": {
+        "text1": "Clínicas | KARV",
+        "text2": "Conforto e confiança começam no ambiente",
+        "text3": "Uma clínica precisa parecer tão confiável quanto o atendimento",
+        "text4": "O mobiliário de uma clínica é parte da experiência de cuidado. Poltronas e peças de identidade ajudam a transmitir organização, confiança e um padrão de excelência que o paciente percebe imediatamente.",
+        "text5": "Por que esse nicho precisa de uma poltrona de identidade",
+        "text6": "Recepção, espera e atendimento precisam ser espaços de acolhimento. A poltrona certa reforça a sensação de cuidado e contribui para a percepção de profissionalismo da clínica.",
+        "text7": "O que o ambiente precisa reforçar",
+        "text8": "Segurança e serenidade para pacientes e acompanhantes",
+        "text9": "Atmosfera limpa, moderna e institucional",
+        "text10": "Valor percebido em cada ponto do espaço",
+        "text11": "Aplicações no ambiente",
+        "text12": "O mobiliário KARV funciona em diferentes áreas da operação clínica.",
+        "text13": "Recepção",
+        "text14": "Peças que acolhem e organizam a primeira impressão do paciente.",
+        "text15": "Sala de espera",
+        "text16": "Conforto e presença que suavizam o momento de espera.",
+        "text17": "Atendimento e consultas",
+        "text18": "Ambientes com mais presença, cuidado e profissionalismo visual.",
+        "text19": "Benefícios comerciais",
+        "text20": "Um ambiente bem estruturado reforça a percepção de valor do negócio e da marca.",
+        "text21": "Eleva a confiança",
+        "text22": "O paciente percebe mais solidez e cuidado no espaço.",
+        "text23": "Melhora a experiência",
+        "text24": "O atendimento se torna mais agradável, organizado e memorável.",
+        "text25": "Fortalece a reputação",
+        "text26": "Ambientes bem pensados reforçam a imagem da clínica no longo prazo.",
+        "text27": "Quando o ambiente transmite confiança, a clínica se destaca",
+        "text28": "A KARV desenvolve soluções que unem conforto, identidade e presença para cada espaço clínico.",
+        "text29": "Ver coleções",
+        "text30": "Falar com a KARV",
+        "text31": "Clínicas",
+        "text32": "Em clínicas, cada detalhe precisa transmitir segurança. O espaço precisa acolher o paciente, reforçar a autoridade do profissional e apoiar uma experiência organizada desde a chegada.",
+        "text33": "Ver produtos"
+      }
     },
     "nichos/estetica": {
-      "seo": { "title": "Estética | KARV", "description": "Poltronas para clínicas e espaços de estética que unem sofisticação, conforto e cuidado." },
-      "hero": { "eyebrow": "Estética", "title": "A experiência de beleza começa antes do procedimento", "text": "O espaço de estética precisa acolher, comunicar técnica e traduzir o cuidado que cada cliente busca.", "primaryCta": { "label": "Ver produtos", "href": "produtos" }, "secondaryCta": { "label": "Falar com a KARV", "href": "contact.whatsapp" } },
+      "seo": {
+        "title": "Estética | KARV",
+        "description": "Poltronas para clínicas e espaços de estética que unem sofisticação, conforto e cuidado."
+      },
+      "hero": {
+        "eyebrow": "Estética",
+        "title": "A experiência de beleza começa antes do procedimento",
+        "text": "O espaço de estética precisa acolher, comunicar técnica e traduzir o cuidado que cada cliente busca.",
+        "primaryCta": {
+          "label": "Ver produtos",
+          "href": "produtos"
+        },
+        "secondaryCta": {
+          "label": "Falar com a KARV",
+          "href": "contact.whatsapp"
+        }
+      },
       "sections": [
-        { "title": "Sofisticação que sustenta a confiança", "paragraphs": ["Em estética, a percepção de cuidado é construída pelo conjunto. Mobiliário com conforto e presença visual ajuda a tornar a experiência mais segura e desejável."] },
-        { "title": "Uma linguagem para bem-estar", "items": ["Acolhimento para espera e atendimento.", "Sensação de limpeza, leveza e organização.", "Materiais alinhados ao uso diário e ao posicionamento da marca."] },
-        { "title": "Do primeiro olhar ao retorno", "paragraphs": ["Uma composição consistente fortalece a sensação de valor, favorece recomendações e torna o ambiente parte da experiência de beleza."] }
+        {
+          "title": "Sofisticação que sustenta a confiança",
+          "paragraphs": [
+            "Em estética, a percepção de cuidado é construída pelo conjunto. Mobiliário com conforto e presença visual ajuda a tornar a experiência mais segura e desejável."
+          ]
+        },
+        {
+          "title": "Uma linguagem para bem-estar",
+          "items": [
+            "Acolhimento para espera e atendimento.",
+            "Sensação de limpeza, leveza e organização.",
+            "Materiais alinhados ao uso diário e ao posicionamento da marca."
+          ]
+        },
+        {
+          "title": "Do primeiro olhar ao retorno",
+          "paragraphs": [
+            "Uma composição consistente fortalece a sensação de valor, favorece recomendações e torna o ambiente parte da experiência de beleza."
+          ]
+        }
       ],
-      "cta": { "title": "Uma experiência de beleza merece conforto e presença", "text": "Explore as opções KARV para criar uma clínica de estética coerente com sua marca.", "action": { "label": "Ver produtos", "href": "produtos" } }
+      "cta": {
+        "title": "Uma experiência de beleza merece conforto e presença",
+        "text": "Explore as opções KARV para criar uma clínica de estética coerente com sua marca.",
+        "action": {
+          "label": "Ver produtos",
+          "href": "produtos"
+        }
+      },
+      "content": {
+        "text1": "Estética | KARV",
+        "text2": "A estética do ambiente impacta a percepção da marca",
+        "text3": "O ambiente reforça o valor do atendimento",
+        "text4": "Em espaços de estética, cada peça precisa equilibrar conforto, beleza e funcionalidade. Uma poltrona de identidade transforma a recepção em um ponto de diferenciação e ajuda o cliente a sentir que está em um lugar cuidado e premium.",
+        "text5": "Por que esse nicho precisa de uma poltrona de identidade",
+        "text6": "O tempo de espera e o momento de atendimento devem transmitir tranquilidade. O mobiliário certo cria uma atmosfera que valoriza a proposta do profissional e a confiança do cliente.",
+        "text7": "O que a experiência precisa transmitir",
+        "text8": "Conforto visual e físico durante a espera",
+        "text9": "Refinamento que acompanha a identidade da marca",
+        "text10": "Ambiente acolhedor para procedimentos e retorno",
+        "text11": "Aplicações no ambiente",
+        "text12": "As soluções KARV se encaixam bem em diferentes momentos da jornada do cliente.",
+        "text13": "Recepção e acolhimento",
+        "text14": "Espaços que recebem com sofisticação e reforçam a imagem da clínica ou salão.",
+        "text15": "Salas de atendimento",
+        "text16": "Conforto e presença que elevam a sensação de exclusividade do procedimento.",
+        "text17": "Áreas de relaxamento",
+        "text18": "Peças que ajudam o cliente a se sentir cuidado e valorizado antes e depois do atendimento.",
+        "text19": "Benefícios comerciais",
+        "text20": "Investir em identidade visual do ambiente é investir em percepção de valor.",
+        "text21": "Aumenta a percepção de premium",
+        "text22": "O espaço passa a transmitir mais sofisticação e cuidado.",
+        "text23": "Melhora a retenção",
+        "text24": "Clientes tendem a voltar quando o espaço é acolhedor e bem pensado.",
+        "text25": "Fortalece a recomendação",
+        "text26": "Ambientes memoráveis viram parte da narrativa da marca.",
+        "text27": "Quando o ambiente é parte do tratamento, a marca se torna inesquecível",
+        "text28": "A KARV entrega soluções que unem estética, conforto e posicionamento para transformar cada espaço em uma experiência premium.",
+        "text29": "Ver coleções",
+        "text30": "Falar com a KARV",
+        "text31": "Estética",
+        "text32": "Em estética, a experiência começa no acolhimento. O cliente entra buscando cuidado, relaxamento e um ambiente que transmita profissionalismo desde a primeira impressão.",
+        "text33": "Ver produtos"
+      }
     },
     "nichos/studios": {
-      "seo": { "title": "Studios | KARV", "description": "Poltronas para studios criativos e premium que desejam construir uma presença visual marcante." },
-      "hero": { "eyebrow": "Studios", "title": "Studios autorais pedem um ambiente que assine a experiência", "text": "Em espaços criativos, cada peça precisa contribuir para uma atmosfera reconhecível, funcional e pronta para ser compartilhada.", "primaryCta": { "label": "Ver produtos", "href": "produtos" }, "secondaryCta": { "label": "Falar com a KARV", "href": "contact.whatsapp" } },
+      "seo": {
+        "title": "Studios | KARV",
+        "description": "Poltronas para studios criativos e premium que desejam construir uma presença visual marcante."
+      },
+      "hero": {
+        "eyebrow": "Studios",
+        "title": "Studios autorais pedem um ambiente que assine a experiência",
+        "text": "Em espaços criativos, cada peça precisa contribuir para uma atmosfera reconhecível, funcional e pronta para ser compartilhada.",
+        "primaryCta": {
+          "label": "Ver produtos",
+          "href": "produtos"
+        },
+        "secondaryCta": {
+          "label": "Falar com a KARV",
+          "href": "contact.whatsapp"
+        }
+      },
       "sections": [
-        { "title": "O espaço como parte da autoria", "paragraphs": ["A poltrona pode funcionar como cenário, ponto de encontro e marca visual. Ela ajuda o studio a expressar sua linguagem sem comprometer o conforto."] },
-        { "title": "Para experiências com personalidade", "items": ["Visual forte para conteúdo e encontros presenciais.", "Conforto para longas jornadas criativas.", "Acabamentos que dialogam com a identidade do projeto."] },
-        { "title": "Uma presença que circula", "paragraphs": ["Quando o ambiente é memorável, ele ganha força em registros, indicações e relações contínuas com a comunidade do studio."] }
+        {
+          "title": "O espaço como parte da autoria",
+          "paragraphs": [
+            "A poltrona pode funcionar como cenário, ponto de encontro e marca visual. Ela ajuda o studio a expressar sua linguagem sem comprometer o conforto."
+          ]
+        },
+        {
+          "title": "Para experiências com personalidade",
+          "items": [
+            "Visual forte para conteúdo e encontros presenciais.",
+            "Conforto para longas jornadas criativas.",
+            "Acabamentos que dialogam com a identidade do projeto."
+          ]
+        },
+        {
+          "title": "Uma presença que circula",
+          "paragraphs": [
+            "Quando o ambiente é memorável, ele ganha força em registros, indicações e relações contínuas com a comunidade do studio."
+          ]
+        }
       ],
-      "cta": { "title": "Construa uma assinatura visual para o seu studio", "text": "Conheça coleções KARV que acompanham a ambição criativa do seu espaço.", "action": { "label": "Explorar produtos", "href": "produtos" } }
+      "cta": {
+        "title": "Construa uma assinatura visual para o seu studio",
+        "text": "Conheça coleções KARV que acompanham a ambição criativa do seu espaço.",
+        "action": {
+          "label": "Explorar produtos",
+          "href": "produtos"
+        }
+      },
+      "content": {
+        "text1": "Studios | KARV",
+        "text2": "Studios criativos precisam de ambientes que carreguem a marca",
+        "text3": "O ambiente é uma extensão do trabalho e da marca",
+        "text4": "Em studios, o mobiliário precisa dialogar com criatividade, presença visual e funcionalidade. Uma poltrona de identidade transforma o espaço em um elemento de posicionamento e reforça a imagem do projeto entregue.",
+        "text5": "Por que esse nicho precisa de uma poltrona de identidade",
+        "text6": "O cliente percebe o ambiente como parte do resultado. Uma peça bem escolhida reforça a personalidade do studio e melhora a percepção de profissionalismo e cuidado.",
+        "text7": "O que o ambiente precisa transmitir",
+        "text8": "Estética contemporânea e diferenciada",
+        "text9": "Conforto para encontros, sessões e produção",
+        "text10": "Presença de marca em cada detalhe visual",
+        "text11": "Aplicações no ambiente",
+        "text12": "As soluções KARV se encaixam bem em diferentes pontos do studio.",
+        "text13": "Recepção",
+        "text14": "Um espaço que prepara o cliente para a experiência e transmite valor desde a entrada.",
+        "text15": "Espaço de reunião",
+        "text16": "Conforto e presença visual para conversas, apresentações e encontros.",
+        "text17": "Produção e sessão",
+        "text18": "Peças que combinam funcionalidade com uma estética que reforça o conceito do studio.",
+        "text19": "Benefícios comerciais",
+        "text20": "Ambientes bem pensados geram mais impacto e mais valor percebido.",
+        "text21": "Eleva a imagem do studio",
+        "text22": "O espaço passa a representar com mais força a proposta da marca.",
+        "text23": "Fortalece a experiência",
+        "text24": "O cliente se sente mais envolvido e acolhido durante o atendimento.",
+        "text25": "Amplia a percepção de valor",
+        "text26": "Um ambiente com identidade cria uma memória mais forte e uma imagem mais premium.",
+        "text27": "Quando o ambiente comunica a marca, o studio se posiciona com mais força",
+        "text28": "A KARV cria móveis e poltronas que ajudam a transformar cada espaço em um ponto de identidade e presença.",
+        "text29": "Ver coleções",
+        "text30": "Falar com a KARV",
+        "text31": "Studios",
+        "text32": "Em studios, o espaço é parte do processo criativo. A experiência do cliente, a imagem da marca e a atmosfera do trabalho precisam caminhar juntos para gerar identidade e valor.",
+        "text33": "Ver produtos"
+      }
     },
     "nichos/tatuagem": {
-      "seo": { "title": "Tatuagem | KARV", "description": "Poltronas para estúdios de tatuagem que combinam resistência, conforto e identidade visual." },
-      "hero": { "eyebrow": "Tatuagem", "title": "Um estúdio de tatuagem pede presença, precisão e conforto", "text": "O ambiente sustenta horas de trabalho, relação de confiança e uma identidade visual que precisa ser própria.", "primaryCta": { "label": "Ver produtos", "href": "produtos" }, "secondaryCta": { "label": "Falar com a KARV", "href": "contact.whatsapp" } },
+      "seo": {
+        "title": "Tatuagem | KARV",
+        "description": "Poltronas para estúdios de tatuagem que combinam resistência, conforto e identidade visual."
+      },
+      "hero": {
+        "eyebrow": "Tatuagem",
+        "title": "Um estúdio de tatuagem pede presença, precisão e conforto",
+        "text": "O ambiente sustenta horas de trabalho, relação de confiança e uma identidade visual que precisa ser própria.",
+        "primaryCta": {
+          "label": "Ver produtos",
+          "href": "produtos"
+        },
+        "secondaryCta": {
+          "label": "Falar com a KARV",
+          "href": "contact.whatsapp"
+        }
+      },
       "sections": [
-        { "title": "Identidade também é permanência", "paragraphs": ["O mobiliário do studio precisa acompanhar uma rotina intensa e, ao mesmo tempo, ajudar o cliente a se sentir em um espaço seguro e autoral."] },
-        { "title": "O que importa para o studio", "items": ["Conforto para sessões prolongadas.", "Materiais e acabamentos adequados ao uso profissional.", "Uma estética memorável para um espaço de expressão."] },
-        { "title": "Experiência que vira recomendação", "paragraphs": ["Ambientes bem construídos tornam o processo mais acolhedor e reforçam a confiança em cada nova visita."] }
+        {
+          "title": "Identidade também é permanência",
+          "paragraphs": [
+            "O mobiliário do studio precisa acompanhar uma rotina intensa e, ao mesmo tempo, ajudar o cliente a se sentir em um espaço seguro e autoral."
+          ]
+        },
+        {
+          "title": "O que importa para o studio",
+          "items": [
+            "Conforto para sessões prolongadas.",
+            "Materiais e acabamentos adequados ao uso profissional.",
+            "Uma estética memorável para um espaço de expressão."
+          ]
+        },
+        {
+          "title": "Experiência que vira recomendação",
+          "paragraphs": [
+            "Ambientes bem construídos tornam o processo mais acolhedor e reforçam a confiança em cada nova visita."
+          ]
+        }
       ],
-      "cta": { "title": "Dê ao seu studio uma presença à altura do seu traço", "text": "Explore produtos e tecidos para montar uma composição singular.", "action": { "label": "Ver produtos", "href": "produtos" } }
+      "cta": {
+        "title": "Dê ao seu studio uma presença à altura do seu traço",
+        "text": "Explore produtos e tecidos para montar uma composição singular.",
+        "action": {
+          "label": "Ver produtos",
+          "href": "produtos"
+        }
+      },
+      "content": {
+        "text1": "Tatuagem | KARV",
+        "text2": "Um estúdio de tatuagem precisa falar com personalidade",
+        "text3": "O cliente sente o espaço antes mesmo da primeira sessão",
+        "text4": "Em estúdios de tatuagem, o mobiliário não é apenas funcional. Ele comunica estilo, autoridade e cuidado. Uma poltrona bem pensada ajuda a criar uma experiência mais segura, confortável e memorável para o cliente.",
+        "text5": "Por que esse nicho precisa de uma poltrona de identidade",
+        "text6": "O cliente entra em um estúdio para viver uma experiência íntima e personalizada. A poltrona precisa reforçar presença, conforto e uma estética alinhada ao trabalho do tatuador.",
+        "text7": "O que o ambiente transmite",
+        "text8": "Conforto para sessões longas e detalhadas",
+        "text9": "Estética marcante para fotos, redes e indicação",
+        "text10": "Profissionalismo que transmite confiança",
+        "text11": "Aplicações no ambiente",
+        "text12": "O mobiliário KARV funciona de forma natural em diferentes pontos do estúdio.",
+        "text13": "Área de atendimento",
+        "text14": "Poltronas que valorizam o momento de conversa, preparação e execução.",
+        "text15": "Recepção e espera",
+        "text16": "Elementos que deixam a chegada do cliente mais sofisticada e acolhedora.",
+        "text17": "Espaços de imagem",
+        "text18": "Peças fortes visualmente, ideais para reforçar o posicionamento da marca.",
+        "text19": "Benefícios comerciais",
+        "text20": "Uma proposta de mobiliário com identidade transforma o ambiente em um ativo de marca.",
+        "text21": "Eleva a percepção do espaço",
+        "text22": "O cliente percebe mais valor e cuidado desde o primeiro contato.",
+        "text23": "Fortalece a marca",
+        "text24": "O ambiente passa a ser um reflexo do estilo do profissional e da sua obra.",
+        "text25": "Gera mais recorrência",
+        "text26": "Experiências bem construídas aumentam a vontade de voltar e indicar.",
+        "text27": "Um estúdio com identidade merece um mobiliário que acompanhe o nível da sua marca",
+        "text28": "A KARV cria soluções que unem conforto, presença e presença visual para transformar cada visita em uma experiência premium.",
+        "text29": "Ver coleções",
+        "text30": "Falar com a KARV",
+        "text31": "Tatuagem",
+        "text32": "Na tatuagem, o ambiente é parte do trabalho. Cada detalhe reforça a identidade do artista, o cuidado da execução e a impressão que o cliente leva ao sair.",
+        "text33": "Ver produtos"
+      }
     },
     "tecidos": {
-      "seo": { "title": "Biblioteca de Tecidos KARV", "description": "Explore a Biblioteca de Tecidos KARV, uma curadoria institucional de revestimentos para ambientes, estilos e projetos." },
-      "hero": { "eyebrow": "Tecidos", "title": "Biblioteca de Tecidos KARV", "text": "Escolha revestimentos pensados para diferentes ambientes, estilos e necessidades, organizados pela Curadoria KARV.", "primaryCta": { "label": "Ver coleções", "href": "tecidos/colecoes" }, "secondaryCta": { "label": "Ver produtos", "href": "produtos" } },
+      "seo": {
+        "title": "Biblioteca de Tecidos KARV",
+        "description": "Explore a Biblioteca de Tecidos KARV, uma curadoria institucional de revestimentos para ambientes, estilos e projetos."
+      },
+      "hero": {
+        "eyebrow": "Tecidos",
+        "title": "Biblioteca de Tecidos KARV",
+        "text": "Escolha revestimentos pensados para diferentes ambientes, estilos e necessidades, organizados pela Curadoria KARV.",
+        "primaryCta": {
+          "label": "Ver coleções",
+          "href": "tecidos/colecoes"
+        },
+        "secondaryCta": {
+          "label": "Ver produtos",
+          "href": "produtos"
+        }
+      },
       "cards": [
-        { "title": "Premium", "description": "Revestimentos para ambientes que valorizam sofisticação, conforto e percepção de valor.", "href": "tecidos/premium" },
-        { "title": "Clínicas Estéticas", "description": "Uma curadoria para espaços com linguagem visual limpa, acolhedora e profissional.", "href": "tecidos/clinicas-esteticas" },
-        { "title": "Barbearias", "description": "Escolhas com personalidade, presença visual e atmosfera marcante para o conceito do espaço.", "href": "tecidos/barbearia" },
-        { "title": "Pet Friendly", "description": "Propostas acolhedoras e práticas para ambientes que convivem com animais no dia a dia.", "href": "tecidos/pet-friendly" },
-        { "title": "Coleções KARV", "description": "Uma seleção própria da KARV, pensada para identidade visual, acabamento e experiência do ambiente.", "href": "tecidos/colecoes" }
+        {
+          "title": "Premium",
+          "description": "Revestimentos para ambientes que valorizam sofisticação, conforto e percepção de valor.",
+          "href": "tecidos/premium"
+        },
+        {
+          "title": "Clínicas Estéticas",
+          "description": "Uma curadoria para espaços com linguagem visual limpa, acolhedora e profissional.",
+          "href": "tecidos/clinicas-esteticas"
+        },
+        {
+          "title": "Barbearias",
+          "description": "Escolhas com personalidade, presença visual e atmosfera marcante para o conceito do espaço.",
+          "href": "tecidos/barbearia"
+        },
+        {
+          "title": "Pet Friendly",
+          "description": "Propostas acolhedoras e práticas para ambientes que convivem com animais no dia a dia.",
+          "href": "tecidos/pet-friendly"
+        },
+        {
+          "title": "Coleções KARV",
+          "description": "Uma seleção própria da KARV, pensada para identidade visual, acabamento e experiência do ambiente.",
+          "href": "tecidos/colecoes"
+        }
       ],
       "sections": [
-        { "title": "Uma biblioteca organizada por ambiente, identidade e objetivo", "paragraphs": ["A KARV desenvolve uma biblioteca própria de revestimentos para orientar a escolha com clareza e reforçar a experiência do espaço."], "actions": [{ "label": "Ver produtos", "href": "produtos" }, { "label": "Explorar nichos", "href": "nichos" }, { "label": "Conhecer coleções", "href": "tecidos/colecoes" }] }
+        {
+          "title": "Uma biblioteca organizada por ambiente, identidade e objetivo",
+          "paragraphs": [
+            "A KARV desenvolve uma biblioteca própria de revestimentos para orientar a escolha com clareza e reforçar a experiência do espaço."
+          ],
+          "actions": [
+            {
+              "label": "Ver produtos",
+              "href": "produtos"
+            },
+            {
+              "label": "Explorar nichos",
+              "href": "nichos"
+            },
+            {
+              "label": "Conhecer coleções",
+              "href": "tecidos/colecoes"
+            }
+          ]
+        }
       ],
-      "cta": { "title": "A experiência do ambiente começa pela curadoria certa", "text": "A Biblioteca de Tecidos KARV organiza a seleção de revestimentos com foco em identidade, aplicação e resultado final.", "action": { "label": "Ver produtos", "href": "produtos" } }
+      "cta": {
+        "title": "A experiência do ambiente começa pela curadoria certa",
+        "text": "A Biblioteca de Tecidos KARV organiza a seleção de revestimentos com foco em identidade, aplicação e resultado final.",
+        "action": {
+          "label": "Ver produtos",
+          "href": "produtos"
+        }
+      },
+      "content": {
+        "text1": "Biblioteca de Tecidos KARV",
+        "text2": "Curadoria KARV",
+        "text3": "Uma biblioteca organizada por ambiente, identidade e objetivo.",
+        "text4": "A KARV desenvolve uma biblioteca própria de revestimentos para orientar a escolha com clareza e reforçar a experiência do espaço.",
+        "text5": "Conexão comercial",
+        "text6": "A biblioteca funciona como guia de decisão entre ambiente, produto e nicho.",
+        "text7": "A curadoria KARV orienta a escolha do revestimento com base na aplicação, na identidade do projeto e na experiência do espaço.",
+        "text8": "Ver produtos",
+        "text9": "Explorar nichos",
+        "text10": "Conhecer coleções",
+        "text11": "A experiência do ambiente começa pela curadoria certa.",
+        "text12": "A Biblioteca de Tecidos KARV organiza a seleção de revestimentos com foco em identidade, aplicação e resultado final.",
+        "text13": "Premium",
+        "text14": "Revestimentos para ambientes que valorizam sofisticação, conforto e percepção de valor.",
+        "text15": "Clínicas Estéticas",
+        "text16": "Uma curadoria para espaços com linguagem visual limpa, acolhedora e profissional.",
+        "text17": "Barbearias",
+        "text18": "Escolhas com personalidade, presença visual e atmosfera marcante para o conceito do espaço.",
+        "text19": "Pet Friendly",
+        "text20": "Propostas acolhedoras e práticas para ambientes que convivem com animais no dia a dia.",
+        "text21": "Coleções KARV",
+        "text22": "Uma seleção própria da KARV, pensada para identidade visual, acabamento e experiência do ambiente.",
+        "text23": "Explore a Biblioteca de Tecidos KARV, uma curadoria institucional de revestimentos para ambientes, estilos e projetos.",
+        "text24": "Tecidos",
+        "text25": "Escolha revestimentos pensados para diferentes ambientes, estilos e necessidades, organizados pela Curadoria KARV.",
+        "text26": "Ver coleções"
+      }
     },
     "tecidos/premium": {
-      "seo": { "title": "Tecidos Premium | KARV", "description": "Revestimentos KARV para ambientes que valorizam sofisticação, conforto e percepção de valor." },
-      "hero": { "eyebrow": "Tecidos premium", "title": "Revestimentos para ambientes que fazem da sofisticação uma experiência", "text": "Uma curadoria para projetos que desejam presença, conforto e acabamento cuidadoso.", "primaryCta": { "label": "Ver produtos", "href": "produtos" }, "secondaryCta": { "label": "Falar com a KARV", "href": "contact.whatsapp" } },
+      "seo": {
+        "title": "Tecidos Premium | KARV",
+        "description": "Revestimentos KARV para ambientes que valorizam sofisticação, conforto e percepção de valor."
+      },
+      "hero": {
+        "eyebrow": "Tecidos premium",
+        "title": "Revestimentos para ambientes que fazem da sofisticação uma experiência",
+        "text": "Uma curadoria para projetos que desejam presença, conforto e acabamento cuidadoso.",
+        "primaryCta": {
+          "label": "Ver produtos",
+          "href": "produtos"
+        },
+        "secondaryCta": {
+          "label": "Falar com a KARV",
+          "href": "contact.whatsapp"
+        }
+      },
       "sections": [
-        { "title": "Matéria que reforça o valor percebido", "paragraphs": ["Tecidos premium ajudam a estruturar uma leitura mais refinada do ambiente e a sustentar uma experiência de conforto desde o primeiro contato."] },
-        { "title": "Para projetos de alta percepção", "items": ["Texturas que valorizam luz, volume e acabamento.", "Conforto para uso recorrente.", "Uma seleção que dialoga com hospitalidade, clínicas e espaços autorais."] }
+        {
+          "title": "Matéria que reforça o valor percebido",
+          "paragraphs": [
+            "Tecidos premium ajudam a estruturar uma leitura mais refinada do ambiente e a sustentar uma experiência de conforto desde o primeiro contato."
+          ]
+        },
+        {
+          "title": "Para projetos de alta percepção",
+          "items": [
+            "Texturas que valorizam luz, volume e acabamento.",
+            "Conforto para uso recorrente.",
+            "Uma seleção que dialoga com hospitalidade, clínicas e espaços autorais."
+          ]
+        }
       ],
-      "cta": { "title": "Escolha um revestimento à altura do seu projeto", "text": "Explore as coleções KARV e encontre uma composição coerente com sua marca.", "action": { "label": "Ver coleções", "href": "tecidos/colecoes" } }
+      "cta": {
+        "title": "Escolha um revestimento à altura do seu projeto",
+        "text": "Explore as coleções KARV e encontre uma composição coerente com sua marca.",
+        "action": {
+          "label": "Ver coleções",
+          "href": "tecidos/colecoes"
+        }
+      },
+      "content": {
+        "text1": "Seleção premium",
+        "text2": "Uma curadoria para ambientes de alto padrão.",
+        "text3": "A KARV desenvolve uma biblioteca própria de revestimentos para orientar a escolha com clareza, reforçando a identidade do projeto e a experiência do espaço.",
+        "text4": "Aplicações recomendadas",
+        "text5": "Benefícios da curadoria",
+        "text6": "A escolha certa começa pela narrativa do ambiente.",
+        "text7": "Explore a Biblioteca de Tecidos KARV e encontre a direção ideal para cada projeto.",
+        "text8": "Voltar à biblioteca",
+        "text9": "Uma linguagem visual mais elaborada, pensada para espaços que desejam presença, conforto e sofisticação.",
+        "text10": "A seleção favorece uma sensação acolhedora, ideal para projetos que valorizam o bem-estar do ambiente.",
+        "text11": "Percepção de valor",
+        "text12": "A curadoria ajuda a construir uma imagem de alto padrão, com identidade visual forte e acabamento cuidadoso.",
+        "text13": "Salas e recepções com proposta de destaque",
+        "text14": "Ambientes residenciais de alto padrão",
+        "text15": "Espaços que valorizam presença e sofisticação",
+        "text16": "Seleção com linguagem visual sofisticada",
+        "text17": "Orientação para ambientes que desejam valor percebido",
+        "text18": "Curadoria KARV",
+        "text19": "Para ambientes que valorizam sofisticação, conforto e percepção de valor, a Curadoria KARV organiza revestimentos com presença refinada e linguagem acolhedora.",
+        "text20": "Ver coleções",
+        "text21": "Atmosfera refinada",
+        "text22": "Proposta acolhedora e elegante",
+        "text23": "Revestimentos Premium",
+        "text24": "Tecidos KARV",
+        "text25": "Conforto como parte da experiência"
+      }
     },
     "tecidos/clinicas-esteticas": {
-      "seo": { "title": "Tecidos para Clínicas Estéticas | KARV", "description": "Curadoria KARV de revestimentos para clínicas estéticas, bem-estar e atendimento profissional." },
-      "hero": { "eyebrow": "Clínicas estéticas", "title": "Revestimentos para espaços de cuidado, leveza e confiança", "text": "Uma seleção para clínicas que desejam acolher com uma linguagem visual limpa e profissional.", "primaryCta": { "label": "Ver produtos", "href": "produtos" }, "secondaryCta": { "label": "Falar com a KARV", "href": "contact.whatsapp" } },
+      "seo": {
+        "title": "Tecidos para Clínicas Estéticas | KARV",
+        "description": "Curadoria KARV de revestimentos para clínicas estéticas, bem-estar e atendimento profissional."
+      },
+      "hero": {
+        "eyebrow": "Clínicas estéticas",
+        "title": "Revestimentos para espaços de cuidado, leveza e confiança",
+        "text": "Uma seleção para clínicas que desejam acolher com uma linguagem visual limpa e profissional.",
+        "primaryCta": {
+          "label": "Ver produtos",
+          "href": "produtos"
+        },
+        "secondaryCta": {
+          "label": "Falar com a KARV",
+          "href": "contact.whatsapp"
+        }
+      },
       "sections": [
-        { "title": "Uma seleção para quem valoriza cuidado e presença visual", "paragraphs": ["A curadoria equilibra aplicação, conforto e uma sensação de limpeza que acompanha a experiência clínica."] },
-        { "title": "Aplicações recomendadas", "items": ["Recepções e salas de espera.", "Ambientes de avaliação e atendimento.", "Espaços de bem-estar e recuperação."] },
-        { "title": "Benefícios da curadoria", "paragraphs": ["Escolhas coerentes ajudam a criar uma atmosfera acolhedora, confiável e alinhada ao padrão de cuidado da clínica."] }
+        {
+          "title": "Uma seleção para quem valoriza cuidado e presença visual",
+          "paragraphs": [
+            "A curadoria equilibra aplicação, conforto e uma sensação de limpeza que acompanha a experiência clínica."
+          ]
+        },
+        {
+          "title": "Aplicações recomendadas",
+          "items": [
+            "Recepções e salas de espera.",
+            "Ambientes de avaliação e atendimento.",
+            "Espaços de bem-estar e recuperação."
+          ]
+        },
+        {
+          "title": "Benefícios da curadoria",
+          "paragraphs": [
+            "Escolhas coerentes ajudam a criar uma atmosfera acolhedora, confiável e alinhada ao padrão de cuidado da clínica."
+          ]
+        }
       ],
-      "cta": { "title": "Cada ambiente merece uma leitura visual clara e acolhedora", "text": "Converse com a KARV para encontrar a melhor composição para sua clínica.", "action": { "label": "Falar com a KARV", "href": "contact.whatsapp" } }
+      "cta": {
+        "title": "Cada ambiente merece uma leitura visual clara e acolhedora",
+        "text": "Converse com a KARV para encontrar a melhor composição para sua clínica.",
+        "action": {
+          "label": "Falar com a KARV",
+          "href": "contact.whatsapp"
+        }
+      },
+      "content": {
+        "text1": "Tecidos para Clínicas e Estética",
+        "text2": "Ambientes profissionais",
+        "text3": "Uma seleção para quem valoriza cuidado e presença visual.",
+        "text4": "Em clínicas e estética, cada detalhe comunica confiança. A Curadoria KARV contribui para uma experiência visual mais alinhada ao propósito do ambiente.",
+        "text5": "Aplicações recomendadas",
+        "text6": "Benefícios da curadoria",
+        "text7": "Cada ambiente merece uma leitura visual clara e acolhedora.",
+        "text8": "Explore a Biblioteca de Tecidos KARV para encontrar uma proposta alinhada ao seu projeto.",
+        "text9": "Voltar à biblioteca",
+        "text10": "A seleção reforça uma imagem contemporânea, organizada e acolhedora para ambientes profissionais.",
+        "text11": "Acolhimento no primeiro contato",
+        "text12": "A proposta visual ajuda a transmitir cuidado, presença e conforto desde a recepção.",
+        "text13": "Os revestimentos contribuem para uma apresentação sofisticada e alinhada ao posicionamento do espaço.",
+        "text14": "Espaços que buscam uma imagem contemporânea",
+        "text15": "Ambiente visualmente equilibrado",
+        "text16": "Sensação de acolhimento e cuidado",
+        "text17": "Apresentação profissional e atual",
+        "text18": "Curadoria KARV",
+        "text19": "A Curadoria KARV organiza revestimentos que favorecem uma imagem limpa, acolhedora e contemporânea para clínicas e espaços de estética.",
+        "text20": "Linguagem visual limpa",
+        "text21": "Identidade profissional",
+        "text22": "Tecidos KARV"
+      }
     },
     "tecidos/barbearia": {
-      "seo": { "title": "Tecidos para Barbearias | KARV", "description": "Curadoria KARV de tecidos e revestimentos para barbearias com presença visual e personalidade." },
-      "hero": { "eyebrow": "Barbearias", "title": "Revestimentos que ajudam a construir o ritual da barbearia", "text": "Escolhas com personalidade, conforto e presença para um ambiente que precisa ser lembrado.", "primaryCta": { "label": "Ver produtos", "href": "produtos" }, "secondaryCta": { "label": "Falar com a KARV", "href": "contact.whatsapp" } },
+      "seo": {
+        "title": "Tecidos para Barbearias | KARV",
+        "description": "Curadoria KARV de tecidos e revestimentos para barbearias com presença visual e personalidade."
+      },
+      "hero": {
+        "eyebrow": "Barbearias",
+        "title": "Revestimentos que ajudam a construir o ritual da barbearia",
+        "text": "Escolhas com personalidade, conforto e presença para um ambiente que precisa ser lembrado.",
+        "primaryCta": {
+          "label": "Ver produtos",
+          "href": "produtos"
+        },
+        "secondaryCta": {
+          "label": "Falar com a KARV",
+          "href": "contact.whatsapp"
+        }
+      },
       "sections": [
-        { "title": "A matéria também comunica estilo", "paragraphs": ["O revestimento cria textura, profundidade e a sensação de qualidade que acompanha o atendimento."] },
-        { "title": "Para uma experiência com assinatura", "items": ["Cores e texturas que reforçam identidade.", "Conforto para atendimento e espera.", "Seleção adequada a uma rotina comercial intensa."] },
-        { "title": "Composição que se torna cenário", "paragraphs": ["A escolha certa ajuda a conectar mobiliário, iluminação e linguagem da marca em um espaço pronto para viver e compartilhar."] }
+        {
+          "title": "A matéria também comunica estilo",
+          "paragraphs": [
+            "O revestimento cria textura, profundidade e a sensação de qualidade que acompanha o atendimento."
+          ]
+        },
+        {
+          "title": "Para uma experiência com assinatura",
+          "items": [
+            "Cores e texturas que reforçam identidade.",
+            "Conforto para atendimento e espera.",
+            "Seleção adequada a uma rotina comercial intensa."
+          ]
+        },
+        {
+          "title": "Composição que se torna cenário",
+          "paragraphs": [
+            "A escolha certa ajuda a conectar mobiliário, iluminação e linguagem da marca em um espaço pronto para viver e compartilhar."
+          ]
+        }
       ],
-      "cta": { "title": "Encontre a matéria que dá corpo à sua barbearia", "text": "Explore produtos e coleções para formar uma composição completa.", "action": { "label": "Voltar à biblioteca", "href": "tecidos" } }
+      "cta": {
+        "title": "Encontre a matéria que dá corpo à sua barbearia",
+        "text": "Explore produtos e coleções para formar uma composição completa.",
+        "action": {
+          "label": "Voltar à biblioteca",
+          "href": "tecidos"
+        }
+      },
+      "content": {
+        "text1": "Revestimentos para Barbearias",
+        "text2": "Identidade marcante",
+        "text3": "Uma curadoria para espaços com caráter e presença.",
+        "text4": "Em barbearias, a experiência do ambiente é parte da marca. A Curadoria KARV ajuda a traduzir essa personalidade com clareza visual.",
+        "text5": "Aplicações recomendadas",
+        "text6": "Benefícios da curadoria",
+        "text7": "A presença do espaço pode ser tão importante quanto o atendimento.",
+        "text8": "Acesse a Biblioteca de Tecidos KARV para construir uma experiência visual mais forte.",
+        "text9": "Voltar à biblioteca",
+        "text10": "A seleção valoriza ambientes com presença forte, identidade marcante e linguagem mais assertiva.",
+        "text11": "Tons e composições mais profundos ajudam a construir uma experiência visual distinta.",
+        "text12": "Presença no ambiente",
+        "text13": "Os revestimentos reforçam a percepção do espaço como um lugar com caráter próprio e memorável.",
+        "text14": "Áreas de atendimento e recepção",
+        "text15": "Espaços de espera com identidade forte",
+        "text16": "Ambientes que desejam uma presença visual marcante",
+        "text17": "Linguagem visual com personalidade",
+        "text18": "Posicionamento claro para o conceito do espaço",
+        "text19": "Curadoria KARV",
+        "text20": "A Curadoria KARV organiza opções com presença visual marcante para barbearias que desejam uma identidade forte e uma atmosfera masculina.",
+        "text21": "Personalidade visual",
+        "text22": "Atmosfera masculina",
+        "text23": "Tecidos KARV",
+        "text24": "Atmosfera mais marcante e memorável"
+      }
     },
     "tecidos/pet-friendly": {
-      "seo": { "title": "Tecidos Pet Friendly | KARV", "description": "Revestimentos KARV para ambientes que convivem com animais e valorizam conforto, praticidade e identidade." },
-      "hero": { "eyebrow": "Pet friendly", "title": "Conforto e praticidade para ambientes que vivem com animais", "text": "Uma curadoria acolhedora para projetos que desejam equilibrar rotina, cuidado e presença visual.", "primaryCta": { "label": "Ver produtos", "href": "produtos" }, "secondaryCta": { "label": "Falar com a KARV", "href": "contact.whatsapp" } },
+      "seo": {
+        "title": "Tecidos Pet Friendly | KARV",
+        "description": "Revestimentos KARV para ambientes que convivem com animais e valorizam conforto, praticidade e identidade."
+      },
+      "hero": {
+        "eyebrow": "Pet friendly",
+        "title": "Conforto e praticidade para ambientes que vivem com animais",
+        "text": "Uma curadoria acolhedora para projetos que desejam equilibrar rotina, cuidado e presença visual.",
+        "primaryCta": {
+          "label": "Ver produtos",
+          "href": "produtos"
+        },
+        "secondaryCta": {
+          "label": "Falar com a KARV",
+          "href": "contact.whatsapp"
+        }
+      },
       "sections": [
-        { "title": "Uma escolha pensada para a vida real", "paragraphs": ["Ambientes que recebem animais pedem materiais que acompanhem a rotina sem perder conforto e intenção estética."] },
-        { "title": "O que a curadoria considera", "items": ["Uso recorrente e manutenção cotidiana.", "Conforto para pessoas e animais.", "Texturas e cores que sustentam uma atmosfera acolhedora."] },
-        { "title": "Praticidade com identidade", "paragraphs": ["A seleção ajuda a criar espaços funcionais que continuam expressando a personalidade do projeto."] }
+        {
+          "title": "Uma escolha pensada para a vida real",
+          "paragraphs": [
+            "Ambientes que recebem animais pedem materiais que acompanhem a rotina sem perder conforto e intenção estética."
+          ]
+        },
+        {
+          "title": "O que a curadoria considera",
+          "items": [
+            "Uso recorrente e manutenção cotidiana.",
+            "Conforto para pessoas e animais.",
+            "Texturas e cores que sustentam uma atmosfera acolhedora."
+          ]
+        },
+        {
+          "title": "Praticidade com identidade",
+          "paragraphs": [
+            "A seleção ajuda a criar espaços funcionais que continuam expressando a personalidade do projeto."
+          ]
+        }
       ],
-      "cta": { "title": "Crie um ambiente acolhedor para todas as presenças", "text": "Conheça revestimentos e produtos que se adaptam à sua rotina.", "action": { "label": "Voltar à biblioteca", "href": "tecidos" } }
+      "cta": {
+        "title": "Crie um ambiente acolhedor para todas as presenças",
+        "text": "Conheça revestimentos e produtos que se adaptam à sua rotina.",
+        "action": {
+          "label": "Voltar à biblioteca",
+          "href": "tecidos"
+        }
+      },
+      "content": {
+        "text1": "Rotina acolhedora",
+        "text2": "Uma curadoria para espaços que precisam de praticidade e presença.",
+        "text3": "A KARV entende que o ambiente precisa funcionar bem para a rotina das pessoas e dos animais. Por isso, a biblioteca organiza opções com linguagem prática e acolhedora.",
+        "text4": "Aplicações recomendadas",
+        "text5": "Benefícios da curadoria",
+        "text6": "Praticidade e acolhimento podem caminhar juntos.",
+        "text7": "Conheça a Biblioteca de Tecidos KARV e escolha uma proposta alinhada à rotina do seu projeto.",
+        "text8": "Voltar à biblioteca",
+        "text9": "A seleção favorece ambientes que precisam de praticidade no dia a dia sem perder o conforto visual.",
+        "text10": "A proposta acolhe quem vive com animais em casa ou em ambientes compartilhados.",
+        "text11": "A curadoria organiza opções que dialogam com a realidade cotidiana de espaços ativos.",
+        "text12": "Residências com rotina intensa",
+        "text13": "Ambientes compartilhados com animais",
+        "text14": "Espaços que valorizam praticidade e acolhimento",
+        "text15": "Experiência mais prática para o cotidiano",
+        "text16": "Ambiente acolhedor e funcional",
+        "text17": "Leitura visual equilibrada para uso frequente",
+        "text18": "Curadoria KARV",
+        "text19": "Para ambientes que convivem com animais no dia a dia, a Curadoria KARV organiza escolhas pensadas para facilitar a rotina e oferecer conforto.",
+        "text20": "Ver coleções",
+        "text21": "Rotina mais simples",
+        "text22": "Uso frequente",
+        "text23": "Revestimentos Pet Friendly",
+        "text24": "Tecidos KARV",
+        "text25": "Conforto diário"
+      }
     },
     "tecidos/colecoes": {
-      "seo": { "title": "Coleções de Tecidos KARV", "description": "Conheça as coleções de revestimentos KARV para criar ambientes com identidade, acabamento e experiência." },
-      "hero": { "eyebrow": "Coleções KARV", "title": "Uma curadoria de revestimentos para dar coerência ao projeto", "text": "Coleções organizadas para conectar identidade visual, aplicação profissional e experiência do ambiente.", "primaryCta": { "label": "Ver produtos", "href": "produtos" }, "secondaryCta": { "label": "Explorar nichos", "href": "nichos" } },
+      "seo": {
+        "title": "Coleções de Tecidos KARV",
+        "description": "Conheça as coleções de revestimentos KARV para criar ambientes com identidade, acabamento e experiência."
+      },
+      "hero": {
+        "eyebrow": "Coleções KARV",
+        "title": "Uma curadoria de revestimentos para dar coerência ao projeto",
+        "text": "Coleções organizadas para conectar identidade visual, aplicação profissional e experiência do ambiente.",
+        "primaryCta": {
+          "label": "Ver produtos",
+          "href": "produtos"
+        },
+        "secondaryCta": {
+          "label": "Explorar nichos",
+          "href": "nichos"
+        }
+      },
       "sections": [
-        { "title": "Coleções que ajudam a decidir com clareza", "paragraphs": ["A biblioteca KARV reúne referências para orientar escolhas de acabamento, conforto e presença visual ao longo do projeto."] },
-        { "title": "Como usar a curadoria", "items": ["Parta da sensação que o espaço deve transmitir.", "Considere a rotina e a aplicação da poltrona.", "Conecte revestimento, produto e nicho em uma mesma linguagem."] },
-        { "title": "Uma base para experiências consistentes", "paragraphs": ["Cada coleção apoia uma composição que funciona no uso e reforça o que a marca deseja comunicar."] }
+        {
+          "title": "Coleções que ajudam a decidir com clareza",
+          "paragraphs": [
+            "A biblioteca KARV reúne referências para orientar escolhas de acabamento, conforto e presença visual ao longo do projeto."
+          ]
+        },
+        {
+          "title": "Como usar a curadoria",
+          "items": [
+            "Parta da sensação que o espaço deve transmitir.",
+            "Considere a rotina e a aplicação da poltrona.",
+            "Conecte revestimento, produto e nicho em uma mesma linguagem."
+          ]
+        },
+        {
+          "title": "Uma base para experiências consistentes",
+          "paragraphs": [
+            "Cada coleção apoia uma composição que funciona no uso e reforça o que a marca deseja comunicar."
+          ]
+        }
       ],
-      "cta": { "title": "Transforme a curadoria em uma escolha de projeto", "text": "Explore a biblioteca completa e converse com a KARV sobre sua aplicação.", "action": { "label": "Voltar à biblioteca", "href": "tecidos" } }
+      "cta": {
+        "title": "Transforme a curadoria em uma escolha de projeto",
+        "text": "Explore a biblioteca completa e converse com a KARV sobre sua aplicação.",
+        "action": {
+          "label": "Voltar à biblioteca",
+          "href": "tecidos"
+        }
+      },
+      "content": {
+        "text1": "Coleções KARV",
+        "text2": "Curadoria em expansão",
+        "text3": "Uma biblioteca em constante construção.",
+        "text4": "A Biblioteca de Tecidos KARV reúne uma seleção própria de revestimentos e abre espaço para novas coleções, sempre pensadas para fortalecer a experiência do ambiente.",
+        "text5": "Hub de coleções",
+        "text6": "A coleção KARV funciona como ponto de entrada para a experiência do projeto.",
+        "text7": "A partir da curadoria, o cliente consegue avançar até a biblioteca de tecidos, os produtos e os nichos mais alinhados à proposta.",
+        "text8": "Novas coleções serão incorporadas à biblioteca conforme o projeto evolui.",
+        "text9": "Enquanto isso, a Curadoria KARV já orienta a escolha por ambientes, identidade e intenção do espaço.",
+        "text10": "Explorar biblioteca",
+        "text11": "Cada coleção é pensada para reforçar a linguagem do ambiente e o posicionamento da proposta.",
+        "text12": "A curadoria organiza a seleção com foco na harmonia e na leitura visual do projeto.",
+        "text13": "Acabamento e aplicação",
+        "text14": "A experiência do espaço é considerada desde a composição visual até o uso cotidiano.",
+        "text15": "Curadoria KARV",
+        "text16": "A KARV desenvolve coleções exclusivas que unem identidade visual, paleta de cores, acabamento, aplicação e a experiência do ambiente.",
+        "text17": "Voltar à biblioteca",
+        "text18": "Aprofunde a seleção por ambiente, aplicação e intenção do espaço.",
+        "text19": "Identidade visual",
+        "text20": "Paleta de cores",
+        "text21": "Biblioteca de tecidos",
+        "text22": "Produtos KARV",
+        "text23": "Tecidos KARV",
+        "text24": "Conecte a curadoria visual às poltronas e coleções da marca.",
+        "text25": "Nichos estratégicos",
+        "text26": "Veja como a curadoria se adapta às demandas de cada segmento."
+      }
     },
     "blog": {
-      "seo": { "title": "Blog editorial | KARV", "description": "Conteúdo editorial, institucional e estratégico da KARV sobre mobiliário, nichos e tecidos para ambientes comerciais." },
-      "hero": { "eyebrow": "Blog editorial", "title": "Conteúdo KARV para autoridade e decisão", "text": "Publicações pensadas para orientar clientes, parceiros e projetos sobre mobiliário de identidade, nichos, tecidos e valor percebido do ambiente.", "primaryCta": { "label": "Explorar produtos", "href": "produtos" }, "secondaryCta": { "label": "Ver nichos", "href": "nichos" } },
+      "seo": {
+        "title": "Blog editorial | KARV",
+        "description": "Conteúdo editorial, institucional e estratégico da KARV sobre mobiliário, nichos e tecidos para ambientes comerciais."
+      },
+      "hero": {
+        "eyebrow": "Blog editorial",
+        "title": "Conteúdo KARV para autoridade e decisão",
+        "text": "Publicações pensadas para orientar clientes, parceiros e projetos sobre mobiliário de identidade, nichos, tecidos e valor percebido do ambiente.",
+        "primaryCta": {
+          "label": "Explorar produtos",
+          "href": "produtos"
+        },
+        "secondaryCta": {
+          "label": "Ver nichos",
+          "href": "nichos"
+        }
+      },
       "cards": [
-        { "title": "Mobiliário de identidade", "description": "Por que a poltrona é um elemento central para comunicar a proposta do ambiente e reforçar a imagem do negócio.", "href": "blog/mobiliario-de-identidade" },
-        { "title": "Poltronas personalizadas para negócios", "description": "Como peças pensadas para o contexto do projeto ajudam a dar presença, valor e identidade ao espaço comercial.", "href": "blog/poltronas-personalizadas-para-negocios" },
-        { "title": "Como escolher tecido para poltrona comercial", "description": "Um guia editorial para compreender a relação entre revestimento, ambiente e percepção de valor.", "href": "blog/como-escolher-tecido-para-poltrona-comercial" },
-        { "title": "Poltronas para clínicas e estética", "description": "Como o mobiliário reforça confiança, sofisticação e cuidado em ambientes clínicos e de beleza.", "href": "blog/poltronas-para-clinicas-esteticas" },
-        { "title": "Poltronas para barbearias", "description": "Por que a poltrona ajuda a construir uma identidade forte e uma experiência memorável no espaço.", "href": "blog/poltronas-para-barbearias" }
+        {
+          "title": "Mobiliário de identidade",
+          "description": "Por que a poltrona é um elemento central para comunicar a proposta do ambiente e reforçar a imagem do negócio.",
+          "href": "blog/mobiliario-de-identidade"
+        },
+        {
+          "title": "Poltronas personalizadas para negócios",
+          "description": "Como peças pensadas para o contexto do projeto ajudam a dar presença, valor e identidade ao espaço comercial.",
+          "href": "blog/poltronas-personalizadas-para-negocios"
+        },
+        {
+          "title": "Como escolher tecido para poltrona comercial",
+          "description": "Um guia editorial para compreender a relação entre revestimento, ambiente e percepção de valor.",
+          "href": "blog/como-escolher-tecido-para-poltrona-comercial"
+        },
+        {
+          "title": "Poltronas para clínicas e estética",
+          "description": "Como o mobiliário reforça confiança, sofisticação e cuidado em ambientes clínicos e de beleza.",
+          "href": "blog/poltronas-para-clinicas-esteticas"
+        },
+        {
+          "title": "Poltronas para barbearias",
+          "description": "Por que a poltrona ajuda a construir uma identidade forte e uma experiência memorável no espaço.",
+          "href": "blog/poltronas-para-barbearias"
+        }
       ],
       "sections": [
-        { "title": "Artigos estruturados para SEO tradicional e respostas de IA", "paragraphs": ["Cada publicação reforça a visão da KARV como mobiliário de identidade, com conteúdo claro, útil e comercial para quem pensa o espaço como protagonista."] }
+        {
+          "title": "Artigos estruturados para SEO tradicional e respostas de IA",
+          "paragraphs": [
+            "Cada publicação reforça a visão da KARV como mobiliário de identidade, com conteúdo claro, útil e comercial para quem pensa o espaço como protagonista."
+          ]
+        }
       ],
-      "cta": { "title": "Conheça o universo KARV além do conteúdo editorial", "text": "Use o blog como ponto de partida para explorar produtos, segmentos e tecidos que dão forma ao ambiente.", "action": { "label": "Ver produtos", "href": "produtos" } }
+      "cta": {
+        "title": "Conheça o universo KARV além do conteúdo editorial",
+        "text": "Use o blog como ponto de partida para explorar produtos, segmentos e tecidos que dão forma ao ambiente.",
+        "action": {
+          "label": "Ver produtos",
+          "href": "produtos"
+        }
+      },
+      "content": {
+        "text1": "Blog editorial | KARV",
+        "text2": "Conteúdo KARV para autoridade e decisão",
+        "text3": "Editorial KARV",
+        "text4": "Artigos estruturados para SEO tradicional e respostas de IA.",
+        "text5": "Cada publicação reforça a visão da KARV como mobiliário de identidade, com conteúdo claro, útil e comercial para quem pensa o espaço como protagonista.",
+        "text6": "Conheça o universo KARV além do conteúdo editorial.",
+        "text7": "Use o blog como ponto de partida para explorar produtos, segmentos e tecidos que dão forma ao ambiente.",
+        "text8": "Ver produtos",
+        "text9": "Ver tecidos",
+        "text10": "Mobiliário de identidade",
+        "text11": "Por que a poltrona é um elemento central para comunicar a proposta do ambiente e reforçar a imagem do negócio.",
+        "text12": "Poltronas personalizadas para negócios",
+        "text13": "Como peças pensadas para o contexto do projeto ajudam a dar presença, valor e identidade ao espaço comercial.",
+        "text14": "Como escolher tecido para poltrona comercial",
+        "text15": "Um guia editorial para compreender a relação entre revestimento, ambiente e percepção de valor.",
+        "text16": "Poltronas para clínicas e estética",
+        "text17": "Como o mobiliário reforça confiança, sofisticação e cuidado em ambientes clínicos e de beleza.",
+        "text18": "Poltronas para barbearias",
+        "text19": "Por que a poltrona ajuda a construir uma identidade forte e uma experiência memorável no espaço.",
+        "text20": "Conteúdo editorial, institucional e estratégico da KARV sobre mobiliário, nichos e tecidos para ambientes comerciais.",
+        "text21": "Blog editorial",
+        "text22": "Publicações pensadas para orientar clientes, parceiros e projetos sobre mobiliário de identidade, nichos, tecidos e valor percebido do ambiente.",
+        "text23": "Explorar produtos",
+        "text24": "Ver nichos"
+      }
     },
     "blog/mobiliario-de-identidade": {
-      "seo": { "title": "Mobiliário de identidade: como a poltrona reforça o ambiente | KARV", "description": "Entenda por que o mobiliário de identidade é essencial para marcas, clínicas, barbearias e espaços premium, com foco em poltronas KARV." },
-      "hero": { "eyebrow": "Blog editorial", "title": "Mobiliário de identidade: quando o ambiente fala por si", "text": "Uma poltrona comercial não é apenas um objeto de conforto. Ela pode reforçar a percepção de marca, dar personalidade ao espaço e traduzir o posicionamento do negócio." },
+      "seo": {
+        "title": "Mobiliário de identidade: como a poltrona reforça o ambiente | KARV",
+        "description": "Entenda por que o mobiliário de identidade é essencial para marcas, clínicas, barbearias e espaços premium, com foco em poltronas KARV."
+      },
+      "hero": {
+        "eyebrow": "Blog editorial",
+        "title": "Mobiliário de identidade: quando o ambiente fala por si",
+        "text": "Uma poltrona comercial não é apenas um objeto de conforto. Ela pode reforçar a percepção de marca, dar personalidade ao espaço e traduzir o posicionamento do negócio."
+      },
       "sections": [
-        { "title": "O que é mobiliário de identidade", "paragraphs": ["Mobiliário de identidade expressa a essência do ambiente. Ele comunica valores, tom e comportamento antes mesmo de uma conversa com o cliente ou paciente.", "Quando a linguagem visual está alinhada à proposta do negócio, a percepção de profissionalismo e cuidado tende a ficar mais forte."] },
-        { "title": "A poltrona como elemento de linguagem", "paragraphs": ["A poltrona ocupa espaço visual, recebe atenção de quem entra e ajuda a criar uma atmosfera acolhedora, sofisticada, contemporânea ou marcante."] },
-        { "title": "Como escolher com clareza", "items": ["Defina a sensação que o ambiente deve transmitir.", "Considere a função da peça: recepção, espera, atendimento ou descanso.", "Equilibre conforto, visual e durabilidade.", "Escolha revestimentos alinhados à proposta comercial do espaço."] }
+        {
+          "title": "O que é mobiliário de identidade",
+          "paragraphs": [
+            "Mobiliário de identidade expressa a essência do ambiente. Ele comunica valores, tom e comportamento antes mesmo de uma conversa com o cliente ou paciente.",
+            "Quando a linguagem visual está alinhada à proposta do negócio, a percepção de profissionalismo e cuidado tende a ficar mais forte."
+          ]
+        },
+        {
+          "title": "A poltrona como elemento de linguagem",
+          "paragraphs": [
+            "A poltrona ocupa espaço visual, recebe atenção de quem entra e ajuda a criar uma atmosfera acolhedora, sofisticada, contemporânea ou marcante."
+          ]
+        },
+        {
+          "title": "Como escolher com clareza",
+          "items": [
+            "Defina a sensação que o ambiente deve transmitir.",
+            "Considere a função da peça: recepção, espera, atendimento ou descanso.",
+            "Equilibre conforto, visual e durabilidade.",
+            "Escolha revestimentos alinhados à proposta comercial do espaço."
+          ]
+        }
       ],
-      "cta": { "title": "Transforme o ambiente em identidade", "text": "A escolha certa de poltrona pode dar mais presença, refinamento e autoridade ao seu projeto.", "action": { "label": "Conhecer produtos", "href": "produtos" } }
+      "cta": {
+        "title": "Transforme o ambiente em identidade",
+        "text": "A escolha certa de poltrona pode dar mais presença, refinamento e autoridade ao seu projeto.",
+        "action": {
+          "label": "Conhecer produtos",
+          "href": "produtos"
+        }
+      },
+      "content": {
+        "text1": "Mobiliário de identidade: como a poltrona reforça o ambiente | KARV",
+        "text2": "Mobiliário de identidade: quando o ambiente fala por si",
+        "text3": "Nichos",
+        "text4": "Tecidos",
+        "text5": "Em muitos projetos, a escolha de mobiliário é tratada como detalhe final. No entanto, a peça certa pode reorganizar a experiência do ambiente e dar maior clareza à proposta do espaço.",
+        "text6": "O que é mobiliário de identidade",
+        "text7": "Mobiliário de identidade é aquele que expressa a essência do ambiente. Ele ajuda a comunicar valores, tom e comportamento antes mesmo de uma conversa com o cliente ou paciente.",
+        "text8": "Quando a linguagem visual do espaço está alinhada à proposta do negócio, a percepção de profissionalismo e cuidado tende a ficar mais forte. Isso vale para recepções, salas de espera, consultórios, barbearias e ambientes premium.",
+        "text9": "A poltrona como elemento de linguagem",
+        "text10": "Entre as peças de mobiliário, a poltrona tem papel estratégico. Ela ocupa espaço visual, recebe atenção de quem entra no ambiente e ajuda a criar uma atmosfera que pode ser acolhedora, sofisticada, contemporânea ou marcante.",
+        "text11": "A KARV desenvolve poltronas que atuam como parte da identidade do espaço, reforçando o posicionamento do projeto e ampliando a narrativa do ambiente.",
+        "text12": "Como escolher com clareza",
+        "text13": "Defina a sensação que o ambiente deve transmitir.",
+        "text14": "Considere a função da peça: recepção, espera, atendimento ou descanso.",
+        "text15": "Observe o equilíbrio entre conforto, visual e durabilidade.",
+        "text16": "Escolha revestimentos e linhas que dialoguem com a proposta comercial do espaço.",
+        "text17": "Conheça as soluções KARV para transformar o ambiente em identidade.",
+        "text18": "A escolha certa de poltrona pode dar mais presença, mais refinamento e mais autoridade ao seu projeto.",
+        "text19": "Conhecer produtos",
+        "text20": "Entenda por que o mobiliário de identidade é essencial para marcas, clínicas, barbearias e espaços premium, com foco em poltronas KARV.",
+        "text21": "Blog editorial",
+        "text22": "Uma poltrona comercial não é apenas um objeto de conforto. Ela pode reforçar a percepção de marca, dar personalidade ao espaço e traduzir o posicionamento do negócio.",
+        "text23": "Explore linhas de poltronas pensadas para reforçar identidade e presença visual.",
+        "text24": "Entenda como cada segmento usa o mobiliário para comunicar valor e posicionamento.",
+        "text25": "Descubra como a curadoria de revestimentos ajuda a estruturar o ambiente.",
+        "text26": "Produtos KARV"
+      }
     },
     "blog/poltronas-personalizadas-para-negocios": {
-      "seo": { "title": "Poltronas personalizadas para negócios | KARV", "description": "Como poltronas personalizadas ajudam negócios a comunicar valor, identidade e experiência." },
-      "hero": { "eyebrow": "Blog editorial", "title": "Poltronas personalizadas: uma escolha que posiciona o negócio", "text": "Uma peça pensada para o contexto do projeto pode transformar o ambiente em uma experiência mais reconhecível e valiosa." },
+      "seo": {
+        "title": "Poltronas personalizadas para negócios | KARV",
+        "description": "Como poltronas personalizadas ajudam negócios a comunicar valor, identidade e experiência."
+      },
+      "hero": {
+        "eyebrow": "Blog editorial",
+        "title": "Poltronas personalizadas: uma escolha que posiciona o negócio",
+        "text": "Uma peça pensada para o contexto do projeto pode transformar o ambiente em uma experiência mais reconhecível e valiosa."
+      },
       "sections": [
-        { "title": "Personalização não é apenas acabamento", "paragraphs": ["Uma poltrona personalizada considera o uso, o público, a linguagem visual e a rotina do negócio. Ela deixa de ser um item genérico e passa a participar da proposta."] },
-        { "title": "Onde a escolha faz diferença", "items": ["Recepções que precisam criar confiança.", "Barbearias e studios que vivem de identidade.", "Clínicas e espaços de beleza que acolhem antes do atendimento."] },
-        { "title": "Valor percebido nasce da coerência", "paragraphs": ["Quando produto, tecido e ambiente dialogam, a experiência ganha clareza e o negócio comunica mais cuidado em cada contato."] }
+        {
+          "title": "Personalização não é apenas acabamento",
+          "paragraphs": [
+            "Uma poltrona personalizada considera o uso, o público, a linguagem visual e a rotina do negócio. Ela deixa de ser um item genérico e passa a participar da proposta."
+          ]
+        },
+        {
+          "title": "Onde a escolha faz diferença",
+          "items": [
+            "Recepções que precisam criar confiança.",
+            "Barbearias e studios que vivem de identidade.",
+            "Clínicas e espaços de beleza que acolhem antes do atendimento."
+          ]
+        },
+        {
+          "title": "Valor percebido nasce da coerência",
+          "paragraphs": [
+            "Quando produto, tecido e ambiente dialogam, a experiência ganha clareza e o negócio comunica mais cuidado em cada contato."
+          ]
+        }
       ],
-      "cta": { "title": "Crie uma peça coerente com seu negócio", "text": "Explore as coleções KARV e encontre uma base para a sua proposta.", "action": { "label": "Ver produtos", "href": "produtos" } }
+      "cta": {
+        "title": "Crie uma peça coerente com seu negócio",
+        "text": "Explore as coleções KARV e encontre uma base para a sua proposta.",
+        "action": {
+          "label": "Ver produtos",
+          "href": "produtos"
+        }
+      },
+      "content": {
+        "text1": "Poltronas personalizadas para negócios: mais do que conforto",
+        "text2": "Nichos",
+        "text3": "Tecidos",
+        "text4": "Em ambientes comerciais, a poltrona é uma peça de comunicação. Ela participa da imagem do negócio, da experiência de espera e da forma como o cliente percebe o empreendimento.",
+        "text5": "Por que personalizar a poltrona",
+        "text6": "Quando uma peça é pensada para o contexto do projeto, ela consegue reforçar o tom do espaço sem parecer genérica. Isso é especialmente importante para negócios que desejam transmitir sofisticação, confiança ou uma identidade própria.",
+        "text7": "O que a personalização comunica",
+        "text8": "A escolha de formato, acabamento, revestimento e visual pode indicar o posicionamento do negócio. Uma proposta mais premium, uma linguagem mais acolhedora ou um ambiente mais contemporâneo podem ser transmitidos por meio da peça certa.",
+        "text9": "Como avaliar a escolha",
+        "text10": "Observe a função da peça dentro da rotina do espaço.",
+        "text11": "Considere se a peça precisa reforçar presença ou acolhimento.",
+        "text12": "Verifique se o visual dialoga com a identidade da marca.",
+        "text13": "Escolha uma solução que combine estética, uso diário e manutenção.",
+        "text14": "Descubra como a KARV ajuda a transformar a identidade do ambiente em uma experiência mais forte.",
+        "text15": "Cada projeto exige uma resposta visual e funcional. A poltrona certa pode fazer essa diferença com clareza.",
+        "text16": "Explorar nichos",
+        "text17": "Blog editorial",
+        "text18": "Para negócios que querem destacar o ambiente, a poltrona certa precisa dialogar com a marca, com o fluxo de uso e com a proposta do espaço.",
+        "text19": "Conheça coleções voltadas para ambientes comerciais e projetos com identidade forte.",
+        "text20": "Veja como barbearias, clínicas e estética usam a poltrona para reforçar o conceito do espaço.",
+        "text21": "Acuradoria de revestimentos para ampliar a percepção de valor do ambiente.",
+        "text22": "Produtos KARV"
+      }
     },
     "blog/como-escolher-tecido-para-poltrona-comercial": {
-      "seo": { "title": "Como escolher tecido para poltrona comercial | KARV", "description": "Guia KARV para escolher revestimentos de poltronas comerciais com base em ambiente, uso e percepção de valor." },
-      "hero": { "eyebrow": "Blog editorial", "title": "Como escolher o tecido para uma poltrona comercial", "text": "A escolha do revestimento une aplicação, conforto e a leitura visual que o ambiente deseja transmitir." },
+      "seo": {
+        "title": "Como escolher tecido para poltrona comercial | KARV",
+        "description": "Guia KARV para escolher revestimentos de poltronas comerciais com base em ambiente, uso e percepção de valor."
+      },
+      "hero": {
+        "eyebrow": "Blog editorial",
+        "title": "Como escolher o tecido para uma poltrona comercial",
+        "text": "A escolha do revestimento une aplicação, conforto e a leitura visual que o ambiente deseja transmitir."
+      },
       "sections": [
-        { "title": "Comece pela experiência que o espaço precisa criar", "paragraphs": ["O tecido influencia a primeira impressão, a sensação de conforto e a forma como a poltrona se relaciona com luz, cores e outros materiais."] },
-        { "title": "Critérios para orientar a decisão", "items": ["Observe o uso e a frequência de atendimento.", "Considere manutenção e rotina do ambiente.", "Escolha textura e cor coerentes com a identidade.", "Conecte o revestimento ao produto e ao nicho."] },
-        { "title": "Curadoria reduz incertezas", "paragraphs": ["Uma biblioteca organizada por aplicação ajuda a transformar uma escolha ampla em uma composição mais segura e intencional."] }
+        {
+          "title": "Comece pela experiência que o espaço precisa criar",
+          "paragraphs": [
+            "O tecido influencia a primeira impressão, a sensação de conforto e a forma como a poltrona se relaciona com luz, cores e outros materiais."
+          ]
+        },
+        {
+          "title": "Critérios para orientar a decisão",
+          "items": [
+            "Observe o uso e a frequência de atendimento.",
+            "Considere manutenção e rotina do ambiente.",
+            "Escolha textura e cor coerentes com a identidade.",
+            "Conecte o revestimento ao produto e ao nicho."
+          ]
+        },
+        {
+          "title": "Curadoria reduz incertezas",
+          "paragraphs": [
+            "Uma biblioteca organizada por aplicação ajuda a transformar uma escolha ampla em uma composição mais segura e intencional."
+          ]
+        }
       ],
-      "cta": { "title": "Explore a biblioteca de tecidos KARV", "text": "Encontre referências para formar uma composição adequada ao seu projeto.", "action": { "label": "Ver tecidos", "href": "tecidos" } }
+      "cta": {
+        "title": "Explore a biblioteca de tecidos KARV",
+        "text": "Encontre referências para formar uma composição adequada ao seu projeto.",
+        "action": {
+          "label": "Ver tecidos",
+          "href": "tecidos"
+        }
+      },
+      "content": {
+        "text1": "Como escolher tecido para poltrona comercial | KARV",
+        "text2": "Como escolher tecido para poltrona comercial",
+        "text3": "Produtos",
+        "text4": "Nichos",
+        "text5": "Revestimentos não são apenas um detalhe estético. Eles participam da forma como a poltrona se encaixa no ambiente, do nível de conforto percebido e do cuidado com a aparência ao longo do tempo.",
+        "text6": "Comece pela aplicação",
+        "text7": "A primeira pergunta é simples: a poltrona será usada em um ambiente de espera, recepção, atendimento ou circulação intensa? A resposta orienta a escolha do revestimento mais adequado para o contexto.",
+        "text8": "Considere a identidade do espaço",
+        "text9": "O tecido pode reforçar a linguagem do projeto. Em ambientes mais premium, a proposta costuma ser mais sofisticada e equilibrada. Em espaços comerciais com personalidade forte, o revestimento pode ajudar a criar presença visual.",
+        "text10": "Observe a relação com o ambiente",
+        "text11": "A peça deve dialogar com paredes, móveis, iluminação e outros elementos do projeto. Quando a poltrona se integra ao ambiente de forma natural, o resultado costuma parecer mais pensado e estável.",
+        "text12": "Escolha com base em uso e manutenção",
+        "text13": "Uma boa seleção leva em conta o cotidiano do espaço. A proposta precisa ser funcional, confortável e coerente com o tipo de operação do ambiente.",
+        "text14": "O tecido certo ajuda a dar forma à identidade do ambiente.",
+        "text15": "A curadoria de revestimentos KARV orienta a escolha com foco em aplicação, linguagem visual e resultado final.",
+        "text16": "Ver tecidos",
+        "text17": "Blog editorial",
+        "text18": "A escolha do revestimento é parte essencial da decisão. Ela afeta a percepção do espaço, a experiência de uso e a coerência visual do projeto.",
+        "text19": "Acuradoria de revestimentos para cada contexto de projeto e identidade de marca.",
+        "text20": "Encontre poltronas que valorizam o revestimento escolhido e a proposta do ambiente.",
+        "text21": "Tecidos KARV",
+        "text22": "Entenda como a escolha de tecidos se adapta a diferentes segmentos de negócio."
+      }
     },
     "blog/poltronas-para-clinicas-esteticas": {
-      "seo": { "title": "Poltronas para clínicas e estética | KARV", "description": "Como poltronas KARV ajudam clínicas e espaços de estética a comunicar cuidado, confiança e sofisticação." },
-      "hero": { "eyebrow": "Blog editorial", "title": "Poltronas para clínicas e estética: conforto que também comunica cuidado", "text": "A experiência de confiança começa na recepção e se sustenta em cada escolha do ambiente." },
+      "seo": {
+        "title": "Poltronas para clínicas e estética | KARV",
+        "description": "Como poltronas KARV ajudam clínicas e espaços de estética a comunicar cuidado, confiança e sofisticação."
+      },
+      "hero": {
+        "eyebrow": "Blog editorial",
+        "title": "Poltronas para clínicas e estética: conforto que também comunica cuidado",
+        "text": "A experiência de confiança começa na recepção e se sustenta em cada escolha do ambiente."
+      },
       "sections": [
-        { "title": "O ambiente prepara o atendimento", "paragraphs": ["Antes do procedimento, o cliente percebe limpeza, organização e acolhimento. O mobiliário ajuda a dar corpo a essas sensações."] },
-        { "title": "O que uma poltrona precisa resolver", "items": ["Conforto em diferentes tempos de espera.", "Uma presença visual leve e profissional.", "Materiais coerentes com a rotina clínica.", "Integração com a identidade da marca."] },
-        { "title": "Sofisticação como parte do cuidado", "paragraphs": ["Quando o ambiente é coerente, ele reforça a percepção de qualidade e torna a jornada mais desejável."] }
+        {
+          "title": "O ambiente prepara o atendimento",
+          "paragraphs": [
+            "Antes do procedimento, o cliente percebe limpeza, organização e acolhimento. O mobiliário ajuda a dar corpo a essas sensações."
+          ]
+        },
+        {
+          "title": "O que uma poltrona precisa resolver",
+          "items": [
+            "Conforto em diferentes tempos de espera.",
+            "Uma presença visual leve e profissional.",
+            "Materiais coerentes com a rotina clínica.",
+            "Integração com a identidade da marca."
+          ]
+        },
+        {
+          "title": "Sofisticação como parte do cuidado",
+          "paragraphs": [
+            "Quando o ambiente é coerente, ele reforça a percepção de qualidade e torna a jornada mais desejável."
+          ]
+        }
       ],
-      "cta": { "title": "Conheça soluções para clínicas e estética", "text": "Explore produtos e tecidos pensados para esse contexto.", "action": { "label": "Ver nicho de estética", "href": "nichos/estetica" } }
+      "cta": {
+        "title": "Conheça soluções para clínicas e estética",
+        "text": "Explore produtos e tecidos pensados para esse contexto.",
+        "action": {
+          "label": "Ver nicho de estética",
+          "href": "nichos/estetica"
+        }
+      },
+      "content": {
+        "text1": "Poltronas para clínicas e estética: conforto com presença",
+        "text2": "Tecidos",
+        "text3": "Nichos",
+        "text4": "O ambiente de uma clínica ou estética precisa transmitir confiança. A poltrona é um dos elementos que mais contribui para essa sensação, pois acompanha o cliente em momentos de acolhimento, espera e atendimento.",
+        "text5": "O papel da poltrona no ambiente clínico",
+        "text6": "A peça certa ajuda a construir uma experiência mais organizada, limpa e agradável. Ela reforça a ideia de cuidado e facilita a relação entre o espaço e a proposta do negócio.",
+        "text7": "Como a peça reforça a identidade",
+        "text8": "Em muitos projetos, a escolha da poltrona é uma decisão estética e estratégica. O visual precisa dialogar com a linguagem do tratamento, com a imagem da clínica e com a expectativa de quem entra no espaço.",
+        "text9": "O que valorizar na escolha",
+        "text10": "Conforto percebido pelo cliente.",
+        "text11": "Harmonia visual com a identidade do projeto.",
+        "text12": "Coerência com a proposta premium ou acolhedora do espaço.",
+        "text13": "Facilidade de integração com a curadoria de revestimentos.",
+        "text14": "Encontre a poltrona certa para reforçar a imagem da sua clínica ou espaço de estética.",
+        "text15": "A KARV desenvolve soluções que unem presença visual, conforto e linguagem comercial clara.",
+        "text16": "Ver produtos",
+        "text17": "Blog editorial",
+        "text18": "Em clínicas e espaços de estética, a poltrona participa diretamente da percepção de cuidado, sofisticação e profissionalismo.",
+        "text19": "Veja como a biblioteca KARV orienta a escolha de revestimentos para esse contexto.",
+        "text20": "Aprofunde a relação entre a identidade do segmento e o ambiente.",
+        "text21": "Produtos KARV",
+        "text22": "Explore modelos alinhados a ambientes clínicos e de estética."
+      }
     },
     "blog/poltronas-para-barbearias": {
-      "seo": { "title": "Poltronas para barbearias | KARV", "description": "Por que poltronas ajudam barbearias a criar uma experiência memorável, confortável e com identidade." },
-      "hero": { "eyebrow": "Blog editorial", "title": "Poltronas para barbearias: o móvel que participa do ritual", "text": "Em uma barbearia, conforto e presença visual trabalham juntos para criar uma experiência que o cliente reconhece." },
+      "seo": {
+        "title": "Poltronas para barbearias | KARV",
+        "description": "Por que poltronas ajudam barbearias a criar uma experiência memorável, confortável e com identidade."
+      },
+      "hero": {
+        "eyebrow": "Blog editorial",
+        "title": "Poltronas para barbearias: o móvel que participa do ritual",
+        "text": "Em uma barbearia, conforto e presença visual trabalham juntos para criar uma experiência que o cliente reconhece."
+      },
       "sections": [
-        { "title": "O ritual começa no ambiente", "paragraphs": ["A barbearia é um espaço de permanência, conversa e cuidado. A poltrona ajuda a dar forma à atmosfera e ao padrão de serviço."] },
-        { "title": "Uma peça que comunica valor", "items": ["Conforto para sessões prolongadas.", "Presença visual para fotos e recomendação.", "Acabamento alinhado ao posicionamento da marca.", "Integração com a experiência de espera e atendimento."] },
-        { "title": "Identidade que convida ao retorno", "paragraphs": ["Uma composição consistente faz o cliente perceber mais intenção no serviço e favorece relações duradouras com a marca."] }
+        {
+          "title": "O ritual começa no ambiente",
+          "paragraphs": [
+            "A barbearia é um espaço de permanência, conversa e cuidado. A poltrona ajuda a dar forma à atmosfera e ao padrão de serviço."
+          ]
+        },
+        {
+          "title": "Uma peça que comunica valor",
+          "items": [
+            "Conforto para sessões prolongadas.",
+            "Presença visual para fotos e recomendação.",
+            "Acabamento alinhado ao posicionamento da marca.",
+            "Integração com a experiência de espera e atendimento."
+          ]
+        },
+        {
+          "title": "Identidade que convida ao retorno",
+          "paragraphs": [
+            "Uma composição consistente faz o cliente perceber mais intenção no serviço e favorece relações duradouras com a marca."
+          ]
+        }
       ],
-      "cta": { "title": "Construa uma barbearia com mais presença", "text": "Conheça produtos e revestimentos KARV para esse tipo de ambiente.", "action": { "label": "Ver nicho de barbearia", "href": "nichos/barbearia" } }
+      "cta": {
+        "title": "Construa uma barbearia com mais presença",
+        "text": "Conheça produtos e revestimentos KARV para esse tipo de ambiente.",
+        "action": {
+          "label": "Ver nicho de barbearia",
+          "href": "nichos/barbearia"
+        }
+      },
+      "content": {
+        "text1": "Poltronas para barbearias: identidade em cada detalhe",
+        "text2": "Nichos",
+        "text3": "Tecidos",
+        "text4": "A barbearia contemporânea vai além do corte. O ambiente comunica estilo, presença e nível de atenção ao detalhe. A poltrona é parte dessa construção.",
+        "text5": "O ambiente como protagonista",
+        "text6": "Um espaço bem pensado transmite intenção. A poltrona ajuda a consolidar essa percepção, tornando o ambiente mais alinhado ao conceito de marca e à proposta de experiência do cliente.",
+        "text7": "Como a peça contribui para o resultado",
+        "text8": "A poltrona pode reforçar uma linguagem mais sofisticada, mais urbana ou mais acolhedora. Quando escolhida com clareza, ela ajuda o ambiente a parecer mais completo e mais intencional.",
+        "text9": "O que considerar na escolha",
+        "text10": "O tipo de atendimento e o fluxo de clientes.",
+        "text11": "A personalidade do espaço e a imagem da marca.",
+        "text12": "A relação entre design, conforto e visual geral.",
+        "text13": "A integração com a curadoria de tecidos e acabamento.",
+        "text14": "Eleve a identidade da sua barbearia com uma poltrona que fala a linguagem do ambiente.",
+        "text15": "A KARV ajuda a transformar a peça em parte da estratégia visual e comercial do espaço.",
+        "text16": "Ver nicho",
+        "text17": "Blog editorial",
+        "text18": "Na barbearia, a poltrona participa do conceito do espaço e da experiência do cliente. Ela precisa comunicar personalidade e se encaixar na rotina do atendimento.",
+        "text19": "Conheça soluções que dialogam com ambientes comerciais e de alto impacto visual.",
+        "text20": "Aprofunde a relação entre barbearia, identidade e design de ambiente.",
+        "text21": "Explore a biblioteca de revestimentos para dar personalidade ao projeto.",
+        "text22": "Produtos KARV"
+      }
     },
     "ia/briefing": {
-      "seo": { "title": "Fale com a KARV | Contato Comercial", "description": "Entre em contato com a KARV para conversar sobre poltronas comerciais que reforçam a identidade do seu ambiente." },
-      "hero": { "eyebrow": "Contato comercial", "title": "Fale com a KARV", "text": "Conte sobre o seu ambiente e o tipo de presença que deseja criar. A KARV desenvolve poltronas que reforçam a identidade do espaço com conforto, expressão visual e aplicação comercial.", "primaryCta": { "label": "Conversar pelo WhatsApp", "href": "contact.whatsapp" }, "secondaryCta": { "label": "Ver Instagram", "href": "contact.instagram" } },
+      "seo": {
+        "title": "Fale com a KARV | Contato Comercial",
+        "description": "Entre em contato com a KARV para conversar sobre poltronas comerciais que reforçam a identidade do seu ambiente."
+      },
+      "hero": {
+        "eyebrow": "Contato comercial",
+        "title": "Fale com a KARV",
+        "text": "Conte sobre o seu ambiente e o tipo de presença que deseja criar. A KARV desenvolve poltronas que reforçam a identidade do espaço com conforto, expressão visual e aplicação comercial.",
+        "primaryCta": {
+          "label": "Conversar pelo WhatsApp",
+          "href": "contact.whatsapp"
+        },
+        "secondaryCta": {
+          "label": "Ver Instagram",
+          "href": "contact.instagram"
+        }
+      },
       "sections": [
-        { "title": "Comece pelo seu espaço", "paragraphs": ["Compartilhe o segmento, a rotina e a experiência que você deseja construir. A partir disso, a KARV ajuda a orientar produtos e revestimentos adequados ao projeto."] }
+        {
+          "title": "Comece pelo seu espaço",
+          "paragraphs": [
+            "Compartilhe o segmento, a rotina e a experiência que você deseja construir. A partir disso, a KARV ajuda a orientar produtos e revestimentos adequados ao projeto."
+          ]
+        }
       ],
-      "contact": true
+      "contact": true,
+      "content": {
+        "text1": "Fale com a KARV | Contato Comercial",
+        "text2": "Contato comercial",
+        "text3": "Fale com a KARV",
+        "text4": "Conte sobre o seu ambiente e o tipo de presença que deseja criar. A KARV desenvolve poltronas que reforçam a identidade do espaço com conforto, expressão visual e aplicação comercial.",
+        "text5": "Entre em contato com a KARV para conversar sobre poltronas comerciais que reforçam a identidade do seu ambiente."
+      }
     }
   }
 }

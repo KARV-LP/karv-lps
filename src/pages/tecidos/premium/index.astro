@@ -4,54 +4,55 @@ import Hero from "../../../components/ui/Hero.astro";
 import Section from "../../../components/ui/Section.astro";
 import Container from "../../../components/ui/Container.astro";
 import Button from "../../../components/ui/Button.astro";
+import { getPageText } from "../../../utils/i18n";
+
+const text = getPageText(Astro.url.pathname);
 
 const highlights = [
   {
-    title: "Atmosfera refinada",
-    text: "Uma linguagem visual mais elaborada, pensada para espaços que desejam presença, conforto e sofisticação.",
+    title: text("text21"),
+    text: text("text9"),
   },
   {
-    title: "Conforto como parte da experiência",
-    text: "A seleção favorece uma sensação acolhedora, ideal para projetos que valorizam o bem-estar do ambiente.",
+    title: text("text25"),
+    text: text("text10"),
   },
   {
-    title: "Percepção de valor",
-    text: "A curadoria ajuda a construir uma imagem de alto padrão, com identidade visual forte e acabamento cuidadoso.",
+    title: text("text11"),
+    text: text("text12"),
   },
 ];
 
 const applications = [
-  "Salas e recepções com proposta de destaque",
-  "Ambientes residenciais de alto padrão",
-  "Espaços que valorizam presença e sofisticação",
+  text("text13"),
+  text("text14"),
+  text("text15"),
 ];
 
 const benefits = [
-  "Seleção com linguagem visual sofisticada",
-  "Proposta acolhedora e elegante",
-  "Orientação para ambientes que desejam valor percebido",
+  text("text16"),
+  text("text22"),
+  text("text17"),
 ];
 ---
 
 <BaseLayout
-  title="Revestimentos Premium | Biblioteca de Tecidos KARV"
-  description="Conheça a Curadoria KARV para revestimentos premium, com sofisticação, conforto e elegância para ambientes de alto padrão."
 >
   <Hero
-    eyebrow="Curadoria KARV"
-    title="Revestimentos Premium"
-    text="Para ambientes que valorizam sofisticação, conforto e percepção de valor, a Curadoria KARV organiza revestimentos com presença refinada e linguagem acolhedora."
-    primaryCta={{ label: "Voltar à biblioteca", href: "/tecidos/" }}
-    secondaryCta={{ label: "Ver coleções", href: "/tecidos/colecoes/" }}
+    eyebrow={text("text18")}
+    title={text("text23")}
+    text={text("text19")}
+    primaryCta={{ label: text("text8"), href: "/tecidos/" }}
+    secondaryCta={{ label: text("text20"), href: "/tecidos/colecoes/" }}
   />
 
   <Section background="surface">
     <Container>
       <div class="intro">
-        <p class="intro__eyebrow">Seleção premium</p>
-        <h2 class="intro__title">Uma curadoria para ambientes de alto padrão.</h2>
+        <p class="intro__eyebrow">{text("text1")}</p>
+        <h2 class="intro__title">{text("text2")}</h2>
         <p class="intro__text">
-          A KARV desenvolve uma biblioteca própria de revestimentos para orientar a escolha com clareza, reforçando a identidade do projeto e a experiência do espaço.
+          {text("text3")}
         </p>
       </div>
 
@@ -69,13 +70,13 @@ const benefits = [
   <Section background="bg">
     <Container class="split">
       <div class="content-block">
-        <h2>Aplicações recomendadas</h2>
+        <h2>{text("text4")}</h2>
         <ul class="feature-list">
           {applications.map((item) => <li>{item}</li>)}
         </ul>
       </div>
       <div class="content-block">
-        <h2>Benefícios da curadoria</h2>
+        <h2>{text("text5")}</h2>
         <ul class="feature-list">
           {benefits.map((item) => <li>{item}</li>)}
         </ul>
@@ -85,11 +86,11 @@ const benefits = [
 
   <Section background="surface-soft" spacing="tight">
     <Container size="narrow" class="cta">
-      <h2 class="cta__title">A escolha certa começa pela narrativa do ambiente.</h2>
+      <h2 class="cta__title">{text("text6")}</h2>
       <p class="cta__text">
-        Explore a Biblioteca de Tecidos KARV e encontre a direção ideal para cada projeto.
+        {text("text7")}
       </p>
-      <Button href="/tecidos/" variant="primary" size="lg">Voltar à biblioteca</Button>
+      <Button href="/tecidos/" variant="primary" size="lg">{text("text8")}</Button>
     </Container>
   </Section>
 </BaseLayout>

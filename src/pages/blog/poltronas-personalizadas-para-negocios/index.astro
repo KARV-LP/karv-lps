@@ -5,40 +5,41 @@ import Section from "../../../components/ui/Section.astro";
 import Container from "../../../components/ui/Container.astro";
 import ProductCard from "../../../components/ui/ProductCard.astro";
 import Button from "../../../components/ui/Button.astro";
+import { getPageText } from "../../../utils/i18n";
+
+const text = getPageText(Astro.url.pathname);
 ---
 
 <BaseLayout
-  title="Poltronas personalizadas para negócios: identidade, conforto e presença | KARV"
-  description="Veja como poltronas personalizadas para negócios ajudam a reforçar a identidade do espaço e elevar a experiência do cliente."
 >
   <Hero
-    eyebrow="Blog editorial"
-    title="Poltronas personalizadas para negócios: mais do que conforto"
-    text="Para negócios que querem destacar o ambiente, a poltrona certa precisa dialogar com a marca, com o fluxo de uso e com a proposta do espaço."
+    eyebrow={text("text17")}
+    title={text("text1")}
+    text={text("text18")}
   />
 
   <Section background="surface">
     <Container size="narrow">
       <p>
-        Em ambientes comerciais, a poltrona é uma peça de comunicação. Ela participa da imagem do negócio, da experiência de espera e da forma como o cliente percebe o empreendimento.
+        {text("text4")}
       </p>
 
-      <h2>Por que personalizar a poltrona</h2>
+      <h2>{text("text5")}</h2>
       <p>
-        Quando uma peça é pensada para o contexto do projeto, ela consegue reforçar o tom do espaço sem parecer genérica. Isso é especialmente importante para negócios que desejam transmitir sofisticação, confiança ou uma identidade própria.
+        {text("text6")}
       </p>
 
-      <h2>O que a personalização comunica</h2>
+      <h2>{text("text7")}</h2>
       <p>
-        A escolha de formato, acabamento, revestimento e visual pode indicar o posicionamento do negócio. Uma proposta mais premium, uma linguagem mais acolhedora ou um ambiente mais contemporâneo podem ser transmitidos por meio da peça certa.
+        {text("text8")}
       </p>
 
-      <h2>Como avaliar a escolha</h2>
+      <h2>{text("text9")}</h2>
       <ul>
-        <li>Observe a função da peça dentro da rotina do espaço.</li>
-        <li>Considere se a peça precisa reforçar presença ou acolhimento.</li>
-        <li>Verifique se o visual dialoga com a identidade da marca.</li>
-        <li>Escolha uma solução que combine estética, uso diário e manutenção.</li>
+        <li>{text("text10")}</li>
+        <li>{text("text11")}</li>
+        <li>{text("text12")}</li>
+        <li>{text("text13")}</li>
       </ul>
     </Container>
   </Section>
@@ -47,18 +48,18 @@ import Button from "../../../components/ui/Button.astro";
     <Container>
       <div class="cards-grid">
         <ProductCard
-          title="Produtos KARV"
-          description="Conheça coleções voltadas para ambientes comerciais e projetos com identidade forte."
+          title={text("text22")}
+          description={text("text19")}
           href="/produtos/"
         />
         <ProductCard
-          title="Nichos"
-          description="Veja como barbearias, clínicas e estética usam a poltrona para reforçar o conceito do espaço."
+          title={text("text2")}
+          description={text("text20")}
           href="/nichos/"
         />
         <ProductCard
-          title="Tecidos"
-          description="Acuradoria de revestimentos para ampliar a percepção de valor do ambiente."
+          title={text("text3")}
+          description={text("text21")}
           href="/tecidos/"
         />
       </div>
@@ -67,11 +68,11 @@ import Button from "../../../components/ui/Button.astro";
 
   <Section background="surface" spacing="tight">
     <Container size="narrow" class="cta">
-      <h2>Descubra como a KARV ajuda a transformar a identidade do ambiente em uma experiência mais forte.</h2>
+      <h2>{text("text14")}</h2>
       <p>
-        Cada projeto exige uma resposta visual e funcional. A poltrona certa pode fazer essa diferença com clareza.
+        {text("text15")}
       </p>
-      <Button href="/nichos/" variant="primary" size="lg">Explorar nichos</Button>
+      <Button href="/nichos/" variant="primary" size="lg">{text("text16")}</Button>
     </Container>
   </Section>
 </BaseLayout>
