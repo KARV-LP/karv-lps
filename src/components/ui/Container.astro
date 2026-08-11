@@ -7,23 +7,16 @@ interface Props {
 const { size = "default", class: className = "" } = Astro.props;
 ---
 
-<div class:list={["container", `container--${size}`, className]}>
+<div class:list={["karv-container", `karv-container--${size}`, "w-full max-w-karv mx-auto px-karv-4", className]}>
   <slot />
 </div>
 
 <style>
-  .container {
-    width: 100%;
-    max-width: var(--container-width);
-    margin-inline: auto;
-    padding-inline: var(--space-4);
-  }
-
-  .container--narrow {
+  .karv-container--narrow {
     max-width: 760px;
   }
 
-  .container--wide {
+  .karv-container--wide {
     max-width: 1440px;
   }
 </style>
