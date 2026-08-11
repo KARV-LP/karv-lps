@@ -4,12 +4,19 @@ Site institucional da KARV, desenvolvido com Astro 7 e Tailwind CSS 4.
 
 ## Setup
 
+O projeto requer Node.js `>=22.12.0` e npm. Instale as dependências a partir do lockfile:
+
 ```sh
-npm install
+npm ci
+```
+
+Inicie o servidor de desenvolvimento:
+
+```sh
 npm run dev
 ```
 
-O projeto requer Node.js 22.12 ou superior. O servidor local fica disponível em `http://localhost:4321`.
+O servidor local fica disponível em `http://localhost:4321`.
 
 ## Tokens e Tailwind CSS 4
 
@@ -28,15 +35,30 @@ As classes seguem os tokens CSS existentes: cores (`bg-karv-bronze`), tipografia
 
 ## Comandos
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+Para gerar a versão de produção, execute:
 
-## 👀 Want to learn more?
+```sh
+npm run build
+```
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+Os arquivos estáticos resultantes ficam em `dist/`. Para inspecionar esse build localmente:
+
+```sh
+npm run preview
+```
+
+## CI e deploy
+
+O workflow [CI](.github/workflows/build.yml) instala as dependências com `npm ci` e executa `npm run build`. Ele é acionado em pull requests direcionados a `main` e em pushes para `main`. Esse workflow apenas valida o build; ele não publica o site.
+
+O arquivo [netlify.toml](netlify.toml) informa ao Netlify o comando `npm run build` e o diretório publicado `dist`. Ele não configura credenciais, uma branch de produção ou um passo de deploy.
+
+Deploy Previews de pull requests dependem da integração Git do projeto no Netlify, configurada fora deste repositório. Quando essa integração estiver habilitada, o Netlify usará o comando e o diretório definidos em `netlify.toml` para montar o preview. Nenhum workflow deste repositório cria um preview.
+
+Da mesma forma, um deploy de produção precisa ser disparado pela configuração externa do projeto Netlify (por exemplo, pela branch de produção definida na integração Git ou por um deploy manual). O push para `main` definido no workflow de CI executa somente a validação. Consulte [docs/netlify.md](docs/netlify.md) para os valores de ambiente e os limites dessa configuração.
+
+## QA antes de publicar
+
+- [ ] **Acessibilidade:** testar navegação por teclado, foco visível, link para pular ao conteúdo, textos alternativos e contraste.
+- [ ] **Imagens e performance:** conferir imagens em larguras mobile e desktop, o `sizes`/`srcset`, dimensões reservadas e formatos responsivos AVIF/WebP.
+- [ ] **SEO localizado:** verificar `/pt/` e `/en/`, o atributo `lang`, canonicals, `hreflang`, metadados Open Graph e o sitemap gerado.
