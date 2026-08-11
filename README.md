@@ -1,46 +1,32 @@
-# Astro Starter Kit: Minimal
+# KARV Landing Pages
+
+Site institucional da KARV, desenvolvido com Astro 7 e Tailwind CSS 4.
+
+## Setup
 
 ```sh
-npm create astro@latest -- --template minimal
+npm install
+npm run dev
 ```
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+O projeto requer Node.js 22.12 ou superior. O servidor local fica disponível em `http://localhost:4321`.
 
-## 🚀 Project Structure
+## Tokens e Tailwind CSS 4
 
-Inside of your Astro project, you'll see the following folders and files:
+Os tokens canônicos da KARV ficam em `src/styles/tokens.css`. `src/styles/global.css` os importa uma única vez e os disponibiliza ao Tailwind por `@theme`; não há `tailwind.config.js`, configuração PostCSS ou `autoprefixer`.
 
-```text
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
+O plugin oficial `@tailwindcss/vite` está configurado em `astro.config.mjs`. Use apenas as utilities `karv-*` para valores definidos no design system:
+
+```astro
+<section class="bg-karv-ink text-karv-paper px-karv-4 py-karv-16">
+  <h1 class="font-karv-display text-karv-hero leading-karv-tight">...</h1>
+  <a class="rounded-karv-pill bg-karv-bronze px-karv-6 py-karv-3">...</a>
+</section>
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+As classes seguem os tokens CSS existentes: cores (`bg-karv-bronze`), tipografia (`font-karv-display`, `text-karv-h2`), espaçamento (`gap-karv-2`, `py-karv-16`), raio (`rounded-karv-md`) e sombra (`shadow-karv-contact`). Para estilos específicos de componentes, mantenha as propriedades CSS canônicas, como `var(--color-accent)`.
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
-
-Any static assets, like images, can be placed in the `public/` directory.
-
-## 🎨 Design tokens
-
-KARV tokens live in `src/styles/tokens.css` and are imported once by `src/styles/global.css`.
-Use the CSS custom properties in component styles, for example:
-
-```css
-.example {
-  color: var(--color-paper);
-  font-family: var(--font-display);
-  padding: var(--space-6);
-}
-```
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
+## Comandos
 
 | Command                   | Action                                           |
 | :------------------------ | :----------------------------------------------- |

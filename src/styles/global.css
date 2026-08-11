@@ -1,4 +1,50 @@
+@import "tailwindcss";
 @import "./tokens.css";
+
+@theme {
+  --color-karv-ink: var(--color-ink);
+  --color-karv-ink-raised: var(--color-ink-raised);
+  --color-karv-paper: var(--color-paper);
+  --color-karv-sand: var(--color-sand);
+  --color-karv-greige: var(--color-greige);
+  --color-karv-clay: var(--color-clay);
+  --color-karv-bronze: var(--color-bronze);
+  --color-karv-bronze-ink: var(--color-bronze-ink);
+  --color-karv-glow: var(--color-glow);
+  --color-karv-border: var(--color-border);
+
+  --font-karv-display: var(--font-display);
+  --font-karv-text: var(--font-text);
+  --text-karv-xs: var(--font-size-xs);
+  --text-karv-sm: var(--font-size-sm);
+  --text-karv-base: var(--font-size-base);
+  --text-karv-body: var(--font-size-body);
+  --text-karv-lg: var(--font-size-lg);
+  --text-karv-xl: var(--font-size-xl);
+  --text-karv-2xl: var(--font-size-2xl);
+  --text-karv-hero: var(--step-hero);
+  --text-karv-h2: var(--step-h2);
+  --leading-karv-tight: var(--line-height-tight);
+  --leading-karv-body: var(--line-height-body);
+  --tracking-karv-tight: var(--letter-spacing-tight);
+
+  --spacing-karv-1: var(--space-1);
+  --spacing-karv-2: var(--space-2);
+  --spacing-karv-3: var(--space-3);
+  --spacing-karv-4: var(--space-4);
+  --spacing-karv-6: var(--space-6);
+  --spacing-karv-8: var(--space-8);
+  --spacing-karv-10: var(--space-10);
+  --spacing-karv-16: var(--space-16);
+  --spacing-karv-24: var(--space-24);
+  --container-karv: var(--container-width);
+
+  --radius-karv-sm: var(--radius-sm);
+  --radius-karv-md: var(--radius-md);
+  --radius-karv-lg: var(--radius-lg);
+  --radius-karv-pill: var(--radius-pill);
+  --shadow-karv-contact: var(--shadow-contact);
+}
 
 /* KARV base reset */
 
