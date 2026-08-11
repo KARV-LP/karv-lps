@@ -9,6 +9,7 @@ import {
   getPathFromLocalePath,
   localizedPath,
   ogLocale,
+  t,
   type Locale
 } from "../utils/i18n";
 
@@ -17,13 +18,19 @@ interface Props {
   path?: string;
   title?: string;
   description?: string;
+  criticalImage?: {
+    src: string;
+    srcset: string;
+    sizes: string;
+  };
 }
 
 const {
   locale = getLocaleFromPath(Astro.url.pathname),
   path = getPathFromLocalePath(Astro.url.pathname),
   title: suppliedTitle = "KARV Platform",
-  description: suppliedDescription = "Plataforma digital oficial da KARV."
+  description: suppliedDescription = "Plataforma digital oficial da KARV.",
+  criticalImage
 } = Astro.props;
 const localizedSeo = getPage(locale, path)?.seo;
 const title = localizedSeo?.title ?? suppliedTitle;
@@ -39,6 +46,17 @@ const englishURL = new URL(localizedPath("en", path), Astro.site);
     <meta charset="UTF-8" />
     <meta name="description" content={description} />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    {criticalImage && (
+      <link
+        rel="preload"
+        as="image"
+        href={criticalImage.src}
+        imagesrcset={criticalImage.srcset}
+        imagesizes={criticalImage.sizes}
+        type="image/avif"
+        fetchpriority="high"
+      />
+    )}
     <link rel="canonical" href={canonicalURL} />
     <link rel="alternate" hreflang="pt-BR" href={portugueseURL} />
     <link rel="alternate" hreflang="en" href={englishURL} />
@@ -55,8 +73,9 @@ const englishURL = new URL(localizedPath("en", path), Astro.site);
     <title>{title}</title>
   </head>
   <body>
+    <a class="skip-link" href="#main-content">{t(locale, "accessibility").skipToContent}</a>
     <Header locale={locale} path={path} />
-    <main>
+    <main id="main-content">
       <slot />
     </main>
     <Footer locale={locale} />

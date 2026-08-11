@@ -14,6 +14,9 @@
       "tagline": "Poltronas comerciais com identidade para ambientes profissionais.",
       "copyright": "Todos os direitos reservados."
     },
+    "accessibility": {
+      "skipToContent": "Pular para o conteúdo principal"
+    },
     "contact": {
       "heading": "Fale com a KARV",
       "intro": "Escolha o canal mais direto para iniciar uma proposta comercial e contar sobre o espaço que deseja transformar.",

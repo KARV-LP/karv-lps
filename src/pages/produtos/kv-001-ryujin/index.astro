@@ -3,6 +3,7 @@ import BaseLayout from "../../../layouts/BaseLayout.astro";
 import Section from "../../../components/ui/Section.astro";
 import Container from "../../../components/ui/Container.astro";
 import Button from "../../../components/ui/Button.astro";
+import ResponsiveImage from "../../../components/ui/ResponsiveImage.astro";
 import { getPageText } from "../../../utils/i18n";
 
 const text = getPageText(Astro.url.pathname);
@@ -15,17 +16,24 @@ const IMG = "/images/produtos/kv-001-ryujin";
 ---
 
 <BaseLayout
+  criticalImage={{
+    src: `${IMG}/responsive/hero-ambiente-1100.avif`,
+    srcset: `${IMG}/responsive/hero-ambiente-480.avif 480w, ${IMG}/responsive/hero-ambiente-768.avif 768w, ${IMG}/responsive/hero-ambiente-1100.avif 1100w`,
+    sizes: "100vw"
+  }}
 >
   <div class="ryujin">
     <section class="ryujin__hero">
-      <img
+      <ResponsiveImage
         class="ryujin__hero-img"
         src={`${IMG}/hero-ambiente.jpg`}
         alt={text("text1")}
         loading="eager"
         fetchpriority="high"
-        width="1100"
-        height="733"
+        sizes="100vw"
+        widths={[480, 768, 1100]}
+        width="900"
+        height="600"
       />
       <div class="ryujin__scrim" aria-hidden="true"></div>
       <div class="ryujin__kmark" aria-hidden="true">
@@ -60,13 +68,13 @@ const IMG = "/images/produtos/kv-001-ryujin";
             </p>
           </div>
           <div class="ryujin__imgcol">
-            <img
+            <ResponsiveImage
               src={`${IMG}/produto-isolado.jpg`}
               alt={text("text2")}
-              loading="lazy"
-              decoding="async"
-              width="1100"
-              height="733"
+              sizes="(min-width: 900px) 50vw, 100vw"
+              widths={[480, 720, 900]}
+              width="900"
+              height="600"
             />
           </div>
         </div>
@@ -81,33 +89,33 @@ const IMG = "/images/produtos/kv-001-ryujin";
         </div>
         <div class="ryujin__grid3">
           <figure>
-            <img
+            <ResponsiveImage
               src={`${IMG}/arte-dragao-peonia.jpg`}
               alt={text("text3")}
-              loading="lazy"
-              decoding="async"
+              sizes="(min-width: 900px) 33vw, 100vw"
+              widths={[480, 720, 900]}
               width="900"
               height="600"
             />
             <figcaption class="ryujin__cap">{text("text26")}</figcaption>
           </figure>
           <figure>
-            <img
+            <ResponsiveImage
               src={`${IMG}/arte-costura.jpg`}
               alt={text("text4")}
-              loading="lazy"
-              decoding="async"
+              sizes="(min-width: 900px) 33vw, 100vw"
+              widths={[480, 720, 900]}
               width="900"
               height="600"
             />
             <figcaption class="ryujin__cap">{text("text27")}</figcaption>
           </figure>
           <figure>
-            <img
+            <ResponsiveImage
               src={`${IMG}/arte-vermelho.jpg`}
               alt={text("text5")}
-              loading="lazy"
-              decoding="async"
+              sizes="(min-width: 900px) 33vw, 100vw"
+              widths={[480, 720, 900]}
               width="900"
               height="600"
             />
@@ -130,33 +138,33 @@ const IMG = "/images/produtos/kv-001-ryujin";
         </div>
         <div class="ryujin__envs">
           <figure>
-            <img
+            <ResponsiveImage
               src={`${IMG}/ambiente-tattoo-studio.jpg`}
               alt={text("text6")}
-              loading="lazy"
-              decoding="async"
+              sizes="(min-width: 900px) 33vw, 100vw"
+              widths={[480, 768, 1100]}
               width="1100"
               height="733"
             />
             <figcaption class="ryujin__cap">{text("text33")}</figcaption>
           </figure>
           <figure>
-            <img
+            <ResponsiveImage
               src={`${IMG}/ambiente-barbearia.jpg`}
               alt={text("text7")}
-              loading="lazy"
-              decoding="async"
+              sizes="(min-width: 900px) 33vw, 100vw"
+              widths={[480, 720, 900]}
               width="1100"
               height="733"
             />
             <figcaption class="ryujin__cap">{text("text34")}</figcaption>
           </figure>
           <figure class="ryujin__envs-third">
-            <img
+            <ResponsiveImage
               src={`${IMG}/ambiente-expressivo.jpg`}
               alt={text("text8")}
-              loading="lazy"
-              decoding="async"
+              sizes="(min-width: 900px) 33vw, 100vw"
+              widths={[480, 768, 1100]}
               width="1100"
               height="733"
             />
@@ -169,13 +177,13 @@ const IMG = "/images/produtos/kv-001-ryujin";
     <Section id="valor" background="surface" spacing="loose" class="ryujin__valor">
       <div class="ryujin__valor-inner">
         <div class="ryujin__valor-img">
-          <img
+          <ResponsiveImage
             src={`${IMG}/ambiente-expressivo.jpg`}
             alt={text("text9")}
-            loading="lazy"
-            decoding="async"
-            width="1400"
-            height="933"
+            sizes="(min-width: 900px) 55vw, 100vw"
+            widths={[480, 768, 1100]}
+            width="1100"
+            height="733"
           />
         </div>
         <div class="ryujin__valor-text">
@@ -229,13 +237,13 @@ const IMG = "/images/produtos/kv-001-ryujin";
     </section>
 
     <section class="ryujin__closer">
-      <img
+      <ResponsiveImage
         src={`${IMG}/ambiente-tattoo-studio.jpg`}
         alt={text("text10")}
-        loading="lazy"
-        decoding="async"
-        width="1600"
-        height="1067"
+        sizes="100vw"
+        widths={[480, 768, 1100]}
+        width="1100"
+        height="733"
       />
     </section>
 
@@ -273,7 +281,7 @@ const IMG = "/images/produtos/kv-001-ryujin";
     --bg: #f3eee6;
     --sand: #e7decf;
     --line: #d8cfbe;
-    --bronze: #96774b;
+    --bronze: #80633c;
     --bronze2: #b79a6b;
     --stone: #6c6357;
     --serif: "Iowan Old Style", "Palatino Linotype", "Palatino", "Georgia", serif;
@@ -289,6 +297,11 @@ const IMG = "/images/produtos/kv-001-ryujin";
     --color-border: var(--line);
 
     background: var(--bg);
+    color: var(--ink);
+  }
+
+  .ryujin :global(.btn--primary) {
+    background: #a77b48;
     color: var(--ink);
   }
 
@@ -372,7 +385,7 @@ const IMG = "/images/produtos/kv-001-ryujin";
     font-size: 11px;
     letter-spacing: 0.16em;
     text-transform: uppercase;
-    color: #8a8072;
+    color: #74695b;
   }
 
   @media (min-width: 900px) {
@@ -863,7 +876,7 @@ const IMG = "/images/produtos/kv-001-ryujin";
     font-size: 11px;
     letter-spacing: 0.16em;
     text-transform: uppercase;
-    color: #8a8072;
+    color: #a99e8d;
     margin-top: 10px;
   }
 
@@ -890,7 +903,7 @@ const IMG = "/images/produtos/kv-001-ryujin";
     font-size: 10px;
     letter-spacing: 0.2em;
     text-transform: uppercase;
-    color: #7c7264;
+    color: #afa391;
     margin: 0 0 8px;
   }
 
